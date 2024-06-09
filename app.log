@@ -1,0 +1,61 @@
+2024-06-09T12:16:09 INFO Logger initialized successfully
+2024-06-09T12:16:09 INFO Starting the application
+2024-06-09T12:20:45 INFO Logger initialized successfully
+2024-06-09T12:20:45 INFO Starting the application
+2024-06-09T12:20:45 INFO parentItem: Profiles
+2024-06-09T12:20:45 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:20:45 INFO parentItem: Device
+2024-06-09T12:20:45 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:21:03 INFO Logger initialized successfully
+2024-06-09T12:21:03 INFO Starting the application
+2024-06-09T12:21:07 INFO parentItem: Device
+2024-06-09T12:21:07 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:21:07 INFO parentItem: Profiles
+2024-06-09T12:21:07 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:23:07 INFO Logger initialized successfully
+2024-06-09T12:23:07 INFO Starting the application
+2024-06-09T12:23:28 INFO Logger initialized successfully
+2024-06-09T12:23:28 INFO Starting the application
+2024-06-09T12:23:28 INFO parentItem: Device
+2024-06-09T12:23:28 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:23:28 INFO parentItem: Profiles
+2024-06-09T12:23:28 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:25:16 INFO Selected device: &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=55}
+2024-06-09T12:25:20 INFO conf: vid=239a,pid=80f4,bus=1,addr=55,config=1
+2024-06-09T12:25:20 INFO c: 0
+2024-06-09T12:30:39 INFO Logger initialized successfully
+2024-06-09T12:30:39 INFO Starting the application
+2024-06-09T12:30:39 INFO parentItem: Device
+2024-06-09T12:30:39 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:30:39 INFO parentItem: Profiles
+2024-06-09T12:30:39 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:30:43 INFO Selected device: &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=55}
+2024-06-09T12:30:51 INFO Selected device: &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=55}
+2024-06-09T12:31:16 INFO conf: vid=239a,pid=80f4,bus=1,addr=55,config=1
+2024-06-09T12:31:16 INFO c: 0
+2024-06-09T12:39:05 INFO Logger initialized successfully
+2024-06-09T12:39:05 INFO Starting the application
+2024-06-09T12:39:05 INFO parentItem: Device
+2024-06-09T12:39:05 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:39:05 INFO parentItem: Profiles
+2024-06-09T12:39:05 INFO g.menuOptions[parentItem]: []
+2024-06-09T12:40:25 INFO Selected device: &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=55}
+2024-06-09T12:40:49 DEBUG Last refresh at 2024-06-09 12:40:49.6527555 +0300 EEST m=+104.208643801
+2024-06-09T12:40:50 DEBUG Last refresh at 2024-06-09 12:40:50.6632884 +0300 EEST m=+105.219176701
+2024-06-09T12:40:51 DEBUG Last refresh at 2024-06-09 12:40:51.6534889 +0300 EEST m=+106.209377201
+2024-06-09T12:40:52 DEBUG Last refresh at 2024-06-09 12:40:52.6640451 +0300 EEST m=+107.219933401
+2024-06-09T12:40:53 DEBUG Last refresh at 2024-06-09 12:40:53.6591611 +0300 EEST m=+108.215049401
+2024-06-09T12:40:54 DEBUG Last refresh at 2024-06-09 12:40:54.6517321 +0300 EEST m=+109.207620401
+2024-06-09T12:40:55 DEBUG Last refresh at 2024-06-09 12:40:55.6549669 +0300 EEST m=+110.210855201
+2024-06-09T12:40:56 DEBUG Last refresh at 2024-06-09 12:40:56.6582284 +0300 EEST m=+111.214116701
+2024-06-09T12:40:57 DEBUG Last refresh at 2024-06-09 12:40:57.6631117 +0300 EEST m=+112.219000001
+2024-06-09T12:40:58 DEBUG Last refresh at 2024-06-09 12:40:58.6572411 +0300 EEST m=+113.213129401
+2024-06-09T12:40:59 DEBUG Last refresh at 2024-06-09 12:40:59.6517168 +0300 EEST m=+114.207605101
+2024-06-09T12:41:00 DEBUG Last refresh at 2024-06-09 12:41:00.6583686 +0300 EEST m=+115.214256901
+2024-06-09T12:41:01 DEBUG Last refresh at 2024-06-09 12:41:01.6643863 +0300 EEST m=+116.220274601
+2024-06-09T12:41:02 DEBUG Last refresh at 2024-06-09 12:41:02.654246 +0300 EEST m=+117.210134301
+2024-06-09T12:41:02 DEBUG Stopping auto refresh
+2024-06-09T12:41:57 INFO conf: vid=239a,pid=80f4,bus=1,addr=55,config=1
+2024-06-09T12:41:57 INFO c: 0
+2024-06-09T13:15:39 INFO Logger initialized successfully
+2024-06-09T13:15:39 INFO Starting the application
