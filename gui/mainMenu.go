@@ -14,8 +14,7 @@ type menuOptions map[string]menuChildElements
 func (g *GUI) getMenuConfig() map[string]menuChildElements {
 	return map[string]menuChildElements{
 		"Device": {
-			"Select":    NewSelectDevice(g),
-			"Info":      NewInfo(g),
+			"Info":      NewInfo(),
 			"RawValues": NewRawValues(g),
 		},
 		"Profiles": {

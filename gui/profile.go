@@ -1,6 +1,7 @@
 package gui
 
 import (
+	"main/logger"
 	"main/usb"
 
 	"fyne.io/fyne/v2"
@@ -18,7 +19,9 @@ func NewProfile(gui *GUI) *Profile {
 		gui: gui,
 	}
 }
-
+func (i *Profile) DeviceSelectionChanged(dev *usb.Device) {
+	logger.Log.Infof("Profile: Device selection changed %v", dev)
+}
 func (i *Profile) Init() {
 }
 

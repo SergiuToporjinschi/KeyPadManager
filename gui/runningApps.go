@@ -30,7 +30,9 @@ type RunningApps struct {
 func NewRunningApps(_ *GUI) *RunningApps {
 	return &RunningApps{}
 }
-
+func (i *RunningApps) DeviceSelectionChanged(dev *usb.Device) {
+	logger.Log.Infof("RunningApps: Device selection changed %v", dev)
+}
 func (r *RunningApps) Build(device *usb.Device) *fyne.Container {
 	items := []fyne.CanvasObject{}
 	bName := binding.NewString()

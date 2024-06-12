@@ -59,3 +59,1362 @@
 2024-06-09T12:41:57 INFO c: 0
 2024-06-09T13:15:39 INFO Logger initialized successfully
 2024-06-09T13:15:39 INFO Starting the application
+2024-06-09T14:15:17 INFO Logger initialized successfully
+2024-06-09T14:15:17 INFO Starting the application
+2024-06-09T14:15:17 INFO parentItem: Device
+2024-06-09T14:15:17 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:15:17 INFO parentItem: Profiles
+2024-06-09T14:15:17 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:20:20 INFO Logger initialized successfully
+2024-06-09T14:20:20 INFO Starting the application
+2024-06-09T14:20:20 INFO parentItem: Device
+2024-06-09T14:20:20 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:20:20 INFO parentItem: Profiles
+2024-06-09T14:20:20 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:20:50 INFO Logger initialized successfully
+2024-06-09T14:20:50 INFO Starting the application
+2024-06-09T14:20:51 INFO parentItem: Device
+2024-06-09T14:20:51 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:20:51 INFO parentItem: Profiles
+2024-06-09T14:20:51 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:42:37 INFO Logger initialized successfully
+2024-06-09T14:42:37 INFO Starting the application
+2024-06-09T14:42:37 INFO parentItem: Profiles
+2024-06-09T14:42:37 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:42:37 INFO parentItem: Device
+2024-06-09T14:42:37 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:44:15 INFO Logger initialized successfully
+2024-06-09T14:44:15 INFO Starting the application
+2024-06-09T14:44:15 INFO parentItem: Device
+2024-06-09T14:44:15 INFO g.menuOptions[parentItem]: []
+2024-06-09T14:44:15 INFO parentItem: Profiles
+2024-06-09T14:44:15 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:42:53 INFO Logger initialized successfully
+2024-06-09T18:42:53 INFO Starting the application
+2024-06-09T18:42:53 INFO parentItem: Device
+2024-06-09T18:42:53 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:42:53 INFO parentItem: Profiles
+2024-06-09T18:42:53 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:49:28 INFO Logger initialized successfully
+2024-06-09T18:49:28 INFO Starting the application
+2024-06-09T18:49:28 INFO parentItem: Device
+2024-06-09T18:49:28 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:49:28 INFO parentItem: Profiles
+2024-06-09T18:49:28 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:52:51 INFO Logger initialized successfully
+2024-06-09T18:52:51 INFO Starting the application
+2024-06-09T18:52:51 INFO parentItem: Device
+2024-06-09T18:52:51 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:52:51 INFO parentItem: Profiles
+2024-06-09T18:52:51 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:53:29 INFO Logger initialized successfully
+2024-06-09T18:53:29 INFO Starting the application
+2024-06-09T18:53:29 INFO parentItem: Device
+2024-06-09T18:53:29 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:53:29 INFO parentItem: Profiles
+2024-06-09T18:53:29 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:53:38 INFO Logger initialized successfully
+2024-06-09T18:53:38 INFO Starting the application
+2024-06-09T18:53:38 INFO parentItem: Device
+2024-06-09T18:53:38 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:53:38 INFO parentItem: Profiles
+2024-06-09T18:53:38 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:53:52 INFO Logger initialized successfully
+2024-06-09T18:53:52 INFO Starting the application
+2024-06-09T18:53:52 INFO parentItem: Device
+2024-06-09T18:53:52 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:53:52 INFO parentItem: Profiles
+2024-06-09T18:53:52 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:54:04 INFO Logger initialized successfully
+2024-06-09T18:54:04 INFO Starting the application
+2024-06-09T18:54:04 INFO parentItem: Device
+2024-06-09T18:54:04 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:54:04 INFO parentItem: Profiles
+2024-06-09T18:54:04 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:54:42 INFO Logger initialized successfully
+2024-06-09T18:54:42 INFO Starting the application
+2024-06-09T18:54:42 INFO parentItem: Profiles
+2024-06-09T18:54:42 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:54:42 INFO parentItem: Device
+2024-06-09T18:54:42 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:55:38 INFO Logger initialized successfully
+2024-06-09T18:55:38 INFO Starting the application
+2024-06-09T18:55:38 INFO parentItem: Device
+2024-06-09T18:55:38 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:55:38 INFO parentItem: Profiles
+2024-06-09T18:55:38 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:58:23 INFO Logger initialized successfully
+2024-06-09T18:58:23 INFO Starting the application
+2024-06-09T18:58:23 INFO parentItem: Device
+2024-06-09T18:58:23 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:58:23 INFO parentItem: Profiles
+2024-06-09T18:58:23 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:58:48 INFO Logger initialized successfully
+2024-06-09T18:58:48 INFO Starting the application
+2024-06-09T18:58:49 INFO parentItem: Device
+2024-06-09T18:58:49 INFO g.menuOptions[parentItem]: []
+2024-06-09T18:58:49 INFO parentItem: Profiles
+2024-06-09T18:58:49 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:03:10 INFO Logger initialized successfully
+2024-06-09T19:03:10 INFO Starting the application
+2024-06-09T19:03:10 INFO parentItem: Device
+2024-06-09T19:03:10 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:03:10 INFO parentItem: Profiles
+2024-06-09T19:03:10 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:06:05 INFO Logger initialized successfully
+2024-06-09T19:06:05 INFO Starting the application
+2024-06-09T19:06:05 INFO parentItem: Device
+2024-06-09T19:06:05 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:06:06 INFO parentItem: Profiles
+2024-06-09T19:06:06 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:08:51 INFO Logger initialized successfully
+2024-06-09T19:08:51 INFO Starting the application
+2024-06-09T19:08:51 INFO parentItem: Device
+2024-06-09T19:08:51 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:08:51 INFO parentItem: Profiles
+2024-06-09T19:08:51 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:09:43 INFO Logger initialized successfully
+2024-06-09T19:09:43 INFO Starting the application
+2024-06-09T19:09:43 INFO parentItem: Device
+2024-06-09T19:09:43 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:09:43 INFO parentItem: Profiles
+2024-06-09T19:09:43 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:11:21 INFO Logger initialized successfully
+2024-06-09T19:11:21 INFO Starting the application
+2024-06-09T19:11:21 INFO parentItem: Device
+2024-06-09T19:11:21 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:11:21 INFO parentItem: Profiles
+2024-06-09T19:11:21 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:11:45 INFO Logger initialized successfully
+2024-06-09T19:11:45 INFO Starting the application
+2024-06-09T19:11:46 INFO parentItem: Device
+2024-06-09T19:11:46 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:11:46 INFO parentItem: Profiles
+2024-06-09T19:11:46 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:12:06 INFO Logger initialized successfully
+2024-06-09T19:12:06 INFO Starting the application
+2024-06-09T19:12:06 INFO parentItem: Profiles
+2024-06-09T19:12:06 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:12:06 INFO parentItem: Device
+2024-06-09T19:12:06 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:12:45 INFO Logger initialized successfully
+2024-06-09T19:12:45 INFO Starting the application
+2024-06-09T19:12:46 INFO parentItem: Device
+2024-06-09T19:12:46 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:12:46 INFO parentItem: Profiles
+2024-06-09T19:12:46 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:13:14 INFO Logger initialized successfully
+2024-06-09T19:13:14 INFO Starting the application
+2024-06-09T19:13:14 INFO parentItem: Device
+2024-06-09T19:13:14 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:13:14 INFO parentItem: Profiles
+2024-06-09T19:13:14 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:13:53 INFO Logger initialized successfully
+2024-06-09T19:13:53 INFO Starting the application
+2024-06-09T19:13:53 INFO parentItem: Device
+2024-06-09T19:13:53 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:13:54 INFO parentItem: Profiles
+2024-06-09T19:13:54 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:14:48 INFO Logger initialized successfully
+2024-06-09T19:14:48 INFO Starting the application
+2024-06-09T19:14:48 INFO parentItem: Device
+2024-06-09T19:14:48 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:14:48 INFO parentItem: Profiles
+2024-06-09T19:14:48 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:16:39 INFO Logger initialized successfully
+2024-06-09T19:16:39 INFO Starting the application
+2024-06-09T19:16:40 INFO parentItem: Device
+2024-06-09T19:16:40 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:16:40 INFO parentItem: Profiles
+2024-06-09T19:16:40 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:17:09 INFO Logger initialized successfully
+2024-06-09T19:17:09 INFO Starting the application
+2024-06-09T19:17:09 INFO parentItem: Device
+2024-06-09T19:17:09 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:17:09 INFO parentItem: Profiles
+2024-06-09T19:17:09 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:17:42 INFO Logger initialized successfully
+2024-06-09T19:17:42 INFO Starting the application
+2024-06-09T19:17:43 INFO parentItem: Device
+2024-06-09T19:17:43 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:17:43 INFO parentItem: Profiles
+2024-06-09T19:17:43 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:18:39 INFO Logger initialized successfully
+2024-06-09T19:18:39 INFO Starting the application
+2024-06-09T19:18:39 INFO parentItem: Profiles
+2024-06-09T19:18:39 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:18:39 INFO parentItem: Device
+2024-06-09T19:18:39 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:19:28 INFO Logger initialized successfully
+2024-06-09T19:19:28 INFO Starting the application
+2024-06-09T19:19:28 INFO parentItem: Device
+2024-06-09T19:19:28 INFO g.menuOptions[parentItem]: []
+2024-06-09T19:19:28 INFO parentItem: Profiles
+2024-06-09T19:19:28 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:18:06 INFO Logger initialized successfully
+2024-06-09T20:18:06 INFO Starting the application
+2024-06-09T20:18:06 INFO parentItem: Device
+2024-06-09T20:18:06 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:18:06 INFO parentItem: Profiles
+2024-06-09T20:18:06 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:33:25 INFO Logger initialized successfully
+2024-06-09T20:33:25 INFO Starting the application
+2024-06-09T20:33:25 INFO parentItem: Device
+2024-06-09T20:33:25 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:33:25 INFO parentItem: Profiles
+2024-06-09T20:33:25 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:33:25 INFO Building device selection widget
+2024-06-09T20:33:27 INFO Searching for devices
+2024-06-09T20:33:29 INFO Searching for devices
+2024-06-09T20:33:41 INFO Searching for devices
+2024-06-09T20:33:43 INFO Searching for devices
+2024-06-09T20:33:44 INFO Searching for devices
+2024-06-09T20:33:52 INFO Searching for devices
+2024-06-09T20:34:50 INFO Logger initialized successfully
+2024-06-09T20:34:50 INFO Starting the application
+2024-06-09T20:34:50 INFO parentItem: Device
+2024-06-09T20:34:50 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:34:50 INFO parentItem: Profiles
+2024-06-09T20:34:50 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:34:50 INFO Building device selection widget
+2024-06-09T20:34:56 INFO Searching for devices
+2024-06-09T20:35:22 INFO Searching for devices
+2024-06-09T20:35:38 INFO Searching for devices
+2024-06-09T20:35:45 INFO Searching for devices
+2024-06-09T20:35:45 INFO Searching for devices
+2024-06-09T20:35:45 INFO Searching for devices
+2024-06-09T20:35:46 INFO Searching for devices
+2024-06-09T20:35:46 INFO Searching for devices
+2024-06-09T20:35:51 INFO Searching for devices
+2024-06-09T20:35:51 INFO Searching for devices
+2024-06-09T20:35:52 INFO Searching for devices
+2024-06-09T20:35:57 INFO Searching for devices
+2024-06-09T20:36:00 INFO Searching for devices
+2024-06-09T20:36:03 INFO Searching for devices
+2024-06-09T20:38:07 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:38:15 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:47:18 INFO Logger initialized successfully
+2024-06-09T20:47:18 INFO Starting the application
+2024-06-09T20:47:19 INFO parentItem: Device
+2024-06-09T20:47:19 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:47:19 INFO parentItem: Profiles
+2024-06-09T20:47:19 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:47:19 INFO Building device selection widget
+2024-06-09T20:47:23 INFO Searching for devices
+2024-06-09T20:47:25 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:47:38 INFO Logger initialized successfully
+2024-06-09T20:47:38 INFO Starting the application
+2024-06-09T20:47:38 INFO parentItem: Device
+2024-06-09T20:47:38 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:47:38 INFO parentItem: Profiles
+2024-06-09T20:47:38 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:47:38 INFO Building device selection widget
+2024-06-09T20:47:41 INFO Searching for devices
+2024-06-09T20:47:43 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:48:01 INFO Logger initialized successfully
+2024-06-09T20:48:01 INFO Starting the application
+2024-06-09T20:48:02 INFO parentItem: Profiles
+2024-06-09T20:48:02 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:48:02 INFO parentItem: Device
+2024-06-09T20:48:02 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:48:02 INFO Building device selection widget
+2024-06-09T20:48:05 INFO Searching for devices
+2024-06-09T20:48:06 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:48:30 INFO Logger initialized successfully
+2024-06-09T20:48:30 INFO Starting the application
+2024-06-09T20:48:30 INFO parentItem: Device
+2024-06-09T20:48:30 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:48:30 INFO parentItem: Profiles
+2024-06-09T20:48:30 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:48:30 INFO Building device selection widget
+2024-06-09T20:48:33 INFO Searching for devices
+2024-06-09T20:48:34 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:48:46 INFO Logger initialized successfully
+2024-06-09T20:48:46 INFO Starting the application
+2024-06-09T20:48:47 INFO parentItem: Device
+2024-06-09T20:48:47 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:48:47 INFO parentItem: Profiles
+2024-06-09T20:48:47 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:48:47 INFO Building device selection widget
+2024-06-09T20:49:33 INFO Searching for devices
+2024-06-09T20:49:34 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:49:55 INFO Logger initialized successfully
+2024-06-09T20:49:55 INFO Starting the application
+2024-06-09T20:49:55 INFO parentItem: Profiles
+2024-06-09T20:49:55 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:49:55 INFO parentItem: Device
+2024-06-09T20:49:55 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:49:55 INFO Building device selection widget
+2024-06-09T20:50:01 INFO Searching for devices
+2024-06-09T20:50:02 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:50:20 INFO Logger initialized successfully
+2024-06-09T20:50:20 INFO Starting the application
+2024-06-09T20:50:20 INFO parentItem: Device
+2024-06-09T20:50:20 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:50:20 INFO parentItem: Profiles
+2024-06-09T20:50:20 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:50:20 INFO Building device selection widget
+2024-06-09T20:50:25 INFO Searching for devices
+2024-06-09T20:50:26 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:50:35 INFO Searching for devices
+2024-06-09T20:51:24 INFO Logger initialized successfully
+2024-06-09T20:51:24 INFO Starting the application
+2024-06-09T20:51:24 INFO parentItem: Device
+2024-06-09T20:51:24 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:51:24 INFO parentItem: Profiles
+2024-06-09T20:51:24 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:51:24 INFO Building device selection widget
+2024-06-09T20:51:26 INFO Searching for devices
+2024-06-09T20:51:28 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:51:30 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T20:51:32 INFO Searching for devices
+2024-06-09T20:52:58 INFO Logger initialized successfully
+2024-06-09T20:52:58 INFO Starting the application
+2024-06-09T20:52:58 INFO parentItem: Device
+2024-06-09T20:52:58 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:52:58 INFO parentItem: Profiles
+2024-06-09T20:52:58 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:52:58 INFO Building device selection widget
+2024-06-09T20:53:49 INFO Logger initialized successfully
+2024-06-09T20:53:49 INFO Starting the application
+2024-06-09T20:53:49 INFO parentItem: Device
+2024-06-09T20:53:49 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:53:49 INFO parentItem: Profiles
+2024-06-09T20:53:49 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:53:49 INFO Building device selection widget
+2024-06-09T20:59:32 INFO Logger initialized successfully
+2024-06-09T20:59:32 INFO Starting the application
+2024-06-09T20:59:32 INFO parentItem: Device
+2024-06-09T20:59:32 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:59:32 INFO parentItem: Profiles
+2024-06-09T20:59:32 INFO g.menuOptions[parentItem]: []
+2024-06-09T20:59:32 INFO Building device selection widget
+2024-06-09T20:59:38 INFO Searching for devices
+2024-06-09T20:59:39 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T21:00:03 INFO Logger initialized successfully
+2024-06-09T21:00:03 INFO Starting the application
+2024-06-09T21:00:03 INFO parentItem: Device
+2024-06-09T21:00:03 INFO g.menuOptions[parentItem]: []
+2024-06-09T21:00:03 INFO parentItem: Profiles
+2024-06-09T21:00:03 INFO g.menuOptions[parentItem]: []
+2024-06-09T21:00:03 INFO Building device selection widget
+2024-06-09T21:00:05 INFO Searching for devices
+2024-06-09T21:00:06 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T21:00:22 INFO Logger initialized successfully
+2024-06-09T21:00:22 INFO Starting the application
+2024-06-09T21:00:22 INFO parentItem: Device
+2024-06-09T21:00:22 INFO g.menuOptions[parentItem]: []
+2024-06-09T21:00:23 INFO parentItem: Profiles
+2024-06-09T21:00:23 INFO g.menuOptions[parentItem]: []
+2024-06-09T21:00:23 INFO Building device selection widget
+2024-06-09T21:00:25 INFO Searching for devices
+2024-06-09T21:00:26 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T21:00:27 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T21:00:28 INFO Searching for devices
+2024-06-09T22:14:33 INFO Logger initialized successfully
+2024-06-09T22:14:33 INFO Starting the application
+2024-06-09T22:14:33 INFO parentItem: Device
+2024-06-09T22:14:33 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:14:33 INFO parentItem: Profiles
+2024-06-09T22:14:33 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:14:33 INFO Building device selection widget
+2024-06-09T22:14:42 INFO Searching for devices
+2024-06-09T22:14:42 INFO Searching for devices
+2024-06-09T22:14:43 INFO Searching for devices
+2024-06-09T22:14:43 INFO Searching for devices
+2024-06-09T22:14:43 INFO Searching for devices
+2024-06-09T22:14:43 INFO Searching for devices
+2024-06-09T22:14:43 INFO Searching for devices
+2024-06-09T22:14:45 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T22:15:26 INFO Logger initialized successfully
+2024-06-09T22:15:26 INFO Starting the application
+2024-06-09T22:15:26 INFO parentItem: Device
+2024-06-09T22:15:26 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:15:26 INFO parentItem: Profiles
+2024-06-09T22:15:26 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:15:26 INFO Building device selection widget
+2024-06-09T22:15:38 INFO Searching for devices
+2024-06-09T22:15:39 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T22:15:58 INFO Logger initialized successfully
+2024-06-09T22:15:58 INFO Starting the application
+2024-06-09T22:15:58 INFO parentItem: Profiles
+2024-06-09T22:15:58 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:15:58 INFO parentItem: Device
+2024-06-09T22:15:58 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:15:58 INFO Building device selection widget
+2024-06-09T22:16:44 INFO Searching for devices
+2024-06-09T22:16:48 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T22:55:01 INFO Logger initialized successfully
+2024-06-09T22:55:01 INFO Starting the application
+2024-06-09T22:55:02 INFO parentItem: Device
+2024-06-09T22:55:02 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:55:02 INFO parentItem: Profiles
+2024-06-09T22:55:02 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:55:02 INFO Building device selection widget
+2024-06-09T22:55:17 INFO Searching for devices
+2024-06-09T22:55:17 INFO Searching for devices
+2024-06-09T22:55:17 INFO Searching for devices
+2024-06-09T22:55:17 INFO Searching for devices
+2024-06-09T22:55:18 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T22:55:18 INFO GUI: iterate menu trigger onSelectionChanged, &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T22:56:22 INFO Logger initialized successfully
+2024-06-09T22:56:22 INFO Starting the application
+2024-06-09T22:56:22 INFO parentItem: Device
+2024-06-09T22:56:22 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:56:22 INFO parentItem: Profiles
+2024-06-09T22:56:22 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:56:22 INFO Building device selection widget
+2024-06-09T22:56:31 INFO Searching for devices
+2024-06-09T22:56:33 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T22:56:33 INFO GUI: iterate menu trigger onSelectionChanged, &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T22:56:33 INFO INFO: Device selection changed &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T22:56:55 INFO Logger initialized successfully
+2024-06-09T22:56:55 INFO Starting the application
+2024-06-09T22:56:55 INFO parentItem: Device
+2024-06-09T22:56:55 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:56:55 INFO parentItem: Profiles
+2024-06-09T22:56:55 INFO g.menuOptions[parentItem]: []
+2024-06-09T22:56:55 INFO Building device selection widget
+2024-06-09T22:56:58 INFO Searching for devices
+2024-06-09T22:56:59 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T22:56:59 INFO GUI: iterate menu trigger onSelectionChanged, &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T22:56:59 INFO INFO: Device selection changed &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T23:17:28 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T23:17:28 INFO GUI: iterate menu trigger onSelectionChanged, &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T23:17:28 INFO INFO: Device selection changed &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T23:17:28 INFO Searching for devices
+2024-06-09T23:17:31 DEBUG Selected device changed: Raspberry Pi Pico
+2024-06-09T23:17:31 INFO GUI: iterate menu trigger onSelectionChanged, &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T23:17:31 INFO INFO: Device selection changed &{{239a 80f4 Raspberry Pi Pico E6604430438B3824} vid=239a,pid=80f4,bus=1,addr=59}
+2024-06-09T23:58:45 INFO Logger initialized successfully
+2024-06-09T23:58:45 INFO Starting the application
+2024-06-09T23:58:45 INFO parentItem: Device
+2024-06-09T23:58:45 INFO g.menuOptions[parentItem]: []
+2024-06-09T23:58:45 INFO parentItem: Profiles
+2024-06-09T23:58:45 INFO g.menuOptions[parentItem]: []
+2024-06-09T23:58:45 INFO Building device selection widget
+2024-06-09T23:58:52 INFO Searching for devices
+2024-06-10T00:04:30 INFO 06 
+2024-06-10T00:04:31 INFO 01 
+2024-06-10T00:04:32 INFO 00 
+2024-06-10T00:04:32 INFO 09 
+2024-06-10T00:04:33 INFO 05 
+2024-06-10T00:13:49 INFO Logger initialized successfully
+2024-06-10T00:13:49 INFO Starting the application
+2024-06-10T00:13:49 INFO parentItem: Device
+2024-06-10T00:13:49 INFO g.menuOptions[parentItem]: []
+2024-06-10T00:13:49 INFO parentItem: Profiles
+2024-06-10T00:13:49 INFO g.menuOptions[parentItem]: []
+2024-06-10T00:13:49 INFO Building device selection widget
+2024-06-10T00:17:29 INFO Searching for devices
+2024-06-10T00:19:05 INFO Logger initialized successfully
+2024-06-10T00:19:05 INFO Starting the application
+2024-06-10T00:19:05 INFO parentItem: Profiles
+2024-06-10T00:19:05 INFO g.menuOptions[parentItem]: []
+2024-06-10T00:19:05 INFO parentItem: Device
+2024-06-10T00:19:05 INFO g.menuOptions[parentItem]: []
+2024-06-10T00:19:05 INFO Building device selection widget
+2024-06-10T00:19:10 INFO Searching for devices
+2024-06-11T23:16:19 INFO Logger initialized successfully
+2024-06-11T23:16:19 INFO Starting the application
+2024-06-11T23:16:20 INFO parentItem: Device
+2024-06-11T23:16:20 INFO g.menuOptions[parentItem]: []
+2024-06-11T23:16:20 INFO parentItem: Profiles
+2024-06-11T23:16:20 INFO g.menuOptions[parentItem]: []
+2024-06-11T23:16:20 INFO Building device selection widget
+2024-06-11T23:16:27 INFO Searching for devices
+2024-06-11T23:16:27 INFO Searching for devices
+2024-06-11T23:16:58 INFO Logger initialized successfully
+2024-06-11T23:16:58 INFO Starting the application
+2024-06-11T23:16:58 INFO parentItem: Device
+2024-06-11T23:16:58 INFO g.menuOptions[parentItem]: []
+2024-06-11T23:16:58 INFO parentItem: Profiles
+2024-06-11T23:16:58 INFO g.menuOptions[parentItem]: []
+2024-06-11T23:16:58 INFO Building device selection widget
+2024-06-11T23:17:01 INFO Searching for devices
+2024-06-11T23:17:01 INFO Searching for devices
+2024-06-11T23:17:20 INFO Logger initialized successfully
+2024-06-11T23:17:20 INFO Starting the application
+2024-06-11T23:17:20 INFO parentItem: Device
+2024-06-11T23:17:20 INFO g.menuOptions[parentItem]: []
+2024-06-11T23:17:20 INFO parentItem: Profiles
+2024-06-11T23:17:20 INFO g.menuOptions[parentItem]: []
+2024-06-11T23:17:20 INFO Building device selection widget
+2024-06-11T23:17:23 INFO Searching for devices
+2024-06-11T23:17:49 DEBUG Selected device changed: Me&Co DevKeyPad
+2024-06-11T23:17:49 INFO GUI: iterate menu trigger onSelectionChanged, &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:49 INFO INFO: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:49 INFO RawValues: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:51 DEBUG Selected device changed: Me&Co DevKeyPad
+2024-06-11T23:17:51 INFO GUI: iterate menu trigger onSelectionChanged, &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:51 INFO INFO: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:51 INFO RawValues: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:55 DEBUG Selected device changed: Me&Co DevKeyPad
+2024-06-11T23:17:55 INFO GUI: iterate menu trigger onSelectionChanged, &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:55 INFO INFO: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-11T23:17:55 INFO RawValues: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=16 0xc000bd1920}
+2024-06-12T00:12:58 INFO Logger initialized successfully
+2024-06-12T00:12:58 INFO Starting the application
+2024-06-12T00:13:06 INFO Loading device layout configuration
+2024-06-12T00:13:23 INFO Logger initialized successfully
+2024-06-12T00:13:23 INFO Starting the application
+2024-06-12T00:13:37 INFO Loading device layout configuration
+2024-06-12T00:13:58 INFO Logger initialized successfully
+2024-06-12T00:13:58 INFO Starting the application
+2024-06-12T00:14:00 INFO Loading device layout configuration
+2024-06-12T00:14:00 ERROR Error opening file: open ../deviceLayout.json: The system cannot find the file specified.
+2024-06-12T00:14:00 ERROR Error loading device layout configuration: open ../deviceLayout.json: The system cannot find the file specified.
+2024-06-12T00:14:16 INFO Logger initialized successfully
+2024-06-12T00:14:16 INFO Starting the application
+2024-06-12T00:14:19 INFO Loading device layout configuration
+2024-06-12T00:14:32 ERROR Error parsing file: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:14:32 ERROR Error loading device layout configuration: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:15:06 INFO Logger initialized successfully
+2024-06-12T00:15:06 INFO Starting the application
+2024-06-12T00:15:08 INFO Loading device layout configuration
+2024-06-12T00:15:20 ERROR Error parsing file: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:15:20 ERROR Error loading device layout configuration: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:16:10 INFO Logger initialized successfully
+2024-06-12T00:16:10 INFO Starting the application
+2024-06-12T00:16:13 INFO Loading device layout configuration
+2024-06-12T00:16:21 ERROR Error parsing file: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:16:21 ERROR Error loading device layout configuration: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:17:34 INFO Logger initialized successfully
+2024-06-12T00:17:34 INFO Starting the application
+2024-06-12T00:17:34 INFO Loading device layout configuration
+2024-06-12T00:18:42 INFO Logger initialized successfully
+2024-06-12T00:18:42 INFO Starting the application
+2024-06-12T00:18:42 INFO Loading device layout configuration
+2024-06-12T00:18:56 ERROR Error parsing file: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:18:56 ERROR Error loading device layout configuration: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:19:16 INFO Logger initialized successfully
+2024-06-12T00:19:16 INFO Starting the application
+2024-06-12T00:19:16 INFO Loading device layout configuration
+2024-06-12T00:19:23 ERROR Error parsing file: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:19:23 ERROR Error loading device layout configuration: json: cannot unmarshal array into Go value of type devicelayout.DeviceLayoutConfig
+2024-06-12T00:19:57 INFO Logger initialized successfully
+2024-06-12T00:19:57 INFO Starting the application
+2024-06-12T00:19:57 INFO Loading device layout configuration
+2024-06-12T00:20:24 INFO Logger initialized successfully
+2024-06-12T00:20:24 INFO Starting the application
+2024-06-12T00:20:24 INFO Loading device layout configuration
+2024-06-12T00:20:27 DEBUG Device layout configuration: &[{{DevKeyPad 6001 1000} [{Button  button 1 00000001} {Rotary Encoder  rotaryEncoder 2 }]}]
+2024-06-12T00:20:28 INFO parentItem: Device
+2024-06-12T00:20:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T00:20:28 INFO parentItem: Profiles
+2024-06-12T00:20:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T00:20:28 INFO Building device selection widget
+2024-06-12T00:20:34 INFO Logger initialized successfully
+2024-06-12T00:20:34 INFO Starting the application
+2024-06-12T00:20:34 INFO Loading device layout configuration
+2024-06-12T00:23:23 INFO Logger initialized successfully
+2024-06-12T00:23:23 INFO Starting the application
+2024-06-12T00:23:23 INFO Loading device layout configuration
+2024-06-12T00:23:34 INFO parentItem: Device
+2024-06-12T00:23:34 INFO g.menuOptions[parentItem]: []
+2024-06-12T00:23:34 INFO parentItem: Profiles
+2024-06-12T00:23:34 INFO g.menuOptions[parentItem]: []
+2024-06-12T00:23:34 INFO Building device selection widget
+2024-06-12T00:27:02 INFO Logger initialized successfully
+2024-06-12T00:27:02 INFO Starting the application
+2024-06-12T00:27:02 INFO Loading device layout configuration
+2024-06-12T00:27:16 INFO parentItem: Device
+2024-06-12T00:27:16 INFO g.menuOptions[parentItem]: []
+2024-06-12T00:27:16 INFO parentItem: Profiles
+2024-06-12T00:27:16 INFO g.menuOptions[parentItem]: []
+2024-06-12T00:27:16 INFO Building device selection widget
+2024-06-12T07:08:39 INFO Logger initialized successfully
+2024-06-12T07:08:39 INFO Starting the application
+2024-06-12T07:08:44 INFO Loading device layout configuration
+2024-06-12T07:08:47 ERROR Error parsing file: json: cannot unmarshal string into Go struct field Component.components.type of type devicelayout.ComponentType
+2024-06-12T07:09:48 INFO Logger initialized successfully
+2024-06-12T07:09:48 INFO Starting the application
+2024-06-12T07:10:00 INFO Loading device layout configuration
+2024-06-12T07:10:21 INFO Logger initialized successfully
+2024-06-12T07:10:21 INFO Starting the application
+2024-06-12T07:10:25 INFO Loading device layout configuration
+2024-06-12T07:10:49 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:11:06 INFO Logger initialized successfully
+2024-06-12T07:11:06 INFO Starting the application
+2024-06-12T07:11:06 INFO Loading device layout configuration
+2024-06-12T07:11:18 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:11:28 ERROR Error loading device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:13:34 INFO Logger initialized successfully
+2024-06-12T07:13:34 INFO Starting the application
+2024-06-12T07:13:34 INFO Loading device layout configuration
+2024-06-12T07:13:42 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:13:46 ERROR Error loading device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:19:52 INFO Logger initialized successfully
+2024-06-12T07:19:52 INFO Starting the application
+2024-06-12T07:19:52 INFO Loading device layout configuration
+2024-06-12T07:20:04 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:20:04 ERROR Error loading device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:20:30 INFO Logger initialized successfully
+2024-06-12T07:20:30 INFO Starting the application
+2024-06-12T07:20:30 INFO Loading device layout configuration
+2024-06-12T07:20:36 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:20:36 ERROR Error loading device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:20:46 INFO Logger initialized successfully
+2024-06-12T07:20:46 INFO Starting the application
+2024-06-12T07:20:46 INFO Loading device layout configuration
+2024-06-12T07:21:01 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:21:01 ERROR Error loading device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T07:26:00 INFO Logger initialized successfully
+2024-06-12T07:26:00 INFO Starting the application
+2024-06-12T07:26:00 INFO Loading device layout configuration
+2024-06-12T07:26:11 INFO parentItem: Device
+2024-06-12T07:26:11 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:26:11 INFO parentItem: Profiles
+2024-06-12T07:26:11 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:26:11 INFO Building device selection widget
+2024-06-12T07:26:29 INFO Logger initialized successfully
+2024-06-12T07:26:29 INFO Starting the application
+2024-06-12T07:26:29 INFO Loading device layout configuration
+2024-06-12T07:26:34 INFO parentItem: Device
+2024-06-12T07:26:34 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:26:34 INFO parentItem: Profiles
+2024-06-12T07:26:34 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:26:34 INFO Building device selection widget
+2024-06-12T07:26:49 INFO Logger initialized successfully
+2024-06-12T07:26:49 INFO Starting the application
+2024-06-12T07:26:49 INFO Loading device layout configuration
+2024-06-12T07:26:53 INFO parentItem: Device
+2024-06-12T07:26:53 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:26:53 INFO parentItem: Profiles
+2024-06-12T07:26:53 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:26:53 INFO Building device selection widget
+2024-06-12T07:54:06 INFO Logger initialized successfully
+2024-06-12T07:54:06 INFO Starting the application
+2024-06-12T07:54:06 INFO Loading device layout configuration
+2024-06-12T07:55:36 INFO parentItem: Device
+2024-06-12T07:55:36 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:55:36 INFO parentItem: Profiles
+2024-06-12T07:55:36 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:55:36 INFO Building device selection widget
+2024-06-12T07:59:27 INFO Logger initialized successfully
+2024-06-12T07:59:27 INFO Starting the application
+2024-06-12T07:59:27 INFO Loading device layout configuration
+2024-06-12T07:59:33 INFO parentItem: Profiles
+2024-06-12T07:59:33 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:59:33 INFO parentItem: Device
+2024-06-12T07:59:33 INFO g.menuOptions[parentItem]: []
+2024-06-12T07:59:33 INFO Building device selection widget
+2024-06-12T08:00:48 INFO Logger initialized successfully
+2024-06-12T08:00:48 INFO Starting the application
+2024-06-12T08:00:48 INFO Loading device layout configuration
+2024-06-12T08:00:55 INFO parentItem: Device
+2024-06-12T08:00:55 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:00:55 INFO parentItem: Profiles
+2024-06-12T08:00:55 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:00:55 INFO Building device selection widget
+2024-06-12T08:01:29 INFO Logger initialized successfully
+2024-06-12T08:01:29 INFO Starting the application
+2024-06-12T08:01:29 INFO Loading device layout configuration
+2024-06-12T08:01:35 INFO parentItem: Device
+2024-06-12T08:01:35 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:01:35 INFO parentItem: Profiles
+2024-06-12T08:01:35 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:01:35 INFO Building device selection widget
+2024-06-12T08:02:46 INFO Logger initialized successfully
+2024-06-12T08:02:46 INFO Starting the application
+2024-06-12T08:02:46 INFO Loading device layout configuration
+2024-06-12T08:08:21 INFO parentItem: Device
+2024-06-12T08:08:21 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:08:21 INFO parentItem: Profiles
+2024-06-12T08:08:21 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:08:21 INFO Building device selection widget
+2024-06-12T08:08:49 INFO Logger initialized successfully
+2024-06-12T08:08:49 INFO Starting the application
+2024-06-12T08:08:49 INFO Loading device layout configuration
+2024-06-12T08:09:04 INFO parentItem: Device
+2024-06-12T08:09:04 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:09:04 INFO parentItem: Profiles
+2024-06-12T08:09:04 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:09:04 INFO Building device selection widget
+2024-06-12T08:09:09 INFO Logger initialized successfully
+2024-06-12T08:09:09 INFO Starting the application
+2024-06-12T08:09:09 INFO Loading device layout configuration
+2024-06-12T08:09:21 INFO parentItem: Profiles
+2024-06-12T08:09:21 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:09:21 INFO parentItem: Device
+2024-06-12T08:09:21 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:09:21 INFO Building device selection widget
+2024-06-12T08:14:22 INFO Logger initialized successfully
+2024-06-12T08:14:22 INFO Starting the application
+2024-06-12T08:14:22 INFO Loading device layout configuration
+2024-06-12T08:14:26 INFO parentItem: Device
+2024-06-12T08:14:26 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:14:26 INFO parentItem: Profiles
+2024-06-12T08:14:26 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:14:26 INFO Building device selection widget
+2024-06-12T08:16:02 INFO Logger initialized successfully
+2024-06-12T08:16:02 INFO Starting the application
+2024-06-12T08:16:02 INFO Loading device layout configuration
+2024-06-12T08:16:06 INFO parentItem: Device
+2024-06-12T08:16:06 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:16:06 INFO parentItem: Profiles
+2024-06-12T08:16:06 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:16:06 INFO Building device selection widget
+2024-06-12T08:24:00 INFO Logger initialized successfully
+2024-06-12T08:24:00 INFO Starting the application
+2024-06-12T08:24:00 INFO Loading device layout configuration
+2024-06-12T08:26:54 INFO Logger initialized successfully
+2024-06-12T08:26:54 INFO Starting the application
+2024-06-12T08:26:54 INFO Loading device layout configuration
+2024-06-12T08:27:23 INFO Logger initialized successfully
+2024-06-12T08:27:23 INFO Starting the application
+2024-06-12T08:27:23 INFO Loading device layout configuration
+2024-06-12T08:27:45 INFO Logger initialized successfully
+2024-06-12T08:27:45 INFO Starting the application
+2024-06-12T08:27:45 INFO Loading device layout configuration
+2024-06-12T08:27:57 INFO parentItem: Device
+2024-06-12T08:27:57 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:27:57 INFO parentItem: Profiles
+2024-06-12T08:27:57 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:27:57 INFO Building device selection widget
+2024-06-12T08:28:10 INFO Logger initialized successfully
+2024-06-12T08:28:10 INFO Starting the application
+2024-06-12T08:28:10 INFO Loading device layout configuration
+2024-06-12T08:30:03 INFO Logger initialized successfully
+2024-06-12T08:30:03 INFO Starting the application
+2024-06-12T08:30:03 INFO Loading device layout configuration
+2024-06-12T08:30:14 INFO parentItem: Profiles
+2024-06-12T08:30:14 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:30:14 INFO parentItem: Device
+2024-06-12T08:30:14 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:30:14 INFO Building device selection widget
+2024-06-12T08:30:46 INFO Logger initialized successfully
+2024-06-12T08:30:46 INFO Starting the application
+2024-06-12T08:30:46 INFO Loading device layout configuration
+2024-06-12T08:31:04 INFO Logger initialized successfully
+2024-06-12T08:31:04 INFO Starting the application
+2024-06-12T08:31:04 INFO Loading device layout configuration
+2024-06-12T08:31:12 INFO parentItem: Device
+2024-06-12T08:31:12 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:31:12 INFO parentItem: Profiles
+2024-06-12T08:31:12 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:31:12 INFO Building device selection widget
+2024-06-12T08:31:41 INFO Logger initialized successfully
+2024-06-12T08:31:41 INFO Starting the application
+2024-06-12T08:31:41 INFO Loading device layout configuration
+2024-06-12T08:32:09 INFO Logger initialized successfully
+2024-06-12T08:32:09 INFO Starting the application
+2024-06-12T08:32:09 INFO Loading device layout configuration
+2024-06-12T08:32:30 INFO Logger initialized successfully
+2024-06-12T08:32:30 INFO Starting the application
+2024-06-12T08:32:30 INFO Loading device layout configuration
+2024-06-12T08:33:43 INFO Logger initialized successfully
+2024-06-12T08:33:43 INFO Starting the application
+2024-06-12T08:33:43 INFO Loading device layout configuration
+2024-06-12T08:34:00 ERROR Error validating device layout configuration: validator: (nil *[]devicelayout.Component)
+2024-06-12T08:34:00 INFO parentItem: Device
+2024-06-12T08:34:00 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:34:00 INFO parentItem: Profiles
+2024-06-12T08:34:00 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:34:00 INFO Building device selection widget
+2024-06-12T08:34:22 INFO Logger initialized successfully
+2024-06-12T08:34:22 INFO Starting the application
+2024-06-12T08:34:22 INFO Loading device layout configuration
+2024-06-12T08:34:28 ERROR Error validating device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T08:34:28 INFO parentItem: Profiles
+2024-06-12T08:34:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:34:28 INFO parentItem: Device
+2024-06-12T08:34:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:34:28 INFO Building device selection widget
+2024-06-12T08:34:47 INFO Logger initialized successfully
+2024-06-12T08:34:47 INFO Starting the application
+2024-06-12T08:34:47 INFO Loading device layout configuration
+2024-06-12T08:34:50 ERROR Error validating device layout configuration: validator: (nil *[]devicelayout.Component)
+2024-06-12T08:34:51 INFO parentItem: Device
+2024-06-12T08:34:51 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:34:51 INFO parentItem: Profiles
+2024-06-12T08:34:51 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:34:51 INFO Building device selection widget
+2024-06-12T08:35:06 INFO Logger initialized successfully
+2024-06-12T08:35:06 INFO Starting the application
+2024-06-12T08:35:06 INFO Loading device layout configuration
+2024-06-12T08:35:11 ERROR Error validating device layout configuration: Key: 'Component.Type' Error:Field validation for 'Type' failed on the 'oneof' tag
+2024-06-12T08:35:11 INFO parentItem: Device
+2024-06-12T08:35:11 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:35:11 INFO parentItem: Profiles
+2024-06-12T08:35:11 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:35:11 INFO Building device selection widget
+2024-06-12T08:37:08 INFO Logger initialized successfully
+2024-06-12T08:37:08 INFO Starting the application
+2024-06-12T08:37:08 INFO Loading device layout configuration
+2024-06-12T08:42:49 INFO Logger initialized successfully
+2024-06-12T08:42:49 INFO Starting the application
+2024-06-12T08:42:49 INFO Loading device layout configuration
+2024-06-12T08:42:54 INFO parentItem: Device
+2024-06-12T08:42:54 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:42:54 INFO parentItem: Profiles
+2024-06-12T08:42:54 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:42:54 INFO Building device selection widget
+2024-06-12T08:43:31 INFO Logger initialized successfully
+2024-06-12T08:43:31 INFO Starting the application
+2024-06-12T08:43:31 INFO Loading device layout configuration
+2024-06-12T08:44:14 INFO Logger initialized successfully
+2024-06-12T08:44:14 INFO Starting the application
+2024-06-12T08:44:14 INFO Loading device layout configuration
+2024-06-12T08:48:28 INFO parentItem: Device
+2024-06-12T08:48:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:48:28 INFO parentItem: Profiles
+2024-06-12T08:48:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:48:28 INFO Building device selection widget
+2024-06-12T08:49:15 INFO Logger initialized successfully
+2024-06-12T08:49:15 INFO Starting the application
+2024-06-12T08:49:15 INFO Loading device layout configuration
+2024-06-12T08:50:51 INFO Logger initialized successfully
+2024-06-12T08:50:51 INFO Starting the application
+2024-06-12T08:50:51 INFO Loading device layout configuration
+2024-06-12T08:50:57 ERROR Error validating device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T08:51:04 ERROR Error loading device layout configuration: validator: (nil map[string]devicelayout.DeviceLayoutConfig)
+2024-06-12T08:52:15 INFO Logger initialized successfully
+2024-06-12T08:52:15 INFO Starting the application
+2024-06-12T08:52:15 INFO Loading device layout configuration
+2024-06-12T08:52:51 INFO Logger initialized successfully
+2024-06-12T08:52:51 INFO Starting the application
+2024-06-12T08:52:51 INFO Loading device layout configuration
+2024-06-12T08:53:49 INFO parentItem: Device
+2024-06-12T08:53:49 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:53:49 INFO parentItem: Profiles
+2024-06-12T08:53:49 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:53:49 INFO Building device selection widget
+2024-06-12T08:54:54 INFO Logger initialized successfully
+2024-06-12T08:54:54 INFO Starting the application
+2024-06-12T08:54:54 INFO Loading device layout configuration
+2024-06-12T08:54:59 ERROR Error validating device layout configuration: Key: 'DeviceLayoutConfig.Identifier.Name' Error:Field validation for 'Name' failed on the 'required' tag
+2024-06-12T08:54:59 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Identifier.Name' Error:Field validation for 'Name' failed on the 'required' tag
+2024-06-12T08:55:35 INFO Logger initialized successfully
+2024-06-12T08:55:35 INFO Starting the application
+2024-06-12T08:55:35 INFO Loading device layout configuration
+2024-06-12T08:55:37 INFO parentItem: Profiles
+2024-06-12T08:55:37 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:55:37 INFO parentItem: Device
+2024-06-12T08:55:37 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:55:37 INFO Building device selection widget
+2024-06-12T08:55:54 INFO Logger initialized successfully
+2024-06-12T08:55:54 INFO Starting the application
+2024-06-12T08:55:54 INFO Loading device layout configuration
+2024-06-12T08:55:57 INFO parentItem: Device
+2024-06-12T08:55:57 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:55:57 INFO parentItem: Profiles
+2024-06-12T08:55:57 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:55:57 INFO Building device selection widget
+2024-06-12T08:56:26 INFO Logger initialized successfully
+2024-06-12T08:56:26 INFO Starting the application
+2024-06-12T08:56:26 INFO Loading device layout configuration
+2024-06-12T08:56:30 INFO parentItem: Device
+2024-06-12T08:56:30 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:56:30 INFO parentItem: Profiles
+2024-06-12T08:56:30 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:56:30 INFO Building device selection widget
+2024-06-12T08:56:51 INFO Logger initialized successfully
+2024-06-12T08:56:51 INFO Starting the application
+2024-06-12T08:56:51 INFO Loading device layout configuration
+2024-06-12T08:56:51 INFO parentItem: Profiles
+2024-06-12T08:56:51 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:56:51 INFO parentItem: Device
+2024-06-12T08:56:51 INFO g.menuOptions[parentItem]: []
+2024-06-12T08:56:51 INFO Building device selection widget
+2024-06-12T09:00:25 INFO Logger initialized successfully
+2024-06-12T09:00:25 INFO Starting the application
+2024-06-12T09:00:25 INFO Loading device layout configuration
+2024-06-12T09:00:29 INFO parentItem: Device
+2024-06-12T09:00:29 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:00:29 INFO parentItem: Profiles
+2024-06-12T09:00:29 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:00:29 INFO Building device selection widget
+2024-06-12T09:01:42 INFO Logger initialized successfully
+2024-06-12T09:01:42 INFO Starting the application
+2024-06-12T09:01:42 INFO Loading device layout configuration
+2024-06-12T09:01:47 INFO parentItem: Device
+2024-06-12T09:01:47 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:01:47 INFO parentItem: Profiles
+2024-06-12T09:01:47 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:01:47 INFO Building device selection widget
+2024-06-12T09:01:55 INFO Logger initialized successfully
+2024-06-12T09:01:55 INFO Starting the application
+2024-06-12T09:01:55 INFO Loading device layout configuration
+2024-06-12T09:02:01 INFO parentItem: Device
+2024-06-12T09:02:01 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:02:01 INFO parentItem: Profiles
+2024-06-12T09:02:01 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:02:01 INFO Building device selection widget
+2024-06-12T09:03:36 INFO Logger initialized successfully
+2024-06-12T09:03:36 INFO Starting the application
+2024-06-12T09:03:36 INFO Loading device layout configuration
+2024-06-12T09:03:40 INFO parentItem: Device
+2024-06-12T09:03:40 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:03:40 INFO parentItem: Profiles
+2024-06-12T09:03:40 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:03:40 INFO Building device selection widget
+2024-06-12T09:04:59 INFO Logger initialized successfully
+2024-06-12T09:04:59 INFO Starting the application
+2024-06-12T09:04:59 INFO Loading device layout configuration
+2024-06-12T09:05:09 INFO parentItem: Profiles
+2024-06-12T09:05:09 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:05:09 INFO parentItem: Device
+2024-06-12T09:05:09 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:05:09 INFO Building device selection widget
+2024-06-12T09:13:03 INFO Logger initialized successfully
+2024-06-12T09:13:03 INFO Starting the application
+2024-06-12T09:13:03 INFO Loading device layout configuration
+2024-06-12T09:13:11 INFO parentItem: Device
+2024-06-12T09:13:11 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:13:11 INFO parentItem: Profiles
+2024-06-12T09:13:11 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:13:11 INFO Building device selection widget
+2024-06-12T09:13:23 INFO Logger initialized successfully
+2024-06-12T09:13:23 INFO Starting the application
+2024-06-12T09:13:23 INFO Loading device layout configuration
+2024-06-12T09:13:28 INFO parentItem: Device
+2024-06-12T09:13:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:13:28 INFO parentItem: Profiles
+2024-06-12T09:13:28 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:13:28 INFO Building device selection widget
+2024-06-12T09:13:38 INFO Logger initialized successfully
+2024-06-12T09:13:38 INFO Starting the application
+2024-06-12T09:13:38 INFO Loading device layout configuration
+2024-06-12T09:13:58 INFO Logger initialized successfully
+2024-06-12T09:13:58 INFO Starting the application
+2024-06-12T09:13:58 INFO Loading device layout configuration
+2024-06-12T09:14:04 ERROR Error validating device layout configuration for key 6001/1000: validator: (nil *[]devicelayout.Component)
+2024-06-12T09:14:04 ERROR Error loading device layout configuration: validator: (nil *[]devicelayout.Component)
+2024-06-12T09:14:17 INFO Logger initialized successfully
+2024-06-12T09:14:17 INFO Starting the application
+2024-06-12T09:14:17 INFO Loading device layout configuration
+2024-06-12T09:14:22 ERROR Error validating device layout configuration for key 6001/1000: validator: (nil []devicelayout.Component)
+2024-06-12T09:14:22 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:14:54 INFO Logger initialized successfully
+2024-06-12T09:14:54 INFO Starting the application
+2024-06-12T09:14:54 INFO Loading device layout configuration
+2024-06-12T09:14:58 ERROR Error validating device layout configuration for key 6001/1000: validator: (nil *[]devicelayout.Component)
+2024-06-12T09:14:58 ERROR Error loading device layout configuration: validator: (nil *[]devicelayout.Component)
+2024-06-12T09:15:48 INFO Logger initialized successfully
+2024-06-12T09:15:48 INFO Starting the application
+2024-06-12T09:15:48 INFO Loading device layout configuration
+2024-06-12T09:15:48 ERROR Error validating device layout configuration for key 6001/1000: validator: (nil []devicelayout.Component)
+2024-06-12T09:15:48 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:18:09 INFO Logger initialized successfully
+2024-06-12T09:18:09 INFO Starting the application
+2024-06-12T09:18:09 INFO Loading device layout configuration
+2024-06-12T09:18:09 ERROR Error validating device layout configuration for key 6001/1000: validator: (nil []*devicelayout.Component)
+2024-06-12T09:18:09 ERROR Error loading device layout configuration: validator: (nil []*devicelayout.Component)
+2024-06-12T09:21:03 INFO Logger initialized successfully
+2024-06-12T09:21:03 INFO Starting the application
+2024-06-12T09:21:03 INFO Loading device layout configuration
+2024-06-12T09:21:03 ERROR Error validating device layout configuration for key a: validator: (nil []*devicelayout.Component)
+2024-06-12T09:21:03 ERROR Error loading device layout configuration: validator: (nil []*devicelayout.Component)
+2024-06-12T09:21:20 INFO Logger initialized successfully
+2024-06-12T09:21:20 INFO Starting the application
+2024-06-12T09:21:20 INFO Loading device layout configuration
+2024-06-12T09:21:20 ERROR Error validating device layout configuration for key a: validator: (nil []devicelayout.Component)
+2024-06-12T09:21:20 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:23:52 INFO Logger initialized successfully
+2024-06-12T09:23:52 INFO Starting the application
+2024-06-12T09:23:52 INFO Loading device layout configuration
+2024-06-12T09:23:52 ERROR Error validating device layout configuration for key a: validator: (nil []devicelayout.Component)
+2024-06-12T09:23:52 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:24:32 INFO Logger initialized successfully
+2024-06-12T09:24:32 INFO Starting the application
+2024-06-12T09:24:32 INFO Loading device layout configuration
+2024-06-12T09:24:32 ERROR Error validating device layout configuration for key a: validator: (nil []devicelayout.Component)
+2024-06-12T09:24:32 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:24:44 INFO Logger initialized successfully
+2024-06-12T09:24:44 INFO Starting the application
+2024-06-12T09:24:44 INFO Loading device layout configuration
+2024-06-12T09:24:44 ERROR Error validating device layout configuration for key a: validator: (nil []devicelayout.Component)
+2024-06-12T09:24:44 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:24:55 INFO Logger initialized successfully
+2024-06-12T09:24:55 INFO Starting the application
+2024-06-12T09:24:55 INFO Loading device layout configuration
+2024-06-12T09:24:55 ERROR Error validating device layout configuration for key a: validator: (nil []devicelayout.Component)
+2024-06-12T09:24:55 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:25:07 INFO Logger initialized successfully
+2024-06-12T09:25:07 INFO Starting the application
+2024-06-12T09:25:07 INFO Loading device layout configuration
+2024-06-12T09:25:07 ERROR Error validating device layout configuration for key a: validator: (nil []devicelayout.Component)
+2024-06-12T09:25:07 ERROR Error loading device layout configuration: validator: (nil []devicelayout.Component)
+2024-06-12T09:25:20 INFO Logger initialized successfully
+2024-06-12T09:25:20 INFO Starting the application
+2024-06-12T09:25:20 INFO Loading device layout configuration
+2024-06-12T09:25:20 ERROR Error validating device layout configuration for key a: validator: (nil *[]devicelayout.Component)
+2024-06-12T09:25:20 ERROR Error loading device layout configuration: validator: (nil *[]devicelayout.Component)
+2024-06-12T09:25:41 INFO Logger initialized successfully
+2024-06-12T09:25:41 INFO Starting the application
+2024-06-12T09:25:41 INFO Loading device layout configuration
+2024-06-12T09:25:41 ERROR Error validating device layout configuration for key a: Key: 'DeviceLayoutConfig.Components' Error:Field validation for 'Components' failed on the 'len' tag
+2024-06-12T09:25:41 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components' Error:Field validation for 'Components' failed on the 'len' tag
+2024-06-12T09:25:59 INFO Logger initialized successfully
+2024-06-12T09:25:59 INFO Starting the application
+2024-06-12T09:25:59 INFO Loading device layout configuration
+2024-06-12T09:25:59 ERROR Error validating device layout configuration for key a: Key: 'DeviceLayoutConfig.Components' Error:Field validation for 'Components' failed on the 'unique' tag
+2024-06-12T09:25:59 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components' Error:Field validation for 'Components' failed on the 'unique' tag
+2024-06-12T09:26:12 INFO Logger initialized successfully
+2024-06-12T09:26:12 INFO Starting the application
+2024-06-12T09:26:12 INFO Loading device layout configuration
+2024-06-12T09:26:37 INFO Logger initialized successfully
+2024-06-12T09:26:37 INFO Starting the application
+2024-06-12T09:26:37 INFO Loading device layout configuration
+2024-06-12T09:26:37 INFO parentItem: Device
+2024-06-12T09:26:37 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:26:37 INFO parentItem: Profiles
+2024-06-12T09:26:37 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:26:37 INFO Building device selection widget
+2024-06-12T09:26:48 INFO Logger initialized successfully
+2024-06-12T09:26:48 INFO Starting the application
+2024-06-12T09:26:48 INFO Loading device layout configuration
+2024-06-12T09:26:48 ERROR Error validating device layout configuration for key a: Key: 'DeviceLayoutConfig.Components[1].Type' Error:Field validation for 'Type' failed on the 'oneof' tag
+2024-06-12T09:26:48 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].Type' Error:Field validation for 'Type' failed on the 'oneof' tag
+2024-06-12T09:27:16 INFO Logger initialized successfully
+2024-06-12T09:27:16 INFO Starting the application
+2024-06-12T09:27:16 INFO Loading device layout configuration
+2024-06-12T09:27:16 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required' tag
+2024-06-12T09:27:16 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required' tag
+2024-06-12T09:29:09 INFO Logger initialized successfully
+2024-06-12T09:29:09 INFO Starting the application
+2024-06-12T09:29:09 INFO Loading device layout configuration
+2024-06-12T09:29:09 INFO parentItem: Profiles
+2024-06-12T09:29:09 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:29:09 INFO parentItem: Device
+2024-06-12T09:29:09 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:29:09 INFO Building device selection widget
+2024-06-12T09:33:34 INFO Logger initialized successfully
+2024-06-12T09:33:34 INFO Starting the application
+2024-06-12T09:33:34 INFO Loading device layout configuration
+2024-06-12T09:33:56 INFO Logger initialized successfully
+2024-06-12T09:33:56 INFO Starting the application
+2024-06-12T09:33:56 INFO Loading device layout configuration
+2024-06-12T09:33:56 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'len' tag
+2024-06-12T09:33:56 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'len' tag
+2024-06-12T09:34:36 INFO Logger initialized successfully
+2024-06-12T09:34:36 INFO Starting the application
+2024-06-12T09:34:36 INFO Loading device layout configuration
+2024-06-12T09:34:36 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'len' tag
+2024-06-12T09:34:36 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'len' tag
+2024-06-12T09:35:21 INFO Logger initialized successfully
+2024-06-12T09:35:21 INFO Starting the application
+2024-06-12T09:35:21 INFO Loading device layout configuration
+2024-06-12T09:35:21 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:35:21 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:38:31 INFO Logger initialized successfully
+2024-06-12T09:38:31 INFO Starting the application
+2024-06-12T09:38:31 INFO Loading device layout configuration
+2024-06-12T09:38:31 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:38:31 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:39:33 INFO Logger initialized successfully
+2024-06-12T09:39:33 INFO Starting the application
+2024-06-12T09:39:33 INFO Loading device layout configuration
+2024-06-12T09:40:14 INFO Logger initialized successfully
+2024-06-12T09:40:14 INFO Starting the application
+2024-06-12T09:40:14 INFO Loading device layout configuration
+2024-06-12T09:40:18 INFO parentItem: Device
+2024-06-12T09:40:18 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:40:18 INFO parentItem: Profiles
+2024-06-12T09:40:18 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:40:18 INFO Building device selection widget
+2024-06-12T09:40:35 INFO Logger initialized successfully
+2024-06-12T09:40:35 INFO Starting the application
+2024-06-12T09:40:35 INFO Loading device layout configuration
+2024-06-12T09:40:35 INFO parentItem: Device
+2024-06-12T09:40:35 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:40:35 INFO parentItem: Profiles
+2024-06-12T09:40:35 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:40:35 INFO Building device selection widget
+2024-06-12T09:42:46 INFO Logger initialized successfully
+2024-06-12T09:42:46 INFO Starting the application
+2024-06-12T09:42:46 INFO Loading device layout configuration
+2024-06-12T09:42:46 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'excluded_unless' tag
+2024-06-12T09:42:46 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'excluded_unless' tag
+2024-06-12T09:43:37 INFO Logger initialized successfully
+2024-06-12T09:43:37 INFO Starting the application
+2024-06-12T09:43:37 INFO Loading device layout configuration
+2024-06-12T09:43:38 INFO parentItem: Device
+2024-06-12T09:43:38 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:43:38 INFO parentItem: Profiles
+2024-06-12T09:43:38 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:43:38 INFO Building device selection widget
+2024-06-12T09:43:47 INFO Logger initialized successfully
+2024-06-12T09:43:47 INFO Starting the application
+2024-06-12T09:43:47 INFO Loading device layout configuration
+2024-06-12T09:43:47 INFO parentItem: Device
+2024-06-12T09:43:47 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:43:47 INFO parentItem: Profiles
+2024-06-12T09:43:47 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:43:47 INFO Building device selection widget
+2024-06-12T09:44:01 INFO Logger initialized successfully
+2024-06-12T09:44:01 INFO Starting the application
+2024-06-12T09:44:01 INFO Loading device layout configuration
+2024-06-12T09:44:02 INFO parentItem: Device
+2024-06-12T09:44:02 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:44:02 INFO parentItem: Profiles
+2024-06-12T09:44:02 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:44:02 INFO Building device selection widget
+2024-06-12T09:44:17 INFO Logger initialized successfully
+2024-06-12T09:44:17 INFO Starting the application
+2024-06-12T09:44:17 INFO Loading device layout configuration
+2024-06-12T09:44:17 INFO parentItem: Device
+2024-06-12T09:44:17 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:44:17 INFO parentItem: Profiles
+2024-06-12T09:44:17 INFO g.menuOptions[parentItem]: []
+2024-06-12T09:44:17 INFO Building device selection widget
+2024-06-12T09:44:41 INFO Logger initialized successfully
+2024-06-12T09:44:41 INFO Starting the application
+2024-06-12T09:44:41 INFO Loading device layout configuration
+2024-06-12T09:44:41 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:44:41 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:46:41 INFO Logger initialized successfully
+2024-06-12T09:46:41 INFO Starting the application
+2024-06-12T09:46:41 INFO Loading device layout configuration
+2024-06-12T09:46:41 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T09:46:41 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:09:19 INFO Logger initialized successfully
+2024-06-12T10:09:19 INFO Starting the application
+2024-06-12T10:09:19 INFO Loading device layout configuration
+2024-06-12T10:09:19 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:09:19 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:12:47 INFO Logger initialized successfully
+2024-06-12T10:12:47 INFO Starting the application
+2024-06-12T10:12:47 INFO Loading device layout configuration
+2024-06-12T10:14:05 INFO Logger initialized successfully
+2024-06-12T10:14:05 INFO Starting the application
+2024-06-12T10:14:05 INFO Loading device layout configuration
+2024-06-12T10:14:05 INFO parentItem: Device
+2024-06-12T10:14:05 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:14:05 INFO parentItem: Profiles
+2024-06-12T10:14:05 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:14:05 INFO Building device selection widget
+2024-06-12T10:14:18 INFO Logger initialized successfully
+2024-06-12T10:14:18 INFO Starting the application
+2024-06-12T10:14:18 INFO Loading device layout configuration
+2024-06-12T10:14:18 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required_if=Type button|byteNumber' tag
+2024-06-12T10:14:18 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required_if=Type button|byteNumber' tag
+2024-06-12T10:15:02 INFO Logger initialized successfully
+2024-06-12T10:15:02 INFO Starting the application
+2024-06-12T10:15:02 INFO Loading device layout configuration
+2024-06-12T10:15:02 INFO parentItem: Device
+2024-06-12T10:15:02 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:15:02 INFO parentItem: Profiles
+2024-06-12T10:15:02 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:15:02 INFO Building device selection widget
+2024-06-12T10:15:14 INFO Logger initialized successfully
+2024-06-12T10:15:14 INFO Starting the application
+2024-06-12T10:15:14 INFO Loading device layout configuration
+2024-06-12T10:15:14 INFO parentItem: Device
+2024-06-12T10:15:14 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:15:14 INFO parentItem: Profiles
+2024-06-12T10:15:14 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:15:14 INFO Building device selection widget
+2024-06-12T10:16:12 INFO Logger initialized successfully
+2024-06-12T10:16:12 INFO Starting the application
+2024-06-12T10:16:12 INFO Loading device layout configuration
+2024-06-12T10:16:12 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:16:12 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+Key: 'DeviceLayoutConfig.Components[1].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:19:12 INFO Logger initialized successfully
+2024-06-12T10:19:12 INFO Starting the application
+2024-06-12T10:19:12 INFO Loading device layout configuration
+2024-06-12T10:19:12 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:19:12 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:19:23 INFO Logger initialized successfully
+2024-06-12T10:19:23 INFO Starting the application
+2024-06-12T10:19:23 INFO Loading device layout configuration
+2024-06-12T10:19:23 INFO parentItem: Device
+2024-06-12T10:19:23 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:19:23 INFO parentItem: Profiles
+2024-06-12T10:19:23 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:19:23 INFO Building device selection widget
+2024-06-12T10:19:37 INFO Logger initialized successfully
+2024-06-12T10:19:37 INFO Starting the application
+2024-06-12T10:19:37 INFO Loading device layout configuration
+2024-06-12T10:19:37 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required_if' tag
+2024-06-12T10:19:37 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required_if' tag
+2024-06-12T10:19:51 INFO Logger initialized successfully
+2024-06-12T10:19:51 INFO Starting the application
+2024-06-12T10:19:51 INFO Loading device layout configuration
+2024-06-12T10:19:51 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required_if' tag
+2024-06-12T10:19:51 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'required_if' tag
+2024-06-12T10:20:01 INFO Logger initialized successfully
+2024-06-12T10:20:01 INFO Starting the application
+2024-06-12T10:20:01 INFO Loading device layout configuration
+2024-06-12T10:20:01 INFO parentItem: Device
+2024-06-12T10:20:01 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:20:02 INFO parentItem: Profiles
+2024-06-12T10:20:02 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:20:02 INFO Building device selection widget
+2024-06-12T10:23:38 INFO Logger initialized successfully
+2024-06-12T10:23:38 INFO Starting the application
+2024-06-12T10:23:38 INFO Loading device layout configuration
+2024-06-12T10:23:38 INFO parentItem: Device
+2024-06-12T10:23:38 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:23:38 INFO parentItem: Profiles
+2024-06-12T10:23:38 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:23:38 INFO Building device selection widget
+2024-06-12T10:25:05 INFO Logger initialized successfully
+2024-06-12T10:25:05 INFO Starting the application
+2024-06-12T10:25:05 INFO Loading device layout configuration
+2024-06-12T10:25:05 ERROR Error validating device layout configuration for key 6001/1000: Key: 'DeviceLayoutConfig.Components[0].Type' Error:Field validation for 'Type' failed on the 'oneof' tag
+Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:25:05 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].Type' Error:Field validation for 'Type' failed on the 'oneof' tag
+Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:26:13 INFO Logger initialized successfully
+2024-06-12T10:26:13 INFO Starting the application
+2024-06-12T10:26:13 INFO Loading device layout configuration
+2024-06-12T10:26:13 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:26:13 ERROR Error loading device layout configuration: Key: 'DeviceLayoutConfig.Components[0].Type' Error:Field validation for 'Type' failed on the 'oneof' tag
+Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:27:03 INFO Logger initialized successfully
+2024-06-12T10:27:03 INFO Starting the application
+2024-06-12T10:27:03 INFO Loading device layout configuration
+2024-06-12T10:27:03 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:27:13 INFO Logger initialized successfully
+2024-06-12T10:27:13 INFO Starting the application
+2024-06-12T10:27:13 INFO Loading device layout configuration
+2024-06-12T10:27:13 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:27:51 INFO Logger initialized successfully
+2024-06-12T10:27:51 INFO Starting the application
+2024-06-12T10:27:51 INFO Loading device layout configuration
+2024-06-12T10:27:51 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:27:51 ERROR Validation error: Field 'Type' failed on the 'oneof' tag
+
+2024-06-12T10:27:51 ERROR Validation error: Field 'BitPosition' failed on the 'byteNumber' tag
+
+2024-06-12T10:28:04 INFO Logger initialized successfully
+2024-06-12T10:28:04 INFO Starting the application
+2024-06-12T10:28:04 INFO Loading device layout configuration
+2024-06-12T10:28:04 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:28:04 ERROR Validation error: Field 'Type' failed on the 'oneof' tag
+2024-06-12T10:28:04 ERROR Validation error: Field 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:29:46 INFO Logger initialized successfully
+2024-06-12T10:29:46 INFO Starting the application
+2024-06-12T10:29:46 INFO Loading device layout configuration
+2024-06-12T10:29:46 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:29:46 ERROR Validation error: Field 'Type' failed on the 'oneof' tag
+2024-06-12T10:29:46 ERROR Validation error: Field 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:30:02 INFO Logger initialized successfully
+2024-06-12T10:30:02 INFO Starting the application
+2024-06-12T10:30:02 INFO Loading device layout configuration
+2024-06-12T10:30:02 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:30:20 ERROR Validation error: Field 'Type' failed on the 'oneof' tag
+2024-06-12T10:31:16 INFO Logger initialized successfully
+2024-06-12T10:31:16 INFO Starting the application
+2024-06-12T10:31:16 INFO Loading device layout configuration
+2024-06-12T10:31:16 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:31:30 INFO Logger initialized successfully
+2024-06-12T10:31:30 INFO Starting the application
+2024-06-12T10:31:30 INFO Loading device layout configuration
+2024-06-12T10:31:30 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:32:29 INFO Logger initialized successfully
+2024-06-12T10:32:29 INFO Starting the application
+2024-06-12T10:32:29 INFO Loading device layout configuration
+2024-06-12T10:32:29 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:32:32 ERROR Validation error: Field 'Type' failed on the 'oneof' tag
+2024-06-12T10:32:34 ERROR Validation error: Field 'BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:32:49 INFO Logger initialized successfully
+2024-06-12T10:32:49 INFO Starting the application
+2024-06-12T10:32:49 INFO Loading device layout configuration
+2024-06-12T10:32:49 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T10:32:49 ERROR Validation error: Field 'DeviceLayoutConfig.Components[0].Type' failed on the 'oneof' tag
+2024-06-12T10:32:49 ERROR Validation error: Field 'DeviceLayoutConfig.Components[0].BitPosition' failed on the 'byteNumber' tag
+2024-06-12T10:33:09 INFO Logger initialized successfully
+2024-06-12T10:33:09 INFO Starting the application
+2024-06-12T10:33:09 INFO Loading device layout configuration
+2024-06-12T10:33:10 INFO parentItem: Profiles
+2024-06-12T10:33:10 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:33:10 INFO parentItem: Device
+2024-06-12T10:33:10 INFO g.menuOptions[parentItem]: []
+2024-06-12T10:33:10 INFO Building device selection widget
+2024-06-12T11:32:18 INFO Logger initialized successfully
+2024-06-12T11:32:18 INFO Starting the application
+2024-06-12T11:32:18 INFO Loading device layout configuration
+2024-06-12T11:32:18 INFO parentItem: Device
+2024-06-12T11:32:18 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:32:18 INFO parentItem: Profiles
+2024-06-12T11:32:18 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:32:18 INFO Building device selection widget
+2024-06-12T11:32:28 INFO Logger initialized successfully
+2024-06-12T11:32:28 INFO Starting the application
+2024-06-12T11:32:28 INFO Loading device layout configuration
+2024-06-12T11:32:28 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T11:32:28 ERROR Validation error: Field 'DeviceLayoutConfig.Components[0].BitPosition' failed on the 'byteNumber' tag
+2024-06-12T11:32:42 INFO Logger initialized successfully
+2024-06-12T11:32:42 INFO Starting the application
+2024-06-12T11:32:42 INFO Loading device layout configuration
+2024-06-12T11:32:42 ERROR Error validating device layout configuration for key 6001/1000: 
+2024-06-12T11:32:42 ERROR Validation error: Field 'DeviceLayoutConfig.Components[0].BitPosition' failed on the 'byteNumber' tag
+2024-06-12T11:33:06 INFO Logger initialized successfully
+2024-06-12T11:33:06 INFO Starting the application
+2024-06-12T11:33:06 INFO Loading device layout configuration
+2024-06-12T11:33:06 INFO parentItem: Device
+2024-06-12T11:33:06 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:33:06 INFO parentItem: Profiles
+2024-06-12T11:33:06 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:33:06 INFO Building device selection widget
+2024-06-12T11:44:54 INFO Logger initialized successfully
+2024-06-12T11:44:54 INFO Starting the application
+2024-06-12T11:44:54 INFO Loading device layout configuration
+2024-06-12T11:44:54 INFO parentItem: Profiles
+2024-06-12T11:44:54 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:44:54 INFO parentItem: Device
+2024-06-12T11:44:54 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:44:54 INFO Building device selection widget
+2024-06-12T11:44:57 INFO Searching for devices
+2024-06-12T11:45:10 INFO Searching for devices
+2024-06-12T11:45:13 DEBUG Selected device changed: Me&Co DevKeyPad
+2024-06-12T11:45:13 INFO GUI: iterate menu trigger onSelectionChanged, &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=14 0xc000f5c390}
+2024-06-12T11:45:13 INFO INFO: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=14 0xc000f5c390}
+2024-06-12T11:45:13 INFO RawValues: Device selection changed &{{6001 1000 Me&Co DevKeyPad E6604430438B3824} vid=6001,pid=1000,bus=1,addr=14 0xc000f5c390}
+2024-06-12T11:51:03 INFO Logger initialized successfully
+2024-06-12T11:51:03 INFO Starting the application
+2024-06-12T11:51:03 INFO Loading device layout configuration
+2024-06-12T11:51:03 ERROR key does not match the VID and PID [6001/1001 != 6001/1000]
+2024-06-12T11:51:15 INFO Logger initialized successfully
+2024-06-12T11:51:15 INFO Starting the application
+2024-06-12T11:51:15 INFO Loading device layout configuration
+2024-06-12T11:51:15 INFO parentItem: Device
+2024-06-12T11:51:15 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:51:15 INFO parentItem: Profiles
+2024-06-12T11:51:15 INFO g.menuOptions[parentItem]: []
+2024-06-12T11:51:15 INFO Building device selection widget
+2024-06-12T12:29:54 INFO Logger initialized successfully
+2024-06-12T12:29:54 INFO Starting the application
+2024-06-12T12:29:54 INFO Loading device layout configuration
+2024-06-12T12:30:35 ERROR Error parsing file: json: cannot unmarshal string into Go struct field Identifier.identifier.vid of type uint16
+2024-06-12T12:30:53 INFO Logger initialized successfully
+2024-06-12T12:30:53 INFO Starting the application
+2024-06-12T12:30:53 INFO Loading device layout configuration
+2024-06-12T12:31:20 INFO Logger initialized successfully
+2024-06-12T12:31:20 INFO Starting the application
+2024-06-12T12:31:20 INFO Loading device layout configuration
+2024-06-12T12:31:33 ERROR Error parsing file: strconv.ParseUint: parsing "0x6001": invalid syntax
+2024-06-12T12:31:41 INFO Logger initialized successfully
+2024-06-12T12:31:41 INFO Starting the application
+2024-06-12T12:31:41 INFO Loading device layout configuration
+2024-06-12T12:32:26 ERROR Error parsing file: strconv.ParseUint: parsing "0x6001": invalid syntax
+2024-06-12T12:32:44 INFO Logger initialized successfully
+2024-06-12T12:32:44 INFO Starting the application
+2024-06-12T12:32:44 INFO Loading device layout configuration
+2024-06-12T12:34:21 INFO Logger initialized successfully
+2024-06-12T12:34:21 INFO Starting the application
+2024-06-12T12:34:21 INFO Loading device layout configuration
+2024-06-12T12:36:27 INFO Logger initialized successfully
+2024-06-12T12:36:27 INFO Starting the application
+2024-06-12T12:36:27 INFO Loading device layout configuration
+2024-06-12T12:37:24 INFO Logger initialized successfully
+2024-06-12T12:37:24 INFO Starting the application
+2024-06-12T12:37:24 INFO Loading device layout configuration
+2024-06-12T12:37:36 INFO parentItem: Device
+2024-06-12T12:37:36 INFO g.menuOptions[parentItem]: []
+2024-06-12T12:37:36 INFO parentItem: Profiles
+2024-06-12T12:37:36 INFO g.menuOptions[parentItem]: []
+2024-06-12T12:37:36 INFO Building device selection widget
+2024-06-12T12:38:54 INFO Logger initialized successfully
+2024-06-12T12:38:54 INFO Starting the application
+2024-06-12T12:38:54 INFO Loading device layout configuration
+2024-06-12T12:39:01 INFO parentItem: Device
+2024-06-12T12:39:01 INFO g.menuOptions[parentItem]: []
+2024-06-12T12:39:01 INFO parentItem: Profiles
+2024-06-12T12:39:01 INFO g.menuOptions[parentItem]: []
+2024-06-12T12:39:01 INFO Building device selection widget

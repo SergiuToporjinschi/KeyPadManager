@@ -1,6 +1,7 @@
 package gui
 
 import (
+	"main/logger"
 	"main/usb"
 
 	"fyne.io/fyne/v2"
@@ -12,58 +13,50 @@ import (
 
 type Info struct {
 	container *fyne.Container
-	gui       *GUI
+	device    *usb.DevInfo
 }
 
-func NewInfo(gui *GUI) *Info {
+func NewInfo() *Info {
 	return &Info{
-		gui: gui,
+		device: &usb.DevInfo{
+			Manufacturer: "",
+			Product:      "",
+			SerialNumber: "",
+			PID:          0,
+			VID:          0,
+		},
 	}
 }
 
-func (i *Info) Init() {
-
+func (i *Info) DeviceSelectionChanged(dev *usb.Device) {
+	logger.Log.Infof("INFO: Device selection changed %v", dev)
+	i.device.Manufacturer = dev.Info.Manufacturer
+	i.device.Product = dev.Info.Product
+	i.device.SerialNumber = dev.Info.SerialNumber
+	i.device.PID = dev.Info.PID
+	i.device.VID = dev.Info.VID
 }
 
 func (i *Info) Build(device *usb.Device) *fyne.Container {
 	items := []fyne.CanvasObject{}
 
 	items = append(items, widget.NewLabel("PID:"))
-	if device != nil {
-		pid := device.Info.PID.String()
-		items = append(items, widget.NewLabelWithData(binding.BindString(&pid)))
-	} else {
-		items = append(items, widget.NewLabel(""))
-	}
+	pid := i.device.PID.String()
+	items = append(items, widget.NewLabelWithData(binding.BindString(&pid)))
 
 	items = append(items, widget.NewLabel("VID:"))
-	if device != nil {
-		vid := device.Info.VID.String()
-		items = append(items, widget.NewLabelWithData(binding.BindString(&vid)))
-	} else {
-		items = append(items, widget.NewLabel(""))
-	}
+	vid := i.device.VID.String()
+	items = append(items, widget.NewLabelWithData(binding.BindString(&vid)))
 
 	items = append(items, widget.NewLabel("Product:"))
-	if device != nil {
-		items = append(items, widget.NewLabelWithData(binding.BindString(&device.Info.Product)))
-	} else {
-		items = append(items, widget.NewLabel(""))
-	}
+	items = append(items, widget.NewLabelWithData(binding.BindString(&i.device.Product)))
 
 	items = append(items, widget.NewLabel("Manufacturer:"))
-	if device != nil {
-		items = append(items, widget.NewLabelWithData(binding.BindString(&device.Info.Manufacturer)))
-	} else {
-		items = append(items, widget.NewLabel(""))
-	}
+	items = append(items, widget.NewLabelWithData(binding.BindString(&i.device.Manufacturer)))
 
 	items = append(items, widget.NewLabel("Serial:"))
-	if device != nil {
-		items = append(items, widget.NewLabelWithData(binding.BindString(&device.Info.Manufacturer)))
-	} else {
-		items = append(items, widget.NewLabel(""))
-	}
+	items = append(items, widget.NewLabelWithData(binding.BindString(&i.device.SerialNumber)))
+
 	i.container = container.New(layout.NewFormLayout(), items...)
 	return i.container
 }

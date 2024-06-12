@@ -1,6 +1,7 @@
 package gui
 
 import (
+	"main/logger"
 	"main/usb"
 
 	"fyne.io/fyne/v2"
@@ -10,7 +11,8 @@ import (
 )
 
 type MainContent interface {
-	Build(device *usb.Device) *fyne.Container
+	Build(*usb.Device) *fyne.Container
+	DeviceSelectionChanged(*usb.Device)
 	Destroy()
 }
 
@@ -19,7 +21,6 @@ type GUI struct {
 	device      *usb.Device
 	menuOptions menuOptions
 	mainWindow  fyne.Window
-	menuBar     *MenuBarWidget
 }
 
 func NewGUI() *GUI {
@@ -37,21 +38,32 @@ func (g *GUI) OpenMain() {
 
 	mainContent := container.NewStack()
 	menu := g.buidMenu(mainContent)
-	g.menuBar = NewMenuBarWidget(widget.NewLabel("Device: "))
-	if g.device != nil {
-		g.menuBar.Add(widget.NewLabel(g.device.Info.Product))
-	}
-	g.mainWindow.SetContent(container.NewStack(container.NewBorder(g.menuBar, nil, nil, nil, container.NewHSplit(menu, mainContent))))
+
+	menuBar := container.NewBorder(
+		nil,                                 //top
+		nil,                                 //bottom
+		nil,                                 //left
+		NewDeviceList(g.onSelectionChanged), //right
+		nil,                                 //center
+	)
+
+	main := container.NewBorder(
+		menuBar,                                //top
+		nil,                                    //bootom
+		nil,                                    //left
+		nil,                                    //right
+		container.NewHSplit(menu, mainContent), //center
+	)
+
+	g.mainWindow.SetContent(container.NewStack(main))
 	g.mainWindow.Show()
 	g.application.Run()
 }
 
-func (g *GUI) deviceSelected() {
-	if g.device != nil {
-		g.menuBar.RemoveAll()
-		g.menuBar.Add(widget.NewLabel("Device: "), widget.NewLabel(g.device.Info.Product))
-	}
-	g.mainWindow.Content().Refresh()
+func (g *GUI) onSelectionChanged(dev *usb.Device) {
+	logger.Log.Infof("GUI: iterate menu trigger onSelectionChanged, %v", dev)
+	g.menuOptions["Device"]["Info"].DeviceSelectionChanged(dev)
+	g.menuOptions["Device"]["RawValues"].DeviceSelectionChanged(dev)
 }
 
 type MenuBarWidget struct {

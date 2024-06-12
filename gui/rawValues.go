@@ -29,6 +29,9 @@ func (i *RawValues) Build(device *usb.Device) *fyne.Container {
 	i.container.Hide()
 	return i.container
 }
+func (i *RawValues) DeviceSelectionChanged(dev *usb.Device) {
+	logger.Log.Infof("RawValues: Device selection changed %v", dev)
+}
 
 func (i *RawValues) Destroy() {
 	if i.container != nil {
