@@ -20,7 +20,7 @@ type DeviceList struct {
 }
 
 func NewDeviceList(onSelectionChange func(*usb.Device)) *DeviceList {
-	logger.Log.Info("Building device selection widget")
+	logger.Log.Debug("Building device selection widget")
 	item := &DeviceList{
 		onSelection: onSelectionChange,
 	}
@@ -57,7 +57,7 @@ func (dl *DeviceList) selectionChanged(s string) {
 }
 
 func (dl *DeviceList) searchDevices() {
-	logger.Log.Info("Searching for devices")
+	logger.Log.Debug("Searching for devices")
 
 	for k := range dl.deviceList {
 		delete(dl.deviceList, k)

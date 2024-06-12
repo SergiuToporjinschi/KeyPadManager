@@ -31,6 +31,8 @@ func (i *RawValues) Build(device *usb.Device) *fyne.Container {
 }
 func (i *RawValues) DeviceSelectionChanged(dev *usb.Device) {
 	logger.Log.Infof("RawValues: Device selection changed %v", dev)
+	// layoutConfig := devicelayout.GetInstance().FindLayout(uint16(dev.Info.VID), uint16(dev.Info.PID))
+	// fmt.Printf("%v", layoutConfig)
 }
 
 func (i *RawValues) Destroy() {

@@ -6,10 +6,10 @@ import (
 )
 
 type DeviceLayoutConfig struct {
-	Identifier Identifier  `json:"identifier" validate:"required"`
-	Components []Component `json:"components" validate:"unique=Name,dive"`
+	Identifier DevIdentifier `json:"identifier" validate:"required"`
+	Components []Component   `json:"components" validate:"unique=Name,dive"`
 }
-type Identifier struct {
+type DevIdentifier struct {
 	Manufacturer string    `json:"manufacturer" validate:"required"`
 	Name         string    `json:"name" validate:"required"`
 	VID          HexUint16 `json:"vid" validate:"required"`

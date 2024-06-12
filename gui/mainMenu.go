@@ -28,8 +28,8 @@ func (g *GUI) buidMenu(mainContent *fyne.Container) *widget.Accordion {
 	menuItems := []*widget.AccordionItem{}
 	for parentItem := range g.menuOptions {
 		parentBtns := []fyne.CanvasObject{}
-		logger.Log.Info("parentItem: ", parentItem)
-		logger.Log.Info("g.menuOptions[parentItem]: ", parentBtns)
+		logger.Log.Debugf("parentItem: %v", parentItem)
+		logger.Log.Debugf("g.menuOptions[%v]: ", parentBtns)
 
 		childContainer := container.NewVBox()
 		for childItem := range g.menuOptions[parentItem] {

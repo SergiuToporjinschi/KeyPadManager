@@ -1,9 +1,9 @@
 package main
 
 import (
-	devicelayout "main/deviceLayout"
-	"main/gui"
+	"main/devicelayout"
 	"main/logger"
+	"main/monitoring"
 )
 
 func main() {
@@ -14,7 +14,11 @@ func main() {
 	if err != nil {
 		return
 	}
-
-	g := gui.NewGUI()
-	g.OpenMain()
+	err = monitoring.GetInstance().Start()
+	if err != nil {
+		return
+	}
+	select {}
+	// g := gui.NewGUI()
+	// g.OpenMain()
 }

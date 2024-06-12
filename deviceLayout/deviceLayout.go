@@ -61,6 +61,16 @@ func (d *DeviceLayout) LoadConfig() error {
 	return nil
 }
 
+func (d *DeviceLayout) FindLayout(vid, pid uint16) (*DeviceLayoutConfig, bool) {
+	genKey := fmt.Sprintf("%04x/%04x", vid, pid)
+	dev, found := d.layouts[genKey]
+	return &dev, found
+}
+func (d *DeviceLayout) FindLayoutByKey(genKey string) (*DeviceLayoutConfig, bool) {
+	dev, found := d.layouts[genKey]
+	return &dev, found
+}
+
 func validate(layouts map[string]DeviceLayoutConfig) error {
 	validate := validator.New()
 	validate.RegisterValidation("byteNumber", validateByteNumber)
@@ -98,13 +108,4 @@ func validateByteNumber(fl validator.FieldLevel) bool {
 
 	// Check if the parsed value is within the valid byte range (0-255)
 	return utility.NewIntSetWithValues(1, 2, 4, 8, 16, 32, 64, 128).Contains(int(value))
-}
-
-func (d *DeviceLayout) GetComponents(key string) DeviceLayoutConfig {
-	return d.layouts[key]
-}
-
-func (d *DeviceLayout) GetComponentFor(vid, pid HexUint16) DeviceLayoutConfig {
-	genKey := fmt.Sprintf("%04x/%04x", vid, pid)
-	return d.layouts[genKey]
 }

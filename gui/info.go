@@ -29,7 +29,7 @@ func NewInfo() *Info {
 }
 
 func (i *Info) DeviceSelectionChanged(dev *usb.Device) {
-	logger.Log.Infof("INFO: Device selection changed %v", dev)
+	logger.Log.Debugf("INFO: Device selection changed %v", dev)
 	i.device.Manufacturer = dev.Info.Manufacturer
 	i.device.Product = dev.Info.Product
 	i.device.SerialNumber = dev.Info.SerialNumber
