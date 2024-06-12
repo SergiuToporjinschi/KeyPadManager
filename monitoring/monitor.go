@@ -10,10 +10,20 @@ import (
 	"github.com/google/gousb"
 )
 
+type deviceEvent struct {
+	event  string
+	device ConnectedDevice
+}
 type Monitor struct {
 	ctx              *gousb.Context
 	stopChan         chan struct{}
 	connectedDevices map[string]ConnectedDevice
+
+	deviceEvents    chan deviceEvent
+	deviceListeners map[string]func(string, ConnectedDevice)
+
+	monitorEvents    chan string
+	monitorListeners map[string]func(string)
 }
 
 type ConnectedDevice struct {
@@ -27,6 +37,12 @@ var once sync.Once
 func GetInstance() *Monitor {
 	once.Do(func() {
 		instance = &Monitor{}
+		instance.deviceEvents = make(chan deviceEvent)
+		instance.deviceListeners = make(map[string]func(string, ConnectedDevice))
+
+		instance.monitorEvents = make(chan string)
+		instance.monitorListeners = make(map[string]func(string), 10)
+
 		instance.connectedDevices = make(map[string]ConnectedDevice)
 	})
 	return instance
@@ -41,26 +57,67 @@ func (m *Monitor) Start() error {
 	logger.Log.Debug("Starting the USB monitor")
 
 	m.ctx = gousb.NewContext()
-
 	m.stopChan = make(chan struct{})
 
+	go m.eventListener()
+
 	go m.monitorDevices()
+	m.monitorEvents <- "start"
 
 	return nil
 }
 
 func (m *Monitor) Stop() {
 	close(m.stopChan)
+	m.monitorEvents <- "stop"
 	defer m.ctx.Close()
 }
 
-func (m *Monitor) monitorDevices() {
+func (m *Monitor) AddMonitorEvent(name string, callback func(string)) {
+	m.monitorListeners[name] = callback
+}
 
+func (m *Monitor) RemoveMonitorEvent(name string) {
+	delete(m.monitorListeners, name)
+}
+
+func (m *Monitor) AddDeviceEvent(name string, callback func(string, ConnectedDevice)) {
+	m.deviceListeners[name] = callback
+}
+
+func (m *Monitor) RemoveDeviceEvent(name string) {
+	delete(m.deviceListeners, name)
+}
+
+func (m *Monitor) eventListener() {
+	for {
+		select {
+		case monitorEvent := <-m.monitorEvents:
+			logger.Log.Debugf("Monitor event received %s", monitorEvent)
+			m.callMonitorListeners(monitorEvent)
+			if monitorEvent == "monitorStop" {
+				return
+			}
+			continue
+		case deviceEvent := <-m.deviceEvents:
+			logger.Log.Debugf("Device event received %v", deviceEvent)
+			m.callDeviceListeners(deviceEvent)
+			continue
+		case <-m.stopChan:
+			logger.Log.Debug("Stopping event listener")
+			return
+		}
+	}
+}
+
+func (m *Monitor) monitorDevices() {
+monitorLoop:
 	for {
 		select {
 		case <-m.stopChan:
 			logger.Log.Debug("Stopping device monitoring...")
-			return
+			m.monitorEvents <- "monitorStop"
+			break monitorLoop
 		default:
 			foundDevices, err := m.listHIDDevices()
 			if err != nil {
@@ -73,6 +130,7 @@ func (m *Monitor) monitorDevices() {
 				_, found := m.connectedDevices[key]
 				if !found {
 					m.connectedDevices[key] = val
+					m.deviceEvents <- deviceEvent{"connected", val}
 					logger.Log.Infof("Device connected: %s %v", key, val)
 				}
 			}
@@ -81,8 +139,9 @@ func (m *Monitor) monitorDevices() {
 			for key, dev := range m.connectedDevices {
 				_, found := foundDevices[key]
 				if !found {
-					logger.Log.Infof("Device disconnected: %v", dev)
 					delete(m.connectedDevices, key)
+					m.deviceEvents <- deviceEvent{"disconnected", dev}
+					logger.Log.Infof("Device disconnected: %v", dev)
 				}
 			}
 
@@ -118,4 +177,16 @@ func (m *Monitor) listHIDDevices() (map[string]ConnectedDevice, error) {
 	}
 
 	return devices, nil
+}
+
+func (m *Monitor) callMonitorListeners(event string) {
+	for _, listener := range m.monitorListeners {
+		listener(event)
+	}
+}
+
+func (m *Monitor) callDeviceListeners(event deviceEvent) {
+	for _, listener := range m.deviceListeners {
+		listener(event.event, event.device)
+	}
 }

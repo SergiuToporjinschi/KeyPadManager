@@ -2507,3 +2507,68 @@ Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for '
 2024-06-12T21:46:57 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
 2024-06-12T21:47:12 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=20
 2024-06-12T21:47:25 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-12T22:19:35 INFO Logger initialized successfully
+2024-06-12T22:19:35 INFO Starting the application
+2024-06-12T22:19:35 INFO Loading device layout configuration
+2024-06-12T22:19:35 DEBUG Starting the USB monitor
+2024-06-12T22:19:48 INFO Logger initialized successfully
+2024-06-12T22:19:48 INFO Starting the application
+2024-06-12T22:19:48 INFO Loading device layout configuration
+2024-06-12T22:19:48 DEBUG Starting the USB monitor
+2024-06-12T22:20:10 INFO Logger initialized successfully
+2024-06-12T22:20:10 INFO Starting the application
+2024-06-12T22:20:10 INFO Loading device layout configuration
+2024-06-12T22:20:30 DEBUG Starting the USB monitor
+2024-06-12T22:20:49 INFO Logger initialized successfully
+2024-06-12T22:20:49 INFO Starting the application
+2024-06-12T22:20:49 INFO Loading device layout configuration
+2024-06-12T22:21:02 DEBUG Starting the USB monitor
+2024-06-12T22:25:18 INFO Logger initialized successfully
+2024-06-12T22:25:18 INFO Starting the application
+2024-06-12T22:25:18 INFO Loading device layout configuration
+2024-06-12T22:25:20 DEBUG Starting the USB monitor
+2024-06-12T22:25:41 DEBUG Monitor event received start
+2024-06-12T22:25:43 INFO MAIN: Monitor connected: start
+2024-06-12T22:26:15 INFO Logger initialized successfully
+2024-06-12T22:26:15 INFO Starting the application
+2024-06-12T22:26:15 INFO Loading device layout configuration
+2024-06-12T22:26:18 DEBUG Starting the USB monitor
+2024-06-12T22:26:21 DEBUG Monitor event received start
+2024-06-12T22:26:30 INFO MAIN: Monitor connected: start
+2024-06-12T22:26:53 INFO Logger initialized successfully
+2024-06-12T22:26:53 INFO Starting the application
+2024-06-12T22:26:53 INFO Loading device layout configuration
+2024-06-12T22:26:53 DEBUG Starting the USB monitor
+2024-06-12T22:27:01 DEBUG Monitor event received start
+2024-06-12T22:27:01 INFO MAIN: Monitor connected: start
+2024-06-12T22:27:13 INFO Logger initialized successfully
+2024-06-12T22:27:13 INFO Starting the application
+2024-06-12T22:27:13 INFO Loading device layout configuration
+2024-06-12T22:27:13 DEBUG Starting the USB monitor
+2024-06-12T22:27:13 DEBUG Monitor event received start
+2024-06-12T22:27:13 INFO MAIN: Monitor connected: start
+2024-06-12T22:27:40 INFO Logger initialized successfully
+2024-06-12T22:27:40 INFO Starting the application
+2024-06-12T22:27:40 INFO Loading device layout configuration
+2024-06-12T22:27:40 DEBUG Starting the USB monitor
+2024-06-12T22:27:40 DEBUG Monitor event received start
+2024-06-12T22:27:40 INFO MAIN: Monitor connected: start
+2024-06-12T22:33:31 INFO Logger initialized successfully
+2024-06-12T22:33:31 INFO Starting the application
+2024-06-12T22:33:31 INFO Loading device layout configuration
+2024-06-12T22:33:31 DEBUG Starting the USB monitor
+2024-06-12T22:35:57 INFO Logger initialized successfully
+2024-06-12T22:35:57 INFO Starting the application
+2024-06-12T22:35:57 INFO Loading device layout configuration
+2024-06-12T22:35:57 DEBUG Starting the USB monitor
+2024-06-12T22:36:02 DEBUG Monitor event received start
+2024-06-12T22:36:02 INFO MAIN: Monitor connected: start
+2024-06-12T22:36:26 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-12T22:36:26 DEBUG Device event received {connected {0xc0004b0100 0xc0004b0300}}
+2024-06-12T22:36:31 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=22
+2024-06-12T22:36:44 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=22
+2024-06-12T22:36:44 DEBUG Device event received {disconnected {0xc0004b0100 0xc0004b0300}}
+2024-06-12T22:36:44 INFO MAIN: Device connected: disconnected : vid=6001,pid=1000,bus=1,addr=22
+2024-06-12T22:36:57 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-12T22:36:57 DEBUG Device event received {connected {0xc000510c00 0xc000510e00}}
+2024-06-12T22:36:57 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=22
