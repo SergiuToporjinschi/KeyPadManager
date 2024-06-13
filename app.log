@@ -2572,3 +2572,1395 @@ Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for '
 2024-06-12T22:36:57 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
 2024-06-12T22:36:57 DEBUG Device event received {connected {0xc000510c00 0xc000510e00}}
 2024-06-12T22:36:57 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=22
+2024-06-12T22:39:33 INFO Logger initialized successfully
+2024-06-12T22:39:33 INFO Starting the application
+2024-06-12T22:39:33 INFO Loading device layout configuration
+2024-06-12T22:39:33 DEBUG Starting the USB monitor
+2024-06-12T22:39:33 DEBUG Monitor event received start
+2024-06-12T22:39:33 INFO MAIN: Monitor connected: start
+2024-06-12T22:39:33 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T22:39:33 DEBUG Device event received {connected {0xc00003c3c0 0xc000430100}}
+2024-06-12T22:39:33 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T22:39:33 DEBUG parentItem: Device
+2024-06-12T22:39:33 DEBUG g.menuOptions[[]]: 
+2024-06-12T22:39:33 DEBUG parentItem: Profiles
+2024-06-12T22:39:33 DEBUG g.menuOptions[[]]: 
+2024-06-12T22:39:33 DEBUG Building device selection widget
+2024-06-12T22:55:02 INFO Logger initialized successfully
+2024-06-12T22:55:02 INFO Starting the application
+2024-06-12T22:55:02 INFO Loading device layout configuration
+2024-06-12T22:55:02 DEBUG Starting the USB monitor
+2024-06-12T22:55:02 DEBUG Monitor event received start
+2024-06-12T22:55:02 INFO MAIN: Monitor connected: start
+2024-06-12T22:55:02 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T22:55:02 DEBUG Device event received {connected {0xc00025c2c0 0xc00025c4c0}}
+2024-06-12T22:55:02 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T22:59:53 INFO Logger initialized successfully
+2024-06-12T22:59:53 INFO Starting the application
+2024-06-12T22:59:53 INFO Loading device layout configuration
+2024-06-12T22:59:53 DEBUG Starting the USB monitor
+2024-06-12T22:59:53 DEBUG Monitor event received start
+2024-06-12T22:59:53 INFO MAIN: Monitor connected: start
+2024-06-12T22:59:53 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T22:59:53 DEBUG Device event received {connected {0xc0003fa240 0xc0003fa440}}
+2024-06-12T22:59:53 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:04:44 INFO Logger initialized successfully
+2024-06-12T23:04:44 INFO Starting the application
+2024-06-12T23:04:44 INFO Loading device layout configuration
+2024-06-12T23:04:44 DEBUG Starting the USB monitor
+2024-06-12T23:04:44 DEBUG Monitor event received start
+2024-06-12T23:04:44 INFO MAIN: Monitor connected: start
+2024-06-12T23:04:44 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:04:44 DEBUG Device event received {connected {0xc000498240 0xc000498480}}
+2024-06-12T23:04:44 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:04:44 DEBUG parentItem: Profiles
+2024-06-12T23:04:44 DEBUG g.menuOptions[[]]: 
+2024-06-12T23:04:44 DEBUG parentItem: Device
+2024-06-12T23:04:44 DEBUG g.menuOptions[[]]: 
+2024-06-12T23:04:44 DEBUG Building device selection widget
+2024-06-12T23:05:14 INFO Logger initialized successfully
+2024-06-12T23:05:14 INFO Starting the application
+2024-06-12T23:05:14 INFO Loading device layout configuration
+2024-06-12T23:05:14 DEBUG Starting the USB monitor
+2024-06-12T23:05:14 DEBUG Monitor event received start
+2024-06-12T23:05:16 INFO MAIN: Monitor connected: start
+2024-06-12T23:05:17 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:05:17 DEBUG Device event received {connected {0xc0003d8380 0xc0003d8580}}
+2024-06-12T23:05:17 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:10:50 INFO Logger initialized successfully
+2024-06-12T23:10:50 INFO Starting the application
+2024-06-12T23:10:50 INFO Loading device layout configuration
+2024-06-12T23:10:50 DEBUG Starting the USB monitor
+2024-06-12T23:10:50 DEBUG Monitor event received start
+2024-06-12T23:10:50 INFO MAIN: Monitor connected: start
+2024-06-12T23:10:50 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:10:50 DEBUG Device event received {connected {0xc0002c0240 0xc0002c0440}}
+2024-06-12T23:10:50 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:11:06 INFO Logger initialized successfully
+2024-06-12T23:11:06 INFO Starting the application
+2024-06-12T23:11:06 INFO Loading device layout configuration
+2024-06-12T23:11:06 DEBUG Starting the USB monitor
+2024-06-12T23:11:06 DEBUG Monitor event received start
+2024-06-12T23:11:06 INFO MAIN: Monitor connected: start
+2024-06-12T23:11:06 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:11:06 DEBUG Device event received {connected {0xc0000f2240 0xc0000f2440}}
+2024-06-12T23:11:06 INFO MAIN: Device connected: connected : vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:12:50 INFO Logger initialized successfully
+2024-06-12T23:12:50 INFO Starting the application
+2024-06-12T23:12:50 INFO Loading device layout configuration
+2024-06-12T23:12:50 DEBUG Starting the USB monitor
+2024-06-12T23:12:50 DEBUG Monitor event received start
+2024-06-12T23:12:50 INFO MAIN: Monitor connected: start
+2024-06-12T23:12:50 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:12:50 DEBUG Device event received {connected {0xc0002c4380 0xc0002c4580}}
+2024-06-12T23:12:58 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:12:58 DEBUG Device event received {disconnected {0xc0002c4380 0xc0002c4580}}
+2024-06-12T23:17:06 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-12T23:17:06 DEBUG Device event received {connected {0xc000430740 0xc000430940}}
+2024-06-12T23:22:55 INFO Logger initialized successfully
+2024-06-12T23:22:55 INFO Starting the application
+2024-06-12T23:22:55 INFO Loading device layout configuration
+2024-06-12T23:22:55 DEBUG Starting the USB monitor
+2024-06-12T23:22:55 DEBUG Monitor event received start
+2024-06-12T23:22:55 INFO MAIN: Monitor connected: start
+2024-06-12T23:22:55 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:22:55 DEBUG Device event received {connected {0xc000294300 0xc000294500}}
+2024-06-12T23:33:52 INFO Logger initialized successfully
+2024-06-12T23:33:52 INFO Starting the application
+2024-06-12T23:33:52 INFO Loading device layout configuration
+2024-06-12T23:33:52 DEBUG Starting the USB monitor
+2024-06-12T23:33:52 DEBUG Monitor event received start
+2024-06-12T23:33:52 INFO MAIN: Monitor connected: start
+2024-06-12T23:33:52 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:33:52 DEBUG Device event received {connected {0xc00028a240 0xc00028a440}}
+2024-06-12T23:34:44 INFO Logger initialized successfully
+2024-06-12T23:34:44 INFO Starting the application
+2024-06-12T23:34:44 INFO Loading device layout configuration
+2024-06-12T23:34:44 DEBUG Starting the USB monitor
+2024-06-12T23:34:44 DEBUG Monitor event received start
+2024-06-12T23:34:44 INFO MAIN: Monitor connected: start
+2024-06-12T23:34:44 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:34:44 DEBUG Device event received {connected {0xc000628180 0xc000628380}}
+2024-06-12T23:35:01 INFO Logger initialized successfully
+2024-06-12T23:35:01 INFO Starting the application
+2024-06-12T23:35:01 INFO Loading device layout configuration
+2024-06-12T23:35:01 DEBUG Starting the USB monitor
+2024-06-12T23:35:01 DEBUG Monitor event received start
+2024-06-12T23:35:01 INFO MAIN: Monitor connected: start
+2024-06-12T23:35:01 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:35:01 DEBUG Device event received {connected {0xc00003c2c0 0xc00003c4c0}}
+2024-06-12T23:36:09 INFO Logger initialized successfully
+2024-06-12T23:36:09 INFO Starting the application
+2024-06-12T23:36:09 INFO Loading device layout configuration
+2024-06-12T23:36:09 DEBUG Starting the USB monitor
+2024-06-12T23:36:09 DEBUG Monitor event received start
+2024-06-12T23:36:09 INFO MAIN: Monitor connected: start
+2024-06-12T23:36:09 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:36:09 DEBUG Device event received {connected {0xc000432180 0xc000432380}}
+2024-06-12T23:36:27 INFO Logger initialized successfully
+2024-06-12T23:36:27 INFO Starting the application
+2024-06-12T23:36:27 INFO Loading device layout configuration
+2024-06-12T23:36:27 DEBUG Starting the USB monitor
+2024-06-12T23:36:27 DEBUG Monitor event received start
+2024-06-12T23:36:27 INFO MAIN: Monitor connected: start
+2024-06-12T23:36:27 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:36:27 DEBUG Device event received {connected {0xc000532240 0xc000532440}}
+2024-06-12T23:36:40 INFO Logger initialized successfully
+2024-06-12T23:36:40 INFO Starting the application
+2024-06-12T23:36:40 INFO Loading device layout configuration
+2024-06-12T23:36:40 DEBUG Starting the USB monitor
+2024-06-12T23:36:40 DEBUG Monitor event received start
+2024-06-12T23:36:40 INFO MAIN: Monitor connected: start
+2024-06-12T23:36:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:36:40 DEBUG Device event received {connected {0xc0002b2300 0xc0002b2500}}
+2024-06-12T23:36:56 INFO Logger initialized successfully
+2024-06-12T23:36:56 INFO Starting the application
+2024-06-12T23:36:56 INFO Loading device layout configuration
+2024-06-12T23:36:56 DEBUG Starting the USB monitor
+2024-06-12T23:36:56 DEBUG Monitor event received start
+2024-06-12T23:36:56 INFO MAIN: Monitor connected: start
+2024-06-12T23:36:56 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:36:56 DEBUG Device event received {connected {0xc000326680 0xc000326880}}
+2024-06-12T23:37:14 INFO Logger initialized successfully
+2024-06-12T23:37:14 INFO Starting the application
+2024-06-12T23:37:14 INFO Loading device layout configuration
+2024-06-12T23:37:14 DEBUG Starting the USB monitor
+2024-06-12T23:37:14 DEBUG Monitor event received start
+2024-06-12T23:37:14 INFO MAIN: Monitor connected: start
+2024-06-12T23:37:14 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:37:14 DEBUG Device event received {connected {0xc0000e8000 0xc000230780}}
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15 Fyne error:  Failed to load image
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:15 INFO 2024/06/12 23:37:15   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17 Fyne error:  Failed to load image
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:17 INFO 2024/06/12 23:37:17   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:18 INFO 2024/06/12 23:37:18 Fyne error:  Failed to load image
+2024-06-12T23:37:18 INFO 2024/06/12 23:37:18   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:18 INFO 2024/06/12 23:37:18   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:18 INFO 2024/06/12 23:37:18 Fyne error:  Failed to load image
+2024-06-12T23:37:18 INFO 2024/06/12 23:37:18   Cause: open devKesdfasdf asdf asdypad.png: The system cannot find the file specified.
+2024-06-12T23:37:18 INFO 2024/06/12 23:37:18   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/canvas/image.go:122
+2024-06-12T23:37:40 INFO Logger initialized successfully
+2024-06-12T23:37:40 INFO Starting the application
+2024-06-12T23:37:40 INFO Loading device layout configuration
+2024-06-12T23:37:40 DEBUG Starting the USB monitor
+2024-06-12T23:37:40 DEBUG Monitor event received start
+2024-06-12T23:37:40 INFO MAIN: Monitor connected: start
+2024-06-12T23:37:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:37:40 DEBUG Device event received {connected {0xc00020e740 0xc0001ce040}}
+2024-06-12T23:38:10 INFO Logger initialized successfully
+2024-06-12T23:38:10 INFO Starting the application
+2024-06-12T23:38:10 INFO Loading device layout configuration
+2024-06-12T23:38:10 DEBUG Starting the USB monitor
+2024-06-12T23:38:10 DEBUG Monitor event received start
+2024-06-12T23:38:10 INFO MAIN: Monitor connected: start
+2024-06-12T23:38:10 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:38:10 DEBUG Device event received {connected {0xc0002a8240 0xc0002a8440}}
+2024-06-12T23:38:45 INFO Logger initialized successfully
+2024-06-12T23:38:45 INFO Starting the application
+2024-06-12T23:38:45 INFO Loading device layout configuration
+2024-06-12T23:38:45 DEBUG Starting the USB monitor
+2024-06-12T23:38:45 DEBUG Monitor event received start
+2024-06-12T23:38:45 INFO MAIN: Monitor connected: start
+2024-06-12T23:38:45 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:38:45 DEBUG Device event received {connected {0xc0002aa280 0xc0002aa480}}
+2024-06-12T23:39:18 INFO Logger initialized successfully
+2024-06-12T23:39:18 INFO Starting the application
+2024-06-12T23:39:18 INFO Loading device layout configuration
+2024-06-12T23:39:18 DEBUG Starting the USB monitor
+2024-06-12T23:39:18 DEBUG Monitor event received start
+2024-06-12T23:39:18 INFO MAIN: Monitor connected: start
+2024-06-12T23:39:18 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:39:18 DEBUG Device event received {connected {0xc00003c2c0 0xc00003c4c0}}
+2024-06-12T23:41:32 INFO Logger initialized successfully
+2024-06-12T23:41:32 INFO Starting the application
+2024-06-12T23:41:32 INFO Loading device layout configuration
+2024-06-12T23:41:32 DEBUG Starting the USB monitor
+2024-06-12T23:41:32 DEBUG Monitor event received start
+2024-06-12T23:41:32 INFO MAIN: Monitor connected: start
+2024-06-12T23:41:32 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:41:32 DEBUG Device event received {connected {0xc0000ae380 0xc0000ae580}}
+2024-06-12T23:41:47 INFO Logger initialized successfully
+2024-06-12T23:41:47 INFO Starting the application
+2024-06-12T23:41:47 INFO Loading device layout configuration
+2024-06-12T23:41:47 DEBUG Starting the USB monitor
+2024-06-12T23:41:47 DEBUG Monitor event received start
+2024-06-12T23:41:47 INFO MAIN: Monitor connected: start
+2024-06-12T23:41:47 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:41:47 DEBUG Device event received {connected {0xc00023c300 0xc00023c500}}
+2024-06-12T23:42:09 INFO Logger initialized successfully
+2024-06-12T23:42:09 INFO Starting the application
+2024-06-12T23:42:09 INFO Loading device layout configuration
+2024-06-12T23:42:09 DEBUG Starting the USB monitor
+2024-06-12T23:42:09 DEBUG Monitor event received start
+2024-06-12T23:42:09 INFO MAIN: Monitor connected: start
+2024-06-12T23:42:10 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:42:10 DEBUG Device event received {connected {0xc0003946c0 0xc0003948c0}}
+2024-06-12T23:46:09 INFO Logger initialized successfully
+2024-06-12T23:46:09 INFO Starting the application
+2024-06-12T23:46:09 INFO Loading device layout configuration
+2024-06-12T23:46:09 DEBUG Starting the USB monitor
+2024-06-12T23:46:09 DEBUG Monitor event received start
+2024-06-12T23:46:09 INFO MAIN: Monitor connected: start
+2024-06-12T23:46:09 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:46:09 DEBUG Device event received {connected {0xc0000ec340 0xc0000ec540}}
+2024-06-12T23:46:50 INFO Logger initialized successfully
+2024-06-12T23:46:50 INFO Starting the application
+2024-06-12T23:46:50 INFO Loading device layout configuration
+2024-06-12T23:46:50 DEBUG Starting the USB monitor
+2024-06-12T23:46:50 DEBUG Monitor event received start
+2024-06-12T23:46:50 INFO MAIN: Monitor connected: start
+2024-06-12T23:46:50 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:46:50 DEBUG Device event received {connected {0xc0000bc240 0xc0000bc440}}
+2024-06-12T23:47:07 INFO Logger initialized successfully
+2024-06-12T23:47:07 INFO Starting the application
+2024-06-12T23:47:07 INFO Loading device layout configuration
+2024-06-12T23:47:07 DEBUG Starting the USB monitor
+2024-06-12T23:47:07 DEBUG Monitor event received start
+2024-06-12T23:47:07 INFO MAIN: Monitor connected: start
+2024-06-12T23:47:07 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:47:07 DEBUG Device event received {connected {0xc000358300 0xc000358500}}
+2024-06-12T23:47:19 INFO Logger initialized successfully
+2024-06-12T23:47:19 INFO Starting the application
+2024-06-12T23:47:19 INFO Loading device layout configuration
+2024-06-12T23:47:19 DEBUG Starting the USB monitor
+2024-06-12T23:47:19 DEBUG Monitor event received start
+2024-06-12T23:47:19 INFO MAIN: Monitor connected: start
+2024-06-12T23:47:19 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:47:19 DEBUG Device event received {connected {0xc000292300 0xc000292500}}
+2024-06-12T23:47:40 INFO Logger initialized successfully
+2024-06-12T23:47:40 INFO Starting the application
+2024-06-12T23:47:40 INFO Loading device layout configuration
+2024-06-12T23:47:40 DEBUG Starting the USB monitor
+2024-06-12T23:47:40 DEBUG Monitor event received start
+2024-06-12T23:47:40 INFO MAIN: Monitor connected: start
+2024-06-12T23:47:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:47:40 DEBUG Device event received {connected {0xc00003c2c0 0xc00003c4c0}}
+2024-06-12T23:49:16 INFO Logger initialized successfully
+2024-06-12T23:49:16 INFO Starting the application
+2024-06-12T23:49:16 INFO Loading device layout configuration
+2024-06-12T23:49:16 DEBUG Starting the USB monitor
+2024-06-12T23:49:16 DEBUG Monitor event received start
+2024-06-12T23:49:16 INFO MAIN: Monitor connected: start
+2024-06-12T23:49:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:49:16 DEBUG Device event received {connected {0xc000430280 0xc000430480}}
+2024-06-12T23:55:04 INFO Logger initialized successfully
+2024-06-12T23:55:04 INFO Starting the application
+2024-06-12T23:55:04 INFO Loading device layout configuration
+2024-06-12T23:55:04 DEBUG Starting the USB monitor
+2024-06-12T23:55:04 DEBUG Monitor event received start
+2024-06-12T23:55:04 INFO MAIN: Monitor connected: start
+2024-06-12T23:55:04 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-12T23:55:04 DEBUG Device event received {connected {0xc00059e280 0xc00059e480}}
+2024-06-13T09:04:46 INFO Logger initialized successfully
+2024-06-13T09:04:46 INFO Starting the application
+2024-06-13T09:04:46 INFO Loading device layout configuration
+2024-06-13T09:04:46 DEBUG Starting the USB monitor
+2024-06-13T09:04:46 DEBUG Monitor event received start
+2024-06-13T09:04:46 INFO MAIN: Monitor connected: start
+2024-06-13T09:04:46 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:04:46 DEBUG Device event received {connected {0xc0000e2280 0xc0000e2480}}
+2024-06-13T09:05:27 INFO Logger initialized successfully
+2024-06-13T09:05:27 INFO Starting the application
+2024-06-13T09:05:27 INFO Loading device layout configuration
+2024-06-13T09:05:27 DEBUG Starting the USB monitor
+2024-06-13T09:05:27 DEBUG Monitor event received start
+2024-06-13T09:05:27 INFO MAIN: Monitor connected: start
+2024-06-13T09:05:27 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:05:27 DEBUG Device event received {connected {0xc00011c280 0xc00011c480}}
+2024-06-13T09:06:26 INFO Logger initialized successfully
+2024-06-13T09:06:26 INFO Starting the application
+2024-06-13T09:06:26 INFO Loading device layout configuration
+2024-06-13T09:06:26 DEBUG Starting the USB monitor
+2024-06-13T09:06:26 DEBUG Monitor event received start
+2024-06-13T09:06:26 INFO MAIN: Monitor connected: start
+2024-06-13T09:06:26 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:06:26 DEBUG Device event received {connected {0xc0003b6300 0xc0003b6500}}
+2024-06-13T09:06:52 INFO Logger initialized successfully
+2024-06-13T09:06:52 INFO Starting the application
+2024-06-13T09:06:52 INFO Loading device layout configuration
+2024-06-13T09:06:52 DEBUG Starting the USB monitor
+2024-06-13T09:06:52 DEBUG Monitor event received start
+2024-06-13T09:06:52 INFO MAIN: Monitor connected: start
+2024-06-13T09:06:52 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:06:52 DEBUG Device event received {connected {0xc00003c3c0 0xc00003c600}}
+2024-06-13T09:10:48 INFO Logger initialized successfully
+2024-06-13T09:10:48 INFO Starting the application
+2024-06-13T09:10:48 INFO Loading device layout configuration
+2024-06-13T09:10:48 DEBUG Starting the USB monitor
+2024-06-13T09:10:48 DEBUG Monitor event received start
+2024-06-13T09:10:48 INFO MAIN: Monitor connected: start
+2024-06-13T09:10:48 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:10:48 DEBUG Device event received {connected {0xc000244240 0xc000244440}}
+2024-06-13T09:11:03 INFO Logger initialized successfully
+2024-06-13T09:11:03 INFO Starting the application
+2024-06-13T09:11:03 INFO Loading device layout configuration
+2024-06-13T09:11:03 DEBUG Starting the USB monitor
+2024-06-13T09:11:03 DEBUG Monitor event received start
+2024-06-13T09:11:03 INFO MAIN: Monitor connected: start
+2024-06-13T09:11:03 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:11:03 DEBUG Device event received {connected {0xc0003ae440 0xc0003ae640}}
+2024-06-13T09:11:20 INFO Logger initialized successfully
+2024-06-13T09:11:20 INFO Starting the application
+2024-06-13T09:11:20 INFO Loading device layout configuration
+2024-06-13T09:11:20 DEBUG Starting the USB monitor
+2024-06-13T09:11:20 DEBUG Monitor event received start
+2024-06-13T09:11:20 INFO MAIN: Monitor connected: start
+2024-06-13T09:11:20 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:11:20 DEBUG Device event received {connected {0xc0003a0240 0xc0003a0440}}
+2024-06-13T09:11:43 INFO Logger initialized successfully
+2024-06-13T09:11:43 INFO Starting the application
+2024-06-13T09:11:43 INFO Loading device layout configuration
+2024-06-13T09:11:43 DEBUG Starting the USB monitor
+2024-06-13T09:11:43 DEBUG Monitor event received start
+2024-06-13T09:11:43 INFO MAIN: Monitor connected: start
+2024-06-13T09:11:43 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T09:11:43 DEBUG Device event received {connected {0xc0002c6240 0xc0002c6440}}
+2024-06-13T11:27:16 INFO Logger initialized successfully
+2024-06-13T11:27:16 INFO Starting the application
+2024-06-13T11:27:16 INFO Loading device layout configuration
+2024-06-13T11:27:16 DEBUG Starting the USB monitor
+2024-06-13T11:27:16 DEBUG Monitor event received start
+2024-06-13T11:27:16 INFO MAIN: Monitor connected: start
+2024-06-13T11:27:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:27:16 DEBUG Device event received {connected {0xc0003b4380 0xc0003b4580}}
+2024-06-13T11:27:56 INFO Logger initialized successfully
+2024-06-13T11:27:56 INFO Starting the application
+2024-06-13T11:27:56 INFO Loading device layout configuration
+2024-06-13T11:27:56 DEBUG Starting the USB monitor
+2024-06-13T11:27:56 DEBUG Monitor event received start
+2024-06-13T11:27:56 INFO MAIN: Monitor connected: start
+2024-06-13T11:27:56 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:27:56 DEBUG Device event received {connected {0xc00003c280 0xc00003c480}}
+2024-06-13T11:28:16 INFO Logger initialized successfully
+2024-06-13T11:28:16 INFO Starting the application
+2024-06-13T11:28:16 INFO Loading device layout configuration
+2024-06-13T11:28:16 DEBUG Starting the USB monitor
+2024-06-13T11:28:16 DEBUG Monitor event received start
+2024-06-13T11:28:16 INFO MAIN: Monitor connected: start
+2024-06-13T11:28:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:28:16 DEBUG Device event received {connected {0xc00041e280 0xc00041e480}}
+2024-06-13T11:29:07 INFO Logger initialized successfully
+2024-06-13T11:29:07 INFO Starting the application
+2024-06-13T11:29:07 INFO Loading device layout configuration
+2024-06-13T11:29:07 DEBUG Starting the USB monitor
+2024-06-13T11:29:07 DEBUG Monitor event received start
+2024-06-13T11:29:07 INFO MAIN: Monitor connected: start
+2024-06-13T11:29:07 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:29:07 DEBUG Device event received {connected {0xc0003d8240 0xc0003d8440}}
+2024-06-13T11:31:55 INFO Logger initialized successfully
+2024-06-13T11:31:55 INFO Starting the application
+2024-06-13T11:31:55 INFO Loading device layout configuration
+2024-06-13T11:31:55 DEBUG Starting the USB monitor
+2024-06-13T11:31:55 DEBUG Monitor event received start
+2024-06-13T11:31:55 INFO MAIN: Monitor connected: start
+2024-06-13T11:31:55 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:31:55 DEBUG Device event received {connected {0xc0000b6240 0xc0002b81c0}}
+2024-06-13T11:32:08 INFO Logger initialized successfully
+2024-06-13T11:32:08 INFO Starting the application
+2024-06-13T11:32:08 INFO Loading device layout configuration
+2024-06-13T11:32:08 DEBUG Starting the USB monitor
+2024-06-13T11:32:08 DEBUG Monitor event received start
+2024-06-13T11:32:08 INFO MAIN: Monitor connected: start
+2024-06-13T11:32:08 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:32:08 DEBUG Device event received {connected {0xc00020e380 0xc00020e580}}
+2024-06-13T11:32:28 INFO Logger initialized successfully
+2024-06-13T11:32:28 INFO Starting the application
+2024-06-13T11:32:28 INFO Loading device layout configuration
+2024-06-13T11:32:28 DEBUG Starting the USB monitor
+2024-06-13T11:32:28 DEBUG Monitor event received start
+2024-06-13T11:32:28 INFO MAIN: Monitor connected: start
+2024-06-13T11:32:28 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:32:28 DEBUG Device event received {connected {0xc000308300 0xc000308500}}
+2024-06-13T11:32:52 INFO Logger initialized successfully
+2024-06-13T11:32:52 INFO Starting the application
+2024-06-13T11:32:52 INFO Loading device layout configuration
+2024-06-13T11:32:52 DEBUG Starting the USB monitor
+2024-06-13T11:32:52 DEBUG Monitor event received start
+2024-06-13T11:32:52 INFO MAIN: Monitor connected: start
+2024-06-13T11:32:52 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:32:52 DEBUG Device event received {connected {0xc00042a700 0xc00042a900}}
+2024-06-13T11:33:58 INFO Logger initialized successfully
+2024-06-13T11:33:58 INFO Starting the application
+2024-06-13T11:33:58 INFO Loading device layout configuration
+2024-06-13T11:33:58 DEBUG Starting the USB monitor
+2024-06-13T11:33:58 DEBUG Monitor event received start
+2024-06-13T11:33:58 INFO MAIN: Monitor connected: start
+2024-06-13T11:33:58 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:33:58 DEBUG Device event received {connected {0xc0005a0240 0xc0005a0440}}
+2024-06-13T11:34:37 INFO Logger initialized successfully
+2024-06-13T11:34:37 INFO Starting the application
+2024-06-13T11:34:37 INFO Loading device layout configuration
+2024-06-13T11:34:37 DEBUG Starting the USB monitor
+2024-06-13T11:34:37 DEBUG Monitor event received start
+2024-06-13T11:34:37 INFO MAIN: Monitor connected: start
+2024-06-13T11:34:37 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:34:37 DEBUG Device event received {connected {0xc0000e2240 0xc0000e2440}}
+2024-06-13T11:34:56 INFO Logger initialized successfully
+2024-06-13T11:34:56 INFO Starting the application
+2024-06-13T11:34:56 INFO Loading device layout configuration
+2024-06-13T11:34:56 DEBUG Starting the USB monitor
+2024-06-13T11:34:56 DEBUG Monitor event received start
+2024-06-13T11:34:56 INFO MAIN: Monitor connected: start
+2024-06-13T11:34:56 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:34:56 DEBUG Device event received {connected {0xc0004b8380 0xc0004b8580}}
+2024-06-13T11:35:33 INFO Logger initialized successfully
+2024-06-13T11:35:33 INFO Starting the application
+2024-06-13T11:35:33 INFO Loading device layout configuration
+2024-06-13T11:35:33 DEBUG Starting the USB monitor
+2024-06-13T11:35:33 DEBUG Monitor event received start
+2024-06-13T11:35:33 INFO MAIN: Monitor connected: start
+2024-06-13T11:35:33 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:35:33 DEBUG Device event received {connected {0xc00059e140 0xc00059e380}}
+2024-06-13T11:40:54 INFO Logger initialized successfully
+2024-06-13T11:40:54 INFO Starting the application
+2024-06-13T11:40:54 INFO Loading device layout configuration
+2024-06-13T11:40:54 DEBUG Starting the USB monitor
+2024-06-13T11:40:54 DEBUG Monitor event received start
+2024-06-13T11:40:54 INFO MAIN: Monitor connected: start
+2024-06-13T11:40:54 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T11:40:54 DEBUG Device event received {connected {0xc00030a440 0xc0001b8240}}
+2024-06-13T12:08:51 INFO Logger initialized successfully
+2024-06-13T12:08:51 INFO Starting the application
+2024-06-13T12:08:51 INFO Loading device layout configuration
+2024-06-13T12:08:51 DEBUG Starting the USB monitor
+2024-06-13T12:08:51 DEBUG Monitor event received start
+2024-06-13T12:08:51 INFO MAIN: Monitor connected: start
+2024-06-13T12:08:51 INFO 2024/06/13 12:08:51 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:08:51 INFO 2024/06/13 12:08:51   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:08:58 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:08:58 DEBUG Device event received {connected {0xc00023c240 0xc00023c440}}
+2024-06-13T12:09:14 INFO Logger initialized successfully
+2024-06-13T12:09:14 INFO Starting the application
+2024-06-13T12:09:14 INFO Loading device layout configuration
+2024-06-13T12:09:14 DEBUG Starting the USB monitor
+2024-06-13T12:09:14 DEBUG Monitor event received start
+2024-06-13T12:09:14 INFO MAIN: Monitor connected: start
+2024-06-13T12:09:14 INFO 2024/06/13 12:09:14 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:09:14 INFO 2024/06/13 12:09:14   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:09:17 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:09:17 DEBUG Device event received {connected {0xc00018a300 0xc00018a500}}
+2024-06-13T12:13:45 INFO Logger initialized successfully
+2024-06-13T12:13:45 INFO Starting the application
+2024-06-13T12:13:45 INFO Loading device layout configuration
+2024-06-13T12:13:45 DEBUG Starting the USB monitor
+2024-06-13T12:13:45 DEBUG Monitor event received start
+2024-06-13T12:13:45 INFO MAIN: Monitor connected: start
+2024-06-13T12:13:45 INFO 2024/06/13 12:13:45 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:13:45 INFO 2024/06/13 12:13:45   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:13:45 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:13:45 DEBUG Device event received {connected {0xc0003b0680 0xc0003b0880}}
+2024-06-13T12:14:05 INFO Logger initialized successfully
+2024-06-13T12:14:05 INFO Starting the application
+2024-06-13T12:14:05 INFO Loading device layout configuration
+2024-06-13T12:14:05 DEBUG Starting the USB monitor
+2024-06-13T12:14:05 DEBUG Monitor event received start
+2024-06-13T12:14:05 INFO MAIN: Monitor connected: start
+2024-06-13T12:14:05 INFO 2024/06/13 12:14:05 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:14:05 INFO 2024/06/13 12:14:05   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:14:05 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:14:05 DEBUG Device event received {connected {0xc000222300 0xc000222500}}
+2024-06-13T12:14:44 INFO Logger initialized successfully
+2024-06-13T12:14:44 INFO Starting the application
+2024-06-13T12:14:44 INFO Loading device layout configuration
+2024-06-13T12:14:44 DEBUG Starting the USB monitor
+2024-06-13T12:14:44 DEBUG Monitor event received start
+2024-06-13T12:14:44 INFO MAIN: Monitor connected: start
+2024-06-13T12:14:44 INFO 2024/06/13 12:14:44 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:14:44 INFO 2024/06/13 12:14:44   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:14:44 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:14:44 DEBUG Device event received {connected {0xc0005b0240 0xc0005b0440}}
+2024-06-13T12:15:49 INFO Logger initialized successfully
+2024-06-13T12:15:49 INFO Starting the application
+2024-06-13T12:15:49 INFO Loading device layout configuration
+2024-06-13T12:15:49 DEBUG Starting the USB monitor
+2024-06-13T12:15:49 DEBUG Monitor event received start
+2024-06-13T12:15:49 INFO MAIN: Monitor connected: start
+2024-06-13T12:15:49 INFO 2024/06/13 12:15:49 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:15:49 INFO 2024/06/13 12:15:49   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:15:49 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:15:49 DEBUG Device event received {connected {0xc00003c340 0xc00003c540}}
+2024-06-13T12:16:51 INFO Logger initialized successfully
+2024-06-13T12:16:51 INFO Starting the application
+2024-06-13T12:16:51 INFO Loading device layout configuration
+2024-06-13T12:16:51 DEBUG Starting the USB monitor
+2024-06-13T12:16:51 DEBUG Monitor event received start
+2024-06-13T12:16:51 INFO MAIN: Monitor connected: start
+2024-06-13T12:16:51 INFO 2024/06/13 12:16:51 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:16:51 INFO 2024/06/13 12:16:51   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:16:51 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:16:51 DEBUG Device event received {connected {0xc0000d6280 0xc0000d6480}}
+2024-06-13T12:17:05 INFO Logger initialized successfully
+2024-06-13T12:17:05 INFO Starting the application
+2024-06-13T12:17:05 INFO Loading device layout configuration
+2024-06-13T12:17:05 DEBUG Starting the USB monitor
+2024-06-13T12:17:05 DEBUG Monitor event received start
+2024-06-13T12:17:05 INFO MAIN: Monitor connected: start
+2024-06-13T12:17:05 INFO 2024/06/13 12:17:05 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:17:05 INFO 2024/06/13 12:17:05   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:17:05 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:17:05 DEBUG Device event received {connected {0xc00003c280 0xc00003c480}}
+2024-06-13T12:18:05 INFO Logger initialized successfully
+2024-06-13T12:18:05 INFO Starting the application
+2024-06-13T12:18:05 INFO Loading device layout configuration
+2024-06-13T12:18:05 DEBUG Starting the USB monitor
+2024-06-13T12:18:05 DEBUG Monitor event received start
+2024-06-13T12:18:05 INFO MAIN: Monitor connected: start
+2024-06-13T12:18:05 INFO 2024/06/13 12:18:05 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:18:05 INFO 2024/06/13 12:18:05   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:18:05 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:18:05 DEBUG Device event received {connected {0xc000430280 0xc000430480}}
+2024-06-13T12:53:53 INFO Logger initialized successfully
+2024-06-13T12:53:53 INFO Starting the application
+2024-06-13T12:53:53 INFO Loading device layout configuration
+2024-06-13T12:53:53 DEBUG Starting the USB monitor
+2024-06-13T12:53:53 DEBUG Monitor event received start
+2024-06-13T12:53:53 INFO MAIN: Monitor connected: start
+2024-06-13T12:53:53 INFO 2024/06/13 12:53:53 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:53:53 INFO 2024/06/13 12:53:53   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:54:01 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:54:01 DEBUG Device event received {connected {0xc000622280 0xc000622480}}
+2024-06-13T12:54:54 INFO Logger initialized successfully
+2024-06-13T12:54:54 INFO Starting the application
+2024-06-13T12:54:54 INFO Loading device layout configuration
+2024-06-13T12:54:54 DEBUG Starting the USB monitor
+2024-06-13T12:54:54 DEBUG Monitor event received start
+2024-06-13T12:54:54 INFO MAIN: Monitor connected: start
+2024-06-13T12:54:54 INFO 2024/06/13 12:54:54 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:54:54 INFO 2024/06/13 12:54:54   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:55:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:55:16 DEBUG Device event received {connected {0xc0003fa300 0xc0003fa540}}
+2024-06-13T12:57:13 INFO Logger initialized successfully
+2024-06-13T12:57:13 INFO Starting the application
+2024-06-13T12:57:13 INFO Loading device layout configuration
+2024-06-13T12:57:13 DEBUG Starting the USB monitor
+2024-06-13T12:57:13 DEBUG Monitor event received start
+2024-06-13T12:57:13 INFO MAIN: Monitor connected: start
+2024-06-13T12:57:13 INFO 2024/06/13 12:57:13 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:57:15 INFO 2024/06/13 12:57:13   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:57:15 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:57:15 DEBUG Device event received {connected {0xc00032c680 0xc00032c880}}
+2024-06-13T12:58:32 INFO Logger initialized successfully
+2024-06-13T12:58:32 INFO Starting the application
+2024-06-13T12:58:32 INFO Loading device layout configuration
+2024-06-13T12:58:32 DEBUG Starting the USB monitor
+2024-06-13T12:58:32 DEBUG Monitor event received start
+2024-06-13T12:58:32 INFO MAIN: Monitor connected: start
+2024-06-13T12:58:32 INFO 2024/06/13 12:58:32 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T12:58:32 INFO 2024/06/13 12:58:32   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T12:58:34 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T12:58:34 DEBUG Device event received {connected {0xc0003d8300 0xc0003d8500}}
+2024-06-13T14:29:37 INFO Logger initialized successfully
+2024-06-13T14:29:37 INFO Starting the application
+2024-06-13T14:29:37 INFO Loading device layout configuration
+2024-06-13T14:29:37 DEBUG Starting the USB monitor
+2024-06-13T14:29:37 DEBUG Monitor event received start
+2024-06-13T14:29:37 INFO MAIN: Monitor connected: start
+2024-06-13T14:29:37 INFO 2024/06/13 14:29:37 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T14:29:46 INFO 2024/06/13 14:29:37   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T14:29:46 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T14:29:46 DEBUG Device event received {connected {0xc0004142c0 0xc0004144c0}}
+2024-06-13T14:30:55 INFO Logger initialized successfully
+2024-06-13T14:30:55 INFO Starting the application
+2024-06-13T14:30:55 INFO Loading device layout configuration
+2024-06-13T14:30:55 DEBUG Starting the USB monitor
+2024-06-13T14:30:55 DEBUG Monitor event received start
+2024-06-13T14:30:55 INFO MAIN: Monitor connected: start
+2024-06-13T14:30:55 INFO 2024/06/13 14:30:55 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T14:30:55 INFO 2024/06/13 14:30:55   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T14:30:55 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T14:30:55 DEBUG Device event received {connected {0xc0004ac5c0 0xc0004ac7c0}}
+2024-06-13T14:31:04 INFO Logger initialized successfully
+2024-06-13T14:31:04 INFO Starting the application
+2024-06-13T14:31:04 INFO Loading device layout configuration
+2024-06-13T14:31:04 DEBUG Starting the USB monitor
+2024-06-13T14:31:04 DEBUG Monitor event received start
+2024-06-13T14:31:04 INFO MAIN: Monitor connected: start
+2024-06-13T14:31:04 INFO 2024/06/13 14:31:04 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T14:31:04 INFO 2024/06/13 14:31:04   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T14:31:04 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T14:31:04 DEBUG Device event received {connected {0xc0002aa240 0xc0002aa440}}
+2024-06-13T14:41:20 INFO Logger initialized successfully
+2024-06-13T14:41:20 INFO Starting the application
+2024-06-13T14:41:20 INFO Loading device layout configuration
+2024-06-13T14:41:20 DEBUG Starting the USB monitor
+2024-06-13T14:41:20 DEBUG Monitor event received start
+2024-06-13T14:41:20 INFO MAIN: Monitor connected: start
+2024-06-13T14:41:20 INFO 2024/06/13 14:41:20 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T14:41:20 INFO 2024/06/13 14:41:20   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T14:41:20 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T14:41:20 DEBUG Device event received {connected {0xc0003c2300 0xc0001ec040}}
+2024-06-13T14:41:20 INFO 2024/06/13 14:41:20 systray error: unable to set icon: The operation completed successfully.
+2024-06-13T14:42:11 INFO Logger initialized successfully
+2024-06-13T14:42:11 INFO Starting the application
+2024-06-13T14:42:11 INFO Loading device layout configuration
+2024-06-13T14:42:11 DEBUG Starting the USB monitor
+2024-06-13T14:42:11 DEBUG Monitor event received start
+2024-06-13T14:42:11 INFO MAIN: Monitor connected: start
+2024-06-13T14:42:11 INFO 2024/06/13 14:42:11 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T14:42:11 INFO 2024/06/13 14:42:11   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T14:42:11 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T14:42:11 DEBUG Device event received {connected {0xc0000e8240 0xc0000e8440}}
+2024-06-13T17:04:34 INFO Logger initialized successfully
+2024-06-13T17:04:34 INFO Starting the application
+2024-06-13T17:04:34 INFO Loading device layout configuration
+2024-06-13T17:04:34 DEBUG Starting the USB monitor
+2024-06-13T17:04:34 DEBUG Monitor event received start
+2024-06-13T17:04:34 INFO MAIN: Monitor connected: start
+2024-06-13T17:04:34 INFO 2024/06/13 17:04:34 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T17:42:47 INFO 2024/06/13 17:04:34   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T17:42:47 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T17:42:47 DEBUG Device event received {connected {0xc0002ca280 0xc0002ca480}}
+2024-06-13T17:42:57 INFO Logger initialized successfully
+2024-06-13T17:42:57 INFO Starting the application
+2024-06-13T17:42:57 INFO Loading device layout configuration
+2024-06-13T17:42:57 DEBUG Starting the USB monitor
+2024-06-13T17:42:57 DEBUG Monitor event received start
+2024-06-13T17:42:57 INFO MAIN: Monitor connected: start
+2024-06-13T17:42:57 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-13T17:42:57 DEBUG Device event received {connected {0xc000288240 0xc000288440}}
+2024-06-13T17:42:57 INFO 2024/06/13 17:42:57 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T17:42:57 INFO 2024/06/13 17:42:57   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T17:43:01 INFO Quit menu item clicked
+2024-06-13T17:43:01 INFO Exiting the application
+2024-06-13T18:04:30 INFO Logger initialized successfully
+2024-06-13T18:04:30 INFO Starting the application
+2024-06-13T18:04:30 INFO Loading device layout configuration
+2024-06-13T18:04:30 DEBUG Starting the USB monitor
+2024-06-13T18:04:30 DEBUG Monitor event received start
+2024-06-13T18:04:30 INFO MAIN: Monitor connected: start
+2024-06-13T18:04:30 INFO 2024/06/13 18:04:30 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T18:04:30 INFO 2024/06/13 18:04:30   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T18:05:27 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=16
+2024-06-13T18:05:27 DEBUG Device event received {connected {0xc000638240 0xc000638440}}
+2024-06-13T18:05:39 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=16
+2024-06-13T18:05:39 DEBUG Device event received {disconnected {0xc000638240 0xc000638440}}
+2024-06-13T18:10:50 INFO Logger initialized successfully
+2024-06-13T18:10:50 INFO Starting the application
+2024-06-13T18:10:50 INFO Loading device layout configuration
+2024-06-13T18:10:50 DEBUG Starting the USB monitor
+2024-06-13T18:10:50 DEBUG Monitor event received start
+2024-06-13T18:10:50 INFO MAIN: Monitor connected: start
+2024-06-13T18:10:50 INFO 2024/06/13 18:10:50 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T18:10:50 INFO 2024/06/13 18:10:50   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T18:11:19 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-13T18:11:19 DEBUG Device event received {connected {0xc000430840 0xc000430a40}}
+2024-06-13T18:11:47 INFO Logger initialized successfully
+2024-06-13T18:11:47 INFO Starting the application
+2024-06-13T18:11:47 INFO Loading device layout configuration
+2024-06-13T18:11:47 DEBUG Starting the USB monitor
+2024-06-13T18:11:47 DEBUG Monitor event received start
+2024-06-13T18:11:47 INFO MAIN: Monitor connected: start
+2024-06-13T18:11:47 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-13T18:11:47 DEBUG Device event received {connected {0xc000238280 0xc000238480}}
+2024-06-13T18:11:47 INFO 2024/06/13 18:11:47 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T18:11:47 INFO 2024/06/13 18:11:47   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T18:12:11 INFO Logger initialized successfully
+2024-06-13T18:12:11 INFO Starting the application
+2024-06-13T18:12:11 INFO Loading device layout configuration
+2024-06-13T18:12:11 DEBUG Starting the USB monitor
+2024-06-13T18:12:11 DEBUG Monitor event received start
+2024-06-13T18:12:11 INFO MAIN: Monitor connected: start
+2024-06-13T18:12:11 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-13T18:12:11 DEBUG Device event received {connected {0xc000430280 0xc000430480}}
+2024-06-13T18:12:11 INFO 2024/06/13 18:12:11 Fyne error:  Preferences API requires a unique ID, use app.NewWithID() or the FyneApp.toml ID field
+2024-06-13T18:12:11 INFO 2024/06/13 18:12:11   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/app/app.go:60
+2024-06-13T18:13:46 INFO Logger initialized successfully
+2024-06-13T18:13:46 INFO Starting the application
+2024-06-13T18:13:46 INFO Loading device layout configuration
+2024-06-13T18:13:46 DEBUG Starting the USB monitor
+2024-06-13T18:13:46 DEBUG Monitor event received start
+2024-06-13T18:13:46 INFO MAIN: Monitor connected: start
+2024-06-13T18:13:46 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-13T18:13:46 DEBUG Device event received {connected {0xc000222280 0xc000222480}}
+2024-06-13T18:13:58 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=18
+2024-06-13T18:13:58 DEBUG Device event received {disconnected {0xc000222280 0xc000222480}}
+2024-06-13T18:15:14 INFO Logger initialized successfully
+2024-06-13T18:15:14 INFO Starting the application
+2024-06-13T18:15:14 INFO Loading device layout configuration
+2024-06-13T18:16:09 INFO Logger initialized successfully
+2024-06-13T18:16:09 INFO Starting the application
+2024-06-13T18:16:09 INFO Loading device layout configuration
+2024-06-13T18:18:44 INFO Logger initialized successfully
+2024-06-13T18:18:44 INFO Starting the application
+2024-06-13T18:18:44 INFO Loading device layout configuration
+2024-06-13T18:18:44 ERROR key does not match the VID and PID [6001/1000 != 3234353737/34303936]
+2024-06-13T18:21:34 INFO Logger initialized successfully
+2024-06-13T18:21:34 INFO Starting the application
+2024-06-13T18:21:34 INFO Loading device layout configuration
+2024-06-13T18:23:41 INFO Logger initialized successfully
+2024-06-13T18:23:41 INFO Starting the application
+2024-06-13T18:23:41 INFO Loading device layout configuration
+2024-06-13T18:24:03 DEBUG Starting the USB monitor
+2024-06-13T18:24:03 DEBUG Monitor event received start
+2024-06-13T18:24:03 INFO MAIN: Monitor connected: start
+2024-06-13T18:24:21 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:24:21 DEBUG Device event received {connected {0xc00003d040 0xc00003d240}}
+2024-06-13T18:25:16 INFO Logger initialized successfully
+2024-06-13T18:25:16 INFO Starting the application
+2024-06-13T18:25:16 INFO Loading device layout configuration
+2024-06-13T18:25:16 DEBUG Starting the USB monitor
+2024-06-13T18:25:16 DEBUG Monitor event received start
+2024-06-13T18:25:16 INFO MAIN: Monitor connected: start
+2024-06-13T18:25:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:25:16 DEBUG Device event received {connected {0xc00003c3c0 0xc00003c5c0}}
+2024-06-13T18:27:10 INFO Logger initialized successfully
+2024-06-13T18:27:10 INFO Starting the application
+2024-06-13T18:27:10 INFO Loading device layout configuration
+2024-06-13T18:27:10 DEBUG Starting the USB monitor
+2024-06-13T18:27:10 DEBUG Monitor event received start
+2024-06-13T18:27:10 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:27:10 DEBUG Device event received {connected {0xc0002de4c0 0xc0002de6c0}}
+2024-06-13T18:29:18 INFO Logger initialized successfully
+2024-06-13T18:29:18 INFO Starting the application
+2024-06-13T18:29:18 INFO Loading device layout configuration
+2024-06-13T18:29:18 DEBUG Starting the USB monitor
+2024-06-13T18:29:18 DEBUG Monitor event received start
+2024-06-13T18:29:18 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:29:18 DEBUG Device event received {connected {0xc00003c3c0 0xc00003c5c0}}
+2024-06-13T18:30:21 INFO Logger initialized successfully
+2024-06-13T18:30:21 INFO Starting the application
+2024-06-13T18:30:21 INFO Loading device layout configuration
+2024-06-13T18:30:21 DEBUG Starting the USB monitor
+2024-06-13T18:30:21 DEBUG Monitor event received start
+2024-06-13T18:30:21 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:30:21 DEBUG Device event received {connected {0xc00059c3c0 0xc00059c600}}
+2024-06-13T18:31:09 INFO Logger initialized successfully
+2024-06-13T18:31:09 INFO Starting the application
+2024-06-13T18:31:09 INFO Loading device layout configuration
+2024-06-13T18:31:09 DEBUG Starting the USB monitor
+2024-06-13T18:31:09 DEBUG Monitor event received start
+2024-06-13T18:31:09 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:31:09 DEBUG Device event received {connected {0xc0004cc380 0xc0004cc580}}
+2024-06-13T18:33:18 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=20
+2024-06-13T18:33:18 DEBUG Device event received {disconnected {0xc0004cc380 0xc0004cc580}}
+2024-06-13T18:36:02 INFO Logger initialized successfully
+2024-06-13T18:36:02 INFO Starting the application
+2024-06-13T18:36:02 INFO Loading device layout configuration
+2024-06-13T18:36:02 DEBUG Starting the USB monitor
+2024-06-13T18:36:02 DEBUG Monitor event received start
+2024-06-13T18:36:21 INFO Logger initialized successfully
+2024-06-13T18:36:21 INFO Starting the application
+2024-06-13T18:36:21 INFO Loading device layout configuration
+2024-06-13T18:36:21 DEBUG Starting the USB monitor
+2024-06-13T18:36:21 DEBUG Monitor event received start
+2024-06-13T18:36:31 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T18:36:31 DEBUG Device event received {connected {0xc000592b40 0xc000592d40}}
+2024-06-13T19:33:01 INFO Logger initialized successfully
+2024-06-13T19:33:01 INFO Starting the application
+2024-06-13T19:33:01 INFO Loading device layout configuration
+2024-06-13T19:33:01 DEBUG Starting the USB monitor
+2024-06-13T19:33:01 DEBUG Monitor event received start
+2024-06-13T19:33:01 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T19:33:01 DEBUG Device event received {connected {0xc00037c340 0xc00037c540}}
+2024-06-13T19:33:25 INFO selDevOpen: clicked
+2024-06-13T19:33:34 INFO Device menu clicked
+2024-06-13T19:33:44 INFO selDevOpen: clicked
+2024-06-13T19:35:20 INFO Logger initialized successfully
+2024-06-13T19:35:20 INFO Starting the application
+2024-06-13T19:35:20 INFO Loading device layout configuration
+2024-06-13T19:35:20 DEBUG Starting the USB monitor
+2024-06-13T19:35:26 DEBUG Monitor event received start
+2024-06-13T19:35:26 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T19:35:26 DEBUG Device event received {connected {0xc000506280 0xc000506480}}
+2024-06-13T19:35:44 INFO selDevOpen: clicked
+2024-06-13T19:48:57 INFO Logger initialized successfully
+2024-06-13T19:48:57 INFO Starting the application
+2024-06-13T19:48:57 INFO Loading device layout configuration
+2024-06-13T19:48:57 DEBUG Starting the USB monitor
+2024-06-13T19:48:57 DEBUG Monitor event received start
+2024-06-13T19:48:57 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T19:48:57 DEBUG Device event received {connected {0xc000242380 0xc000242580}}
+2024-06-13T19:49:28 INFO Logger initialized successfully
+2024-06-13T19:49:28 INFO Starting the application
+2024-06-13T19:49:28 INFO Loading device layout configuration
+2024-06-13T19:49:28 DEBUG Starting the USB monitor
+2024-06-13T19:49:36 DEBUG Monitor event received start
+2024-06-13T19:49:36 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T19:49:36 DEBUG Device event received {connected {0xc000432380 0xc0004325c0}}
+2024-06-13T20:05:20 INFO Logger initialized successfully
+2024-06-13T20:05:20 INFO Starting the application
+2024-06-13T20:05:20 INFO Loading device layout configuration
+2024-06-13T20:05:20 DEBUG Starting the USB monitor
+2024-06-13T20:05:32 DEBUG Monitor event received start
+2024-06-13T20:05:32 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:05:32 DEBUG Device event received {connected {0xc000430540 0xc000430740}}
+2024-06-13T20:05:36 INFO selDevOpen: clicked
+2024-06-13T20:05:49 INFO selDevOpen: clicked
+2024-06-13T20:07:08 INFO Logger initialized successfully
+2024-06-13T20:07:08 INFO Starting the application
+2024-06-13T20:07:08 INFO Loading device layout configuration
+2024-06-13T20:07:08 DEBUG Starting the USB monitor
+2024-06-13T20:07:08 DEBUG Monitor event received start
+2024-06-13T20:07:08 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:07:08 DEBUG Device event received {connected {0xc00026c880 0xc00026ca80}}
+2024-06-13T20:07:13 INFO selDevOpen: clicked
+2024-06-13T20:07:51 INFO Logger initialized successfully
+2024-06-13T20:07:51 INFO Starting the application
+2024-06-13T20:07:51 INFO Loading device layout configuration
+2024-06-13T20:07:51 DEBUG Starting the USB monitor
+2024-06-13T20:07:51 DEBUG Monitor event received start
+2024-06-13T20:07:51 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:07:51 DEBUG Device event received {connected {0xc0004b65c0 0xc0004b67c0}}
+2024-06-13T20:08:01 INFO selDevOpen: clicked
+2024-06-13T20:08:41 INFO Logger initialized successfully
+2024-06-13T20:08:41 INFO Starting the application
+2024-06-13T20:08:41 INFO Loading device layout configuration
+2024-06-13T20:08:41 DEBUG Starting the USB monitor
+2024-06-13T20:08:41 DEBUG Monitor event received start
+2024-06-13T20:08:41 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:08:41 DEBUG Device event received {connected {0xc0000f89c0 0xc0000f8bc0}}
+2024-06-13T20:08:48 INFO selDevOpen: clicked
+2024-06-13T20:10:15 INFO Logger initialized successfully
+2024-06-13T20:10:15 INFO Starting the application
+2024-06-13T20:10:15 INFO Loading device layout configuration
+2024-06-13T20:10:15 DEBUG Starting the USB monitor
+2024-06-13T20:10:15 DEBUG Monitor event received start
+2024-06-13T20:10:15 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:10:15 DEBUG Device event received {connected {0xc000614480 0xc000614680}}
+2024-06-13T20:10:20 INFO selDevOpen: clicked
+2024-06-13T20:10:38 INFO Logger initialized successfully
+2024-06-13T20:10:38 INFO Starting the application
+2024-06-13T20:10:38 INFO Loading device layout configuration
+2024-06-13T20:10:38 DEBUG Starting the USB monitor
+2024-06-13T20:10:38 DEBUG Monitor event received start
+2024-06-13T20:10:38 DEBUG Device event received {connected {0xc0000b2500 0xc0000b2700}}
+2024-06-13T20:10:38 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:10:58 INFO selDevOpen: clicked
+2024-06-13T20:11:26 INFO Logger initialized successfully
+2024-06-13T20:11:26 INFO Starting the application
+2024-06-13T20:11:26 INFO Loading device layout configuration
+2024-06-13T20:11:26 DEBUG Starting the USB monitor
+2024-06-13T20:11:26 DEBUG Monitor event received start
+2024-06-13T20:11:26 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:11:26 DEBUG Device event received {connected {0xc000304580 0xc000304780}}
+2024-06-13T20:11:46 INFO Logger initialized successfully
+2024-06-13T20:11:46 INFO Starting the application
+2024-06-13T20:11:46 INFO Loading device layout configuration
+2024-06-13T20:11:46 DEBUG Starting the USB monitor
+2024-06-13T20:11:46 DEBUG Monitor event received start
+2024-06-13T20:11:46 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:11:46 DEBUG Device event received {connected {0xc00003c740 0xc00003ca80}}
+2024-06-13T20:12:20 INFO Logger initialized successfully
+2024-06-13T20:12:20 INFO Starting the application
+2024-06-13T20:12:20 INFO Loading device layout configuration
+2024-06-13T20:12:30 DEBUG Starting the USB monitor
+2024-06-13T20:12:30 DEBUG Monitor event received start
+2024-06-13T20:12:30 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:12:30 DEBUG Device event received {connected {0xc0000a4840 0xc0000a4a80}}
+2024-06-13T20:12:34 INFO selDevOpen: clicked
+2024-06-13T20:12:35 INFO 2024/06/13 20:12:35 Fyne error:  Failed to set dark mode
+2024-06-13T20:12:35 INFO 2024/06/13 20:12:35   Cause: The operation completed successfully.
+2024-06-13T20:12:35 INFO 2024/06/13 20:12:35   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/internal/driver/glfw/window_windows.go:27
+2024-06-13T20:14:34 INFO Logger initialized successfully
+2024-06-13T20:14:34 INFO Starting the application
+2024-06-13T20:14:34 INFO Loading device layout configuration
+2024-06-13T20:14:37 DEBUG Starting the USB monitor
+2024-06-13T20:14:37 DEBUG Monitor event received start
+2024-06-13T20:14:37 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T20:14:37 DEBUG Device event received {connected {0xc00003c500 0xc00003c700}}
+2024-06-13T20:14:40 INFO selDevOpen: clicked
+2024-06-13T20:14:41 INFO 2024/06/13 20:14:41 Fyne error:  Failed to set dark mode
+2024-06-13T20:14:41 INFO 2024/06/13 20:14:41   Cause: The operation completed successfully.
+2024-06-13T20:14:41 INFO 2024/06/13 20:14:41   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/internal/driver/glfw/window_windows.go:27
+2024-06-13T21:59:12 INFO Logger initialized successfully
+2024-06-13T21:59:12 INFO Starting the application
+2024-06-13T21:59:12 INFO Loading device layout configuration
+2024-06-13T21:59:12 DEBUG Starting the USB monitor
+2024-06-13T21:59:12 DEBUG Monitor event received start
+2024-06-13T21:59:12 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T21:59:12 DEBUG Device event received {connected {0xc0003c30c0 0xc0003c32c0}}
+2024-06-13T21:59:17 INFO selDevOpen: clicked
+2024-06-13T21:59:55 INFO Logger initialized successfully
+2024-06-13T21:59:55 INFO Starting the application
+2024-06-13T21:59:55 INFO Loading device layout configuration
+2024-06-13T21:59:55 DEBUG Starting the USB monitor
+2024-06-13T21:59:55 DEBUG Monitor event received start
+2024-06-13T21:59:55 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T21:59:55 DEBUG Device event received {connected {0xc0002842c0 0xc0002844c0}}
+2024-06-13T22:00:22 INFO Logger initialized successfully
+2024-06-13T22:00:22 INFO Starting the application
+2024-06-13T22:00:22 INFO Loading device layout configuration
+2024-06-13T22:00:22 DEBUG Starting the USB monitor
+2024-06-13T22:00:22 DEBUG Monitor event received start
+2024-06-13T22:00:22 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T22:00:22 DEBUG Device event received {connected {0xc000234780 0xc000234980}}
+2024-06-13T22:00:45 INFO Logger initialized successfully
+2024-06-13T22:00:45 INFO Starting the application
+2024-06-13T22:00:45 INFO Loading device layout configuration
+2024-06-13T22:00:45 DEBUG Starting the USB monitor
+2024-06-13T22:00:45 DEBUG Monitor event received start
+2024-06-13T22:00:45 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T22:00:45 DEBUG Device event received {connected {0xc00059ea40 0xc00059ec40}}
+2024-06-13T22:03:26 INFO Logger initialized successfully
+2024-06-13T22:03:26 INFO Starting the application
+2024-06-13T22:03:26 INFO Loading device layout configuration
+2024-06-13T22:03:26 DEBUG Starting the USB monitor
+2024-06-13T22:03:26 DEBUG Monitor event received start
+2024-06-13T22:03:27 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T22:03:27 DEBUG Device event received {connected {0xc0002b66c0 0xc0002b68c0}}
+2024-06-13T22:03:35 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T22:03:35 DEBUG Device event received {disconnected {0xc0002b66c0 0xc0002b68c0}}
+2024-06-13T22:03:47 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=22
+2024-06-13T22:03:47 DEBUG Device event received {connected {0xc00003de00 0xc001d72080}}
+2024-06-13T22:06:11 INFO Logger initialized successfully
+2024-06-13T22:06:11 INFO Starting the application
+2024-06-13T22:06:11 INFO Loading device layout configuration
+2024-06-13T22:06:11 DEBUG Starting the USB monitor
+2024-06-13T22:06:11 DEBUG Monitor event received start
+2024-06-13T22:06:11 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=24
+2024-06-13T22:06:11 DEBUG Device event received {connected {0xc000350bc0 0xc000350dc0}}
+2024-06-13T22:09:28 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=24
+2024-06-13T22:09:28 DEBUG Device event received {disconnected {0xc000350bc0 0xc000350dc0}}
+2024-06-13T22:09:35 INFO Logger initialized successfully
+2024-06-13T22:09:35 INFO Starting the application
+2024-06-13T22:09:35 INFO Loading device layout configuration
+2024-06-13T22:09:35 DEBUG Starting the USB monitor
+2024-06-13T22:09:35 DEBUG Monitor event received start
+2024-06-13T22:09:51 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=26
+2024-06-13T22:09:51 DEBUG Device event received {connected {0xc000430700 0xc000430900}}
+2024-06-13T22:10:07 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=26
+2024-06-13T22:10:07 DEBUG Device event received {disconnected {0xc000430700 0xc000430900}}
+2024-06-13T22:10:14 INFO Logger initialized successfully
+2024-06-13T22:10:14 INFO Starting the application
+2024-06-13T22:10:14 INFO Loading device layout configuration
+2024-06-13T22:10:14 DEBUG Starting the USB monitor
+2024-06-13T22:10:14 DEBUG Monitor event received start
+2024-06-13T22:10:29 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=28
+2024-06-13T22:10:29 DEBUG Device event received {connected {0xc000222d00 0xc000223140}}
+2024-06-13T22:18:23 INFO Logger initialized successfully
+2024-06-13T22:18:23 INFO Starting the application
+2024-06-13T22:18:23 INFO Loading device layout configuration
+2024-06-13T22:18:24 DEBUG Starting the USB monitor
+2024-06-13T22:18:24 DEBUG Monitor event received start
+2024-06-13T22:18:24 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=28
+2024-06-13T22:18:24 DEBUG Device event received {connected {0xc000430000 0xc000430240}}
+2024-06-13T22:18:30 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=28
+2024-06-13T22:18:30 DEBUG Device event received {disconnected {0xc000430000 0xc000430240}}
+2024-06-13T22:18:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=28
+2024-06-13T22:18:40 DEBUG Device event received {connected {0xc000cf46c0 0xc000cf48c0}}
+2024-06-13T22:18:52 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=28
+2024-06-13T22:18:52 DEBUG Device event received {disconnected {0xc000cf46c0 0xc000cf48c0}}
+2024-06-13T22:19:02 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=28
+2024-06-13T22:19:02 DEBUG Device event received {connected {0xc000cf5b00 0xc000cf5d00}}
+2024-06-13T22:19:53 INFO Logger initialized successfully
+2024-06-13T22:19:53 INFO Starting the application
+2024-06-13T22:19:53 INFO Loading device layout configuration
+2024-06-13T22:19:53 DEBUG Starting the USB monitor
+2024-06-13T22:19:53 DEBUG Monitor event received start
+2024-06-13T22:19:53 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:19:53 DEBUG Device event received {connected {0xc00003c440 0xc00003c640}}
+2024-06-13T22:20:00 INFO Selected device: vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:20:01 INFO Selected device: vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:20:01 INFO Selected device: vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:20:01 INFO Selected device: vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:20:02 INFO Selected device: vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:20:03 INFO Selected device: vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:23:43 INFO Logger initialized successfully
+2024-06-13T22:23:43 INFO Starting the application
+2024-06-13T22:23:43 INFO Loading device layout configuration
+2024-06-13T22:23:43 DEBUG Starting the USB monitor
+2024-06-13T22:23:43 DEBUG Monitor event received start
+2024-06-13T22:23:43 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:23:43 DEBUG Device event received {connected {0xc00042a280 0xc00042a480}}
+2024-06-13T22:24:58 INFO Logger initialized successfully
+2024-06-13T22:24:58 INFO Starting the application
+2024-06-13T22:24:58 INFO Loading device layout configuration
+2024-06-13T22:24:58 DEBUG Starting the USB monitor
+2024-06-13T22:24:58 DEBUG Monitor event received start
+2024-06-13T22:24:58 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:24:58 DEBUG Device event received {connected {0xc000614340 0xc000614540}}
+2024-06-13T22:29:10 INFO Logger initialized successfully
+2024-06-13T22:29:10 INFO Starting the application
+2024-06-13T22:29:10 INFO Loading device layout configuration
+2024-06-13T22:29:10 DEBUG Starting the USB monitor
+2024-06-13T22:29:10 DEBUG Monitor event received start
+2024-06-13T22:29:10 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:29:10 DEBUG Device event received {connected {0xc0003a03c0 0xc0003a05c0}}
+2024-06-13T22:29:27 INFO Logger initialized successfully
+2024-06-13T22:29:27 INFO Starting the application
+2024-06-13T22:29:27 INFO Loading device layout configuration
+2024-06-13T22:29:27 DEBUG Starting the USB monitor
+2024-06-13T22:29:27 DEBUG Monitor event received start
+2024-06-13T22:29:27 DEBUG Device event received {connected {0xc000270940 0xc000270b40}}
+2024-06-13T22:29:52 INFO Logger initialized successfully
+2024-06-13T22:29:52 INFO Starting the application
+2024-06-13T22:29:52 INFO Loading device layout configuration
+2024-06-13T22:29:52 DEBUG Starting the USB monitor
+2024-06-13T22:29:52 DEBUG Monitor event received start
+2024-06-13T22:29:52 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:29:52 DEBUG Device event received {connected {0xc00003c340 0xc00003c540}}
+2024-06-13T22:33:55 INFO Logger initialized successfully
+2024-06-13T22:33:55 INFO Starting the application
+2024-06-13T22:33:55 INFO Loading device layout configuration
+2024-06-13T22:33:55 DEBUG Starting the USB monitor
+2024-06-13T22:33:55 DEBUG Monitor event received start
+2024-06-13T22:33:55 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:33:55 DEBUG Device event received {connected {0xc000616a80 0xc000616c80}}
+2024-06-13T22:34:28 INFO Logger initialized successfully
+2024-06-13T22:34:28 INFO Starting the application
+2024-06-13T22:34:28 INFO Loading device layout configuration
+2024-06-13T22:34:29 DEBUG Starting the USB monitor
+2024-06-13T22:34:29 DEBUG Monitor event received start
+2024-06-13T22:34:29 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:34:29 DEBUG Device event received {connected {0xc00003c540 0xc00003c780}}
+2024-06-13T22:36:14 INFO Logger initialized successfully
+2024-06-13T22:36:14 INFO Starting the application
+2024-06-13T22:36:14 INFO Loading device layout configuration
+2024-06-13T22:36:14 DEBUG Starting the USB monitor
+2024-06-13T22:36:14 DEBUG Monitor event received start
+2024-06-13T22:36:14 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:36:14 DEBUG Device event received {connected {0xc000430280 0xc000430480}}
+2024-06-13T22:45:29 INFO Logger initialized successfully
+2024-06-13T22:45:29 INFO Starting the application
+2024-06-13T22:45:29 INFO Loading device layout configuration
+2024-06-13T22:45:29 DEBUG Starting the USB monitor
+2024-06-13T22:45:29 DEBUG Monitor event received start
+2024-06-13T22:45:29 DEBUG Device event received {connected {0xc0003d8ac0 0xc0003d8cc0}}
+2024-06-13T22:45:29 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:55:51 INFO Logger initialized successfully
+2024-06-13T22:55:51 INFO Starting the application
+2024-06-13T22:55:51 INFO Loading device layout configuration
+2024-06-13T22:55:51 DEBUG Starting the USB monitor
+2024-06-13T22:55:51 DEBUG Monitor event received start
+2024-06-13T22:55:51 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:55:51 DEBUG Device event received {connected {0xc0004309c0 0xc000430bc0}}
+2024-06-13T22:56:34 INFO Logger initialized successfully
+2024-06-13T22:56:34 INFO Starting the application
+2024-06-13T22:56:34 INFO Loading device layout configuration
+2024-06-13T22:56:34 DEBUG Starting the USB monitor
+2024-06-13T22:56:34 DEBUG Monitor event received start
+2024-06-13T22:56:34 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:56:34 DEBUG Device event received {connected {0xc0003fa380 0xc0003fa580}}
+2024-06-13T22:57:36 INFO Logger initialized successfully
+2024-06-13T22:57:36 INFO Starting the application
+2024-06-13T22:57:36 INFO Loading device layout configuration
+2024-06-13T22:57:36 DEBUG Starting the USB monitor
+2024-06-13T22:57:36 DEBUG Monitor event received start
+2024-06-13T22:57:36 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:57:36 DEBUG Device event received {connected {0xc00031c280 0xc00031c600}}
+2024-06-13T22:59:48 INFO Logger initialized successfully
+2024-06-13T22:59:48 INFO Starting the application
+2024-06-13T22:59:48 INFO Loading device layout configuration
+2024-06-13T22:59:48 DEBUG Starting the USB monitor
+2024-06-13T22:59:48 DEBUG Monitor event received start
+2024-06-13T22:59:48 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T22:59:48 DEBUG Device event received {connected {0xc00003c540 0xc00003c740}}
+2024-06-13T23:55:56 INFO Logger initialized successfully
+2024-06-13T23:55:56 INFO Starting the application
+2024-06-13T23:55:56 INFO Loading device layout configuration
+2024-06-13T23:55:56 DEBUG Starting the USB monitor
+2024-06-13T23:55:56 DEBUG Monitor event received start
+2024-06-13T23:55:56 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T23:55:56 DEBUG Device event received {connected {0xc00025a340 0xc00025a540}}
+2024-06-13T23:58:18 INFO Logger initialized successfully
+2024-06-13T23:58:18 INFO Starting the application
+2024-06-13T23:58:18 INFO Loading device layout configuration
+2024-06-13T23:58:18 DEBUG Starting the USB monitor
+2024-06-13T23:58:18 DEBUG Monitor event received start
+2024-06-13T23:58:18 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T23:58:18 DEBUG Device event received {connected {0xc0003b04c0 0xc0003b0700}}
+2024-06-13T23:58:56 INFO Logger initialized successfully
+2024-06-13T23:58:56 INFO Starting the application
+2024-06-13T23:58:56 INFO Loading device layout configuration
+2024-06-13T23:58:56 DEBUG Starting the USB monitor
+2024-06-13T23:58:56 DEBUG Monitor event received start
+2024-06-13T23:58:56 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T23:58:56 DEBUG Device event received {connected {0xc0003b0240 0xc0003b0440}}
+2024-06-13T23:59:19 INFO Logger initialized successfully
+2024-06-13T23:59:19 INFO Starting the application
+2024-06-13T23:59:19 INFO Loading device layout configuration
+2024-06-13T23:59:19 DEBUG Starting the USB monitor
+2024-06-13T23:59:19 DEBUG Monitor event received start
+2024-06-13T23:59:19 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-13T23:59:19 DEBUG Device event received {connected {0xc000638280 0xc000638480}}
+2024-06-13T23:59:22 INFO Tapped
+2024-06-13T23:59:23 INFO Tapped
+2024-06-13T23:59:23 INFO Tapped
+2024-06-13T23:59:24 INFO Tapped
+2024-06-13T23:59:24 INFO Tapped
+2024-06-13T23:59:24 INFO Tapped
+2024-06-13T23:59:24 INFO Tapped
+2024-06-13T23:59:24 INFO Tapped
+2024-06-13T23:59:25 INFO Tapped
+2024-06-14T00:04:36 INFO Logger initialized successfully
+2024-06-14T00:04:36 INFO Starting the application
+2024-06-14T00:04:36 INFO Loading device layout configuration
+2024-06-14T00:04:37 DEBUG Starting the USB monitor
+2024-06-14T00:04:37 DEBUG Monitor event received start
+2024-06-14T00:04:37 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:04:37 DEBUG Device event received {connected {0xc0003ea300 0xc0003ea540}}
+2024-06-14T00:04:42 INFO Tapped
+2024-06-14T00:06:06 INFO Logger initialized successfully
+2024-06-14T00:06:06 INFO Starting the application
+2024-06-14T00:06:06 INFO Loading device layout configuration
+2024-06-14T00:06:06 DEBUG Starting the USB monitor
+2024-06-14T00:06:06 DEBUG Monitor event received start
+2024-06-14T00:06:06 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:06:06 DEBUG Device event received {connected {0xc000306a00 0xc000306c00}}
+2024-06-14T00:06:52 INFO Logger initialized successfully
+2024-06-14T00:06:52 INFO Starting the application
+2024-06-14T00:06:52 INFO Loading device layout configuration
+2024-06-14T00:06:52 DEBUG Starting the USB monitor
+2024-06-14T00:06:52 DEBUG Monitor event received start
+2024-06-14T00:06:52 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:06:52 DEBUG Device event received {connected {0xc000430440 0xc000430680}}
+2024-06-14T00:07:32 INFO Logger initialized successfully
+2024-06-14T00:07:32 INFO Starting the application
+2024-06-14T00:07:32 INFO Loading device layout configuration
+2024-06-14T00:07:32 DEBUG Starting the USB monitor
+2024-06-14T00:07:32 DEBUG Monitor event received start
+2024-06-14T00:07:32 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:07:32 DEBUG Device event received {connected {0xc0003b0380 0xc0003b05c0}}
+2024-06-14T00:08:50 INFO Logger initialized successfully
+2024-06-14T00:08:50 INFO Starting the application
+2024-06-14T00:08:50 INFO Loading device layout configuration
+2024-06-14T00:08:50 DEBUG Starting the USB monitor
+2024-06-14T00:08:50 DEBUG Monitor event received start
+2024-06-14T00:08:50 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:08:50 DEBUG Device event received {connected {0xc0004be240 0xc0004be440}}
+2024-06-14T00:10:05 INFO Logger initialized successfully
+2024-06-14T00:10:05 INFO Starting the application
+2024-06-14T00:10:05 INFO Loading device layout configuration
+2024-06-14T00:10:05 DEBUG Starting the USB monitor
+2024-06-14T00:10:05 DEBUG Monitor event received start
+2024-06-14T00:10:05 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:10:05 DEBUG Device event received {connected {0xc0003a6280 0xc0003a6bc0}}
+2024-06-14T00:10:16 INFO Device clicked
+2024-06-14T00:12:28 INFO Logger initialized successfully
+2024-06-14T00:12:28 INFO Starting the application
+2024-06-14T00:12:28 INFO Loading device layout configuration
+2024-06-14T00:12:29 DEBUG Starting the USB monitor
+2024-06-14T00:12:29 DEBUG Monitor event received start
+2024-06-14T00:12:29 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:12:29 DEBUG Device event received {connected {0xc0000f4ac0 0xc0000f4cc0}}
+2024-06-14T00:12:31 INFO Device clicked 6001/1000
+2024-06-14T00:12:33 INFO Device clicked 6001/1000
+2024-06-14T00:12:33 INFO Device clicked 6001/1000
+2024-06-14T00:12:33 INFO Device clicked 6001/1000
+2024-06-14T00:12:34 INFO Device clicked 6001/1000
+2024-06-14T00:12:34 INFO Device clicked 6001/1000
+2024-06-14T00:12:34 INFO Device clicked 6001/1000
+2024-06-14T00:12:34 INFO Device clicked 6001/1000
+2024-06-14T00:12:35 INFO Device clicked 6001/1000
+2024-06-14T00:12:35 INFO Device clicked 6001/1000
+2024-06-14T00:14:09 INFO Logger initialized successfully
+2024-06-14T00:14:09 INFO Starting the application
+2024-06-14T00:14:09 INFO Loading device layout configuration
+2024-06-14T00:14:09 DEBUG Starting the USB monitor
+2024-06-14T00:14:09 DEBUG Monitor event received start
+2024-06-14T00:14:09 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:14:09 DEBUG Device event received {connected {0xc00003c500 0xc00003c700}}
+2024-06-14T00:14:12 INFO Secondary click
+2024-06-14T00:14:13 INFO Secondary click
+2024-06-14T00:14:13 INFO Secondary click
+2024-06-14T00:14:14 INFO Secondary click
+2024-06-14T00:14:14 INFO Secondary click
+2024-06-14T00:15:47 INFO Logger initialized successfully
+2024-06-14T00:15:47 INFO Starting the application
+2024-06-14T00:15:47 INFO Loading device layout configuration
+2024-06-14T00:15:47 DEBUG Starting the USB monitor
+2024-06-14T00:15:47 DEBUG Monitor event received start
+2024-06-14T00:15:47 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:15:47 DEBUG Device event received {connected {0xc0003cc280 0xc0003cc480}}
+2024-06-14T00:16:45 INFO Logger initialized successfully
+2024-06-14T00:16:45 INFO Starting the application
+2024-06-14T00:16:45 INFO Loading device layout configuration
+2024-06-14T00:16:45 DEBUG Starting the USB monitor
+2024-06-14T00:16:45 DEBUG Monitor event received start
+2024-06-14T00:16:45 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:16:45 DEBUG Device event received {connected {0xc0005283c0 0xc0005285c0}}
+2024-06-14T00:16:49 INFO Device clicked 6001/1000
+2024-06-14T00:17:42 INFO Logger initialized successfully
+2024-06-14T00:17:42 INFO Starting the application
+2024-06-14T00:17:42 INFO Loading device layout configuration
+2024-06-14T00:17:42 DEBUG Starting the USB monitor
+2024-06-14T00:17:42 DEBUG Monitor event received start
+2024-06-14T00:17:42 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:17:42 DEBUG Device event received {connected {0xc00003c580 0xc00003c780}}
+2024-06-14T00:18:36 INFO Logger initialized successfully
+2024-06-14T00:18:36 INFO Starting the application
+2024-06-14T00:18:36 INFO Loading device layout configuration
+2024-06-14T00:18:36 DEBUG Starting the USB monitor
+2024-06-14T00:18:36 DEBUG Monitor event received start
+2024-06-14T00:18:36 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:18:36 DEBUG Device event received {connected {0xc00035ecc0 0xc00035eec0}}
+2024-06-14T00:23:16 INFO Logger initialized successfully
+2024-06-14T00:23:16 INFO Starting the application
+2024-06-14T00:23:16 INFO Loading device layout configuration
+2024-06-14T00:23:16 DEBUG Starting the USB monitor
+2024-06-14T00:23:16 DEBUG Monitor event received start
+2024-06-14T00:23:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:23:16 DEBUG Device event received {connected {0xc0002dc4c0 0xc0002dc6c0}}
+2024-06-14T00:27:03 INFO Logger initialized successfully
+2024-06-14T00:27:03 INFO Starting the application
+2024-06-14T00:27:03 INFO Loading device layout configuration
+2024-06-14T00:27:03 DEBUG Starting the USB monitor
+2024-06-14T00:27:03 DEBUG Monitor event received start
+2024-06-14T00:27:03 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=32
+2024-06-14T00:27:03 DEBUG Device event received {connected {0xc00042a340 0xc00042a540}}
+2024-06-14T00:27:07 INFO Device clicked 6001/1000
+2024-06-14T00:27:07 INFO Device clicked 6001/1000
+2024-06-14T00:27:08 INFO Device clicked 6001/1000
+2024-06-14T00:27:08 INFO Device clicked 6001/1000
+2024-06-14T00:27:08 INFO Device clicked 6001/1000
+2024-06-14T00:27:08 INFO Device clicked 6001/1000
+2024-06-14T00:27:20 INFO Logger initialized successfully
+2024-06-14T00:27:20 INFO Starting the application
+2024-06-14T00:27:20 INFO Loading device layout configuration
+2024-06-14T00:27:20 DEBUG Starting the USB monitor
+2024-06-14T00:27:20 DEBUG Monitor event received start
+2024-06-14T00:27:33 INFO Logger initialized successfully
+2024-06-14T00:27:33 INFO Starting the application
+2024-06-14T00:27:33 INFO Loading device layout configuration
+2024-06-14T00:27:33 DEBUG Starting the USB monitor
+2024-06-14T00:27:33 DEBUG Monitor event received start
+2024-06-14T00:32:01 INFO Logger initialized successfully
+2024-06-14T00:32:01 INFO Starting the application
+2024-06-14T00:32:01 INFO Loading device layout configuration
+2024-06-14T00:32:01 DEBUG Starting the USB monitor
+2024-06-14T00:32:01 DEBUG Monitor event received start
+2024-06-14T00:32:20 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=34
+2024-06-14T00:32:20 DEBUG Device event received {connected {0xc00003c400 0xc00003c600}}
+2024-06-14T00:32:31 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=34
+2024-06-14T00:32:31 DEBUG Device event received {disconnected {0xc00003c400 0xc00003c600}}
+2024-06-14T00:32:44 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=34
+2024-06-14T00:32:44 DEBUG Device event received {connected {0xc000431e00 0xc0024d8080}}
+2024-06-14T00:32:48 INFO Device clicked 6001/1000
+2024-06-14T00:32:49 INFO Device clicked 6001/1000

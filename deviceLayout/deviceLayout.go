@@ -87,8 +87,8 @@ func validate(layouts map[string]DeviceLayoutConfig) error {
 			}
 			return err
 		}
-		if genKey := fmt.Sprintf("%04x/%04x", layout.Identifier.VID, layout.Identifier.PID); key != genKey {
-			err = fmt.Errorf("key does not match the VID and PID [%s != %s]", key, genKey)
+		if key != layout.Identifier.String() {
+			err = fmt.Errorf("key does not match the VID and PID [%s != %s]", key, layout.Identifier.String())
 			logger.Log.Error(err)
 			return err
 		}

@@ -4,6 +4,7 @@ go 1.22.3
 
 require (
 	fyne.io/fyne/v2 v2.4.5
+	github.com/go-playground/validator/v10 v10.21.0
 	github.com/google/gousb v1.1.3
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/sirupsen/logrus v1.9.3
@@ -23,7 +24,6 @@ require (
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
-	github.com/go-playground/validator/v10 v10.21.0 // indirect
 	github.com/go-text/render v0.1.0 // indirect
 	github.com/go-text/typesetting v0.1.0 // indirect
 	github.com/godbus/dbus/v5 v5.1.0 // indirect

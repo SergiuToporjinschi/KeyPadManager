@@ -1,4 +1,4 @@
-package monitoring
+package monitor
 
 import (
 	"fmt"
@@ -10,11 +10,12 @@ import (
 	"github.com/google/gousb"
 )
 
-type deviceEvent struct {
-	event  string
-	device ConnectedDevice
-}
-type Monitor struct {
+const (
+	EventDeviceConnected    string = "connected"
+	EventDeviceDisconnected string = "disconnected"
+)
+
+type USBMonitor struct {
 	ctx              *gousb.Context
 	stopChan         chan struct{}
 	connectedDevices map[string]ConnectedDevice
@@ -31,12 +32,17 @@ type ConnectedDevice struct {
 	*devicelayout.DeviceLayoutConfig
 }
 
-var instance *Monitor
+type deviceEvent struct {
+	event  string
+	device ConnectedDevice
+}
+
+var instance *USBMonitor
 var once sync.Once
 
-func GetInstance() *Monitor {
+func GetInstance() *USBMonitor {
 	once.Do(func() {
-		instance = &Monitor{}
+		instance = &USBMonitor{}
 		instance.deviceEvents = make(chan deviceEvent)
 		instance.deviceListeners = make(map[string]func(string, ConnectedDevice))
 
@@ -48,7 +54,7 @@ func GetInstance() *Monitor {
 	return instance
 }
 
-func (m *Monitor) Start() error {
+func (m *USBMonitor) Start() error {
 	if m.stopChan != nil {
 		logger.Log.Debug("Monitoring already started")
 		return nil
@@ -67,29 +73,29 @@ func (m *Monitor) Start() error {
 	return nil
 }
 
-func (m *Monitor) Stop() {
+func (m *USBMonitor) Stop() {
 	close(m.stopChan)
 	m.monitorEvents <- "stop"
 	defer m.ctx.Close()
 }
 
-func (m *Monitor) AddMonitorEvent(name string, callback func(string)) {
+func (m *USBMonitor) AddMonitorEvent(name string, callback func(string)) {
 	m.monitorListeners[name] = callback
 }
 
-func (m *Monitor) RemoveMonitorEvent(name string) {
+func (m *USBMonitor) RemoveMonitorEvent(name string) {
 	delete(m.monitorListeners, name)
 }
 
-func (m *Monitor) AddDeviceEvent(name string, callback func(string, ConnectedDevice)) {
+func (m *USBMonitor) AddDeviceEvent(name string, callback func(string, ConnectedDevice)) {
 	m.deviceListeners[name] = callback
 }
 
-func (m *Monitor) RemoveDeviceEvent(name string) {
+func (m *USBMonitor) RemoveDeviceEvent(name string) {
 	delete(m.deviceListeners, name)
 }
 
-func (m *Monitor) eventListener() {
+func (m *USBMonitor) eventListener() {
 	for {
 		select {
 		case monitorEvent := <-m.monitorEvents:
@@ -110,14 +116,15 @@ func (m *Monitor) eventListener() {
 	}
 }
 
-func (m *Monitor) monitorDevices() {
-monitorLoop:
+func (m *USBMonitor) monitorDevices() {
+	// monitorLoop:
 	for {
 		select {
 		case <-m.stopChan:
 			logger.Log.Debug("Stopping device monitoring...")
 			m.monitorEvents <- "monitorStop"
-			break monitorLoop
+			// break monitorLoop
+			return
 		default:
 			foundDevices, err := m.listHIDDevices()
 			if err != nil {
@@ -149,7 +156,8 @@ monitorLoop:
 		time.Sleep(2 * time.Second)
 	}
 }
-func (m *Monitor) listHIDDevices() (map[string]ConnectedDevice, error) {
+
+func (m *USBMonitor) listHIDDevices() (map[string]ConnectedDevice, error) {
 	devices := make(map[string]ConnectedDevice)
 	knwonDevices := devicelayout.GetInstance()
 	// List devices
@@ -179,13 +187,13 @@ func (m *Monitor) listHIDDevices() (map[string]ConnectedDevice, error) {
 	return devices, nil
 }
 
-func (m *Monitor) callMonitorListeners(event string) {
+func (m *USBMonitor) callMonitorListeners(event string) {
 	for _, listener := range m.monitorListeners {
 		listener(event)
 	}
 }
 
-func (m *Monitor) callDeviceListeners(event deviceEvent) {
+func (m *USBMonitor) callDeviceListeners(event deviceEvent) {
 	for _, listener := range m.deviceListeners {
 		listener(event.event, event.device)
 	}
