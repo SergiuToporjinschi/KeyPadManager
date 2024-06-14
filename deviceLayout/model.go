@@ -11,7 +11,7 @@ type DeviceLayoutConfig struct {
 }
 type DevIdentifier struct {
 	Manufacturer string    `json:"manufacturer" validate:"required"`
-	Name         string    `json:"name" validate:"required"`
+	Product      string    `json:"product" validate:"required"`
 	VID          HexUint16 `json:"vid" validate:"required"`
 	PID          HexUint16 `json:"pid" validate:"required"`
 }
@@ -50,5 +50,5 @@ func (di *DevIdentifier) String() string {
 }
 
 func (di *DevIdentifier) StringDetailed() string {
-	return fmt.Sprintf("%s by %s [%s]", di.Name, di.Manufacturer, di.String())
+	return fmt.Sprintf("%s by %s [%s]", di.Product, di.Manufacturer, di.String())
 }

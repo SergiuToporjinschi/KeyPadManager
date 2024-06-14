@@ -92,7 +92,7 @@ func (s SysTrayMenu) onDeviceConnection(event string, device *monitor.ConnectedD
 	item, found := s.mDevConMenus[device.Identifier.String()]
 
 	if event == monitor.EventDeviceConnected {
-		newItem := s.mDevConMain.AddSubMenuItem(device.Identifier.Name, device.Identifier.StringDetailed())
+		newItem := s.mDevConMain.AddSubMenuItem(device.Identifier.Product, device.Identifier.StringDetailed())
 		s.mDevConMenus[device.Identifier.String()] = newItem
 
 	} else if event == monitor.EventDeviceDisconnected && found {

@@ -37,7 +37,7 @@ func NewDeviceCard(device *monitor.ConnectedDevice, img *canvas.Image, onLeftCli
 	}
 
 	card.ExtendBaseWidget(card)
-	card.SetTitle(device.Identifier.Name)
+	card.SetTitle(device.Identifier.Product)
 	card.SetSubTitle(device.Identifier.String())
 	card.SetImage(img)
 	return card

@@ -25,7 +25,7 @@ func NewDeviceInfo() *DeviceInfo {
 		deviceBindingData: &devicelayout.DeviceLayoutConfig{
 			Identifier: devicelayout.DevIdentifier{
 				Manufacturer: "",
-				Name:         "",
+				Product:      "",
 				PID:          0,
 				VID:          0,
 			},
@@ -47,7 +47,7 @@ func (i *DeviceInfo) Build() *fyne.Container {
 	items = append(items, widget.NewLabelWithData(binding.BindString(&vid)))
 
 	items = append(items, widget.NewLabel("Product:"))
-	items = append(items, widget.NewLabelWithData(binding.BindString(&i.deviceBindingData.Identifier.Name)))
+	items = append(items, widget.NewLabelWithData(binding.BindString(&i.deviceBindingData.Identifier.Product)))
 
 	items = append(items, widget.NewLabel("Manufacturer:"))
 	items = append(items, widget.NewLabelWithData(binding.BindString(&i.deviceBindingData.Identifier.Manufacturer)))

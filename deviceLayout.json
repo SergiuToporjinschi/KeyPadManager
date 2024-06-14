@@ -2,7 +2,7 @@
   "6001/1000" : {
         "identifier": {
             "manufacturer": "Me&Co",
-            "name": "Development key pad",
+            "product": "Development key pad",
             "vid": "6001",
             "pid": "1000"
         },
