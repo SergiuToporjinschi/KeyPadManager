@@ -12,6 +12,7 @@ type DeviceLayoutConfig struct {
 type DevIdentifier struct {
 	Manufacturer string    `json:"manufacturer" validate:"required"`
 	Product      string    `json:"product" validate:"required"`
+	SerialNumber string    `json:"serialNumber" validate:"omitempty"`
 	VID          HexUint16 `json:"vid" validate:"required"`
 	PID          HexUint16 `json:"pid" validate:"required"`
 }

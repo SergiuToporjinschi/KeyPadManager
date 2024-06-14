@@ -10,9 +10,9 @@ import (
 )
 
 type MainWindow struct {
-	usbMonitor     *monitor.USBMonitor
-	window         fyne.Window
-	device         *monitor.ConnectedDevice
+	usbMonitor *monitor.USBMonitor
+	window     fyne.Window
+	// device         *monitor.ConnectedDevice
 	contentManager *ContentManager
 }
 
@@ -51,10 +51,11 @@ func (m *MainWindow) Show(device *monitor.ConnectedDevice) {
 	m.window.Show()
 }
 
-// ------------ Content Manager ------------
+// ------------------------ Content Manager ------------------------
 
 type ContentManager struct {
 	container.Split
+	currentDevice *monitor.ConnectedDevice
 }
 
 func NewContentManager() *ContentManager {
@@ -62,42 +63,43 @@ func NewContentManager() *ContentManager {
 		Split: container.Split{
 			Offset:     0.5, // Sensible default, can be overridden with SetOffset
 			Horizontal: true,
-			Leading:    NewMenuOptions(),
-			Trailing:   container.NewStack(widget.NewLabel("Menu selection")),
+			Trailing:   container.NewStack(),
 		},
 	}
+	s.Split.Leading = NewMenuOptions(s.onMenuClicked)
 	s.BaseWidget.ExtendBaseWidget(s)
 	return s
 }
 
 func (c *ContentManager) SetDevice(device *monitor.ConnectedDevice) {
-	logger.Log.Debugf("Set device: %v", device)
-	// c.Trailing.(*MenuOptions).SetDevice("info", NewDeviceInfo())
+	c.currentDevice = device
 }
 
-// ------------ Menu Options ------------
+func (c *ContentManager) onMenuClicked(content MainContent) {
+	logger.Log.Debugf("Menu selection changed: device: %v; content: %v", c.currentDevice, content)
+	c.Trailing.(*fyne.Container).Add(content.GetContent(c.currentDevice))
+	// c.Split.Resize(fyne.NewSize(100, 100)) //TODO change size
+	c.Refresh()
+}
+
+// ------------------------ Menu Options ------------------------
 type MenuOptions struct {
 	widget.Accordion
 }
 
-func NewMenuOptions() *MenuOptions {
+func NewMenuOptions(onClick func(MainContent)) *MenuOptions {
 	menu := &MenuOptions{}
 	menu.ExtendBaseWidget(menu)
-	inf := widget.NewButton("Info", func() { menu.onSelectionChanged("info", NewDeviceInfo()) })
+	devInf := NewDeviceInfo()
+	inf := widget.NewButton("Info", func() { onClick(devInf) })
+	// inf := widget.NewButton("Info", func() { onClick(NewDeviceInfo()) })
+	//.......
+	// inf := widget.NewButton("Info", func() { onClick(NewDeviceInfo()) })
 	menu.Append(widget.NewAccordionItem("Device", container.NewVBox(inf)))
 	return menu
 }
 
-func (m *MenuOptions) onSelectionChanged(title string, content MainContent) {
-	logger.Log.Debugf("Menu selection changed: %v, %v", title, content)
-}
-
-func (m *MenuOptions) SetDevice(title string, content MainContent) {
-	logger.Log.Debugf("Set device: %v, %v", title, content)
-}
-
 type MainContent interface {
-	Build() *fyne.Container
-	SetDevice(*monitor.ConnectedDevice)
+	GetContent(*monitor.ConnectedDevice) *fyne.Container
 	Destroy()
 }

@@ -173,20 +173,49 @@ func (m *USBMonitor) listHIDDevices() (map[string]ConnectedDevice, error) {
 	}
 
 	for _, dev := range devs {
-		key := fmt.Sprintf("%s/%s", dev.Desc.Vendor.String(), dev.Desc.Product.String())
-		conf, found := knwonDevices.FindLayoutByKey(key)
-		if found {
-			devices[key] = ConnectedDevice{
-				Device:             dev,
-				DeviceLayoutConfig: conf,
-			}
-		} else {
-			logger.Log.Warnf("Device with VID: %v and PID: %v not found in device layout config", dev.Desc.Vendor, dev.Desc.Product)
+		key, conDevice := m.newConnectedDevice(dev, knwonDevices)
+		if conDevice != nil {
+			devices[key] = *conDevice
 		}
-
 	}
 
 	return devices, nil
+}
+
+func (*USBMonitor) newConnectedDevice(dev *gousb.Device, knwonDevices *devicelayout.DeviceLayout) (string, *ConnectedDevice) {
+	key := fmt.Sprintf("%s/%s", dev.Desc.Vendor.String(), dev.Desc.Product.String())
+	conf, found := knwonDevices.FindLayoutByKey(key)
+	if found {
+
+		prod, err := dev.Product()
+		if err == nil {
+			conf.Identifier.Product = prod
+		} else {
+			logger.Log.Warnf("Error getting product name from phisical device: %v", err)
+		}
+
+		man, err := dev.Manufacturer()
+		if err == nil {
+			conf.Identifier.Manufacturer = man
+		} else {
+			logger.Log.Warnf("Error getting manufacturer name from phisical device: %v", err)
+		}
+
+		serial, err := dev.SerialNumber()
+		if err == nil {
+			conf.Identifier.SerialNumber = serial
+		} else {
+			logger.Log.Warnf("Error getting serial number from phisical device: %v", err)
+		}
+
+		return key, &ConnectedDevice{
+			Device:             dev,
+			DeviceLayoutConfig: conf,
+		}
+	} else {
+		logger.Log.Warnf("Device with VID: %v and PID: %v not found in device layout config", dev.Desc.Vendor, dev.Desc.Product)
+	}
+	return key, nil
 }
 
 func (m *USBMonitor) callMonitorListeners(event string) {

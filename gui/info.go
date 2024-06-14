@@ -12,13 +12,13 @@ import (
 )
 
 type DeviceInfo struct {
-	fyne.Container
+	*fyne.Container
 	deviceBindingData *devicelayout.DeviceLayoutConfig
 }
 
 func NewDeviceInfo() *DeviceInfo {
 	instance := &DeviceInfo{
-		Container: fyne.Container{
+		Container: &fyne.Container{
 			Hidden: true,
 			Layout: layout.NewVBoxLayout(),
 		},
@@ -26,16 +26,17 @@ func NewDeviceInfo() *DeviceInfo {
 			Identifier: devicelayout.DevIdentifier{
 				Manufacturer: "",
 				Product:      "",
+				SerialNumber: "",
 				PID:          0,
 				VID:          0,
 			},
 		},
 	}
-	instance.Objects = append(instance.Objects, instance.Build())
+	instance.build()
 	return instance
 }
 
-func (i *DeviceInfo) Build() *fyne.Container {
+func (i *DeviceInfo) build() {
 	items := []fyne.CanvasObject{}
 
 	items = append(items, widget.NewLabel("PID:"))
@@ -52,18 +53,20 @@ func (i *DeviceInfo) Build() *fyne.Container {
 	items = append(items, widget.NewLabel("Manufacturer:"))
 	items = append(items, widget.NewLabelWithData(binding.BindString(&i.deviceBindingData.Identifier.Manufacturer)))
 
-	// items = append(items, widget.NewLabel("Serial:"))
-	// items = append(items, widget.NewLabelWithData(binding.BindString(&i.deviceBindingData.SerialNumber)))
+	items = append(items, widget.NewLabel("Serial:"))
+	items = append(items, widget.NewLabelWithData(binding.BindString(&i.deviceBindingData.Identifier.SerialNumber)))
 
-	return container.New(layout.NewFormLayout(), items...)
+	i.Objects = append(i.Objects, container.New(layout.NewFormLayout(), items...))
 }
 
-func (i *DeviceInfo) SetDevice(dev *monitor.ConnectedDevice) {
-	// i.deviceBindingData.Identifier.Manufacturer = dev.DeviceLayoutConfig.Identifier.Manufacturer
-	// i.deviceBindingData.Identifier.Product = dev.DeviceLayoutConfig.Identifier.Name
-	// i.deviceBindingData.Identifier.PID = uint16(dev.DeviceLayoutConfig.Identifier.PID)
-	// i.deviceBindingData.Identifier.VID = dev.DeviceLayoutConfig.Identifier.VID
-	// i.deviceBindingData.Identifier.SerialNumber = dev.DeviceLayoutConfig.Identifier.SerialNumber
+func (i *DeviceInfo) GetContent(dev *monitor.ConnectedDevice) *fyne.Container {
+	i.deviceBindingData.Identifier.Manufacturer = dev.Identifier.Manufacturer
+	i.deviceBindingData.Identifier.Product = dev.Identifier.Product
+	i.deviceBindingData.Identifier.SerialNumber = dev.Identifier.SerialNumber
+	i.deviceBindingData.Identifier.PID = dev.Identifier.PID
+	i.deviceBindingData.Identifier.VID = dev.Identifier.VID
+	i.Container.Show()
+	return i.Container
 }
 
 func (i *DeviceInfo) Destroy() {
