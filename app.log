@@ -4274,3 +4274,19 @@ Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for '
 2024-06-14T14:13:15 DEBUG Menu selection changed: device: vid=6001,pid=1000,bus=1,addr=18; content: &{0xc000074320 0xc000074370}
 2024-06-14T14:13:37 INFO selDevOpen: clicked
 2024-06-14T14:13:40 DEBUG Menu selection changed: device: vid=6001,pid=1000,bus=1,addr=18; content: &{0xc000074320 0xc000074370}
+2024-06-14T17:05:35 INFO Logger initialized successfully
+2024-06-14T17:05:35 INFO Starting the application
+2024-06-14T17:05:35 INFO Loading device layout configuration
+2024-06-14T17:05:35 DEBUG Starting the USB monitor
+2024-06-14T17:05:35 DEBUG Monitor event received start
+2024-06-14T17:05:35 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T17:05:35 DEBUG Device event received {connected {0xc0004a4500 0xc0017bb680}}
+2024-06-14T17:05:41 DEBUG Menu selection changed: device: vid=6001,pid=1000,bus=1,addr=18; content: &{0xc00048c0a0 0xc00048c0f0}
+2024-06-14T20:08:30 INFO Logger initialized successfully
+2024-06-14T20:08:30 INFO Starting the application
+2024-06-14T20:08:30 INFO Loading device layout configuration
+2024-06-14T20:08:30 DEBUG Starting the USB monitor
+2024-06-14T20:08:30 DEBUG Monitor event received start
+2024-06-14T20:08:30 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T20:08:30 DEBUG Device event received {connected {0xc0004d0180 0xc001cf8c30}}
+2024-06-14T20:08:43 DEBUG Menu selection changed: device: vid=6001,pid=1000,bus=1,addr=18; content: &{0xc0003500a0 0xc0003500f0}
