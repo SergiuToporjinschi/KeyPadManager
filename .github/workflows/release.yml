@@ -32,7 +32,7 @@ jobs:
         - name: Get latest tag
           id: get_latest_tag
           run: |
-            echo "LAST_TAG=$(git describe --abbrev=0 --tags)" >> $GITHUB_ENV
+            echo "$LAST_TAG=$(git describe --abbrev=0 --tags)" >> $GITHUB_ENV
         
         - name: Create new tag
           id: create_tag
