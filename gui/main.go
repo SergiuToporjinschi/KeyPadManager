@@ -1,10 +1,10 @@
 package gui
 
 import (
+	resources "main/assets"
 	"main/monitor"
 
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/container"
 )
 
 type MainContent interface {
@@ -13,9 +13,8 @@ type MainContent interface {
 }
 
 type MainWindow struct {
-	usbMonitor *monitor.USBMonitor
-	window     fyne.Window
-	// device         *monitor.ConnectedDevice
+	usbMonitor     *monitor.USBMonitor
+	window         fyne.Window
 	contentManager *Navigation
 }
 
@@ -30,18 +29,12 @@ func NewMainWindow(myApp fyne.App) *MainWindow {
 
 func (m *MainWindow) buildWindow() {
 	m.window.Hide()
+	m.window.SetIcon(resources.ResLogoPng)
 	m.window.SetCloseIntercept(m.Close)
-	m.window.SetPadded(true)
 	m.window.CenterOnScreen()
 	m.window.Resize(fyne.NewSize(800, 600))
 	m.contentManager = NewContentManager()
-	m.window.SetContent(container.NewStack(
-		container.NewBorder(
-			nil, //bootom
-			nil, //left
-			nil, //right
-			m.contentManager,
-		)))
+	m.window.SetContent(m.contentManager)
 }
 
 func (m *MainWindow) Close() {

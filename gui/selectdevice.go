@@ -1,6 +1,7 @@
 package gui
 
 import (
+	resources "main/assets"
 	"main/monitor"
 
 	"fyne.io/fyne/v2"
@@ -32,6 +33,7 @@ func NewSelectDevice(myApp fyne.App) *SelectDeviceWindow {
 
 func (s *SelectDeviceWindow) buildWindow() {
 	s.window.Hide()
+	s.window.SetIcon(resources.ResLogoPng)
 	s.window.SetCloseIntercept(s.Close)
 	s.cardList = container.NewHBox(NewNoDeviceCard())
 	s.window.SetContent(container.New(layout.NewCenterLayout(), s.cardList))

@@ -11,6 +11,8 @@ import (
 	"fyne.io/systray"
 )
 
+//go:generate $GOPATH\bin\fyne bundle -prefix Res -package resources -o assets/bundled.go assets/files
+
 func main() {
 	logger.Init()
 	logger.Log.Info("Starting the application")

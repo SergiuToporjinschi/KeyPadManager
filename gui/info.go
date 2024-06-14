@@ -1,5 +1,7 @@
 package gui
 
+//go:generate go run ./ bundle -package data -o bundled.go assets
+
 import (
 	"main/devicelayout"
 	"main/monitor"
