@@ -3964,3 +3964,91 @@ Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for '
 2024-06-14T00:32:44 DEBUG Device event received {connected {0xc000431e00 0xc0024d8080}}
 2024-06-14T00:32:48 INFO Device clicked 6001/1000
 2024-06-14T00:32:49 INFO Device clicked 6001/1000
+2024-06-14T06:40:56 INFO Logger initialized successfully
+2024-06-14T06:40:56 INFO Starting the application
+2024-06-14T06:40:56 INFO Loading device layout configuration
+2024-06-14T06:40:56 DEBUG Starting the USB monitor
+2024-06-14T06:40:56 DEBUG Monitor event received start
+2024-06-14T06:40:57 INFO 2024/06/14 06:40:57 Fyne error:  Failed to set dark mode
+2024-06-14T06:40:57 INFO 2024/06/14 06:40:57   Cause: The operation completed successfully.
+2024-06-14T06:40:57 INFO 2024/06/14 06:40:57   At: C:/Users/Sergi/go/pkg/mod/fyne.io/fyne/v2@v2.4.5/internal/driver/glfw/window_windows.go:27
+2024-06-14T06:41:12 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-14T06:41:12 DEBUG Device event received {connected {0xc000430c40 0xc000430e40}}
+2024-06-14T06:41:17 INFO Device clicked 6001/1000
+2024-06-14T06:45:09 INFO Device clicked 6001/1000
+2024-06-14T06:52:16 INFO Logger initialized successfully
+2024-06-14T06:52:16 INFO Starting the application
+2024-06-14T06:52:16 INFO Loading device layout configuration
+2024-06-14T06:52:16 DEBUG Starting the USB monitor
+2024-06-14T06:52:16 DEBUG Monitor event received start
+2024-06-14T06:52:16 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=14
+2024-06-14T06:52:16 DEBUG Device event received {connected {0xc0005b0700 0xc0005b0900}}
+2024-06-14T06:52:19 INFO Device clicked 6001/1000
+2024-06-14T06:52:24 INFO selDevOpen: clicked
+2024-06-14T06:57:11 INFO Logger initialized successfully
+2024-06-14T06:57:11 INFO Starting the application
+2024-06-14T06:57:11 INFO Loading device layout configuration
+2024-06-14T06:57:11 DEBUG Starting the USB monitor
+2024-06-14T06:57:11 DEBUG Monitor event received start
+2024-06-14T06:57:11 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=16
+2024-06-14T06:57:11 DEBUG Device event received {connected {0xc00003d080 0xc00003d280}}
+2024-06-14T06:57:29 INFO Device disconnected: vid=6001,pid=1000,bus=1,addr=16
+2024-06-14T06:57:29 DEBUG Device event received {disconnected {0xc00003d080 0xc00003d280}}
+2024-06-14T06:57:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=16
+2024-06-14T06:57:40 DEBUG Device event received {connected {0xc001656780 0xc001656980}}
+2024-06-14T06:58:04 INFO Logger initialized successfully
+2024-06-14T06:58:04 INFO Starting the application
+2024-06-14T06:58:04 INFO Loading device layout configuration
+2024-06-14T06:58:05 DEBUG Starting the USB monitor
+2024-06-14T06:58:05 DEBUG Monitor event received start
+2024-06-14T06:58:05 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T06:58:05 DEBUG Device event received {connected {0xc00003c3c0 0xc00003c5c0}}
+2024-06-14T06:58:20 INFO Device clicked 6001/1000
+2024-06-14T06:59:41 INFO Logger initialized successfully
+2024-06-14T06:59:41 INFO Starting the application
+2024-06-14T06:59:41 INFO Loading device layout configuration
+2024-06-14T06:59:41 DEBUG Starting the USB monitor
+2024-06-14T06:59:41 DEBUG Monitor event received start
+2024-06-14T06:59:41 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T06:59:41 DEBUG Device event received {connected {0xc0000e0b40 0xc0000e0f80}}
+2024-06-14T07:09:41 INFO Logger initialized successfully
+2024-06-14T07:09:41 INFO Starting the application
+2024-06-14T07:09:41 INFO Loading device layout configuration
+2024-06-14T07:09:41 DEBUG Starting the USB monitor
+2024-06-14T07:09:41 DEBUG Monitor event received start
+2024-06-14T07:09:41 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T07:09:41 DEBUG Device event received {connected {0xc00030e7c0 0xc00030ee40}}
+2024-06-14T07:09:44 INFO Device clicked 6001/1000
+2024-06-14T07:09:46 INFO Device clicked 6001/1000
+2024-06-14T07:09:46 INFO Device clicked 6001/1000
+2024-06-14T07:09:47 INFO Device clicked 6001/1000
+2024-06-14T07:09:47 INFO Device clicked 6001/1000
+2024-06-14T07:10:18 INFO Logger initialized successfully
+2024-06-14T07:10:18 INFO Starting the application
+2024-06-14T07:10:18 INFO Loading device layout configuration
+2024-06-14T07:10:18 DEBUG Starting the USB monitor
+2024-06-14T07:10:18 DEBUG Monitor event received start
+2024-06-14T07:10:18 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T07:10:18 DEBUG Device event received {connected {0xc000239880 0xc000239a80}}
+2024-06-14T07:10:20 DEBUG Device 6001/1000 selected
+2024-06-14T07:10:20 DEBUG Showing main window for device 6001/1000
+2024-06-14T07:10:22 DEBUG Device 6001/1000 selected
+2024-06-14T07:10:22 DEBUG Showing main window for device 6001/1000
+2024-06-14T07:10:31 DEBUG Device 6001/1000 selected
+2024-06-14T07:11:39 INFO Logger initialized successfully
+2024-06-14T07:11:39 INFO Starting the application
+2024-06-14T07:11:39 INFO Loading device layout configuration
+2024-06-14T07:11:40 DEBUG Starting the USB monitor
+2024-06-14T07:11:40 DEBUG Monitor event received start
+2024-06-14T07:11:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T07:11:40 DEBUG Device event received {connected {0xc00003c7c0 0xc00003ca00}}
+2024-06-14T07:11:42 DEBUG Device 6001/1000 selected
+2024-06-14T07:11:42 DEBUG Showing main window for device 6001/1000
+2024-06-14T07:12:37 INFO Logger initialized successfully
+2024-06-14T07:12:37 INFO Starting the application
+2024-06-14T07:12:37 INFO Loading device layout configuration
+2024-06-14T07:12:37 DEBUG Starting the USB monitor
+2024-06-14T07:12:37 DEBUG Monitor event received start
+2024-06-14T07:12:37 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T07:12:37 DEBUG Device event received {connected {0xc00051ef40 0xc00051f140}}
+2024-06-14T07:12:39 DEBUG Device 6001/1000 selected

@@ -1,7 +1,6 @@
 package gui
 
 import (
-	"fmt"
 	"image/color"
 
 	"fyne.io/fyne/v2"
@@ -77,7 +76,6 @@ func (t ScsiTheme) Font(style fyne.TextStyle) fyne.Resource {
 }
 
 func (t ScsiTheme) Icon(name fyne.ThemeIconName) fyne.Resource {
-	fmt.Printf("Icon %s", name)
 	return theme.DefaultTheme().Icon(name)
 }
 func (t ScsiTheme) Size(name fyne.ThemeSizeName) float32 {
@@ -92,6 +90,5 @@ func (t ScsiTheme) Size(name fyne.ThemeSizeName) float32 {
 	case theme.SizeNameSeparatorThickness:
 		return ScsiSizeNameSeparatorThickness
 	}
-	fmt.Printf("SizeName %s", name)
 	return theme.DefaultTheme().Size(name)
 }

@@ -45,10 +45,10 @@ func (h HexUint16) String() string {
 	return strconv.FormatUint(uint64(h), 16)
 }
 
-func (di DevIdentifier) String() string {
+func (di *DevIdentifier) String() string {
 	return fmt.Sprintf("%s/%s", di.VID, di.PID)
 }
 
-func (di DevIdentifier) StringDetailed() string {
+func (di *DevIdentifier) StringDetailed() string {
 	return fmt.Sprintf("%s by %s [%s]", di.Name, di.Manufacturer, di.String())
 }
