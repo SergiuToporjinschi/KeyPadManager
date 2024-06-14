@@ -8,8 +8,8 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-type menuChildElements map[string]MainContent
 type menuOptions map[string]menuChildElements
+type menuChildElements map[string]MainContent
 
 func (g *GUI) getMenuConfig() map[string]menuChildElements {
 	return map[string]menuChildElements{

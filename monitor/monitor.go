@@ -135,7 +135,9 @@ func (m *USBMonitor) monitorDevices() {
 			// Check for new devices
 			for key, val := range foundDevices {
 				_, found := m.connectedDevices[key]
+				val.Device.Product()
 				if !found {
+					val.Device.Manufacturer()
 					m.connectedDevices[key] = val
 					m.deviceEvents <- deviceEvent{"connected", val}
 					logger.Log.Infof("Device connected: %s %v", key, val)
