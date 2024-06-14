@@ -56,7 +56,7 @@ func (s *SelectDeviceWindow) updateCards(event string, device *monitor.Connected
 
 		card := NewDeviceCard(
 			device,
-			canvas.NewImageFromFile("devKeypad.png"), //TODO maybe should be in resources
+			canvas.NewImageFromResource(resources.ResDevKeypadPng), //TODO make it dynamic (maybe save the image in the device object)
 			s.onClickDevice,
 			nil)
 

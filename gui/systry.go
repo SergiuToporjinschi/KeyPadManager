@@ -1,9 +1,9 @@
 package gui
 
 import (
+	resources "main/assets"
 	"main/logger"
 	"main/monitor"
-	"os"
 
 	"fyne.io/systray"
 )
@@ -38,13 +38,8 @@ func (s SysTrayMenu) onExit() {
 }
 
 func (s SysTrayMenu) onReady() {
-	data, err := s.getIcon()
-	if err != nil {
-		logger.Log.Warnf("Error reading icon file for systray: %v", err)
-	} else {
-		// Set the icon of the systray
-		systray.SetIcon(data) // iconData should be a byte slice containing the icon data
-	}
+	// Set the icon of the systray
+	systray.SetIcon(resources.ResLogoIco.StaticContent) // iconData should be a byte slice containing the icon data
 
 	// Set the tooltip of the systray
 	systray.SetTooltip("Keypad Manager")
@@ -63,15 +58,6 @@ func (s SysTrayMenu) onReady() {
 
 	//start monitor
 	s.gui.UsbMonitor.Start()
-}
-
-func (SysTrayMenu) getIcon() ([]byte, error) {
-	//TODO move it in resources
-	data, err := os.ReadFile("icon.ico")
-	if err != nil {
-		return data, err
-	}
-	return data, nil
 }
 
 func (s SysTrayMenu) sysTrayActionListener() {
