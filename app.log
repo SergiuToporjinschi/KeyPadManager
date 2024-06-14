@@ -4052,3 +4052,25 @@ Key: 'DeviceLayoutConfig.Components[0].BitPosition' Error:Field validation for '
 2024-06-14T07:12:37 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
 2024-06-14T07:12:37 DEBUG Device event received {connected {0xc00051ef40 0xc00051f140}}
 2024-06-14T07:12:39 DEBUG Device 6001/1000 selected
+2024-06-14T07:24:40 INFO Logger initialized successfully
+2024-06-14T07:24:40 INFO Starting the application
+2024-06-14T07:24:40 INFO Loading device layout configuration
+2024-06-14T07:24:40 DEBUG Starting the USB monitor
+2024-06-14T07:24:40 DEBUG Monitor event received start
+2024-06-14T07:24:40 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T07:24:40 DEBUG Device event received {connected {0xc000284680 0xc000284c40}}
+2024-06-14T07:24:44 INFO Device clicked 6001/1000
+2024-06-14T07:24:45 INFO Device clicked 6001/1000
+2024-06-14T07:24:46 INFO Device clicked 6001/1000
+2024-06-14T07:24:46 INFO Device clicked 6001/1000
+2024-06-14T07:24:46 INFO Device clicked 6001/1000
+2024-06-14T07:24:51 INFO Device clicked 6001/1000
+2024-06-14T07:24:52 INFO Device clicked 6001/1000
+2024-06-14T07:25:20 INFO Device clicked 6001/1000
+2024-06-14T07:25:51 INFO Logger initialized successfully
+2024-06-14T07:25:51 INFO Starting the application
+2024-06-14T07:25:51 INFO Loading device layout configuration
+2024-06-14T07:25:51 DEBUG Starting the USB monitor
+2024-06-14T07:25:51 DEBUG Monitor event received start
+2024-06-14T07:25:51 INFO Device connected: 6001/1000 vid=6001,pid=1000,bus=1,addr=18
+2024-06-14T07:25:51 DEBUG Device event received {connected {0xc00040a440 0xc00040a640}}

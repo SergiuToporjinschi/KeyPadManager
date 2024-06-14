@@ -1,7 +1,6 @@
 package gui
 
 import (
-	"main/logger"
 	"main/monitor"
 
 	"fyne.io/fyne/v2"
@@ -15,7 +14,7 @@ type SelectDeviceWindow struct {
 	window            fyne.Window
 	cardList          *fyne.Container
 	selectDevEvent    chan string
-	selectDevListners map[string]func(monitor.ConnectedDevice)
+	selectDevListners map[string]func(*monitor.ConnectedDevice)
 }
 
 func NewSelectDevice(myApp fyne.App) *SelectDeviceWindow {
@@ -25,7 +24,7 @@ func NewSelectDevice(myApp fyne.App) *SelectDeviceWindow {
 	}
 
 	instance.selectDevEvent = make(chan string)
-	instance.selectDevListners = make(map[string]func(monitor.ConnectedDevice))
+	instance.selectDevListners = make(map[string]func(*monitor.ConnectedDevice))
 
 	instance.buildWindow()
 	return instance
@@ -47,7 +46,7 @@ func (s *SelectDeviceWindow) Close() {
 	s.window.Hide()
 }
 
-func (s *SelectDeviceWindow) updateCards(event string, device monitor.ConnectedDevice) {
+func (s *SelectDeviceWindow) updateCards(event string, device *monitor.ConnectedDevice) {
 	if event == monitor.EventDeviceConnected {
 		if len(s.cardList.Objects) == 1 && s.cardList.Objects[0].(*DeviceCard).IsDummy {
 			s.cardList.Objects = []fyne.CanvasObject{}
@@ -77,14 +76,15 @@ func (s *SelectDeviceWindow) updateCards(event string, device monitor.ConnectedD
 	s.cardList.Refresh()
 }
 
-func (s *SelectDeviceWindow) AddSelectDeviceListener(name string, callback func(device monitor.ConnectedDevice)) {
+func (s *SelectDeviceWindow) AddSelectDeviceListener(name string, callback func(device *monitor.ConnectedDevice)) {
 	s.selectDevListners[name] = callback
 
 }
 
-func (s *SelectDeviceWindow) onClickDevice(device monitor.ConnectedDevice) {
-	//TODO open main window
-	logger.Log.Infof("Device clicked %s", device.Identifier.String())
+func (s *SelectDeviceWindow) onClickDevice(device *monitor.ConnectedDevice) {
+	for _, listener := range s.selectDevListners {
+		listener(device)
+	}
 }
 
 func (s *SelectDeviceWindow) Show() {

@@ -35,7 +35,7 @@ func (s *MainWindow) Close() {
 	s.window.Hide()
 }
 
-func (s *MainWindow) Show(device monitor.ConnectedDevice) {
+func (s *MainWindow) Show(device *monitor.ConnectedDevice) {
 	s.window.Content().(*widget.Label).SetText(device.Identifier.String())
 	s.window.Show()
 }

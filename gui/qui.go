@@ -40,7 +40,7 @@ func (g Gui) ShowDeviceWindow() {
 	g.SelectDeviceWindow.Show()
 }
 
-func (g *Gui) onDeviceSelected(device monitor.ConnectedDevice) {
+func (g *Gui) onDeviceSelected(device *monitor.ConnectedDevice) {
 	instance.SelectDeviceWindow.Close()
 	instance.MainWindow.Show(device)
 }

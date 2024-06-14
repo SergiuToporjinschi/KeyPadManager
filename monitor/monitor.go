@@ -21,7 +21,7 @@ type USBMonitor struct {
 	connectedDevices map[string]ConnectedDevice
 
 	deviceEvents    chan deviceEvent
-	deviceListeners map[string]func(string, ConnectedDevice)
+	deviceListeners map[string]func(string, *ConnectedDevice)
 
 	monitorEvents    chan string
 	monitorListeners map[string]func(string)
@@ -44,7 +44,7 @@ func GetInstance() *USBMonitor {
 	once.Do(func() {
 		instance = &USBMonitor{}
 		instance.deviceEvents = make(chan deviceEvent)
-		instance.deviceListeners = make(map[string]func(string, ConnectedDevice))
+		instance.deviceListeners = make(map[string]func(string, *ConnectedDevice))
 
 		instance.monitorEvents = make(chan string)
 		instance.monitorListeners = make(map[string]func(string), 10)
@@ -87,7 +87,7 @@ func (m *USBMonitor) RemoveMonitorEvent(name string) {
 	delete(m.monitorListeners, name)
 }
 
-func (m *USBMonitor) AddDeviceEvent(name string, callback func(string, ConnectedDevice)) {
+func (m *USBMonitor) AddDeviceEvent(name string, callback func(string, *ConnectedDevice)) {
 	m.deviceListeners[name] = callback
 }
 
@@ -107,7 +107,7 @@ func (m *USBMonitor) eventListener() {
 			continue
 		case deviceEvent := <-m.deviceEvents:
 			logger.Log.Debugf("Device event received %v", deviceEvent)
-			m.callDeviceListeners(deviceEvent)
+			m.callDeviceListeners(&deviceEvent)
 			continue
 		case <-m.stopChan:
 			logger.Log.Debug("Stopping event listener")
@@ -193,8 +193,8 @@ func (m *USBMonitor) callMonitorListeners(event string) {
 	}
 }
 
-func (m *USBMonitor) callDeviceListeners(event deviceEvent) {
+func (m *USBMonitor) callDeviceListeners(event *deviceEvent) {
 	for _, listener := range m.deviceListeners {
-		listener(event.event, event.device)
+		listener(event.event, &event.device)
 	}
 }

@@ -10,9 +10,9 @@ import (
 
 type DeviceCard struct {
 	widget.Card
-	device       monitor.ConnectedDevice
-	onLeftClick  func(monitor.ConnectedDevice)
-	onRightClick func(monitor.ConnectedDevice)
+	device       *monitor.ConnectedDevice
+	onLeftClick  func(*monitor.ConnectedDevice)
+	onRightClick func(*monitor.ConnectedDevice)
 	IsDummy      bool
 }
 
@@ -27,7 +27,7 @@ func NewNoDeviceCard() *DeviceCard {
 	return card
 }
 
-func NewDeviceCard(device monitor.ConnectedDevice, img *canvas.Image, onLeftClick, onRightClick func(monitor.ConnectedDevice)) *DeviceCard {
+func NewDeviceCard(device *monitor.ConnectedDevice, img *canvas.Image, onLeftClick, onRightClick func(*monitor.ConnectedDevice)) *DeviceCard {
 	img.FillMode = canvas.ImageFillOriginal
 
 	card := &DeviceCard{

@@ -88,7 +88,7 @@ func (s SysTrayMenu) sysTrayActionListener() {
 	}
 }
 
-func (s SysTrayMenu) onDeviceConnection(event string, device monitor.ConnectedDevice) {
+func (s SysTrayMenu) onDeviceConnection(event string, device *monitor.ConnectedDevice) {
 	item, found := s.mDevConMenus[device.Identifier.String()]
 
 	if event == monitor.EventDeviceConnected {
