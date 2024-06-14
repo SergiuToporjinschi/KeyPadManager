@@ -35,11 +35,13 @@ jobs:
 
         - name: Get latest tag
           id: get_latest_tag
-          run: echo "::set-output name=latest_tag::$(git describe --abbrev=0 --tags)"
+          run: |
+            echo "LAST_TAG=$(git describe --abbrev=0 --tags)" >> $GITHUB_ENV
         
         - name: Create new tag
           id: create_tag
-          run: echo "::set-output name=new_tag::v$(echo "${{ steps.get_latest_tag.outputs.latest_tag }}" | awk -F. -v OFS=. '{$NF++;print}')"
+          run: |
+            echo "NEW_TAG=v$(echo "$LAST_TAG" | awk -F. -v OFS=. '{$NF++;print}')" >> $GITHUB_ENV
 
         - uses: softprops/action-gh-release@v1
           env:
@@ -47,8 +49,8 @@ jobs:
           with:
             files: |
               main.exe
-              tag_name: ${{ steps.create_tag.outputs.new_tag }}
-              release_name: Release ${{ steps.create_tag.outputs.new_tag }}
+              tag_name: $NEW_TAG 
+              release_name: Release $NEW_TAG
             body: |
               manual release
             draft: false
