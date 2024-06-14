@@ -2,11 +2,7 @@
 name: Release
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag'
-        required: true
-        default: 'v1.0.0'
+
 jobs:
     build-windows:
         runs-on: windows-latest
