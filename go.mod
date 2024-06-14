@@ -4,14 +4,13 @@ go 1.22.3
 
 require (
 	fyne.io/fyne/v2 v2.4.5
+	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e
 	github.com/go-playground/validator/v10 v10.21.0
 	github.com/google/gousb v1.1.3
-	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/sirupsen/logrus v1.9.3
 )
 
 require (
-	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fredbi/uri v1.0.0 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
@@ -21,7 +20,6 @@ require (
 	github.com/gabriel-vasile/mimetype v1.4.3 // indirect
 	github.com/go-gl/gl v0.0.0-20211210172815-726fda9656d6 // indirect
 	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20240306074159-ea2d69986ecb // indirect
-	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-text/render v0.1.0 // indirect
@@ -35,10 +33,7 @@ require (
 	github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef // indirect
 	github.com/stretchr/testify v1.9.0 // indirect
 	github.com/tevino/abool v1.2.0 // indirect
-	github.com/tklauser/go-sysconf v0.3.14 // indirect
-	github.com/tklauser/numcpus v0.8.0 // indirect
 	github.com/yuin/goldmark v1.5.5 // indirect
-	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	golang.org/x/crypto v0.19.0 // indirect
 	golang.org/x/image v0.11.0 // indirect
 	golang.org/x/mobile v0.0.0-20230531173138-3c911d8e3eda // indirect
