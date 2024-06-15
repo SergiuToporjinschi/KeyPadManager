@@ -2,6 +2,7 @@ package gui
 
 import (
 	"main/monitor"
+	"main/txt"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -20,7 +21,7 @@ func NewNoDeviceCard() *DeviceCard {
 	card := &DeviceCard{
 		IsDummy: true,
 		Card: widget.Card{
-			Title: "No device connected",
+			Title: txt.GetLabel("card.noDevice"),
 		},
 	}
 	card.ExtendBaseWidget(card)

@@ -4,7 +4,9 @@ import (
 	resources "main/assets"
 	"main/logger"
 	"main/monitor"
+	"main/txt"
 
+	"fyne.io/fyne/v2"
 	"fyne.io/systray"
 )
 
@@ -42,12 +44,12 @@ func (s SysTrayMenu) onReady() {
 	systray.SetIcon(resources.ResLogoIco.StaticContent) // iconData should be a byte slice containing the icon data
 
 	// Set the tooltip of the systray
-	systray.SetTooltip("Keypad Manager")
+	systray.SetTooltip(txt.GetLabel("app.title"))
 
 	// Add menu items to the systray
-	s.mSelectDevice = systray.AddMenuItem("Select device", "Open device selection window")
-	s.mDevConMain = systray.AddMenuItem("Connected devices", "Show connected devices")
-	s.mQuit = systray.AddMenuItem("Quit", "Quit the application")
+	s.mSelectDevice = systray.AddMenuItem(txt.GetLabel("try.selDevice"), txt.GetLabel("try.selDeviceTT"))
+	s.mDevConMain = systray.AddMenuItem(txt.GetLabel("try.conDevices"), txt.GetLabel("try.conDevicesTT"))
+	s.mQuit = systray.AddMenuItem(txt.GetLabel("try.quit"), txt.GetLabel("try.quitTT"))
 
 	// Add connected devices to the menu
 
@@ -69,6 +71,7 @@ func (s SysTrayMenu) sysTrayActionListener() {
 		case <-s.mQuit.ClickedCh:
 			logger.Log.Info("Quit menu systry clicked")
 			systray.Quit()
+			fyne.CurrentApp().Quit()
 			return
 		}
 	}

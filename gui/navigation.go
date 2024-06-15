@@ -1,49 +1,39 @@
 package gui
 
 import (
-	"image/color"
 	"main/monitor"
-	"main/utility"
+	"main/txt"
 
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/widget"
 )
 
-type ContentManager struct {
-	container.Split
-	currentDevice *monitor.ConnectedDevice
+type NavigationItem interface {
+	GetTitle() string
+	GetNavTitle() string
+	GetButton() *widget.Button
+	GetContent(*monitor.ConnectedDevice) *fyne.Container
+	Destroy()
+}
+type Navigation struct {
+	widget.Accordion
 }
 
-func NewContentManager() *ContentManager {
-	s := &ContentManager{
-		Split: container.Split{
-			Offset:     0.2, // Sensible default, can be overridden with SetOffset
-			Horizontal: true,
-			Trailing:   container.NewStack(),
-		},
-	}
-	s.Split.Leading = NewNavigation(s.onMenuClicked)
-	s.BaseWidget.ExtendBaseWidget(s)
-	return s
-}
+func NewNavigation(onClick func(NavigationItem)) *Navigation {
+	nav := &Navigation{}
+	nav.ExtendBaseWidget(nav)
 
-func (c *ContentManager) SetDevice(device *monitor.ConnectedDevice) {
-	c.currentDevice = device
-}
+	inf := NewDeviceInfo(onClick)
+	rawData := NewRawData(onClick)
 
-func (c *ContentManager) onMenuClicked(navItem NavigationItem) {
-	c.Trailing.(*fyne.Container).Add(
-		container.NewVBox(
-			newTitleText(navItem.GetTitle()),
-			navItem.GetContent(c.currentDevice),
+	nav.Append(
+		widget.NewAccordionItem(txt.GetLabel("navi.deviceSecTitle"),
+			container.NewVBox(
+				inf.GetButton(),
+				rawData.GetButton(),
+			),
 		),
 	)
-	c.Refresh()
-}
-
-func newTitleText(text string) *canvas.Text {
-	r := utility.NewSizeableText(text, 20)
-	r.TextStyle.Bold = true
-	return utility.NewSizeableColorText(text, 20, color.NRGBA{R: 0xFE, G: 0x58, B: 0x62, A: 0xFF})
+	return nav
 }

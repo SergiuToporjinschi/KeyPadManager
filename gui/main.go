@@ -3,6 +3,7 @@ package gui
 import (
 	resources "main/assets"
 	"main/monitor"
+	"main/txt"
 
 	"fyne.io/fyne/v2"
 )
@@ -16,7 +17,7 @@ type MainWindow struct {
 func NewMainWindow(myApp fyne.App) *MainWindow {
 	instance := &MainWindow{
 		usbMonitor: monitor.GetInstance(),
-		window:     myApp.NewWindow("Manager"), //TOOD change title
+		window:     myApp.NewWindow(txt.GetLabel("win.mainTitle")),
 	}
 	instance.buildWindow()
 	return instance

@@ -3,6 +3,7 @@ package gui
 import (
 	resources "main/assets"
 	"main/monitor"
+	"main/txt"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -21,7 +22,7 @@ type SelectDeviceWindow struct {
 func NewSelectDevice(myApp fyne.App) *SelectDeviceWindow {
 	instance := &SelectDeviceWindow{
 		usbMonitor: monitor.GetInstance(),
-		window:     myApp.NewWindow("Select device"),
+		window:     myApp.NewWindow(txt.GetLabel("win.selDevTitle")),
 	}
 
 	instance.selectDevEvent = make(chan string)

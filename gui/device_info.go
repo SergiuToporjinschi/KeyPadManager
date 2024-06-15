@@ -2,6 +2,7 @@ package gui
 
 import (
 	"main/monitor"
+	"main/txt"
 	"main/utility"
 
 	"fyne.io/fyne/v2"
@@ -28,8 +29,8 @@ type infoBindingData struct {
 
 func NewDeviceInfo(onNavClick func(NavigationItem)) *DeviceInfo {
 	inst := &DeviceInfo{
-		title:    "Info",
-		navTitle: "Info",
+		title:    txt.GetLabel("navi.deviceInfoTitle"),
+		navTitle: txt.GetLabel("cont.deviceInfoTitle"),
 		bindingData: infoBindingData{
 			Manufacturer: binding.BindString(nil),
 			Product:      binding.BindString(nil),
@@ -52,19 +53,19 @@ func (i *DeviceInfo) buildButton(onNavClick func(NavigationItem)) {
 func (i *DeviceInfo) buildBody() {
 	i.body = container.New(layout.NewFormLayout()) //TODO if not works then try to use i.body.Add()
 
-	i.body.Add(utility.NewTitleLabel("PID:"))
+	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.pid")))
 	i.body.Add(widget.NewLabelWithData(i.bindingData.PID))
 
-	i.body.Add(utility.NewTitleLabel("VID:"))
+	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.vid")))
 	i.body.Add(widget.NewLabelWithData(i.bindingData.VID))
 
-	i.body.Add(utility.NewTitleLabel("Product:"))
+	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.product")))
 	i.body.Add(widget.NewLabelWithData(i.bindingData.Product))
 
-	i.body.Add(utility.NewTitleLabel("Manufacturer:"))
+	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.manufacturer")))
 	i.body.Add(widget.NewLabelWithData(i.bindingData.Manufacturer))
 
-	i.body.Add(utility.NewTitleLabel("Serial:"))
+	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.serial")))
 	i.body.Add(widget.NewLabelWithData(i.bindingData.SerialNumber))
 }
 
