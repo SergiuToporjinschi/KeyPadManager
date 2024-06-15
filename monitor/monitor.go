@@ -15,6 +15,7 @@ const (
 	EventDeviceDisconnected string = "disconnected"
 )
 
+// TODO use MUTEX to protect the all maps
 type USBMonitor struct {
 	ctx              *gousb.Context
 	stopChan         chan struct{}

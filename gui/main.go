@@ -7,15 +7,10 @@ import (
 	"fyne.io/fyne/v2"
 )
 
-type MainContent interface {
-	GetContent(*monitor.ConnectedDevice) *fyne.Container
-	Destroy()
-}
-
 type MainWindow struct {
 	usbMonitor     *monitor.USBMonitor
 	window         fyne.Window
-	contentManager *Navigation
+	contentManager *ContentManager
 }
 
 func NewMainWindow(myApp fyne.App) *MainWindow {
