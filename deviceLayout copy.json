@@ -1,0 +1,28 @@
+{
+  "6001/1000" : {
+        "identifier": {
+            "manufacturer": "Me&Co",
+            "product": "Development key pad",
+            "vid": "6001",
+            "pid": "1000"
+        },
+        "devDescription": {
+            "reportSize": 5
+        },
+        "components": [
+            {
+                "name": "Button",
+                "type": "button",
+                "icon": "",
+                "byteNumber": 1,
+                "bitPosition": "00000001"
+            },
+            {
+                "name": "Rotary Encoder",
+                "type": "rotaryEncoder",
+                "icon": "",
+                "byteNumber": 2                
+            }
+        ]
+    }
+}

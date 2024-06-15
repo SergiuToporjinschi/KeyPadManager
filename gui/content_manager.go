@@ -34,8 +34,11 @@ func (c *ContentManager) SetDevice(device *monitor.ConnectedDevice) {
 
 func (c *ContentManager) onMenuClicked(navItem NavigationItem) {
 	c.Trailing.(*fyne.Container).Add(
-		container.NewVBox(
+		container.NewBorder(
 			newTitleText(navItem.GetTitle()),
+			nil,
+			nil,
+			nil,
 			navItem.GetContent(c.currentDevice),
 		),
 	)

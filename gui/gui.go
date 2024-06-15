@@ -6,6 +6,7 @@ import (
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/theme"
 )
 
 type Gui struct {
@@ -29,7 +30,8 @@ func GetInstance() *Gui {
 			SelectDeviceWindow: NewSelectDevice(app),
 		}
 
-		instance.App.Settings().SetTheme(NewTheme(instance.App.Preferences()))
+		// instance.App.Settings().SetTheme(NewTheme(instance.App.Preferences()))
+		instance.App.Settings().SetTheme(theme.DefaultTheme())
 		instance.SelectDeviceWindow.AddSelectDeviceListener("Gui", instance.onDeviceSelected)
 		NewSysTrayMenu(instance).Start()
 	})

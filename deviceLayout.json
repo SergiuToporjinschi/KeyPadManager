@@ -12,13 +12,33 @@
                 "type": "button",
                 "icon": "",
                 "byteNumber": 1,
-                "bitPosition": "00000001"
+                "bitPosition": "00000001",
+                "min": 0,
+                "max": 1
             },
             {
-                "name": "Rotary Encoder",
-                "type": "rotaryEncoder",
+                "name": "Dial 1",
+                "type": "dial",
                 "icon": "",
-                "byteNumber": 2                
+                "byteNumber": 2,
+                "min": 0,
+                "max": 100
+            },
+            {
+                "name": "Dial 2",
+                "type": "dial",
+                "icon": "",
+                "byteNumber": 3,
+                "min": 0,
+                "max": 100
+            },
+            {
+                "name": "Dial 3",
+                "type": "dial",
+                "icon": "",
+                "byteNumber": 4,
+                "min": 0,
+                "max": 100
             }
         ]
     }

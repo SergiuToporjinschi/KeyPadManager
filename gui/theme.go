@@ -82,13 +82,23 @@ func (t ScsiTheme) Size(name fyne.ThemeSizeName) float32 {
 
 	switch name {
 	case theme.SizeNamePadding:
-		return ScsiSizeNamePadding
+		return 8
+	case theme.SizeNameInlineIcon:
+		return 20
+	case theme.SizeNameScrollBar:
+		return 5
+	case theme.SizeNameScrollBarSmall:
+		return 5
 	case theme.SizeNameText:
-		return ScsiSizeNameText
-	case theme.SizeNameLineSpacing:
-		return ScsiSizeNameLineSpacing
-	case theme.SizeNameSeparatorThickness:
-		return ScsiSizeNameSeparatorThickness
+		return 18
+	case theme.SizeNameHeadingText:
+		return 30
+	case theme.SizeNameSubHeadingText:
+		return 25
+	case theme.SizeNameCaptionText:
+		return 15
+	case theme.SizeNameInputBorder:
+		return 1
 	}
 	return theme.DefaultTheme().Size(name)
 }

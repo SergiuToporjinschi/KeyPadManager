@@ -20,9 +20,11 @@ type DevIdentifier struct {
 type Component struct {
 	Name        string `json:"name" validate:"required"`
 	Icon        string `json:"icon" validate:"omitempty"`
-	Type        string `json:"type" validate:"required,oneof=button rotaryEncoder"`
+	Type        string `json:"type" validate:"required,oneof=button rotaryEncoder dial"`
 	ByteNumber  int    `json:"byteNumber" validate:"omitempty"`
 	BitPosition string `json:"bitPosition" validate:"byteNumber,required_if=Type button"`
+	Min         int    `json:"min" validate:""`
+	Max         int    `json:"max" validate:""`
 }
 type HexUint16 uint16
 
