@@ -25,34 +25,3 @@ func main() {
 	g.ShowDeviceWindow()
 	g.App.Run()
 }
-
-// func onReady(label *widget.Label) func() {
-// 	return func() {
-// 		data, err := os.ReadFile("icon.ico")
-// 		if err != nil {
-// 			log.Fatalf("Failed to read file: %v", err)
-// 		}
-// 		// Set the icon of the systray
-// 		systray.SetIcon(data) // iconData should be a byte slice containing the icon data
-
-// 		// Set the tooltip of the systray
-// 		systray.SetTooltip("System Tray Example")
-
-// 		// Add menu items to the systray
-// 		mHello := systray.AddMenuItem("Hello", "Say Hello")
-// 		mQuit := systray.AddMenuItem("Quit", "Quit the application")
-
-// 		// Handle menu item clicks
-// 		go func() {
-// 			for {
-// 				select {
-// 				case <-mHello.ClickedCh:
-// 					label.SetText("Hello menu item clicked")
-// 				case <-mQuit.ClickedCh:
-// 					systray.Quit()
-// 					return
-// 				}
-// 			}
-// 		}()
-// 	}
-// }
