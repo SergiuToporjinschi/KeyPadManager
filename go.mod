@@ -5,13 +5,15 @@ go 1.22.3
 require (
 	fyne.io/fyne/v2 v2.4.5
 	fyne.io/systray v1.10.1-0.20231115130155-104f5ef7839e
+	github.com/BurntSushi/toml v1.4.0
 	github.com/go-playground/validator/v10 v10.21.0
 	github.com/google/gousb v1.1.3
+	github.com/nicksnyder/go-i18n/v2 v2.4.0
 	github.com/sirupsen/logrus v1.9.3
+	golang.org/x/text v0.14.0
 )
 
 require (
-	github.com/BurntSushi/toml v1.4.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fredbi/uri v1.0.0 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
@@ -29,7 +31,6 @@ require (
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jsummers/gobmp v0.0.0-20151104160322-e2ba15ffa76e // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
-	github.com/nicksnyder/go-i18n/v2 v2.4.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/srwiley/oksvg v0.0.0-20221011165216-be6e8873101c // indirect
 	github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef // indirect
@@ -41,7 +42,6 @@ require (
 	golang.org/x/mobile v0.0.0-20230531173138-3c911d8e3eda // indirect
 	golang.org/x/net v0.21.0 // indirect
 	golang.org/x/sys v0.21.0 // indirect
-	golang.org/x/text v0.14.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	honnef.co/go/js/dom v0.0.0-20210725211120-f030747120f2 // indirect
 )
