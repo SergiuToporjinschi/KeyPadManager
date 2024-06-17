@@ -28,7 +28,7 @@ type RawData struct {
 	stopChan        chan bool
 }
 
-func NewRawData(onNavClick func(NavigationItem)) *RawData {
+func NewRawData() NavigationItem {
 	inst := &RawData{
 		title:           txt.GetLabel("navi.rawDataTitle"),
 		navTitle:        txt.GetLabel("navi.rawDataTitle"),
@@ -43,15 +43,8 @@ func NewRawData(onNavClick func(NavigationItem)) *RawData {
 	for i := range inst.bndRowHeader {
 		inst.bndRowHeader[i] = binding.BindString(nil)
 	}
-	inst.buildButton(onNavClick)
 	inst.buildBody()
 	return inst
-}
-
-func (i *RawData) buildButton(onNavClick func(NavigationItem)) {
-	i.button = widget.NewButton(i.title, func() {
-		onNavClick(i)
-	})
 }
 
 func (i *RawData) buildBody() {
@@ -74,7 +67,6 @@ func (i *RawData) buildBody() {
 	}
 	t.ShowHeaderColumn = true
 	t.ShowHeaderRow = true
-	// t.StickyColumnCount = 1
 	t.StickyRowCount = 1
 	t.UpdateHeader = func(cell widget.TableCellID, o fyne.CanvasObject) {
 		if cell.Row == -1 {
@@ -115,15 +107,7 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 	i.bndRowHeader[4].Set(txt.GetLabel("cont.rawDataMin"))
 	i.bndRowHeader[5].Set(txt.GetLabel("cont.rawDataMax"))
 	i.body.Refresh()
-	// dev.DeviceLayoutConfig.Components[cell.Row].Name
 
-	// for _, v := range dev.DeviceLayoutConfig.Components {
-	// 	i.body.Add(utility.NewTitleLabel(v.Name))
-	// 	i.body.Add(utility.NewTitleLabel(v.Type)) //TODO Maybe mapping it to a better name
-	// 	i.body.Add()
-	// }
-	// widget.NewTableWithHeaders()
-	// i.body.Add(widget.NewLabelWithData(i.bindingData))
 	i.stopChan = make(chan bool)
 	go func() {
 		for {
@@ -135,9 +119,6 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 				data := readUSB(dev.Device)
 				fmt.Printf("s %v\n", data)
 			}
-			// i.bndLength.Set(len(dev.DeviceLayoutConfig.Components))
-			// i.bndData.Set()
-
 		}
 	}()
 }

@@ -28,7 +28,7 @@ type infoBindingData struct {
 	VID          binding.ExternalString
 }
 
-func NewDeviceInfo(onNavClick func(NavigationItem)) *DeviceInfo {
+func NewDeviceInfo() NavigationItem {
 	inst := &DeviceInfo{
 		title:    txt.GetLabel("navi.deviceInfoTitle"),
 		navTitle: txt.GetLabel("cont.deviceInfoTitle"),
@@ -40,15 +40,8 @@ func NewDeviceInfo(onNavClick func(NavigationItem)) *DeviceInfo {
 			VID:          binding.BindString(nil),
 		},
 	}
-	inst.buildButton(onNavClick)
 	inst.buildBody()
 	return inst
-}
-
-func (i *DeviceInfo) buildButton(onNavClick func(NavigationItem)) {
-	i.button = widget.NewButton(i.title, func() {
-		onNavClick(i)
-	})
 }
 
 func (i *DeviceInfo) buildBody() {

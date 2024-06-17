@@ -99,6 +99,7 @@ func (m *USBMonitor) RemoveDeviceEvent(name string) {
 func (m *USBMonitor) eventListener() {
 	for {
 		select {
+
 		case monitorEvent := <-m.monitorEvents:
 			logger.Log.Debugf("Monitor event received %s", monitorEvent)
 			m.callMonitorListeners(monitorEvent)

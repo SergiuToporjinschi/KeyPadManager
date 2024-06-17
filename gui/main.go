@@ -34,11 +34,11 @@ func (m *MainWindow) buildWindow() {
 }
 
 func (m *MainWindow) Close() {
+	m.contentManager.OnMainWindowHide()
 	m.window.Hide()
 }
 
 func (m *MainWindow) Show(device *monitor.ConnectedDevice) {
 	m.contentManager.SetDevice(device)
-	// m.window.Content().(*widget.Label).SetText(device.Identifier.String())
 	m.window.Show()
 }
