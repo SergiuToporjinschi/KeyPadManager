@@ -12,7 +12,8 @@ import (
 
 type ContentManager struct {
 	container.Split
-	currentDevice *monitor.ConnectedDevice
+	currentDevice  *monitor.ConnectedDevice
+	currentNavItem NavigationItem
 }
 
 func NewContentManager() *ContentManager {
@@ -33,7 +34,12 @@ func (c *ContentManager) SetDevice(device *monitor.ConnectedDevice) {
 }
 
 func (c *ContentManager) onMenuClicked(navItem NavigationItem) {
-	c.Trailing.(*fyne.Container).Add(
+	content := c.Trailing.(*fyne.Container)
+	if c.currentNavItem != nil {
+		c.currentNavItem.Destroy()
+	}
+	content.RemoveAll()
+	content.Add(
 		container.NewBorder(
 			newTitleText(navItem.GetTitle()),
 			nil,
@@ -43,8 +49,11 @@ func (c *ContentManager) onMenuClicked(navItem NavigationItem) {
 		),
 	)
 	c.Refresh()
+	c.currentNavItem = navItem
 }
-
+func (c *ContentManager) OnMainWindowHide() {
+	c.currentNavItem.Destroy()
+}
 func newTitleText(text string) *canvas.Text {
 	r := utility.NewSizeableText(text, 20)
 	r.TextStyle.Bold = true

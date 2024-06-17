@@ -1,6 +1,7 @@
 package gui
 
 import (
+	"main/logger"
 	"main/monitor"
 	"main/txt"
 	"main/utility"
@@ -95,5 +96,5 @@ func (i *DeviceInfo) GetNavTitle() string {
 }
 
 func (i *DeviceInfo) Destroy() {
-	//TODO
+	logger.Log.Debug("Destroying DeviceInfo")
 }

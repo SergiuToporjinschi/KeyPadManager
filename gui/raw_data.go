@@ -25,10 +25,10 @@ type RawData struct {
 	bndLength       binding.ExternalInt
 	bndColumnHeader []binding.ExternalString
 	bndRowHeader    []binding.ExternalString
+	stopChan        chan bool
 }
 
 func NewRawData(onNavClick func(NavigationItem)) *RawData {
-
 	inst := &RawData{
 		title:           txt.GetLabel("navi.rawDataTitle"),
 		navTitle:        txt.GetLabel("navi.rawDataTitle"),
@@ -124,14 +124,22 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 	// }
 	// widget.NewTableWithHeaders()
 	// i.body.Add(widget.NewLabelWithData(i.bindingData))
+	i.stopChan = make(chan bool)
+	go func() {
+		for {
+			select {
+			case <-i.stopChan:
+				logger.Log.Debug("Stopping RawData")
+				return
+			default:
+				data := readUSB(dev.Device)
+				fmt.Printf("s %v\n", data)
+			}
+			// i.bndLength.Set(len(dev.DeviceLayoutConfig.Components))
+			// i.bndData.Set()
 
-	// go func() {
-	// 	for {
-	// 		data := readUSB(dev.Device)
-	// 		i.bndLength.Set(len(dev.DeviceLayoutConfig.Components))
-	// 		i.bndData.Set()
-	// 	}
-	// }()
+		}
+	}()
 }
 
 func (i *RawData) GetContent(dev *monitor.ConnectedDevice) *fyne.Container {
@@ -152,7 +160,8 @@ func (i *RawData) GetNavTitle() string {
 }
 
 func (i *RawData) Destroy() {
-	//TODO
+	logger.Log.Debug("Destroying RawData")
+	i.stopChan <- true
 }
 
 func readUSB(dev *gousb.Device) []byte {
