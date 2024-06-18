@@ -8,6 +8,9 @@ import (
 	"main/monitor"
 	"main/txt"
 	"slices"
+	"strconv"
+	"strings"
+	"sync"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
@@ -17,74 +20,109 @@ import (
 )
 
 type RawData struct {
-	title           string
-	navTitle        string
-	button          *widget.Button
-	body            *fyne.Container
-	bndData         binding.ExternalString
-	bndLength       binding.ExternalInt
-	bndColumnHeader []binding.ExternalString
-	bndRowHeader    []binding.ExternalString
-	stopChan        chan bool
+	title     string
+	navTitle  string
+	button    *widget.Button
+	body      *fyne.Container
+	grid      *fyne.Container
+	bndLength binding.ExternalInt
+	stopChan  chan bool
+	bndDta    []controlDataValue
+}
+
+type controlDataValue struct {
+	bndValueBin binding.ExternalString
+	bndValueHex binding.ExternalString
+	bndValueDec binding.ExternalString
 }
 
 func NewRawData() NavigationItem {
 	inst := &RawData{
-		title:           txt.GetLabel("navi.rawDataTitle"),
-		navTitle:        txt.GetLabel("navi.rawDataTitle"),
-		bndData:         binding.BindString(nil),
-		bndLength:       binding.BindInt(nil),
-		bndColumnHeader: make([]binding.ExternalString, 4),
-		bndRowHeader:    make([]binding.ExternalString, 6),
-	}
-	for i := range inst.bndColumnHeader {
-		inst.bndColumnHeader[i] = binding.BindString(nil)
-	}
-	for i := range inst.bndRowHeader {
-		inst.bndRowHeader[i] = binding.BindString(nil)
+		title:     txt.GetLabel("navi.rawDataTitle"),
+		navTitle:  txt.GetLabel("navi.rawDataTitle"),
+		bndLength: binding.BindInt(nil),
 	}
 	inst.buildBody()
 	return inst
 }
 
 func (i *RawData) buildBody() {
-	t := widget.NewTable(
-		func() (rows int, cols int) {
-			return len(i.bndRowHeader), len(i.bndColumnHeader)
-		},
-
-		func() fyne.CanvasObject {
-			return widget.NewLabel("")
-		},
-
-		func(cell widget.TableCellID, o fyne.CanvasObject) {
-
-		},
+	i.grid = container.NewGridWithColumns(4,
+		widget.NewLabel(""),
+		widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataVal"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}),
+		widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataHex"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}),
+		widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataDec"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}),
 	)
+	i.body = container.NewHBox(container.NewVBox(i.grid))
+}
 
-	t.CreateHeader = func() fyne.CanvasObject {
-		return widget.NewLabel("HHH")
-	}
-	t.ShowHeaderColumn = true
-	t.ShowHeaderRow = true
-	t.StickyRowCount = 1
-	t.UpdateHeader = func(cell widget.TableCellID, o fyne.CanvasObject) {
-		if cell.Row == -1 {
-			val, err := i.bndColumnHeader[cell.Col].Get()
-			if err != nil {
-				logger.Log.Warn("Error getting column header", val)
-			}
-			o.(*widget.Label).SetText(val)
-		} else if cell.Col == -1 {
-			val, err := i.bndRowHeader[cell.Row].Get()
-			if err != nil {
-				logger.Log.Warn("Error getting row header")
-			}
-			o.(*widget.Label).SetText(val)
+func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
+
+	for ind, comp := range layout.Components {
+		bndValue := controlDataValue{
+			bndValueBin: binding.BindString(nil),
+			bndValueHex: binding.BindString(nil),
+			bndValueDec: binding.BindString(nil),
 		}
-	}
 
-	i.body = container.NewStack(t)
+		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataReceived"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		i.grid.Add(widget.NewLabelWithData(bndValue.bndValueBin))
+		i.grid.Add(widget.NewLabelWithData(bndValue.bndValueHex))
+		i.grid.Add(widget.NewLabelWithData(bndValue.bndValueDec))
+
+		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataType"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		i.grid.Add(widget.NewLabel(comp.Type))
+		i.grid.Add(widget.NewLabel(""))
+		i.grid.Add(widget.NewLabel(""))
+
+		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataByteNo"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.ByteNumber)))
+		i.grid.Add(widget.NewLabel(""))
+		i.grid.Add(widget.NewLabel(""))
+
+		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawBitMask"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		comp.BitPosition = strings.Trim(comp.BitPosition, " ")
+		if len(comp.BitPosition) > 0 {
+			i.grid.Add(widget.NewLabel(comp.BitPosition))
+			bitPosition, _ := strconv.Atoi(comp.BitPosition)
+			i.grid.Add(widget.NewLabel(fmt.Sprintf("%02X", bitPosition)))
+			i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", bitPosition)))
+		} else {
+			i.grid.Add(widget.NewLabel(""))
+			i.grid.Add(widget.NewLabel(""))
+			i.grid.Add(widget.NewLabel(""))
+		}
+
+		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataMin"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.Min)))
+		i.grid.Add(widget.NewLabel(""))
+		i.grid.Add(widget.NewLabel(""))
+
+		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataMax"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.Max)))
+		i.grid.Add(widget.NewLabel(""))
+		i.grid.Add(widget.NewLabel(""))
+
+		if ind < len(layout.Components)-1 {
+			i.grid.Add(widget.NewSeparator())
+			i.grid.Add(widget.NewSeparator())
+			i.grid.Add(widget.NewSeparator())
+			i.grid.Add(widget.NewSeparator())
+		}
+
+		i.bndDta = append(i.bndDta, bndValue)
+	}
+}
+
+var once1 sync.Once
+
+func (i *RawData) refreshBindings(data []byte) {
+	dataWithoutReportID := data[1:]
+	for inx, val := range dataWithoutReportID {
+		i.bndDta[inx].bndValueBin.Set(fmt.Sprintf("%08b", val))
+		i.bndDta[inx].bndValueHex.Set(fmt.Sprintf("%02X", val))
+		i.bndDta[inx].bndValueDec.Set(fmt.Sprintf("%d", val))
+	}
 }
 
 func (i *RawData) setData(dev *monitor.ConnectedDevice) {
@@ -95,18 +133,9 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 		return 0
 	})
 
-	i.bndColumnHeader[0].Set(txt.GetLabel(""))
-	i.bndColumnHeader[2].Set(txt.GetLabel("cont.rawDataVal"))
-	i.bndColumnHeader[1].Set(txt.GetLabel("cont.rawDataHex"))
-	i.bndColumnHeader[3].Set(txt.GetLabel("cont.rawDataDec"))
-
-	i.bndRowHeader[0].Set(txt.GetLabel(""))
-	i.bndRowHeader[1].Set(txt.GetLabel("cont.rawDataReceived"))
-	i.bndRowHeader[2].Set(txt.GetLabel("cont.rawDataType"))
-	i.bndRowHeader[3].Set(txt.GetLabel("cont.rawDataBytePos"))
-	i.bndRowHeader[4].Set(txt.GetLabel("cont.rawDataMin"))
-	i.bndRowHeader[5].Set(txt.GetLabel("cont.rawDataMax"))
-	i.body.Refresh()
+	once1.Do(func() {
+		i.buildBindings(dev.DeviceLayoutConfig)
+	})
 
 	i.stopChan = make(chan bool)
 	go func() {
@@ -117,7 +146,7 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 				return
 			default:
 				data := readUSB(dev.Device)
-				fmt.Printf("s %v\n", data)
+				i.refreshBindings(data)
 			}
 		}
 	}()
