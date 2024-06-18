@@ -28,12 +28,14 @@ type RawData struct {
 	bndLength binding.ExternalInt
 	stopChan  chan bool
 	bndDta    []controlDataValue
+	onceGrid  sync.Once
 }
 
 type controlDataValue struct {
-	bndValueBin binding.ExternalString
-	bndValueHex binding.ExternalString
-	bndValueDec binding.ExternalString
+	bndValueBin        binding.ExternalString
+	bndValueHex        binding.ExternalString
+	bndValueDec        binding.ExternalString
+	bndValueDecAsFloat binding.Float
 }
 
 func NewRawData() NavigationItem {
@@ -59,10 +61,12 @@ func (i *RawData) buildBody() {
 func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 
 	for ind, comp := range layout.Components {
+		var val float64
 		bndValue := controlDataValue{
-			bndValueBin: binding.BindString(nil),
-			bndValueHex: binding.BindString(nil),
-			bndValueDec: binding.BindString(nil),
+			bndValueBin:        binding.BindString(nil),
+			bndValueHex:        binding.BindString(nil),
+			bndValueDec:        binding.BindString(nil),
+			bndValueDecAsFloat: binding.BindFloat(&val),
 		}
 
 		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataReceived"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
@@ -103,6 +107,13 @@ func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 		i.grid.Add(widget.NewLabel(""))
 		i.grid.Add(widget.NewLabel(""))
 
+		if comp.Type == "dial" {
+			i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.progress"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+			i.grid.Add(widget.NewProgressBarWithData(bndValue.bndValueDecAsFloat))
+			i.grid.Add(widget.NewLabel(""))
+			i.grid.Add(widget.NewLabel(""))
+		}
+
 		if ind < len(layout.Components)-1 {
 			i.grid.Add(widget.NewSeparator())
 			i.grid.Add(widget.NewSeparator())
@@ -114,14 +125,13 @@ func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 	}
 }
 
-var once1 sync.Once
-
 func (i *RawData) refreshBindings(data []byte) {
 	dataWithoutReportID := data[1:]
 	for inx, val := range dataWithoutReportID {
 		i.bndDta[inx].bndValueBin.Set(fmt.Sprintf("%08b", val))
 		i.bndDta[inx].bndValueHex.Set(fmt.Sprintf("%02X", val))
 		i.bndDta[inx].bndValueDec.Set(fmt.Sprintf("%d", val))
+		i.bndDta[inx].bndValueDecAsFloat.Set(float64(val) / 100)
 	}
 }
 
@@ -133,7 +143,7 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 		return 0
 	})
 
-	once1.Do(func() {
+	i.onceGrid.Do(func() {
 		i.buildBindings(dev.DeviceLayoutConfig)
 	})
 
@@ -145,8 +155,7 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 				logger.Log.Debug("Stopping RawData")
 				return
 			default:
-				data := readUSB(dev.Device)
-				i.refreshBindings(data)
+				i.refreshBindings(readUSB(dev.Device))
 			}
 		}
 	}()
