@@ -3,18 +3,22 @@ package gui
 import (
 	"cmp"
 	"fmt"
+	"image/color"
 	"main/devicelayout"
 	"main/logger"
 	"main/monitor"
 	"main/txt"
+	"main/utility"
 	"slices"
 	"strconv"
 	"strings"
 	"sync"
 
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/data/binding"
+	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 	"github.com/google/gousb"
 )
@@ -23,8 +27,7 @@ type RawData struct {
 	title     string
 	navTitle  string
 	button    *widget.Button
-	body      *fyne.Container
-	grid      *fyne.Container
+	body      *container.Scroll
 	bndLength binding.ExternalInt
 	stopChan  chan bool
 	bndDta    []controlDataValue
@@ -49,18 +52,23 @@ func NewRawData() NavigationItem {
 }
 
 func (i *RawData) buildBody() {
-	i.grid = container.NewGridWithColumns(4,
-		widget.NewLabel(""),
-		widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataVal"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}),
-		widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataHex"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}),
-		widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataDec"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}),
-	)
-	i.body = container.NewHBox(container.NewVBox(i.grid))
+	i.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(450, 300))))
+}
+
+func (i *RawData) newTitleText(text string) *canvas.Text {
+	return utility.NewSizeableColorText(text, 15, color.NRGBA{R: 0xFE, G: 0x58, B: 0x62, A: 0xFF})
 }
 
 func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 
 	for ind, comp := range layout.Components {
+		grid := container.NewGridWithColumns(4,
+			widget.NewLabel(""),
+			NewCustomLocaleLabel("cont.rawDataVal", &style{Bold: true}),
+			NewCustomLocaleLabel("cont.rawDataHex", &style{Bold: true}),
+			NewCustomLocaleLabel("cont.rawDataDec", &style{Bold: true}),
+		)
+
 		var val float64
 		bndValue := controlDataValue{
 			bndValueBin:        binding.BindString(nil),
@@ -69,56 +77,62 @@ func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 			bndValueDecAsFloat: binding.BindFloat(&val),
 		}
 
-		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataReceived"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
-		i.grid.Add(widget.NewLabelWithData(bndValue.bndValueBin))
-		i.grid.Add(widget.NewLabelWithData(bndValue.bndValueHex))
-		i.grid.Add(widget.NewLabelWithData(bndValue.bndValueDec))
+		grid.Add(NewCustomLocaleLabel("cont.rawDataReceived", &style{Bold: true}))
+		// grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataReceived"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		grid.Add(widget.NewLabelWithData(bndValue.bndValueBin))
+		grid.Add(widget.NewLabelWithData(bndValue.bndValueHex))
+		grid.Add(widget.NewLabelWithData(bndValue.bndValueDec))
 
-		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataType"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
-		i.grid.Add(widget.NewLabel(comp.Type))
-		i.grid.Add(widget.NewLabel(""))
-		i.grid.Add(widget.NewLabel(""))
-
-		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataByteNo"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
-		i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.ByteNumber)))
-		i.grid.Add(widget.NewLabel(""))
-		i.grid.Add(widget.NewLabel(""))
-
-		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawBitMask"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
+		grid.Add(NewCustomLocaleLabel("cont.rawDataType", &style{Bold: true}))
+		grid.Add(widget.NewLabel(comp.Type))
+		grid.Add(widget.NewLabel(""))
+		grid.Add(widget.NewLabel(""))
+		grid.Add(NewCustomLocaleLabel("cont.rawDataByteNo", &style{Bold: true}))
+		grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.ByteNumber)))
+		grid.Add(widget.NewLabel(""))
+		grid.Add(widget.NewLabel(""))
+		grid.Add(NewCustomLocaleLabel("cont.rawBitMask", &style{Bold: true}))
 		comp.BitPosition = strings.Trim(comp.BitPosition, " ")
 		if len(comp.BitPosition) > 0 {
-			i.grid.Add(widget.NewLabel(comp.BitPosition))
+			grid.Add(widget.NewLabel(comp.BitPosition))
 			bitPosition, _ := strconv.Atoi(comp.BitPosition)
-			i.grid.Add(widget.NewLabel(fmt.Sprintf("%02X", bitPosition)))
-			i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", bitPosition)))
+			grid.Add(widget.NewLabel(fmt.Sprintf("%02X", bitPosition)))
+			grid.Add(widget.NewLabel(fmt.Sprintf("%d", bitPosition)))
 		} else {
-			i.grid.Add(widget.NewLabel(""))
-			i.grid.Add(widget.NewLabel(""))
-			i.grid.Add(widget.NewLabel(""))
+			grid.Add(widget.NewLabel(""))
+			grid.Add(widget.NewLabel(""))
+			grid.Add(widget.NewLabel(""))
 		}
 
-		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataMin"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
-		i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.Min)))
-		i.grid.Add(widget.NewLabel(""))
-		i.grid.Add(widget.NewLabel(""))
+		grid.Add(NewCustomLocaleLabel("cont.rawDataMin", &style{Bold: true}))
+		grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.Min)))
+		grid.Add(widget.NewLabel(""))
+		grid.Add(widget.NewLabel(""))
 
-		i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.rawDataMax"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
-		i.grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.Max)))
-		i.grid.Add(widget.NewLabel(""))
-		i.grid.Add(widget.NewLabel(""))
-
+		grid.Add(NewCustomLocaleLabel("cont.rawDataMax", &style{Bold: true}))
+		grid.Add(widget.NewLabel(fmt.Sprintf("%d", comp.Max)))
+		grid.Add(widget.NewLabel(""))
+		grid.Add(widget.NewLabel(""))
+		contrImg := container.NewStack()
 		if comp.Type == "dial" {
-			i.grid.Add(widget.NewLabelWithStyle(txt.GetLabel("cont.progress"), fyne.TextAlignLeading, fyne.TextStyle{Bold: true}))
-			i.grid.Add(widget.NewProgressBarWithData(bndValue.bndValueDecAsFloat))
-			i.grid.Add(widget.NewLabel(""))
-			i.grid.Add(widget.NewLabel(""))
+			contrImg.Add(widget.NewProgressBarWithData(bndValue.bndValueDecAsFloat))
+		} else if comp.Type == "button" {
+			contrImg.Add(widget.NewButton(txt.GetLabel("cont.buttonTestLabel"), func() {}))
 		}
+
+		i.body.Content.(*fyne.Container).Add(
+			container.NewBorder(
+				container.NewStack(
+					i.newTitleText(comp.Name),
+				),
+				contrImg,
+				nil,
+				nil,
+				grid),
+		)
 
 		if ind < len(layout.Components)-1 {
-			i.grid.Add(widget.NewSeparator())
-			i.grid.Add(widget.NewSeparator())
-			i.grid.Add(widget.NewSeparator())
-			i.grid.Add(widget.NewSeparator())
+			widget.NewSeparator()
 		}
 
 		i.bndDta = append(i.bndDta, bndValue)
@@ -161,21 +175,13 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 	}()
 }
 
-func (i *RawData) GetContent(dev *monitor.ConnectedDevice) *fyne.Container {
+func (i *RawData) GetContent(dev *monitor.ConnectedDevice) *container.Scroll {
 	i.setData(dev)
 	return i.body
 }
 
 func (i *RawData) GetButton() *widget.Button {
 	return i.button
-}
-
-func (i *RawData) GetTitle() string {
-	return i.title
-}
-
-func (i *RawData) GetNavTitle() string {
-	return i.navTitle
 }
 
 func (i *RawData) Destroy() {

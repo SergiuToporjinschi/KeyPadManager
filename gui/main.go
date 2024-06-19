@@ -28,7 +28,7 @@ func (m *MainWindow) buildWindow() {
 	m.window.SetIcon(resources.ResLogoPng)
 	m.window.SetCloseIntercept(m.Close)
 	m.window.CenterOnScreen()
-	m.window.Resize(fyne.NewSize(800, 600))
+	m.window.Resize(fyne.NewSize(1224, 768))
 	m.contentManager = NewContentManager()
 	m.window.SetContent(m.contentManager)
 }

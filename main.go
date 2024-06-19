@@ -8,7 +8,6 @@ import (
 )
 
 //go:generate $GOPATH\bin\fyne bundle -prefix Lang -package txt -o txt/bundles.go assets/langs
-
 //go:generate $GOPATH\bin\fyne bundle -prefix Res -package resources -o assets/bundled.go assets/files
 
 func main() {

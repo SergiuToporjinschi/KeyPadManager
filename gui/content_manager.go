@@ -1,11 +1,10 @@
 package gui
 
 import (
-	"image/color"
+	resources "main/assets"
 	"main/logger"
 	"main/monitor"
 	"main/txt"
-	"main/utility"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -14,9 +13,7 @@ import (
 )
 
 type NavigationItem interface {
-	GetTitle() string
-	GetNavTitle() string
-	GetContent(*monitor.ConnectedDevice) *fyne.Container
+	GetContent(*monitor.ConnectedDevice) *container.Scroll
 	Destroy()
 }
 
@@ -28,15 +25,21 @@ var naviIndex = map[string][]string{
 
 type Navigation struct {
 	naviInitilizer func() NavigationItem
+	naviIcon       fyne.Resource
+	naviTitle      string
 	naviInst       NavigationItem
 }
 
 var navigationContent = map[string]*Navigation{
 	"info": {
 		naviInitilizer: NewDeviceInfo,
+		naviIcon:       resources.ResInfoPng,
+		naviTitle:      "navi.deviceInfoTitle",
 	},
 	"rawdata": {
 		naviInitilizer: NewRawData,
+		naviIcon:       resources.ResMatrixPng,
+		naviTitle:      "navi.rawDataTitle",
 	},
 }
 
@@ -90,12 +93,13 @@ func (c *ContentManager) isBranch(uid string) bool {
 }
 
 func (c *ContentManager) createNode(branch bool) fyne.CanvasObject {
-	return widget.NewLabel(txt.GetLabel("common.notDefined"))
+	return container.NewHBox(widget.NewIcon(nil), widget.NewLabel(txt.GetLabel("common.notDefined")))
 }
 
 func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObject) {
+	box := obj.(*fyne.Container)
 	if branch {
-		obj.(*widget.Label).SetText(txt.GetLabel(uid))
+		box.Objects[1].(*widget.Label).SetText(txt.GetLabel(uid))
 		return
 	}
 	item, found := navigationContent[uid]
@@ -103,7 +107,10 @@ func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObje
 		if item.naviInst == nil {
 			item.naviInst = item.naviInitilizer()
 		}
-		obj.(*widget.Label).SetText(item.naviInst.GetNavTitle())
+		box.Objects[1].(*widget.Label).SetText(txt.GetLabel(item.naviTitle))
+		if item.naviIcon != nil {
+			box.Objects[0] = widget.NewIcon(item.naviIcon)
+		}
 	} else {
 		logger.Log.Warnf("Unknown UID: %v", uid)
 	}
@@ -117,9 +124,13 @@ func (n *ContentManager) onSelected(uid string) {
 			n.currentNavItem.Destroy()
 		}
 		mainContent.RemoveAll()
+		icn := canvas.NewImageFromResource(item.naviIcon)
+		icn.FillMode = canvas.ImageFillOriginal
 		mainContent.Add(
 			container.NewBorder(
-				newTitleText(item.naviInst.GetTitle()),
+				container.NewHBox(
+					icn,
+					NewTitleLocaleText(item.naviTitle)),
 				nil,
 				nil,
 				nil,
@@ -129,10 +140,4 @@ func (n *ContentManager) onSelected(uid string) {
 		n.currentNavItem = item.naviInst
 
 	}
-}
-
-func newTitleText(text string) *canvas.Text {
-	r := utility.NewSizeableText(text, 20)
-	r.TextStyle.Bold = true
-	return utility.NewSizeableColorText(text, 20, color.NRGBA{R: 0xFE, G: 0x58, B: 0x62, A: 0xFF})
 }

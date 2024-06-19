@@ -17,7 +17,7 @@ type DeviceInfo struct {
 	title       string
 	navTitle    string
 	button      *widget.Button
-	body        *fyne.Container
+	body        *container.Scroll
 	bindingData infoBindingData
 }
 type infoBindingData struct {
@@ -45,22 +45,22 @@ func NewDeviceInfo() NavigationItem {
 }
 
 func (i *DeviceInfo) buildBody() {
-	i.body = container.New(layout.NewFormLayout()) //TODO if not works then try to use i.body.Add()
+	i.body = container.NewVScroll(container.New(layout.NewFormLayout())) //TODO if not works then try to use i.body.Add()
 
-	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.pid")))
-	i.body.Add(widget.NewLabelWithData(i.bindingData.PID))
+	i.body.Content.(*fyne.Container).Add(utility.NewTitleLabel(txt.GetLabel("cont.pid")))
+	i.body.Content.(*fyne.Container).Add(widget.NewLabelWithData(i.bindingData.PID))
 
-	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.vid")))
-	i.body.Add(widget.NewLabelWithData(i.bindingData.VID))
+	i.body.Content.(*fyne.Container).Add(utility.NewTitleLabel(txt.GetLabel("cont.vid")))
+	i.body.Content.(*fyne.Container).Add(widget.NewLabelWithData(i.bindingData.VID))
 
-	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.product")))
-	i.body.Add(widget.NewLabelWithData(i.bindingData.Product))
+	i.body.Content.(*fyne.Container).Add(utility.NewTitleLabel(txt.GetLabel("cont.product")))
+	i.body.Content.(*fyne.Container).Add(widget.NewLabelWithData(i.bindingData.Product))
 
-	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.manufacturer")))
-	i.body.Add(widget.NewLabelWithData(i.bindingData.Manufacturer))
+	i.body.Content.(*fyne.Container).Add(utility.NewTitleLabel(txt.GetLabel("cont.manufacturer")))
+	i.body.Content.(*fyne.Container).Add(widget.NewLabelWithData(i.bindingData.Manufacturer))
 
-	i.body.Add(utility.NewTitleLabel(txt.GetLabel("cont.serial")))
-	i.body.Add(widget.NewLabelWithData(i.bindingData.SerialNumber))
+	i.body.Content.(*fyne.Container).Add(utility.NewTitleLabel(txt.GetLabel("cont.serial")))
+	i.body.Content.(*fyne.Container).Add(widget.NewLabelWithData(i.bindingData.SerialNumber))
 }
 
 func (i *DeviceInfo) setData(dev *monitor.ConnectedDevice) {
@@ -71,21 +71,13 @@ func (i *DeviceInfo) setData(dev *monitor.ConnectedDevice) {
 	i.bindingData.VID.Set(dev.Identifier.VID.String())
 }
 
-func (i *DeviceInfo) GetContent(dev *monitor.ConnectedDevice) *fyne.Container {
+func (i *DeviceInfo) GetContent(dev *monitor.ConnectedDevice) *container.Scroll {
 	i.setData(dev)
 	return i.body
 }
 
 func (i *DeviceInfo) GetButton() *widget.Button {
 	return i.button
-}
-
-func (i *DeviceInfo) GetTitle() string {
-	return i.title
-}
-
-func (i *DeviceInfo) GetNavTitle() string {
-	return i.navTitle
 }
 
 func (i *DeviceInfo) Destroy() {
