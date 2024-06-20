@@ -20,6 +20,7 @@ func NewMainWindow(myApp fyne.App) *MainWindow {
 		window:     myApp.NewWindow(txt.GetLabel("win.mainTitle")),
 	}
 	instance.buildWindow()
+	instance.usbMonitor.AddDeviceEvent("contentManager", instance.OnDeviceEvent)
 	return instance
 }
 
@@ -41,4 +42,10 @@ func (m *MainWindow) Close() {
 func (m *MainWindow) Show(device *monitor.ConnectedDevice) {
 	m.contentManager.SetDevice(device)
 	m.window.Show()
+}
+
+func (m *MainWindow) OnDeviceEvent(event string, device *monitor.ConnectedDevice) {
+	if event == "disconnected" {
+		m.Close()
+	}
 }

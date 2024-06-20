@@ -140,6 +140,9 @@ func (i *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 }
 
 func (i *RawData) refreshBindings(data []byte) {
+	if len(data) == 0 {
+		return
+	}
 	dataWithoutReportID := data[1:]
 	for inx, val := range dataWithoutReportID {
 		i.bndDta[inx].bndValueBin.Set(fmt.Sprintf("%08b", val))
@@ -169,7 +172,11 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 				logger.Log.Debug("Stopping RawData")
 				return
 			default:
-				i.refreshBindings(readUSB(dev.Device))
+				data := readUSB(dev.Device)
+				if len(data) == 0 {
+					return
+				}
+				i.refreshBindings(data)
 			}
 		}
 	}()
@@ -186,7 +193,10 @@ func (i *RawData) GetButton() *widget.Button {
 
 func (i *RawData) Destroy() {
 	logger.Log.Debug("Destroying RawData")
-	i.stopChan <- true
+	select {
+	case i.stopChan <- true:
+	default:
+	}
 }
 
 func readUSB(dev *gousb.Device) []byte {

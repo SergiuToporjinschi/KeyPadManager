@@ -5,6 +5,7 @@ import (
 	"main/logger"
 	"main/monitor"
 	"main/txt"
+	"sync"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -48,6 +49,7 @@ type ContentManager struct {
 	navi           *widget.Tree
 	currentDevice  *monitor.ConnectedDevice
 	currentNavItem NavigationItem
+	mutex          sync.Mutex
 }
 
 func NewContentManager() *ContentManager {
@@ -65,11 +67,17 @@ func NewContentManager() *ContentManager {
 }
 
 func (c *ContentManager) SetDevice(device *monitor.ConnectedDevice) {
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
 	c.currentDevice = device
 }
 
 func (c *ContentManager) OnMainWindowHide() {
-	c.currentNavItem.Destroy()
+	c.mutex.Lock()
+	defer c.mutex.Unlock()
+	if c.currentNavItem != nil {
+		c.currentNavItem.Destroy()
+	}
 }
 
 func (c *ContentManager) buildNavigation() {
@@ -79,7 +87,6 @@ func (c *ContentManager) buildNavigation() {
 	c.navi.CreateNode = c.createNode
 	c.navi.UpdateNode = c.updateNode
 	c.navi.OnSelected = c.onSelected
-
 }
 
 func (c *ContentManager) childUIDs(uid string) []string {
