@@ -140,7 +140,7 @@ func (m *USBMonitor) monitorDevices() {
 				if !found {
 					m.connectedDevices[key] = val
 					m.deviceEvents <- deviceEvent{"connected", val}
-					slog.Info("Device connected", "key", key, "value", val)
+					slog.Info("Device connected", "key", key)
 				}
 			}
 

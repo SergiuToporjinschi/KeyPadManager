@@ -4,7 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"io"
 	"log"
 	"log/slog"
 	"os"
@@ -12,56 +11,7 @@ import (
 	"runtime"
 	"strconv"
 	"strings"
-
-	"github.com/sirupsen/logrus"
 )
-
-var (
-	Log *logrus.Logger
-)
-
-// CustomTextFormatter is a custom formatter that displays only values without attribute names
-type CustomTextFormatter struct {
-	TimestampFormat string
-}
-
-// Format formats the log entry without attribute names
-func (f *CustomTextFormatter) Format(entry *logrus.Entry) ([]byte, error) {
-	timestamp := ""
-	if !entry.HasCaller() {
-		timestamp = entry.Time.Format(f.TimestampFormat)
-	}
-	// Extract log level
-	level := strings.ToUpper(entry.Level.String())
-	return []byte(timestamp + " " + level + " " + entry.Message + "\n"), nil
-}
-
-func Init() {
-	Log = logrus.New()
-
-	// Set the formatter, output, and level for the logger
-	// Log.SetFormatter(&logrus.TextFormatter{
-	// 	FullTimestamp: true,
-	// })
-	// Set the formatter, output, and level for the logger
-	Log.SetFormatter(&CustomTextFormatter{
-		TimestampFormat: "2006-01-02T15:04:05", // Customize timestamp format
-	})
-
-	// Define file for logging
-	file, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
-	if err != nil {
-		Log.Fatal("Unable to open log file:", err)
-	}
-
-	// Set the output to both console and file
-	Log.SetOutput(io.MultiWriter(os.Stdout, file))
-
-	// Set the log level
-	Log.SetLevel(logrus.DebugLevel)
-	Log.Infof("Logger initialized %s", "successfully")
-	log.SetOutput(Log.Writer())
-}
 
 func NewSLogger() *slog.Logger {
 	return slog.New(
@@ -78,6 +28,7 @@ const (
 	lightYellow = 93
 	lightBlue   = 94
 	white       = 97
+	lightGray   = 37
 )
 
 type PrettyConsoleHandler struct {
@@ -89,6 +40,7 @@ type PrettyConsoleHandler struct {
 }
 
 func NewPrettyConsoleHandler(opts slog.HandlerOptions) *PrettyConsoleHandler {
+	pathToMain = getPathToMain()
 	return &PrettyConsoleHandler{
 		options:   &opts,
 		useColors: true,
@@ -109,7 +61,7 @@ func (h *PrettyConsoleHandler) WithGroup(name string) slog.Handler {
 }
 
 func (h *PrettyConsoleHandler) Handle(ctx context.Context, r slog.Record) error {
-	level := ReplaceLevelName(r.Level) + ":"
+	level := ReplaceLevelName(r.Level)
 	buffer := make([]byte, 0, 10)
 	appendToBuffer := func(content string) {
 		buffer = append(buffer, []byte(content)...)
@@ -123,7 +75,7 @@ func (h *PrettyConsoleHandler) Handle(ctx context.Context, r slog.Record) error 
 		case slog.LevelDebug:
 			level = colorize(lightGreen, level)
 		case slog.LevelInfo:
-			level = colorize(lightBlue, level)
+			level = colorize(lightGray, level)
 		case slog.LevelWarn:
 			level = colorize(lightYellow, level)
 		case slog.LevelError:
@@ -131,7 +83,7 @@ func (h *PrettyConsoleHandler) Handle(ctx context.Context, r slog.Record) error 
 		}
 	}
 
-	appendToBuffer(level)
+	appendToBuffer(fmt.Sprintf("%s:", level))
 
 	if h.addSource {
 		appendToBuffer(h.getSourceString(r.PC))
@@ -178,7 +130,12 @@ func (h *PrettyConsoleHandler) Handle(ctx context.Context, r slog.Record) error 
 func (h *PrettyConsoleHandler) getSourceString(caller uintptr) string {
 	fs := runtime.CallersFrames([]uintptr{caller})
 	f, _ := fs.Next()
-	shortFileName := f.File[strings.LastIndex(f.File, "/")+1:]
+	var shortFileName string
+	if pathToMain != nil && len(f.File) > 0 {
+		shortFileName = strings.ReplaceAll(f.File, *pathToMain, ".")
+	} else {
+		shortFileName = f.File[strings.LastIndex(f.File, "/")+1:]
+	}
 	return fmt.Sprintf("%s:%d", shortFileName, f.Line)
 }
 
@@ -220,10 +177,10 @@ func (h *PrettyConsoleHandler) getStack() string {
 }
 
 var LevelNames = map[slog.Level]string{
-	slog.LevelDebug: "DEBUG",
-	slog.LevelInfo:  "INFO",
+	slog.LevelDebug: "DEBUG  ",
+	slog.LevelInfo:  "INFO   ",
 	slog.LevelWarn:  "WARNING",
-	slog.LevelError: "ERROR",
+	slog.LevelError: "ERROR  ",
 }
 
 func ReplaceLevelName(level slog.Level) string {
@@ -247,9 +204,21 @@ func HandleCustomLevels() *slog.HandlerOptions {
 }
 func findLeveler(strLevel string) slog.Level {
 	for key := range LevelNames {
-		if LevelNames[key] == strLevel {
+		if strings.Contains(LevelNames[key], strLevel) {
 			return key
 		}
 	}
 	return slog.LevelError
+}
+
+var pathToMain *string
+
+func getPathToMain() *string {
+	dir, err := os.Getwd()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return nil
+	}
+	dir = strings.ReplaceAll(dir, "\\", "/")
+	return &dir
 }

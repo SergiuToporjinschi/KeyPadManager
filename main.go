@@ -14,8 +14,6 @@ import (
 func main() {
 	slog.SetDefault(logger.NewSLogger())
 	slog.Info("Starting the application")
-	// logger.Init()
-	// logger.Log.Info("Starting the application")
 
 	err := devicelayout.GetInstance().LoadConfig()
 	if err != nil {

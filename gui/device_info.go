@@ -15,7 +15,6 @@ import (
 
 type DeviceInfo struct {
 	title       string
-	navTitle    string
 	button      *widget.Button
 	body        *container.Scroll
 	bindingData infoBindingData
@@ -30,8 +29,7 @@ type infoBindingData struct {
 
 func NewDeviceInfo() NavigationItem {
 	inst := &DeviceInfo{
-		title:    txt.GetLabel("navi.deviceInfoTitle"),
-		navTitle: txt.GetLabel("cont.deviceInfoTitle"),
+		title: txt.GetLabel("navi.deviceInfoTitle"),
 		bindingData: infoBindingData{
 			Manufacturer: binding.BindString(nil),
 			Product:      binding.BindString(nil),
