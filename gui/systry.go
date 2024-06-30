@@ -1,8 +1,8 @@
 package gui
 
 import (
+	"log/slog"
 	resources "main/assets"
-	"main/logger"
 	"main/monitor"
 	"main/txt"
 
@@ -30,7 +30,7 @@ func (s SysTrayMenu) Start() {
 }
 
 func (s SysTrayMenu) onExit() {
-	logger.Log.Info("Exiting the application")
+	slog.Info("Exiting the application")
 
 	//Stop usb monitoring
 	s.gui.UsbMonitor.Stop()
@@ -66,10 +66,10 @@ func (s SysTrayMenu) sysTrayActionListener() {
 	for {
 		select {
 		case <-s.mSelectDevice.ClickedCh:
-			logger.Log.Info("selDevOpen: clicked")
+			slog.Info("selDevOpen: clicked")
 			s.gui.ShowDeviceWindow()
 		case <-s.mQuit.ClickedCh:
-			logger.Log.Info("Quit menu systry clicked")
+			slog.Info("Quit menu systry clicked")
 			systray.Quit()
 			fyne.CurrentApp().Quit()
 			return

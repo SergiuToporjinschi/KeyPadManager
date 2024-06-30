@@ -4,8 +4,8 @@ import (
 	"cmp"
 	"fmt"
 	"image/color"
+	"log/slog"
 	"main/devicelayout"
-	"main/logger"
 	"main/monitor"
 	"main/txt"
 	"main/utility"
@@ -169,7 +169,7 @@ func (i *RawData) setData(dev *monitor.ConnectedDevice) {
 		for {
 			select {
 			case <-i.stopChan:
-				logger.Log.Debug("Stopping RawData")
+				slog.Debug("Stopping RawData")
 				return
 			default:
 				data := readUSB(dev.Device)
@@ -192,7 +192,7 @@ func (i *RawData) GetButton() *widget.Button {
 }
 
 func (i *RawData) Destroy() {
-	logger.Log.Debug("Destroying RawData")
+	slog.Debug("Destroying RawData")
 	select {
 	case i.stopChan <- true:
 	default:

@@ -1,8 +1,8 @@
 package gui
 
 import (
+	"log/slog"
 	resources "main/assets"
-	"main/logger"
 	"main/monitor"
 	"main/txt"
 	"sync"
@@ -119,7 +119,7 @@ func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObje
 			box.Objects[0] = widget.NewIcon(item.naviIcon)
 		}
 	} else {
-		logger.Log.Warnf("Unknown UID: %v", uid)
+		slog.Warn("Unknown UID", "UUID", uid)
 	}
 }
 

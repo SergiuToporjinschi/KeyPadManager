@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log/slog"
 	"main/devicelayout"
 	"main/gui"
 	"main/logger"
@@ -11,8 +12,10 @@ import (
 //go:generate $GOPATH\bin\fyne bundle -prefix Res -package resources -o assets/bundled.go assets/files
 
 func main() {
-	logger.Init()
-	logger.Log.Info("Starting the application")
+	slog.SetDefault(logger.NewSLogger())
+	slog.Info("Starting the application")
+	// logger.Init()
+	// logger.Log.Info("Starting the application")
 
 	err := devicelayout.GetInstance().LoadConfig()
 	if err != nil {

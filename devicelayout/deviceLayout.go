@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"main/logger"
+	"log/slog"
 	"main/utility"
 	"os"
 	"strconv"
@@ -28,11 +28,11 @@ func GetInstance() *DeviceLayout {
 }
 
 func (d *DeviceLayout) LoadConfig() error {
-	logger.Log.Info("Loading device layout configuration")
+	slog.Info("Loading device layout configuration")
 	// Open json file
 	file, err := os.Open("./deviceLayout.json")
 	if err != nil {
-		logger.Log.Errorf("Error opening file: %v", err)
+		slog.Error("Error opening file", "error", err)
 		return err
 	}
 	defer file.Close()
@@ -40,7 +40,7 @@ func (d *DeviceLayout) LoadConfig() error {
 	//Read json file
 	data, err := io.ReadAll(file)
 	if err != nil {
-		logger.Log.Errorf("Error reading file: %v", err)
+		slog.Error("Error reading file", "error", err)
 		return err
 	}
 
@@ -48,7 +48,7 @@ func (d *DeviceLayout) LoadConfig() error {
 	layouts := map[string]DeviceLayoutConfig{}
 	err = json.Unmarshal([]byte(data), &layouts)
 	if err != nil {
-		logger.Log.Errorf("Error parsing file: %v", err)
+		slog.Error("Error parsing file", "error", err)
 		return err
 	}
 
@@ -77,19 +77,19 @@ func validate(layouts map[string]DeviceLayoutConfig) error {
 	for key, layout := range layouts {
 		err := validate.Struct(layout)
 		if err != nil {
-			logger.Log.Errorf("Error validating device layout configuration for key %s: ", key)
+			slog.Error("Error validating device layout configuration", "key", key)
 			if _, ok := err.(*validator.InvalidValidationError); ok {
-				logger.Log.Error(err)
+				slog.Error("", "error", err)
 				return err
 			}
 			for _, err := range err.(validator.ValidationErrors) {
-				logger.Log.Errorf("Validation error: Field '%s' failed on the '%s' tag", err.Namespace(), err.Tag())
+				slog.Error("Validation error", "field", err.Namespace(), "tag", err.Tag())
 			}
 			return err
 		}
 		if key != layout.Identifier.String() {
 			err = fmt.Errorf("key does not match the VID and PID [%s != %s]", key, layout.Identifier.String())
-			logger.Log.Error(err)
+			slog.Error("", "error", err)
 			return err
 		}
 	}

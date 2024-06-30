@@ -1,7 +1,7 @@
 package gui
 
 import (
-	"main/logger"
+	"log/slog"
 	"main/monitor"
 	"main/txt"
 	"main/utility"
@@ -81,5 +81,5 @@ func (i *DeviceInfo) GetButton() *widget.Button {
 }
 
 func (i *DeviceInfo) Destroy() {
-	logger.Log.Debug("Destroying DeviceInfo")
+	slog.Debug("Destroying DeviceInfo")
 }

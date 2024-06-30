@@ -2,8 +2,8 @@ package monitor
 
 import (
 	"fmt"
+	"log/slog"
 	"main/devicelayout"
-	"main/logger"
 	"sync"
 	"time"
 
@@ -57,11 +57,11 @@ func GetInstance() *USBMonitor {
 
 func (m *USBMonitor) Start() error {
 	if m.stopChan != nil {
-		logger.Log.Debug("Monitoring already started")
+		slog.Debug("Monitoring already started")
 		return nil
 	}
 
-	logger.Log.Debug("Starting the USB monitor")
+	slog.Debug("Starting the USB monitor")
 
 	m.ctx = gousb.NewContext()
 	m.stopChan = make(chan struct{})
@@ -101,18 +101,18 @@ func (m *USBMonitor) eventListener() {
 		select {
 
 		case monitorEvent := <-m.monitorEvents:
-			logger.Log.Debugf("Monitor event received %s", monitorEvent)
+			slog.Debug("Monitor event received", "monitorEvent", monitorEvent)
 			m.callMonitorListeners(monitorEvent)
 			if monitorEvent == "monitorStop" {
 				return
 			}
 			continue
 		case deviceEvent := <-m.deviceEvents:
-			logger.Log.Debugf("Device event received %v", deviceEvent)
+			slog.Debug("Device event received", "deviceEvent", deviceEvent)
 			m.callDeviceListeners(&deviceEvent)
 			continue
 		case <-m.stopChan:
-			logger.Log.Debug("Stopping event listener")
+			slog.Debug("Stopping event listener")
 			return
 		}
 	}
@@ -123,14 +123,14 @@ func (m *USBMonitor) monitorDevices() {
 	for {
 		select {
 		case <-m.stopChan:
-			logger.Log.Debug("Stopping device monitoring...")
+			slog.Debug("Stopping device monitoring...")
 			m.monitorEvents <- "monitorStop"
 			// break monitorLoop
 			return
 		default:
 			foundDevices, err := m.listHIDDevices()
 			if err != nil {
-				logger.Log.Errorf("Error listing HID devices: %v", err)
+				slog.Error("Error listing HID devices", "error", err)
 				continue
 			}
 
@@ -140,7 +140,7 @@ func (m *USBMonitor) monitorDevices() {
 				if !found {
 					m.connectedDevices[key] = val
 					m.deviceEvents <- deviceEvent{"connected", val}
-					logger.Log.Infof("Device connected: %s %v", key, val)
+					slog.Info("Device connected", "key", key, "value", val)
 				}
 			}
 
@@ -150,7 +150,7 @@ func (m *USBMonitor) monitorDevices() {
 				if !found {
 					delete(m.connectedDevices, key)
 					m.deviceEvents <- deviceEvent{"disconnected", dev}
-					logger.Log.Infof("Device disconnected: %v", dev)
+					slog.Info("Device disconnected ", "device", dev)
 				}
 			}
 
@@ -191,21 +191,21 @@ func (*USBMonitor) newConnectedDevice(dev *gousb.Device, knwonDevices *devicelay
 		if err == nil {
 			conf.Identifier.Product = prod
 		} else {
-			logger.Log.Warnf("Error getting product name from phisical device: %v", err)
+			slog.Warn("Error getting product name from phisical device", "error", err)
 		}
 
 		man, err := dev.Manufacturer()
 		if err == nil {
 			conf.Identifier.Manufacturer = man
 		} else {
-			logger.Log.Warnf("Error getting manufacturer name from phisical device: %v", err)
+			slog.Warn("Error getting manufacturer name from phisical device", "error", err)
 		}
 
 		serial, err := dev.SerialNumber()
 		if err == nil {
 			conf.Identifier.SerialNumber = serial
 		} else {
-			logger.Log.Warnf("Error getting serial number from phisical device: %v", err)
+			slog.Warn("Error getting serial number from phisical device", "error", err)
 		}
 
 		return key, &ConnectedDevice{
@@ -213,7 +213,7 @@ func (*USBMonitor) newConnectedDevice(dev *gousb.Device, knwonDevices *devicelay
 			DeviceLayoutConfig: conf,
 		}
 	} else {
-		logger.Log.Warnf("Device with VID: %v and PID: %v not found in device layout config", dev.Desc.Vendor, dev.Desc.Product)
+		slog.Warn("Device not found in layout config", "VID", dev.Desc.Vendor, "PID", dev.Desc.Product)
 	}
 	return key, nil
 }

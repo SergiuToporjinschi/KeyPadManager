@@ -1,7 +1,7 @@
 package txt
 
 import (
-	"main/logger"
+	"log/slog"
 	"sync"
 
 	"github.com/BurntSushi/toml"
@@ -39,7 +39,7 @@ func (l *Txt) SetLanguage(langCode string) *Txt {
 func (l *Txt) GetLabel(key string) string {
 	msg, tag, err := l.local.LocalizeWithTag(&i18n.LocalizeConfig{MessageID: key})
 	if err != nil {
-		logger.Log.Warnf("Could not extract label with key %s language %s because: %v", key, tag, err)
+		slog.Warn("Could not extract label", "key", key, "tag", tag, "error", err)
 		msg = key
 	}
 

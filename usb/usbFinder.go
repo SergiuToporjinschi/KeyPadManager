@@ -2,7 +2,7 @@ package usb
 
 import (
 	"fmt"
-	"main/logger"
+	"log/slog"
 
 	"github.com/google/gousb"
 )
@@ -35,17 +35,17 @@ func FindDevices() ([]Device, error) {
 func getInfo(device *gousb.Device) (*DevInfo, *HIDDescriptor) {
 	manufacturer, err := device.Manufacturer()
 	if err != nil {
-		logger.Log.Warnf("Error reading manufacturer: %v\n", err)
+		slog.Warn("Error reading manufacturer", "error", err)
 	}
 
 	product, err := device.Product()
 	if err != nil {
-		logger.Log.Warnf("Error reading product: %v\n", err)
+		slog.Warn("Error reading product", "error", err)
 	}
 
 	serialNumber, err := device.SerialNumber()
 	if err != nil {
-		logger.Log.Warnf("Error reading serial number: %v\n", err)
+		slog.Warn("Error reading serial number", "error", err)
 	}
 	descriptor := getDescriptor(device)
 	return &DevInfo{
@@ -62,7 +62,7 @@ func getInfo(device *gousb.Device) (*DevInfo, *HIDDescriptor) {
 func getDescriptor(device *gousb.Device) []byte {
 	cfg, err := device.Config(1)
 	if err != nil {
-		logger.Log.Fatalf("Could not get config: %v", err)
+		slog.Error("Could not get config", "error", err)
 	}
 	defer cfg.Close()
 
@@ -84,7 +84,7 @@ func getDescriptor(device *gousb.Device) []byte {
 	}
 
 	if !found {
-		logger.Log.Fatalf("No HID interface found")
+		slog.Error("No HID interface found")
 	}
 
 	descriptor := make([]byte, 256)
@@ -96,7 +96,7 @@ func getDescriptor(device *gousb.Device) []byte {
 
 	length, err := device.Control(uint8(reqType), req, value, index, descriptor)
 	if err != nil {
-		logger.Log.Fatalf("Control request failed: %v", err)
+		slog.Error("Control request failed", "error", err)
 	}
 
 	descriptor = descriptor[:length]
