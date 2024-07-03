@@ -20,7 +20,7 @@ type KeySwitchControl struct {
 	binderFocused Binder
 }
 
-// NewImageWithBorder creates a new ImageWithBorder widget.
+// NewKeySwitchControl creates a new ImageWithBorder widget.
 func NewKeySwitchControl(imageResource fyne.Resource, selImageResource fyne.Resource, data binding.Bool) *KeySwitchControl {
 	img := canvas.NewImageFromResource(imageResource)
 	img.SetMinSize(fyne.NewSize(64, 64))
