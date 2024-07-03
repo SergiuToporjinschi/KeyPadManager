@@ -84,7 +84,7 @@ func (rd *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
 	}
 }
 
-func (rd *RawData) buildButtonInfoGrid(comp devicelayout.Component) (*fyne.Container, controlBindings) {
+func (rd *RawData) buildButtonInfoGrid(_ devicelayout.Component) (*fyne.Container, controlBindings) {
 	grid := container.NewGridWithColumns(4,
 		widget.NewLabel(""),
 		NewCustomLocaleLabel("cont.rawDataVal", &style{Bold: true}),
@@ -102,9 +102,8 @@ func (rd *RawData) buildButtonInfoGrid(comp devicelayout.Component) (*fyne.Conta
 	grid.Add(widget.NewLabelWithData(bndValue.bndValueHex))
 	grid.Add(widget.NewLabelWithData(bndValue.bndValueDec))
 
-	borderedImage := widgets.NewBorderedControlImage(resources.ResButtonPng, bndValue.bndValueFocused)
-
-	return container.NewVBox(grid, borderedImage), bndValue
+	keySwitch := widgets.NewKeySwitchControl(resources.ResButtonGrayPng, resources.ResButtonPng, bndValue.bndValueFocused)
+	return container.NewVBox(grid, keySwitch), bndValue
 }
 
 func (rd *RawData) buildEncoderInfoGrid(_ devicelayout.Component) (*fyne.Container, controlBindings) {
