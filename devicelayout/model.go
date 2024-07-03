@@ -18,13 +18,13 @@ type DevIdentifier struct {
 }
 
 type Component struct {
-	Name        string `json:"name" validate:"required"`
-	Icon        string `json:"icon" validate:"omitempty"`
-	Type        string `json:"type" validate:"required,oneof=button rotaryEncoder dial"`
-	ByteNumber  int    `json:"byteNumber" validate:"omitempty"`
-	BitPosition string `json:"bitPosition" validate:"byteNumber,required_if=Type button"`
-	Min         int    `json:"min" validate:""`
-	Max         int    `json:"max" validate:""`
+	Name      string `json:"name" validate:"required"`
+	Icon      string `json:"icon" validate:"omitempty"`
+	Type      string `json:"type" validate:"required,oneof=button encoder"`
+	Endianess string `json:"endianess" validate:"omitempty,oneof=big little"`
+	Bytes     [2]int `json:"bytes" validate:"omitempty"`
+	ByteType  string `json:"byteType" validate:"omitempty,oneof=signed unsigned"`
+	Value     int    `json:"value" validate:"required_if=Type button"`
 }
 type HexUint16 uint16
 

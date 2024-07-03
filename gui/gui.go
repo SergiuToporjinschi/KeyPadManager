@@ -29,7 +29,7 @@ func GetInstance() *Gui {
 			MainWindow:         NewMainWindow(app),
 			SelectDeviceWindow: NewSelectDevice(app),
 		}
-
+		// instance.App.Preferences().RemoveValue("sizeNameText")
 		// instance.App.Settings().SetTheme(NewTheme(instance.App.Preferences()))
 		instance.App.Settings().SetTheme(theme.DefaultTheme())
 		instance.SelectDeviceWindow.AddSelectDeviceListener("Gui", instance.onDeviceSelected)

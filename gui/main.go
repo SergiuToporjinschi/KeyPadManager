@@ -35,6 +35,9 @@ func (m *MainWindow) buildWindow() {
 }
 
 func (m *MainWindow) Close() {
+
+	// fyne.CurrentApp().Preferences().SetFloat("mainWindowX", size.X)
+	// fyne.CurrentApp().Settings()
 	m.contentManager.OnMainWindowHide()
 	m.window.Hide()
 }

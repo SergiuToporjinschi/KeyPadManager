@@ -2,6 +2,7 @@ package gui
 
 import (
 	"image/color"
+	"log/slog"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/theme"
@@ -45,6 +46,8 @@ func TextMinus() {
 	}
 }
 func (t ScsiTheme) Color(name fyne.ThemeColorName, variant fyne.ThemeVariant) color.Color {
+	slog.Debug("ScsiTheme.Color", "name", name, "variant", variant)
+
 	switch name {
 	case theme.ColorNameSeparator:
 		return theme.PrimaryColor()
