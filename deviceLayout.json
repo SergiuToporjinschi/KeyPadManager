@@ -120,8 +120,8 @@
                 "value": 512
             },
             {
-                "name": "Button 11",
-                "type": "button",
+                "name": "Button",
+                "type": "encoderButton",
                 "icon": "",
                 "endianess": "little",
                 "bytes": [

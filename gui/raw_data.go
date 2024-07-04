@@ -2,9 +2,7 @@ package gui
 
 import (
 	"fmt"
-	"image/color"
 	"log/slog"
-	resources "main/assets"
 	"main/devicelayout"
 	"main/gui/widgets"
 	"main/monitor"
@@ -13,7 +11,6 @@ import (
 	"sync"
 
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/data/binding"
 	"fyne.io/fyne/v2/layout"
@@ -22,21 +19,14 @@ import (
 )
 
 type RawData struct {
-	title     string
-	navTitle  string
-	button    *widget.Button
-	body      *container.Scroll
-	bndLength binding.ExternalInt
-	stopChan  chan bool
-	bndData   []controlBindings
-	onceGrid  sync.Once
-}
-
-type controlBindings struct {
-	bndValueBin     binding.ExternalString
-	bndValueHex     binding.ExternalString
-	bndValueDec     binding.ExternalString
-	bndValueFocused binding.Bool
+	title       string
+	navTitle    string
+	button      *widget.Button
+	body        *container.Scroll
+	bndLength   binding.ExternalInt
+	stopChan    chan bool
+	bndValueDec binding.ExternalInt
+	onceGrid    sync.Once
 }
 
 func NewRawData() NavigationItem {
@@ -50,82 +40,15 @@ func NewRawData() NavigationItem {
 }
 
 func (rd *RawData) buildBody() {
-	rd.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(450, 180))))
-}
-
-func (rd *RawData) newTitleText(text string) *canvas.Text {
-	return utility.NewSizeableColorText(text, 15, color.NRGBA{R: 0xFE, G: 0x58, B: 0x62, A: 0xFF})
+	rd.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
 }
 
 func (rd *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
-	for ind, comp := range layout.Components {
-		var grid *fyne.Container
-		var bindings controlBindings
-		if comp.Type == "button" {
-			grid, bindings = rd.buildButtonInfoGrid(comp)
-		} else if comp.Type == "encoder" {
-			grid, bindings = rd.buildEncoderInfoGrid(comp)
-		}
-		rd.bndData = append(rd.bndData, bindings)
-		rd.body.Content.(*fyne.Container).Add(
-			container.NewBorder(
-				container.NewStack(
-					rd.newTitleText(fmt.Sprintf("%s (%s)", comp.Name, comp.Type)),
-				),
-				nil,
-				nil,
-				nil,
-				grid),
-		)
-
-		if ind < len(layout.Components)-1 {
-			widget.NewSeparator()
-		}
-	}
-}
-
-func (rd *RawData) buildButtonInfoGrid(_ devicelayout.Component) (*fyne.Container, controlBindings) {
-	grid := container.NewGridWithColumns(4,
-		widget.NewLabel(""),
-		NewCustomLocaleLabel("cont.rawDataVal", &style{Bold: true}),
-		NewCustomLocaleLabel("cont.rawDataHex", &style{Bold: true}),
-		NewCustomLocaleLabel("cont.rawDataDec", &style{Bold: true}),
-	)
-	bndValue := controlBindings{
-		bndValueBin:     binding.BindString(nil),
-		bndValueHex:     binding.BindString(nil),
-		bndValueDec:     binding.BindString(nil),
-		bndValueFocused: binding.BindBool(nil),
-	}
-	grid.Add(NewCustomLocaleLabel("cont.rawDataReceived", &style{Bold: true}))
-	grid.Add(widget.NewLabelWithData(bndValue.bndValueBin))
-	grid.Add(widget.NewLabelWithData(bndValue.bndValueHex))
-	grid.Add(widget.NewLabelWithData(bndValue.bndValueDec))
-
-	keySwitch := widgets.NewKeySwitchControl(resources.ResButtonGrayPng, resources.ResButtonPng, bndValue.bndValueFocused)
-	return container.NewVBox(grid, keySwitch), bndValue
-}
-
-func (rd *RawData) buildEncoderInfoGrid(_ devicelayout.Component) (*fyne.Container, controlBindings) {
-	grid := container.NewGridWithColumns(4,
-		widget.NewLabel(""),
-		NewCustomLocaleLabel("cont.rawDataVal", &style{Bold: true}),
-		NewCustomLocaleLabel("cont.rawDataHex", &style{Bold: true}),
-		NewCustomLocaleLabel("cont.rawDataDec", &style{Bold: true}),
-	)
-
-	bindings := controlBindings{
-		bndValueBin:     binding.BindString(nil),
-		bndValueHex:     binding.BindString(nil),
-		bndValueDec:     binding.BindString(nil),
-		bndValueFocused: binding.BindBool(nil),
-	}
-
-	grid.Add(NewCustomLocaleLabel("cont.rawDataReceived", &style{Bold: true}))
-
-	img := widgets.NewKnobControlImage(resources.ResKnobPng, bindings.bndValueFocused)
-
-	return container.NewVBox(grid, img), bindings
+	rd.bndValueDec = utility.NewIntBinding(0)
+	rd.body.Content.(*fyne.Container).Add(widgets.NewKeySwitchControl(
+		rd.bndValueDec,
+		layout,
+	))
 }
 
 func (rd *RawData) refreshBindings(data []byte, layout *devicelayout.DeviceLayoutConfig) {
@@ -136,14 +59,9 @@ func (rd *RawData) refreshBindings(data []byte, layout *devicelayout.DeviceLayou
 		slog.Error("Device layout is not loaded")
 		return
 	}
-	for inx, comp := range layout.Components {
-		hexStr, decStr, byteStr, value := getControlValues(comp, data[1:])
-		slog.Debug("Data read from USB", "data", fmt.Sprintf("%s %s %s %s", comp.Name, decStr, hexStr, byteStr))
-		rd.bndData[inx].bndValueBin.Set(byteStr)
-		rd.bndData[inx].bndValueHex.Set(hexStr)
-		rd.bndData[inx].bndValueDec.Set(decStr)
-		rd.bndData[inx].bndValueFocused.Set(value&comp.Value != 0)
-	}
+	hexStr, decStr, byteStr, value := getControlValues(layout.Components[0], data[1:])
+	rd.bndValueDec.Set(value)
+	slog.Debug("Data read from USB", "data", fmt.Sprintf("%s %s %s %s %d ", layout.Components[0].Name, decStr, hexStr, byteStr, value))
 }
 
 func (rd *RawData) setData(dev *monitor.ConnectedDevice) {

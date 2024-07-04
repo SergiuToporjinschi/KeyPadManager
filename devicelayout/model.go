@@ -20,7 +20,7 @@ type DevIdentifier struct {
 type Component struct {
 	Name      string `json:"name" validate:"required"`
 	Icon      string `json:"icon" validate:"omitempty"`
-	Type      string `json:"type" validate:"required,oneof=button encoder"`
+	Type      string `json:"type" validate:"required,oneof=button encoder encoderButton"`
 	Endianess string `json:"endianess" validate:"omitempty,oneof=big little"`
 	Bytes     [2]int `json:"bytes" validate:"omitempty"`
 	ByteType  string `json:"byteType" validate:"omitempty,oneof=signed unsigned"`
