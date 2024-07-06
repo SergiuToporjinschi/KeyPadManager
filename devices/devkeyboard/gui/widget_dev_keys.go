@@ -6,6 +6,7 @@ import (
 	"main/devicelayout"
 	"main/devices/devkeyboard"
 	"main/gui/widgets"
+	"main/utility"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -76,7 +77,8 @@ func (w *KeySwitchControl) updateFromData(dataBinding binding.DataItem) {
 		return
 	}
 
-	slog.Info("Binary data", "binary", binaryData)
+	slog.Debug("Binary data", "binary", utility.AsBinaryString(binaryData))
+	slog.Debug("Hex data", "hex", utility.AsHexString(binaryData))
 	w.setSelected(binaryData)
 }
 
@@ -85,10 +87,11 @@ func (r *KeySwitchControl) CreateRenderer() fyne.WidgetRenderer {
 }
 
 func (w *KeySwitchControl) setSelected(data []byte) {
-	//TODO match value with devDescriptor.HardwareDescriptor and change the image for it
 	hrdDesc := w.devDescriptor.HardwareDescriptor.([]devkeyboard.DevKeyboardComponent)
 	values, encoderValue := devkeyboard.DecodeBinaryValue(data, hrdDesc)
-	slog.Info("Decoded data", "values", values, "encoderValue", encoderValue)
+
+	slog.Debug("Decoded data", "values", values.Keys(), "encoderValue", encoderValue)
+
 	for key := range w.keysImages {
 		if values.Contains(key) {
 			w.keysImages[key].Resource = w.keySelImageRes
