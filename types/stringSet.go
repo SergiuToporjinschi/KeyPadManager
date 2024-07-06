@@ -1,4 +1,4 @@
-package utility
+package types
 
 type StringSet map[string]bool
 

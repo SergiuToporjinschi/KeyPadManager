@@ -5,16 +5,14 @@ import (
 	"fmt"
 	"io"
 	"log/slog"
-	"main/utility"
 	"os"
-	"strconv"
 	"sync"
 
 	"github.com/go-playground/validator/v10"
 )
 
 type DeviceLayout struct {
-	layouts map[string]DeviceLayoutConfig
+	devDescriptors map[string]DeviceDescriptor
 }
 
 var instance *DeviceLayout
@@ -45,37 +43,35 @@ func (d *DeviceLayout) LoadConfig() error {
 	}
 
 	// Parse json data
-	layouts := map[string]DeviceLayoutConfig{}
-	err = json.Unmarshal([]byte(data), &layouts)
+	devDesc := map[string]DeviceDescriptor{}
+	err = json.Unmarshal([]byte(data), &devDesc)
 	if err != nil {
 		slog.Error("Error parsing file", "error", err)
 		return err
 	}
 
-	if err = validate(layouts); err != nil {
+	if err = validate(devDesc); err != nil {
 		return err
 	}
 
-	d.layouts = layouts
+	d.devDescriptors = devDesc
 
 	return nil
 }
 
-func (d *DeviceLayout) FindLayout(vid, pid uint16) (*DeviceLayoutConfig, bool) {
-	genKey := fmt.Sprintf("%04x/%04x", vid, pid)
-	dev, found := d.layouts[genKey]
-	return &dev, found
+func (d *DeviceLayout) FindLayout(vid, pid uint16) (*DeviceDescriptor, bool) {
+	return d.FindLayoutByKey(fmt.Sprintf("%04x/%04x", vid, pid))
 }
-func (d *DeviceLayout) FindLayoutByKey(genKey string) (*DeviceLayoutConfig, bool) {
-	dev, found := d.layouts[genKey]
+
+func (d *DeviceLayout) FindLayoutByKey(genKey string) (*DeviceDescriptor, bool) {
+	dev, found := d.devDescriptors[genKey]
 	return &dev, found
 }
 
-func validate(layouts map[string]DeviceLayoutConfig) error {
+func validate(devDesc map[string]DeviceDescriptor) error {
 	validate := validator.New()
-	validate.RegisterValidation("byteNumber", validateByteNumber)
-	for key, layout := range layouts {
-		err := validate.Struct(layout)
+	for key, desc := range devDesc {
+		err := validate.Struct(desc)
 		if err != nil {
 			slog.Error("Error validating device layout configuration", "key", key)
 			if _, ok := err.(*validator.InvalidValidationError); ok {
@@ -87,25 +83,11 @@ func validate(layouts map[string]DeviceLayoutConfig) error {
 			}
 			return err
 		}
-		if key != layout.Identifier.String() {
-			err = fmt.Errorf("key does not match the VID and PID [%s != %s]", key, layout.Identifier.String())
+		if key != desc.Identifier.String() {
+			err = fmt.Errorf("key does not match the VID and PID [%s != %s]", key, desc.Identifier.String())
 			slog.Error("", "error", err)
 			return err
 		}
 	}
 	return nil
-}
-
-func validateByteNumber(fl validator.FieldLevel) bool {
-	val := fl.Field().String()
-	if val == "" {
-		return true
-	}
-	value, err := strconv.ParseUint(val, 2, 8)
-	if err != nil {
-		return false
-	}
-
-	// Check if the parsed value is within the valid byte range (0-255)
-	return utility.NewIntSetWithValues(1, 2, 4, 8, 16, 32, 64, 128).Contains(int(value))
 }

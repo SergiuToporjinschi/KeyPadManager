@@ -5,11 +5,11 @@ import (
 	"strconv"
 )
 
-type DeviceLayoutConfig struct {
-	Identifier DevIdentifier `json:"identifier" validate:"required"`
-	Components []Component   `json:"components" validate:"unique=Name,dive"`
+type DeviceDescriptor struct {
+	Identifier         Identifier `json:"identifier" validate:"required"`
+	HardwareDescriptor any        `json:"hardwareDescriptor"`
 }
-type DevIdentifier struct {
+type Identifier struct {
 	Manufacturer string    `json:"manufacturer" validate:"required"`
 	Product      string    `json:"product" validate:"required"`
 	SerialNumber string    `json:"serialNumber" validate:"omitempty"`
@@ -17,15 +17,6 @@ type DevIdentifier struct {
 	PID          HexUint16 `json:"pid" validate:"required"`
 }
 
-type Component struct {
-	Name      string `json:"name" validate:"required"`
-	Icon      string `json:"icon" validate:"omitempty"`
-	Type      string `json:"type" validate:"required,oneof=button encoder encoderButton"`
-	Endianess string `json:"endianess" validate:"omitempty,oneof=big little"`
-	Bytes     [2]int `json:"bytes" validate:"omitempty"`
-	ByteType  string `json:"byteType" validate:"omitempty,oneof=signed unsigned"`
-	Value     int    `json:"value" validate:"required_if=Type button"`
-}
 type HexUint16 uint16
 
 func (h *HexUint16) UnmarshalJSON(b []byte) error {
@@ -48,10 +39,10 @@ func (h HexUint16) String() string {
 	return strconv.FormatUint(uint64(h), 16)
 }
 
-func (di *DevIdentifier) String() string {
+func (di *Identifier) String() string {
 	return fmt.Sprintf("%s/%s", di.VID, di.PID)
 }
 
-func (di *DevIdentifier) StringDetailed() string {
+func (di *Identifier) StringDetailed() string {
 	return fmt.Sprintf("%s by %s [%s]", di.Product, di.Manufacturer, di.String())
 }

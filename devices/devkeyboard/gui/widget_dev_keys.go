@@ -1,9 +1,11 @@
-package widgets
+package devkeyboardGui
 
 import (
 	"log/slog"
 	resources "main/assets"
 	"main/devicelayout"
+	"main/devices/devkeyboard"
+	"main/gui/widgets"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/canvas"
@@ -21,37 +23,30 @@ type KeySwitchControl struct {
 	keyImageRes     fyne.Resource
 	knobImageRes    fyne.Resource
 	knobSelImageRes fyne.Resource
-	binderFocused   Binder
+	binderFocused   widgets.Binder
 	keysImages      map[int]*canvas.Image
 	knobImage       *canvas.Image
-	layout          *devicelayout.DeviceLayoutConfig
+	devDescriptor   *devicelayout.DeviceDescriptor
 }
 
-// NewKeySwitchControl creates a new ImageWithBorder widget.
-func NewKeySwitchControl(data binding.ExternalInt, layout *devicelayout.DeviceLayoutConfig) *KeySwitchControl {
-	// rotated, err := utility.RotateImageResource(resources.ResKnobPng, 45)
-	// if err != nil {
-	// 	slog.Error("Error rotating image resource", "error", err)
-	// 	return nil
-	// }
-
-	w := &KeySwitchControl{
+func New(data binding.Bytes, devDesc *devicelayout.DeviceDescriptor) fyne.CanvasObject {
+	ins := &KeySwitchControl{
 		keySelImageRes:  resources.ResButtonPng,
 		keyImageRes:     resources.ResButtonGrayPng,
 		knobImageRes:    resources.ResKnobGrayPng,
 		knobSelImageRes: resources.ResKnobPng,
 		keysImages:      make(map[int]*canvas.Image),
-		layout:          layout,
 	}
-
-	w.ExtendBaseWidget(w)
-	w.binderFocused.Bind(data, w.updateFromData)
-	w.createImages()
-	return w
+	ins.devDescriptor = devkeyboard.ConvertHardwareDescriptor(devDesc)
+	ins.ExtendBaseWidget(ins)
+	ins.binderFocused.Bind(data, ins.updateFromData)
+	ins.createImages()
+	return ins
 }
 
 func (w *KeySwitchControl) createImages() {
-	for _, comp := range w.layout.Components {
+	hrdDesc := w.devDescriptor.HardwareDescriptor.([]devkeyboard.DevKeyboardComponent)
+	for _, comp := range hrdDesc {
 		if comp.Type == "button" && comp.Value != 1024 {
 			w.keysImages[comp.Value] = canvas.NewImageFromResource(w.keyImageRes)
 			w.keysImages[comp.Value].FillMode = canvas.ImageFillContain
@@ -64,32 +59,38 @@ func (w *KeySwitchControl) createImages() {
 	}
 }
 
-func (w *KeySwitchControl) updateFromData(data binding.DataItem) {
-	if data == nil {
+func (w *KeySwitchControl) updateFromData(dataBinding binding.DataItem) {
+	if dataBinding == nil {
 		return
 	}
-	boolSource, ok := data.(binding.Int)
+	source, ok := dataBinding.(binding.Bytes)
 
 	if !ok {
+		slog.Error("Received data is not a binding.Bytes")
 		return
 	}
 
-	val, err := boolSource.Get()
+	binaryData, err := source.Get()
 	if err != nil {
 		slog.Error("Error getting current data value", "error", err)
 		return
 	}
-	slog.Info("KeySwitchControl", "val", val)
-	w.setSelected(val)
+
+	slog.Info("Binary data", "binary", binaryData)
+	w.setSelected(binaryData)
 }
 
 func (r *KeySwitchControl) CreateRenderer() fyne.WidgetRenderer {
 	return newDevRenderer(r.keysImages, r.knobImage, r)
 }
 
-func (w *KeySwitchControl) setSelected(value int) {
+func (w *KeySwitchControl) setSelected(data []byte) {
+	//TODO match value with devDescriptor.HardwareDescriptor and change the image for it
+	hrdDesc := w.devDescriptor.HardwareDescriptor.([]devkeyboard.DevKeyboardComponent)
+	values, encoderValue := devkeyboard.DecodeBinaryValue(data, hrdDesc)
+	slog.Info("Decoded data", "values", values, "encoderValue", encoderValue)
 	for key := range w.keysImages {
-		if key&value != 0 {
+		if values.Contains(key) {
 			w.keysImages[key].Resource = w.keySelImageRes
 		} else {
 			w.keysImages[key].Resource = w.keyImageRes

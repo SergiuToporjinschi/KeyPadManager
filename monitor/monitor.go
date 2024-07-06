@@ -30,7 +30,7 @@ type USBMonitor struct {
 
 type ConnectedDevice struct {
 	*gousb.Device
-	*devicelayout.DeviceLayoutConfig
+	*devicelayout.DeviceDescriptor
 }
 
 type deviceEvent struct {
@@ -209,8 +209,8 @@ func (*USBMonitor) newConnectedDevice(dev *gousb.Device, knwonDevices *devicelay
 		}
 
 		return key, &ConnectedDevice{
-			Device:             dev,
-			DeviceLayoutConfig: conf,
+			Device:           dev,
+			DeviceDescriptor: conf,
 		}
 	} else {
 		slog.Warn("Device not found in layout config", "VID", dev.Desc.Vendor, "PID", dev.Desc.Product)

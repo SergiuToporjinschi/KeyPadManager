@@ -1,13 +1,12 @@
 package gui
 
 import (
-	"fmt"
 	"log/slog"
 	"main/devicelayout"
-	"main/gui/widgets"
+	"main/devices"
+	devkeyboardGui "main/devices/devkeyboard/gui"
 	"main/monitor"
 	"main/txt"
-	"main/utility"
 	"sync"
 
 	"fyne.io/fyne/v2"
@@ -18,15 +17,19 @@ import (
 	"github.com/google/gousb"
 )
 
+var EventDeviceConnected map[string]devices.DeviceConstructor = map[string]devices.DeviceConstructor{
+	"6001/1000": devkeyboardGui.New,
+}
+
 type RawData struct {
-	title       string
-	navTitle    string
-	button      *widget.Button
-	body        *container.Scroll
-	bndLength   binding.ExternalInt
-	stopChan    chan bool
-	bndValueDec binding.ExternalInt
-	onceGrid    sync.Once
+	title     string
+	navTitle  string
+	button    *widget.Button
+	body      *container.Scroll
+	bndLength binding.ExternalInt
+	stopChan  chan bool
+	bndData   binding.Bytes
+	onceGrid  sync.Once
 }
 
 func NewRawData() NavigationItem {
@@ -34,6 +37,7 @@ func NewRawData() NavigationItem {
 		title:     txt.GetLabel("navi.rawDataTitle"),
 		navTitle:  txt.GetLabel("navi.rawDataTitle"),
 		bndLength: binding.BindInt(nil),
+		bndData:   binding.NewBytes(),
 	}
 	inst.buildBody()
 	return inst
@@ -43,31 +47,27 @@ func (rd *RawData) buildBody() {
 	rd.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
 }
 
-func (rd *RawData) buildBindings(layout *devicelayout.DeviceLayoutConfig) {
-	rd.bndValueDec = utility.NewIntBinding(0)
-	rd.body.Content.(*fyne.Container).Add(widgets.NewKeySwitchControl(
-		rd.bndValueDec,
-		layout,
-	))
+func (rd *RawData) buildBindings(devDescriptor *devicelayout.DeviceDescriptor) {
+	instObject := EventDeviceConnected[devDescriptor.Identifier.String()](rd.bndData, devDescriptor)
+
+	rd.body.Content.(*fyne.Container).Add(instObject)
 }
 
-func (rd *RawData) refreshBindings(data []byte, layout *devicelayout.DeviceLayoutConfig) {
+func (rd *RawData) refreshBindings(data []byte, devDesc *devicelayout.DeviceDescriptor) {
 	if len(data) == 0 || len(data[1:]) == 0 {
 		return
 	}
-	if layout == nil {
+	if devDesc == nil {
 		slog.Error("Device layout is not loaded")
 		return
 	}
-	hexStr, decStr, byteStr, value := getControlValues(layout.Components[0], data[1:])
-	rd.bndValueDec.Set(value)
-	slog.Debug("Data read from USB", "data", fmt.Sprintf("%s %s %s %s %d ", layout.Components[0].Name, decStr, hexStr, byteStr, value))
+	rd.bndData.Set(data)
 }
 
 func (rd *RawData) setData(dev *monitor.ConnectedDevice) {
 
 	rd.onceGrid.Do(func() {
-		rd.buildBindings(dev.DeviceLayoutConfig)
+		rd.buildBindings(dev.DeviceDescriptor)
 	})
 
 	rd.stopChan = make(chan bool)
@@ -78,7 +78,7 @@ func (rd *RawData) setData(dev *monitor.ConnectedDevice) {
 				slog.Debug("Stopping RawData")
 				return
 			default:
-				rd.refreshBindings(readUSB(dev.Device), dev.DeviceLayoutConfig)
+				rd.refreshBindings(readUSB(dev.Device), dev.DeviceDescriptor)
 			}
 		}
 	}()
@@ -132,47 +132,4 @@ func readUSB(dev *gousb.Device) []byte {
 		return nil
 	}
 	return data
-}
-
-func getControlValues(layoutComp devicelayout.Component, data []byte) (string, string, string, int) {
-	byteVal := make([]byte, len(data[layoutComp.Bytes[0]:layoutComp.Bytes[1]+1]))
-	copy(byteVal, data[layoutComp.Bytes[0]:layoutComp.Bytes[1]+1])
-
-	var value int
-	if layoutComp.Bytes[1]-layoutComp.Bytes[0]+1 > 1 { //more than one byte
-		if layoutComp.Endianess == "big" {
-			for i := 0; i < len(byteVal); i++ {
-				value |= int(byteVal[i]) << (8 * (len(byteVal) - 1 - i))
-			}
-		} else if layoutComp.Endianess == "little" {
-			for i := 0; i < len(byteVal); i++ {
-				value |= int(byteVal[i]) << (8 * i)
-			}
-			byteTemp := byteVal[0]
-			byteVal[0] = byteVal[1]
-			byteVal[1] = byteTemp
-		} else {
-			slog.Warn("Endianess not specified")
-		}
-	} else { //one byte
-		if layoutComp.ByteType == "signed" {
-			value = int(int8(byteVal[0]))
-		} else if layoutComp.ByteType == "unsigned" {
-			value = int(uint8(byteVal[0]))
-		} else {
-			slog.Warn("Byte type not specified")
-		}
-	}
-
-	if layoutComp.Value != 0 {
-		byteStr := utility.FormatAsBinary(utility.AbsInt(value)&layoutComp.Value, layoutComp.Bytes[1]-layoutComp.Bytes[0])
-		hexStr := fmt.Sprintf("0x%02X", utility.AbsInt(value)&layoutComp.Value)
-		decStr := fmt.Sprintf("%d", value&layoutComp.Value)
-		return hexStr, decStr, byteStr, value
-	} else {
-		byteStr := utility.FormatAsBinary(int(uint8(value)), layoutComp.Bytes[1]+1-layoutComp.Bytes[0])
-		hexStr := fmt.Sprintf("0x%02X", int(uint8(value)))
-		decStr := fmt.Sprintf("%d", value)
-		return hexStr, decStr, byteStr, value
-	}
 }

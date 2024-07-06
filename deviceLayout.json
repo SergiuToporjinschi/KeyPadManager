@@ -6,139 +6,137 @@
             "vid": "6001",
             "pid": "1000"
         },
-        "components": [
+        "hardwareDescriptor": [
             {
                 "name": "Button 1",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 1
             },
             {
                 "name": "Button 2",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 2
             },
             {
                 "name": "Button 3",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 4
             },
             {
                 "name": "Button 4",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
-                "value": 8,
-                "min": 0,
-                "max": 1
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
+                "value": 8
             },
             {
                 "name": "Button 5",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 16
             },
             {
                 "name": "Button 6",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 32
             },
             {
                 "name": "Button 7",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 64
             },
             {
                 "name": "Button 8",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 128
             },
             {
                 "name": "Button 9",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 256
             },
             {
                 "name": "Button 10",
                 "type": "button",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 512
             },
             {
                 "name": "Button",
-                "type": "encoderButton",
-                "icon": "",
-                "endianess": "little",
-                "bytes": [
-                    0,
-                    1
-                ],
+                "type": "button",
+                "bytesDescriptor": {
+                    "endianess": "little",
+                    "signed": false,
+                    "start": 0,
+                    "size": 2
+                },
                 "value": 1024
             },
             {
                 "name": "Encoder",
                 "type": "encoder",
-                "icon": "",
-                "byteType": "signed",
-                "bytes": [
-                    2,
-                    2
-                ]
+                "bytesDescriptor": {
+                    "endianess": "big",
+                    "signed": true,
+                    "start": 2,
+                    "size": 1
+                }
             }
         ]
     }
