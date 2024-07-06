@@ -5,10 +5,12 @@ win.selDevTitle = "Select device"
 
 card.noDevice = "No device connected"
 
-navi.deviceInfoTitle = "Info"
-navi.rawDataTitle = "Raw data"
-navi.deviceBranchTitle = "Device"
-navi.profileBranchTitle = "Profile"
+navi.deviceTitle = "Device"
+navi.appsTitle = "Apps"
+navi.macrosTitle = "Macros"
+navi.scriptTitle = "Scripts"
+navi.mappingTitle = "Mappings"
+navi.managementTitle = "Management"
 
 try.conDevices = "Connected devices"
 try.conDevicesTT = "Show connected devices"

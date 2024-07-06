@@ -1,4 +1,4 @@
-package gui
+package screens
 
 import (
 	"log/slog"
@@ -21,7 +21,7 @@ var EventDeviceConnected map[string]devices.DeviceConstructor = map[string]devic
 	"6001/1000": devkeyboardGui.New,
 }
 
-type RawData struct {
+type DeviceScreen struct {
 	title     string
 	navTitle  string
 	button    *widget.Button
@@ -32,10 +32,10 @@ type RawData struct {
 	onceGrid  sync.Once
 }
 
-func NewRawData() NavigationItem {
-	inst := &RawData{
-		title:     txt.GetLabel("navi.rawDataTitle"),
-		navTitle:  txt.GetLabel("navi.rawDataTitle"),
+func NewDeviceScreen() NavigationItem {
+	inst := &DeviceScreen{
+		title:     txt.GetLabel("navi.deviceTitle"),
+		navTitle:  txt.GetLabel("navi.deviceTitle"),
 		bndLength: binding.BindInt(nil),
 		bndData:   binding.NewBytes(),
 	}
@@ -43,17 +43,17 @@ func NewRawData() NavigationItem {
 	return inst
 }
 
-func (rd *RawData) buildBody() {
-	rd.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
+func (ds *DeviceScreen) buildBody() {
+	ds.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
 }
 
-func (rd *RawData) buildBindings(devDescriptor *devicelayout.DeviceDescriptor) {
-	instObject := EventDeviceConnected[devDescriptor.Identifier.String()](rd.bndData, devDescriptor)
+func (ds *DeviceScreen) buildBindings(devDescriptor *devicelayout.DeviceDescriptor) {
+	instObject := EventDeviceConnected[devDescriptor.Identifier.String()](ds.bndData, devDescriptor)
 
-	rd.body.Content.(*fyne.Container).Add(instObject)
+	ds.body.Content.(*fyne.Container).Add(instObject)
 }
 
-func (rd *RawData) refreshBindings(data []byte, devDesc *devicelayout.DeviceDescriptor) {
+func (ds *DeviceScreen) refreshBindings(data []byte, devDesc *devicelayout.DeviceDescriptor) {
 	if len(data) == 0 || len(data[1:]) == 0 {
 		return
 	}
@@ -61,42 +61,41 @@ func (rd *RawData) refreshBindings(data []byte, devDesc *devicelayout.DeviceDesc
 		slog.Error("Device layout is not loaded")
 		return
 	}
-	rd.bndData.Set(data)
+	ds.bndData.Set(data)
 }
 
-func (rd *RawData) setData(dev *monitor.ConnectedDevice) {
-
-	rd.onceGrid.Do(func() {
-		rd.buildBindings(dev.DeviceDescriptor)
+func (ds *DeviceScreen) setData(dev *monitor.ConnectedDevice) {
+	ds.onceGrid.Do(func() {
+		ds.buildBindings(dev.DeviceDescriptor)
 	})
 
-	rd.stopChan = make(chan bool)
+	ds.stopChan = make(chan bool)
 	go func() {
 		for {
 			select {
-			case <-rd.stopChan:
+			case <-ds.stopChan:
 				slog.Debug("Stopping RawData")
 				return
 			default:
-				rd.refreshBindings(readUSB(dev.Device), dev.DeviceDescriptor)
+				ds.refreshBindings(readUSB(dev.Device), dev.DeviceDescriptor)
 			}
 		}
 	}()
 }
 
-func (rd *RawData) GetContent(dev *monitor.ConnectedDevice) *container.Scroll {
-	rd.setData(dev)
-	return rd.body
+func (ds *DeviceScreen) GetContent(dev *monitor.ConnectedDevice) *container.Scroll {
+	ds.setData(dev)
+	return ds.body
 }
 
-func (rd *RawData) GetButton() *widget.Button {
-	return rd.button
+func (ds *DeviceScreen) GetButton() *widget.Button {
+	return ds.button
 }
 
-func (rd *RawData) Destroy() {
+func (ds *DeviceScreen) Destroy() {
 	slog.Debug("Destroying RawData")
 	select {
-	case rd.stopChan <- true:
+	case ds.stopChan <- true:
 	default:
 	}
 }

@@ -5,10 +5,12 @@ win.selDevTitle = "Selectarie controller"
 
 card.noDevice = "Nu sunt controllere conectate"
 
-navi.deviceInfoTitle = "Informatii"
-navi.rawDataTitle = "Date live"
-navi.deviceBranchTitle = "Controller"
-navi.profileBranchTitle = "Profile"
+navi.deviceTitle = "Pad"
+navi.appsTitle = "Aplicatii"
+navi.macrosTitle = "Macrouri"
+navi.scriptTitle = "Scripturi"
+navi.mappingTitle = "Mappari"
+navi.managementTitle = "Management"
 
 try.conDevices = "Controllere connectate"
 try.conDevicesTT = "Afiseaza controllerele conectate"

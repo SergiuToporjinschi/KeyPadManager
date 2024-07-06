@@ -2,7 +2,7 @@ package gui
 
 import (
 	"log/slog"
-	resources "main/assets"
+	"main/gui/screens"
 	"main/monitor"
 	"main/txt"
 	"sync"
@@ -13,42 +13,11 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-type NavigationItem interface {
-	GetContent(*monitor.ConnectedDevice) *container.Scroll
-	Destroy()
-}
-
-var naviIndex = map[string][]string{
-	"":                        {"navi.deviceBranchTitle", "navi.profileBranchTitle"},
-	"navi.deviceBranchTitle":  {"info", "rawdata"},
-	"navi.profileBranchTitle": {"something1", "something2"},
-}
-
-type Navigation struct {
-	naviInitilizer func() NavigationItem
-	naviIcon       fyne.Resource
-	naviTitle      string
-	naviInst       NavigationItem
-}
-
-var navigationContent = map[string]*Navigation{
-	"info": {
-		naviInitilizer: NewDeviceInfo,
-		naviIcon:       resources.ResInfoPng,
-		naviTitle:      "navi.deviceInfoTitle",
-	},
-	"rawdata": {
-		naviInitilizer: NewRawData,
-		naviIcon:       resources.ResMatrixPng,
-		naviTitle:      "navi.rawDataTitle",
-	},
-}
-
 type ContentManager struct {
 	container.Split
 	navi           *widget.Tree
 	currentDevice  *monitor.ConnectedDevice
-	currentNavItem NavigationItem
+	currentNavItem screens.NavigationItem
 	mutex          sync.Mutex
 }
 
@@ -81,7 +50,7 @@ func (c *ContentManager) OnMainWindowHide() {
 }
 
 func (c *ContentManager) buildNavigation() {
-	c.navi = widget.NewTreeWithStrings(naviIndex)
+	c.navi = widget.NewTreeWithStrings(screens.NaviIndex)
 	c.navi.ChildUIDs = c.childUIDs
 	c.navi.IsBranch = c.isBranch
 	c.navi.CreateNode = c.createNode
@@ -90,11 +59,11 @@ func (c *ContentManager) buildNavigation() {
 }
 
 func (c *ContentManager) childUIDs(uid string) []string {
-	return naviIndex[uid]
+	return screens.NaviIndex[uid]
 }
 
 func (c *ContentManager) isBranch(uid string) bool {
-	children, ok := naviIndex[uid]
+	children, ok := screens.NaviIndex[uid]
 
 	return ok && len(children) > 0
 }
@@ -109,14 +78,14 @@ func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObje
 		box.Objects[1].(*widget.Label).SetText(txt.GetLabel(uid))
 		return
 	}
-	item, found := navigationContent[uid]
+	item, found := screens.NavigationContent[uid]
 	if found {
-		if item.naviInst == nil {
-			item.naviInst = item.naviInitilizer()
+		if item.Inst == nil {
+			item.Inst = item.Initilizer()
 		}
-		box.Objects[1].(*widget.Label).SetText(txt.GetLabel(item.naviTitle))
-		if item.naviIcon != nil {
-			box.Objects[0] = widget.NewIcon(item.naviIcon)
+		box.Objects[1].(*widget.Label).SetText(txt.GetLabel(item.Title))
+		if item.Icon != nil {
+			box.Objects[0] = widget.NewIcon(item.Icon)
 		}
 	} else {
 		slog.Warn("Unknown UID", "UUID", uid)
@@ -124,27 +93,27 @@ func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObje
 }
 
 func (n *ContentManager) onSelected(uid string) {
-	item, found := navigationContent[uid]
+	item, found := screens.NavigationContent[uid]
 	if found {
 		mainContent := n.Trailing.(*fyne.Container)
 		if n.currentNavItem != nil {
 			n.currentNavItem.Destroy()
 		}
 		mainContent.RemoveAll()
-		icn := canvas.NewImageFromResource(item.naviIcon)
+		icn := canvas.NewImageFromResource(item.Icon)
 		icn.FillMode = canvas.ImageFillOriginal
 		mainContent.Add(
 			container.NewBorder(
 				container.NewHBox(
 					icn,
-					NewTitleLocaleText(item.naviTitle)),
+					NewTitleLocaleText(item.Title)),
 				nil,
 				nil,
 				nil,
-				item.naviInst.GetContent(n.currentDevice),
+				item.Inst.GetContent(n.currentDevice),
 			),
 		)
-		n.currentNavItem = item.naviInst
+		n.currentNavItem = item.Inst
 
 	}
 }
