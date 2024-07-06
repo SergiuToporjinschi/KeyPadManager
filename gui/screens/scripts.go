@@ -14,7 +14,6 @@ import (
 
 type ScriptsScreen struct {
 	title     string
-	navTitle  string
 	button    *widget.Button
 	body      *container.Scroll
 	bndLength binding.ExternalInt
@@ -26,7 +25,6 @@ type ScriptsScreen struct {
 func NewScriptsScreen() NavigationItem {
 	inst := &ScriptsScreen{
 		title:     txt.GetLabel("navi.scriptTitle"),
-		navTitle:  txt.GetLabel("navi.scriptTitle"),
 		bndLength: binding.BindInt(nil),
 		bndData:   binding.NewBytes(),
 	}

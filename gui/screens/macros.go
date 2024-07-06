@@ -14,7 +14,6 @@ import (
 
 type MacrosScreen struct {
 	title     string
-	navTitle  string
 	button    *widget.Button
 	body      *container.Scroll
 	bndLength binding.ExternalInt
@@ -26,7 +25,6 @@ type MacrosScreen struct {
 func NewMacrosScreen() NavigationItem {
 	inst := &MacrosScreen{
 		title:     txt.GetLabel("navi.macrosTitle"),
-		navTitle:  txt.GetLabel("navi.macrosTitle"),
 		bndLength: binding.BindInt(nil),
 		bndData:   binding.NewBytes(),
 	}

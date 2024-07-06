@@ -23,7 +23,6 @@ var EventDeviceConnected map[string]devices.DeviceConstructor = map[string]devic
 
 type DeviceScreen struct {
 	title     string
-	navTitle  string
 	button    *widget.Button
 	body      *container.Scroll
 	bndLength binding.ExternalInt
@@ -35,7 +34,6 @@ type DeviceScreen struct {
 func NewDeviceScreen() NavigationItem {
 	inst := &DeviceScreen{
 		title:     txt.GetLabel("navi.deviceTitle"),
-		navTitle:  txt.GetLabel("navi.deviceTitle"),
 		bndLength: binding.BindInt(nil),
 		bndData:   binding.NewBytes(),
 	}

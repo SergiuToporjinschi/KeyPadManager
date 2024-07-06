@@ -14,7 +14,6 @@ import (
 
 type AppsScreen struct {
 	title     string
-	navTitle  string
 	button    *widget.Button
 	body      *container.Scroll
 	bndLength binding.ExternalInt
@@ -26,7 +25,6 @@ type AppsScreen struct {
 func NewAppsScreen() NavigationItem {
 	inst := &AppsScreen{
 		title:     txt.GetLabel("navi.appsTitle"),
-		navTitle:  txt.GetLabel("navi.appsTitle"),
 		bndLength: binding.BindInt(nil),
 		bndData:   binding.NewBytes(),
 	}
