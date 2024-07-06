@@ -6,19 +6,35 @@ import (
 	"main/devicelayout"
 )
 
-type DevKeyboardComponent struct {
-	Name            string          `json:"name" validate:"required"`
-	Type            string          `json:"type" validate:"required,oneof=button encoder encoderButton"`
-	BytesDescriptor BytesDescriptor `json:"bytesDescriptor" validate:"required"`
-	Value           int             `json:"value" validate:"required_if=Type button"`
-}
+type (
+	DevKeyboardComponent struct {
+		Keys []KeyDescriptor `json:"keys" validate:"required"`
+		Knob KnobConfig      `json:"knob" validate:"required"`
+	}
 
-type BytesDescriptor struct {
-	Start     int    `json:"start"`
-	Size      int    `json:"size"`
-	Endianess string `json:"endianess" validate:"omitempty,oneof=big little"`
-	Signed    bool   `json:"signed" validate:"omitempty"`
-}
+	KeyDescriptor struct {
+		Name            string          `json:"name" validate:"required"`
+		Type            string          `json:"type" validate:"required,oneof=button rottary"`
+		BytesDescriptor BytesDescriptor `json:"bytesDescriptor" validate:"required"`
+		Value           int             `json:"value" validate:"required_if=Type button"`
+	}
+
+	KnobConfig struct {
+		Button  KeyDescriptor     `json:"button" validate:"required"`
+		Encoder EncoderDescriptor `json:"encoder" validate:"required"`
+	}
+
+	EncoderDescriptor struct {
+		KeyDescriptor
+	}
+
+	BytesDescriptor struct {
+		Start     int    `json:"start"`
+		Size      int    `json:"size"`
+		Endianess string `json:"endianess" validate:"omitempty,oneof=big little"`
+		Signed    bool   `json:"signed" validate:"omitempty"`
+	}
+)
 
 const (
 	BYTE_DESCRIPTOR_ENDI_BIG    = "big"
@@ -26,7 +42,7 @@ const (
 )
 
 func ConvertHardwareDescriptor(devDescriptor *devicelayout.DeviceDescriptor) *devicelayout.DeviceDescriptor {
-	var comps []DevKeyboardComponent
+	var comps DevKeyboardComponent
 
 	desc, err := json.Marshal(devDescriptor.HardwareDescriptor)
 	if err != nil {
@@ -36,14 +52,10 @@ func ConvertHardwareDescriptor(devDescriptor *devicelayout.DeviceDescriptor) *de
 
 	err = json.Unmarshal(desc, &comps)
 	if err != nil {
-		slog.Error("Error parsing []DevKeyboardComponent", "error", err)
+		slog.Error("Error parsing DevKeyboardComponent", "error", err)
 		panic(err)
 	}
 
 	devDescriptor.HardwareDescriptor = comps
 	return devDescriptor
-}
-
-func (inst *DevKeyboardComponent) GetButtonValue() int {
-	return inst.Value
 }

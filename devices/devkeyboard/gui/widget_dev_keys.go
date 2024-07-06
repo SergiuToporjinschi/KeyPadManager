@@ -46,18 +46,15 @@ func New(data binding.Bytes, devDesc *devicelayout.DeviceDescriptor) fyne.Canvas
 }
 
 func (w *KeySwitchControl) createImages() {
-	hrdDesc := w.devDescriptor.HardwareDescriptor.([]devkeyboard.DevKeyboardComponent)
-	for _, comp := range hrdDesc {
-		if comp.Type == "button" && comp.Value != 1024 {
+	hrdDesc := w.devDescriptor.HardwareDescriptor.(devkeyboard.DevKeyboardComponent)
+	for _, comp := range hrdDesc.Keys {
+		if comp.Type == "button" {
 			w.keysImages[comp.Value] = canvas.NewImageFromResource(w.keyImageRes)
 			w.keysImages[comp.Value].FillMode = canvas.ImageFillContain
 		}
-
-		if comp.Type == "encoder" {
-			w.knobImage = canvas.NewImageFromResource(w.knobImageRes)
-			w.knobImage.FillMode = canvas.ImageFillContain
-		}
 	}
+	w.knobImage = canvas.NewImageFromResource(w.knobImageRes)
+	w.knobImage.FillMode = canvas.ImageFillContain
 }
 
 func (w *KeySwitchControl) updateFromData(dataBinding binding.DataItem) {
@@ -87,16 +84,41 @@ func (r *KeySwitchControl) CreateRenderer() fyne.WidgetRenderer {
 }
 
 func (w *KeySwitchControl) setSelected(data []byte) {
-	hrdDesc := w.devDescriptor.HardwareDescriptor.([]devkeyboard.DevKeyboardComponent)
-	values, encoderValue := devkeyboard.DecodeBinaryValue(data, hrdDesc)
+	hrdDesc := w.devDescriptor.HardwareDescriptor.(devkeyboard.DevKeyboardComponent)
+	values, encBtnVal, rotValue := devkeyboard.DecodeBinaryValue(data, hrdDesc)
 
-	slog.Debug("Decoded data", "values", values.Keys(), "encoderValue", encoderValue)
+	slog.Debug("Decoded data", "values", values.Keys(), "rotary", rotValue, "encoder", encBtnVal)
 
 	for key := range w.keysImages {
 		if values.Contains(key) {
 			w.keysImages[key].Resource = w.keySelImageRes
 		} else {
 			w.keysImages[key].Resource = w.keyImageRes
+		}
+	}
+
+	if rotValue > 0 {
+		res, err := utility.RotateImageResource(w.knobSelImageRes.(*fyne.StaticResource), 70)
+		if err != nil {
+			slog.Error("Error rotating image", "error", err)
+			w.knobImage.Resource = w.knobSelImageRes
+		} else {
+			w.knobImage.Resource = res
+		}
+	} else if rotValue < 0 {
+		res, err := utility.RotateImageResource(w.knobSelImageRes.(*fyne.StaticResource), -70)
+		if err != nil {
+			slog.Error("Error rotating image", "error", err)
+			w.knobImage.Resource = w.knobSelImageRes
+		} else {
+			w.knobImage.Resource = res
+		}
+	} else {
+		w.knobImage.Resource = w.knobImageRes
+		if encBtnVal != 0 {
+			w.knobImage.Resource = w.knobSelImageRes
+		} else {
+			w.knobImage.Resource = w.knobImageRes
 		}
 	}
 	w.Refresh()
@@ -148,6 +170,7 @@ func (inst *devRanderer) Layout(_ fyne.Size) {
 		inst.keysImages[i].Resize(inst.iconSize)
 	}
 
+	//key display
 	inst.keysImages[1].Move(fyne.NewPos(inst.margin, inst.margin+vShift*2))
 	inst.keysImages[2].Move(fyne.NewPos(xPos+inst.margin, inst.margin+vShift))
 	inst.keysImages[4].Move(fyne.NewPos(inst.margin+xPos*2, inst.margin))
@@ -159,6 +182,7 @@ func (inst *devRanderer) Layout(_ fyne.Size) {
 	inst.keysImages[256].Move(fyne.NewPos(inst.margin+xPos*3, yPos+inst.margin+vShift))
 	inst.keysImages[512].Move(fyne.NewPos(inst.margin+xPos*4, yPos+inst.margin+vShift*2))
 
+	//knob display
 	inst.knobImage.SetMinSize(inst.iconSize)
 	inst.knobImage.Resize(inst.iconSize)
 	inst.knobImage.Move(fyne.NewPos(inst.margin+xPos*4+vShift, yPos+inst.margin+vShift*2+inst.iconSSize+inst.vGap))

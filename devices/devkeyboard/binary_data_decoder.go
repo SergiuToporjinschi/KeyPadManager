@@ -5,25 +5,28 @@ import (
 	"main/types"
 )
 
-func DecodeBinaryValue(data []byte, comp []DevKeyboardComponent) (types.IntSet, int) {
+func DecodeBinaryValue(data []byte, devKeyDescriptor DevKeyboardComponent) (types.IntSet, int, int) {
 	if len(data) == 0 {
-		return nil, 0
+		return nil, 0, 0
 	}
 
 	keyList := types.NewIntSet()
 	encoderValue := 0
 
-	for _, hrd := range comp {
+	for _, hrd := range devKeyDescriptor.Keys {
 		if hrd.Type == "button" {
 			val := decodeButton(data[1:], hrd.BytesDescriptor)
 			if val&hrd.Value != 0 {
 				keyList.Add(hrd.Value)
 			}
-		} else if hrd.Type == "encoder" {
-			encoderValue = decodeEncoderValue(data[1:], hrd.BytesDescriptor)
 		}
 	}
-	return keyList, encoderValue
+
+	encBtnVal := decodeButton(data[1:], devKeyDescriptor.Knob.Button.BytesDescriptor)
+	encBtnVal = encBtnVal & devKeyDescriptor.Knob.Button.Value
+
+	encoderValue = decodeEncoderValue(data[1:], devKeyDescriptor.Knob.Encoder.BytesDescriptor)
+	return keyList, encBtnVal, encoderValue
 }
 
 func decodeButton(data []byte, byteDesc BytesDescriptor) int {

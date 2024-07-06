@@ -6,138 +6,142 @@
             "vid": "6001",
             "pid": "1000"
         },
-        "hardwareDescriptor": [
-            {
-                "name": "Button 1",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+        "hardwareDescriptor": {
+            "keys": [
+                {
+                    "name": "Button 1",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 1
                 },
-                "value": 1
-            },
-            {
-                "name": "Button 2",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 2",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 2
                 },
-                "value": 2
-            },
-            {
-                "name": "Button 3",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 3",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 4
                 },
-                "value": 4
-            },
-            {
-                "name": "Button 4",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 4",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 8
                 },
-                "value": 8
-            },
-            {
-                "name": "Button 5",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 5",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 16
                 },
-                "value": 16
-            },
-            {
-                "name": "Button 6",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 6",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 32
                 },
-                "value": 32
-            },
-            {
-                "name": "Button 7",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 7",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 64
                 },
-                "value": 64
-            },
-            {
-                "name": "Button 8",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 8",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 128
                 },
-                "value": 128
-            },
-            {
-                "name": "Button 9",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 9",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 256
                 },
-                "value": 256
-            },
-            {
-                "name": "Button 10",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
+                {
+                    "name": "Button 10",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 512
+                }
+            ],
+            "knob": {
+                "button": {
+                    "name": "Button",
+                    "type": "button",
+                    "bytesDescriptor": {
+                        "endianess": "little",
+                        "signed": false,
+                        "start": 0,
+                        "size": 2
+                    },
+                    "value": 1024
                 },
-                "value": 512
-            },
-            {
-                "name": "Button",
-                "type": "button",
-                "bytesDescriptor": {
-                    "endianess": "little",
-                    "signed": false,
-                    "start": 0,
-                    "size": 2
-                },
-                "value": 1024
-            },
-            {
-                "name": "Encoder",
-                "type": "encoder",
-                "bytesDescriptor": {
-                    "endianess": "big",
-                    "signed": true,
-                    "start": 2,
-                    "size": 1
+                "encoder": {
+                    "name": "Encoder",
+                    "type": "encoder",
+                    "bytesDescriptor": {
+                        "endianess": "big",
+                        "signed": true,
+                        "start": 2,
+                        "size": 1
+                    }
                 }
             }
-        ]
+        }
     }
 }
