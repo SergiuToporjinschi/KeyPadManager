@@ -12,7 +12,7 @@ type MacrosScreen struct {
 	*fyne.Container
 }
 
-func NewMacrosScreen(_ *monitor.ConnectedDevice) NavigationItem {
+func NewMacrosScreen(_ *monitor.ConnectedDevice, _ *fyne.Window) NavigationItem {
 	inst := &MacrosScreen{
 		Container: container.NewStack(),
 	}

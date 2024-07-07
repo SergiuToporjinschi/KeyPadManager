@@ -30,7 +30,7 @@ func (m *MainWindow) buildWindow() {
 	m.window.SetCloseIntercept(m.Close)
 	m.window.CenterOnScreen()
 	m.window.Resize(fyne.NewSize(1224, 768))
-	m.contentManager = NewContentManager()
+	m.contentManager = NewContentManager(&m.window)
 	m.window.SetContent(m.contentManager)
 }
 

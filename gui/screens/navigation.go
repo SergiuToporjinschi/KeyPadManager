@@ -13,7 +13,7 @@ type NavigationItem interface {
 	Destroy()
 }
 type Navigation struct {
-	Initilizer func(*monitor.ConnectedDevice) NavigationItem
+	Initilizer func(*monitor.ConnectedDevice, *fyne.Window) NavigationItem
 	Icon       fyne.Resource
 	Title      string
 }

@@ -16,19 +16,21 @@ import (
 type ContentManager struct {
 	container.Split
 	navi           *widget.Tree
+	parentWindow   *fyne.Window
 	currentDevice  *monitor.ConnectedDevice
 	currentNavItem screens.NavigationItem
 	mutex          sync.Mutex
 	lastSelected   string
 }
 
-func NewContentManager() *ContentManager {
+func NewContentManager(parentWindow *fyne.Window) *ContentManager {
 	s := &ContentManager{
 		Split: container.Split{
 			Offset:     0.2, // Sensible default, can be overridden with SetOffset
 			Horizontal: true,
 			Trailing:   container.NewStack(),
 		},
+		parentWindow: parentWindow,
 	}
 	s.buildNavigation()
 	s.Split.Leading = s.navi
@@ -118,7 +120,7 @@ func (n *ContentManager) onSelected(uid string) {
 	n.lastSelected = uid
 	item, found := screens.NavigationContent[uid]
 	if found {
-		naviContentInst := item.Initilizer(n.currentDevice)
+		naviContentInst := item.Initilizer(n.currentDevice, n.parentWindow)
 		mainContent := n.Trailing.(*fyne.Container)
 		if n.currentNavItem != nil {
 			n.currentNavItem.Destroy()

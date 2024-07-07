@@ -31,7 +31,7 @@ type DeviceScreen struct {
 	closeOnce  sync.Once
 }
 
-func NewDeviceScreen(currentDevice *monitor.ConnectedDevice) NavigationItem {
+func NewDeviceScreen(currentDevice *monitor.ConnectedDevice, _ *fyne.Window) NavigationItem {
 	slog.Debug("Creating NewDeviceScreen")
 	inst := &DeviceScreen{
 		stopChan:   make(chan struct{}),

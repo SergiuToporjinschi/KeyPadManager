@@ -12,7 +12,7 @@ type ScriptsScreen struct {
 	*fyne.Container
 }
 
-func NewScriptsScreen(_ *monitor.ConnectedDevice) NavigationItem {
+func NewScriptsScreen(_ *monitor.ConnectedDevice, _ *fyne.Window) NavigationItem {
 	inst := &ScriptsScreen{
 		Container: container.NewStack(),
 	}
