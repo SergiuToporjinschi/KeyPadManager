@@ -1,22 +1,21 @@
 package screens
 
 import (
+	"log/slog"
 	resources "main/assets"
 	"main/monitor"
 
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/container"
 )
 
 type NavigationItem interface {
-	GetContent(*monitor.ConnectedDevice) *container.Scroll
+	GetContent() *fyne.Container
 	Destroy()
 }
 type Navigation struct {
-	Initilizer func() NavigationItem
+	Initilizer func(*monitor.ConnectedDevice) NavigationItem
 	Icon       fyne.Resource
 	Title      string
-	Inst       NavigationItem
 }
 
 var NaviIndex = map[string][]string{
@@ -52,4 +51,14 @@ var NavigationContent = map[string]*Navigation{
 		Icon:       resources.ResScriptPng,
 		Title:      "navi.scriptTitle",
 	},
+}
+
+func GetFirstNaviIndexID() string {
+	root, found := NaviIndex[""]
+	if found {
+		return root[0]
+	} else {
+		slog.Error("No root navigation item found")
+	}
+	return ""
 }

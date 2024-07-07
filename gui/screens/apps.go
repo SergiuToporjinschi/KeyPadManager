@@ -1,42 +1,45 @@
 package screens
 
 import (
+	"main/devicelayout"
 	"main/monitor"
-	"main/txt"
 	"sync"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/data/binding"
-	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 )
 
 type AppsScreen struct {
-	title     string
-	button    *widget.Button
-	body      *container.Scroll
+	*fyne.Container
 	bndLength binding.ExternalInt
-	stopChan  chan bool
 	bndData   binding.Bytes
-	onceGrid  sync.Once
+	stopChan  chan struct{}
+	closeOnce sync.Once
 }
 
-func NewAppsScreen() NavigationItem {
+func NewAppsScreen(currentDevice *monitor.ConnectedDevice) NavigationItem {
 	inst := &AppsScreen{
-		title:     txt.GetLabel("navi.appsTitle"),
+		stopChan:  make(chan struct{}),
 		bndLength: binding.BindInt(nil),
 		bndData:   binding.NewBytes(),
+		Container: container.NewStack(),
 	}
-	inst.buildBody()
+	inst.buildContent(currentDevice.DeviceDescriptor)
 	return inst
 }
 
-func (as *AppsScreen) buildBody() {
-	as.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
+func (as *AppsScreen) GetContent() *fyne.Container {
+	return as.Container
 }
 
-func (as *AppsScreen) GetContent(*monitor.ConnectedDevice) *container.Scroll {
-	return as.body
+func (as *AppsScreen) buildContent(_ *devicelayout.DeviceDescriptor) {
+	as.Container.Add(container.NewCenter(widget.NewLabel("Apps")))
 }
-func (as *AppsScreen) Destroy() {}
+
+func (as *AppsScreen) Destroy() {
+	as.closeOnce.Do(func() {
+		close(as.stopChan)
+	})
+}

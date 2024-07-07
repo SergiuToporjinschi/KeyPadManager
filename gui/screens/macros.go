@@ -2,41 +2,30 @@ package screens
 
 import (
 	"main/monitor"
-	"main/txt"
-	"sync"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/data/binding"
-	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 )
 
 type MacrosScreen struct {
-	title     string
-	button    *widget.Button
-	body      *container.Scroll
-	bndLength binding.ExternalInt
-	stopChan  chan bool
-	bndData   binding.Bytes
-	onceGrid  sync.Once
+	*fyne.Container
 }
 
-func NewMacrosScreen() NavigationItem {
+func NewMacrosScreen(_ *monitor.ConnectedDevice) NavigationItem {
 	inst := &MacrosScreen{
-		title:     txt.GetLabel("navi.macrosTitle"),
-		bndLength: binding.BindInt(nil),
-		bndData:   binding.NewBytes(),
+		Container: container.NewStack(),
 	}
-	inst.buildBody()
+	inst.buildContent()
 	return inst
 }
 
-func (as *MacrosScreen) buildBody() {
-	as.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
+func (ss *MacrosScreen) buildContent() {
+	ss.Container.Add(container.NewCenter(widget.NewLabel("Macros")))
 }
 
-func (as *MacrosScreen) GetContent(*monitor.ConnectedDevice) *container.Scroll {
-	return as.body
+func (ms *MacrosScreen) GetContent() *fyne.Container {
+	return ms.Container
 }
-func (as *MacrosScreen) Destroy() {}
+
+func (ms *MacrosScreen) Destroy() {}

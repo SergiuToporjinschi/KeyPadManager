@@ -1,18 +1,20 @@
 package screens
 
 import (
+	"context"
+	"fmt"
 	"log/slog"
 	"main/devicelayout"
 	"main/devices"
 	devkeyboardGui "main/devices/devkeyboard/gui"
 	"main/monitor"
-	"main/txt"
+	"main/utility"
 	"sync"
+	"time"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/data/binding"
-	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 	"github.com/google/gousb"
 )
@@ -22,83 +24,74 @@ var EventDeviceConnected map[string]devices.DeviceConstructor = map[string]devic
 }
 
 type DeviceScreen struct {
-	title     string
-	button    *widget.Button
-	body      *container.Scroll
-	bndLength binding.ExternalInt
-	stopChan  chan bool
-	bndData   binding.Bytes
-	onceGrid  sync.Once
+	*fyne.Container
+	bndData    binding.Bytes
+	bndDataStr binding.String
+	stopChan   chan struct{}
+	closeOnce  sync.Once
 }
 
-func NewDeviceScreen() NavigationItem {
+func NewDeviceScreen(currentDevice *monitor.ConnectedDevice) NavigationItem {
+	slog.Debug("Creating NewDeviceScreen")
 	inst := &DeviceScreen{
-		title:     txt.GetLabel("navi.deviceTitle"),
-		bndLength: binding.BindInt(nil),
-		bndData:   binding.NewBytes(),
+		stopChan:   make(chan struct{}),
+		bndData:    binding.NewBytes(),
+		bndDataStr: binding.NewString(),
+		Container:  container.NewStack(),
 	}
-	inst.buildBody()
+	//build content
+	inst.buildContent(currentDevice.DeviceDescriptor)
+
+	//start data monitoring
+	go inst.monitorUSBData(currentDevice)
+
 	return inst
 }
-
-func (ds *DeviceScreen) buildBody() {
-	ds.body = container.NewVScroll(container.New(layout.NewGridWrapLayout(fyne.NewSize(64, 64))))
+func (ds *DeviceScreen) GetContent() *fyne.Container {
+	return ds.Container
 }
 
-func (ds *DeviceScreen) buildBindings(devDescriptor *devicelayout.DeviceDescriptor) {
+func (ds *DeviceScreen) buildContent(devDescriptor *devicelayout.DeviceDescriptor) {
+	//draw device layout
 	instObject := EventDeviceConnected[devDescriptor.Identifier.String()](ds.bndData, devDescriptor)
 
-	ds.body.Content.(*fyne.Container).Add(instObject)
+	//draw console
+	console := container.NewGridWrap(fyne.NewSize(400, 90), widget.NewLabelWithData(ds.bndDataStr))
+
+	ds.Container.Add(container.NewVSplit(container.NewCenter(instObject), console))
 }
 
-func (ds *DeviceScreen) refreshBindings(data []byte, devDesc *devicelayout.DeviceDescriptor) {
-	if len(data) == 0 || len(data[1:]) == 0 {
-		return
-	}
-	if devDesc == nil {
-		slog.Error("Device layout is not loaded")
-		return
-	}
-	ds.bndData.Set(data)
-}
-
-func (ds *DeviceScreen) setData(dev *monitor.ConnectedDevice) {
-	ds.onceGrid.Do(func() {
-		ds.buildBindings(dev.DeviceDescriptor)
-	})
-
-	ds.stopChan = make(chan bool)
-	go func() {
-		for {
-			select {
-			case <-ds.stopChan:
-				slog.Debug("Stopping RawData")
+func (ds *DeviceScreen) monitorUSBData(dev *monitor.ConnectedDevice) {
+	slog.Debug("Starting go routine DeviceScreen")
+	for {
+		select {
+		case <-ds.stopChan:
+			slog.Debug("Stopping maonitorUSBData")
+			return
+		default:
+			if dev == nil {
+				slog.Error("Device not connected")
 				return
-			default:
-				ds.refreshBindings(readUSB(dev.Device), dev.DeviceDescriptor)
 			}
+			data := readUSB(dev.Device, &dev.DeviceDescriptor.Report)
+			if len(data) == 0 || len(data[1:]) == 0 {
+				continue
+			}
+			ds.bndData.Set(data)
+			txt, _ := ds.bndDataStr.Get()
+			ds.bndDataStr.Set(fmt.Sprintf("%s\n%s", utility.AsBinaryString(data), txt))
 		}
-	}()
-}
-
-func (ds *DeviceScreen) GetContent(dev *monitor.ConnectedDevice) *container.Scroll {
-	ds.setData(dev)
-	return ds.body
-}
-
-func (ds *DeviceScreen) GetButton() *widget.Button {
-	return ds.button
+	}
 }
 
 func (ds *DeviceScreen) Destroy() {
-	slog.Debug("Destroying RawData")
-	select {
-	case ds.stopChan <- true:
-	default:
-	}
+	slog.Debug("Destroying DeviceScreen")
+	ds.closeOnce.Do(func() {
+		close(ds.stopChan)
+	})
 }
 
-func readUSB(dev *gousb.Device) []byte {
+func readUSB(dev *gousb.Device, devReport *devicelayout.Report) []byte {
 	cfg, err := dev.Config(1)
 	if err != nil {
 		slog.Error("Could not get config:", "error", err)
@@ -122,8 +115,16 @@ func readUSB(dev *gousb.Device) []byte {
 	}
 
 	// Read data from the endpoint
-	data := make([]byte, 4)
-	_, err = ep.Read(data)
+	data := make([]byte, devReport.Size)
+
+	timeoutCtx, cncFunc := context.WithTimeout(context.Background(), 10*time.Microsecond) //TODO make it configurable
+	defer cncFunc()
+
+	_, err = ep.ReadContext(timeoutCtx, data)
+	if gousb.TransferCancelled == err {
+		return nil
+	}
+
 	if err != nil {
 		slog.Error("Could not read data:", "error", err)
 		return nil

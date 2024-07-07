@@ -19,6 +19,7 @@ type ContentManager struct {
 	currentDevice  *monitor.ConnectedDevice
 	currentNavItem screens.NavigationItem
 	mutex          sync.Mutex
+	lastSelected   string
 }
 
 func NewContentManager() *ContentManager {
@@ -38,14 +39,26 @@ func NewContentManager() *ContentManager {
 func (c *ContentManager) SetDevice(device *monitor.ConnectedDevice) {
 	c.mutex.Lock()
 	defer c.mutex.Unlock()
+
 	c.currentDevice = device
+
+	if c.lastSelected == "" {
+		c.lastSelected = screens.GetFirstNaviIndexID()
+	}
+	c.navi.FocusGained()
+	c.navi.Select(c.lastSelected)
+	c.onSelected(c.lastSelected)
 }
 
 func (c *ContentManager) OnMainWindowHide() {
 	c.mutex.Lock()
 	defer c.mutex.Unlock()
+
+	mainContent := c.Trailing.(*fyne.Container)
+	mainContent.RemoveAll()
 	if c.currentNavItem != nil {
 		c.currentNavItem.Destroy()
+		c.currentNavItem = nil
 	}
 }
 
@@ -56,6 +69,7 @@ func (c *ContentManager) buildNavigation() {
 	c.navi.CreateNode = c.createNode
 	c.navi.UpdateNode = c.updateNode
 	c.navi.OnSelected = c.onSelected
+	c.navi.OnUnselected = c.onUnselected
 }
 
 func (c *ContentManager) childUIDs(uid string) []string {
@@ -80,9 +94,9 @@ func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObje
 	}
 	item, found := screens.NavigationContent[uid]
 	if found {
-		if item.Inst == nil {
-			item.Inst = item.Initilizer()
-		}
+		// if item.Inst == nil {
+		// 	item.Inst = item.Initilizer()
+		// }
 		box.Objects[1].(*widget.Label).SetText(txt.GetLabel(item.Title))
 		if item.Icon != nil {
 			box.Objects[0] = widget.NewIcon(item.Icon)
@@ -91,10 +105,20 @@ func (c *ContentManager) updateNode(uid string, branch bool, obj fyne.CanvasObje
 		slog.Warn("Unknown UID", "UUID", uid)
 	}
 }
+func (n *ContentManager) onUnselected(uid string) {
+	mainContent := n.Trailing.(*fyne.Container)
+	mainContent.RemoveAll()
+	if n.currentNavItem != nil {
+		n.currentNavItem.Destroy()
+		n.currentNavItem = nil
+	}
+}
 
 func (n *ContentManager) onSelected(uid string) {
+	n.lastSelected = uid
 	item, found := screens.NavigationContent[uid]
 	if found {
+		naviContentInst := item.Initilizer(n.currentDevice)
 		mainContent := n.Trailing.(*fyne.Container)
 		if n.currentNavItem != nil {
 			n.currentNavItem.Destroy()
@@ -110,10 +134,9 @@ func (n *ContentManager) onSelected(uid string) {
 				nil,
 				nil,
 				nil,
-				item.Inst.GetContent(n.currentDevice),
+				naviContentInst.GetContent(),
 			),
 		)
-		n.currentNavItem = item.Inst
-
+		n.currentNavItem = naviContentInst
 	}
 }

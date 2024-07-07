@@ -6,6 +6,9 @@
             "vid": "6001",
             "pid": "1000"
         },
+        "report" : {
+            "size": 4
+        },
         "hardwareDescriptor": {
             "keys": [
                 {

@@ -5,19 +5,26 @@ import (
 	"strconv"
 )
 
-type DeviceDescriptor struct {
-	Identifier         Identifier `json:"identifier" validate:"required"`
-	HardwareDescriptor any        `json:"hardwareDescriptor"`
-}
-type Identifier struct {
-	Manufacturer string    `json:"manufacturer" validate:"required"`
-	Product      string    `json:"product" validate:"required"`
-	SerialNumber string    `json:"serialNumber" validate:"omitempty"`
-	VID          HexUint16 `json:"vid" validate:"required"`
-	PID          HexUint16 `json:"pid" validate:"required"`
-}
+type (
+	DeviceDescriptor struct {
+		Identifier         Identifier `json:"identifier" validate:"required"`
+		Report             Report     `json:"report" validate:"required"`
+		HardwareDescriptor any        `json:"hardwareDescriptor"`
+	}
+	Identifier struct {
+		Manufacturer string    `json:"manufacturer" validate:"required"`
+		Product      string    `json:"product" validate:"required"`
+		SerialNumber string    `json:"serialNumber" validate:"omitempty"`
+		VID          HexUint16 `json:"vid" validate:"required"`
+		PID          HexUint16 `json:"pid" validate:"required"`
+	}
 
-type HexUint16 uint16
+	Report struct {
+		Size uint8 `json:"size" validate:"required"`
+	}
+
+	HexUint16 uint16
+)
 
 func (h *HexUint16) UnmarshalJSON(b []byte) error {
 	// Remove the quotes from the JSON string

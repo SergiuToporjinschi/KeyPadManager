@@ -189,7 +189,7 @@ func (inst *devRanderer) Layout(_ fyne.Size) {
 }
 
 func (inst *devRanderer) MinSize() fyne.Size {
-	return fyne.NewSize(inst.iconSSize*5+inst.margin*2, inst.iconSSize*3+inst.margin*2)
+	return fyne.NewSize(inst.iconSSize*5+inst.margin*2, (inst.iconSSize*3)+(inst.margin*2)+(inst.iconSSize*0.3*2))
 }
 
 func (inst *devRanderer) Refresh() {
