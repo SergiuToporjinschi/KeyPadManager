@@ -9,6 +9,7 @@ require (
 	github.com/go-playground/validator/v10 v10.21.0
 	github.com/google/gousb v1.1.3
 	github.com/nicksnyder/go-i18n/v2 v2.4.0
+	github.com/shirou/gopsutil/v4 v4.24.6
 	golang.org/x/text v0.14.0
 )
 
@@ -34,7 +35,6 @@ require (
 	github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
-	github.com/shirou/gopsutil/v4 v4.24.6 // indirect
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
 	github.com/srwiley/oksvg v0.0.0-20221011165216-be6e8873101c // indirect
 	github.com/srwiley/rasterx v0.0.0-20220730225603-2ab79fcdd4ef // indirect
