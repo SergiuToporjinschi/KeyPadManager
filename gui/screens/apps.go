@@ -7,6 +7,7 @@ import (
 	"main/devicelayout"
 	"main/monitor"
 	"main/types"
+	"strings"
 	"sync"
 
 	"fyne.io/fyne/v2"
@@ -76,15 +77,17 @@ func (as *AppsScreen) selectExe() {
 			slog.Error("Error opening file: ", "error", err)
 			return
 		}
-		as.addApp(reader.URI().String())
+		file := strings.TrimLeft(reader.URI().String(), "file://")
+		file = strings.ReplaceAll(file, "/", "\\")
+		as.addApp([]string{file})
 	}, *as.parentWindow)
 	dia.Resize(fyne.NewSize(800, 600))
 	dia.SetFilter(storage.NewMimeTypeFileFilter([]string{"application/*"}))
 	dia.Show()
 }
 
-func (as *AppsScreen) addApp(exePath string) {
-	slog.Debug("Adding app: ", "path", exePath)
+func (as *AppsScreen) addApp(exePaths []string) {
+	as.appList.AddAll(exePaths...)
 }
 
 func (as *AppsScreen) selectProcess() {
@@ -92,12 +95,11 @@ func (as *AppsScreen) selectProcess() {
 	dia.SetOnClose(func(selection types.StringSet, confirmed bool) {
 		if confirmed {
 			slog.Debug("Selected processes: ", "list", dia.GetSelection())
-			as.appList.AddAll(dia.GetSelection().Keys()...)
+			as.addApp(dia.GetSelection().Keys())
 		} else {
 			slog.Debug("Cancelled")
 		}
 	})
 	dia.Show()
 
-	// listAllRunningProcesses()
 }
