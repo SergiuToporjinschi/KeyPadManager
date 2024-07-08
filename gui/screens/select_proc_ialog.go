@@ -1,15 +1,17 @@
 package screens
 
 import (
-	"fmt"
 	"log"
+	resources "main/assets"
+	"main/gui/widgets"
+	"main/txt"
 	"main/types"
+	"strings"
 
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/data/binding"
 	"fyne.io/fyne/v2/dialog"
-	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 	"github.com/shirou/gopsutil/v4/process"
 )
@@ -20,51 +22,73 @@ type Process struct {
 }
 
 type SelectProcessDialog struct {
-	*dialog.ConfirmDialog
-	list        *widget.List
-	body        fyne.CanvasObject
-	processList binding.UntypedList
-	selProcs    types.StringSet
-	oldSelProcs types.StringSet
+	*dialog.CustomDialog
+	list            *widget.List
+	body            fyne.CanvasObject
+	processList     []Process
+	currentSelProcs types.StringSet
+	oldSelProcs     types.StringSet
+	callBack        func(selection types.StringSet, confirmed bool)
+	searchBar       *widgets.StringSearchBar[Process]
 }
 
-func NewSelectProcessDialog() *SelectProcessDialog {
+func NewSelectProcessDialog(oldSelProcs types.StringSet, parent *fyne.Window) *SelectProcessDialog {
 	inst := &SelectProcessDialog{
-		body:        container.NewStack(),
-		processList: binding.NewUntypedList(),
-		selProcs:    types.NewStringSet(),
-		oldSelProcs: types.NewStringSet(),
+		body:            container.NewStack(),
+		processList:     []Process{},
+		currentSelProcs: types.NewStringSet(),
+		oldSelProcs:     oldSelProcs,
 	}
+	inst.CustomDialog = dialog.NewCustom(txt.GetLabel("apps.selProcTitle"), "", inst.body, *parent)
 
+	inst.CustomDialog.Resize(fyne.NewSize(1100, 600))
 	inst.buildContent()
+	inst.populateProcessList()
+	inst.Refresh()
 	return inst
 }
 
-type MySearchToolbar struct {
-	*widget.ToolbarAction
-}
-
-func (s *MySearchToolbar) ToolbarObject() fyne.CanvasObject {
-	button := widget.NewButtonWithIcon("", s.ToolbarAction.Icon, s.ToolbarAction.OnActivated)
-	// button.Importance = LowImportance
-	entr := widget.NewEntry()
-	entr.Resize(fyne.NewSize(400, 30))
-	cnt := container.NewBorder(nil, nil, nil, button, entr)
-	cnt.Resize(fyne.NewSize(400, 30))
-	return cnt
-}
-
 func (spd *SelectProcessDialog) buildContent() {
-	spd.list = widget.NewListWithData(spd.processList, func() fyne.CanvasObject {
+	//create confirm button
+	confirmBtn := widget.NewButton(txt.GetLabel("btn.generalSelect"), func() {
+		spd.CustomDialog.Hide()
+		if spd.callBack != nil {
+			spd.callBack(spd.currentSelProcs, true)
+		}
+	})
+
+	//update confirm button
+	confirmBtn.Importance = widget.HighImportance
+	if spd.currentSelProcs.IsEmpty() {
+		confirmBtn.Disable()
+	} else {
+		confirmBtn.Enable()
+	}
+
+	//set buttons
+	spd.SetButtons([]fyne.CanvasObject{
+		widget.NewButton(txt.GetLabel("btn.generalCancel"), func() {
+			spd.CustomDialog.Hide()
+			if spd.callBack != nil {
+				spd.callBack(spd.currentSelProcs, false)
+			}
+		}), confirmBtn,
+	})
+
+	//create list
+	spd.list = widget.NewList(func() int {
+		return len(spd.processList)
+	}, func() fyne.CanvasObject {
 		return container.NewHBox(
 			widget.NewCheck("", nil),
 			widget.NewLabel("Name"),
 			widget.NewLabel("Path"),
 		)
-	}, func(id binding.DataItem, item fyne.CanvasObject) {
-		process := getProcess(id)
+	}, func(id int, item fyne.CanvasObject) {
+		process := spd.processList[id]
+
 		isInTheList := spd.oldSelProcs.Contains(process.ExePath)
-		isSel := spd.selProcs.Contains(process.ExePath)
+		isSel := spd.currentSelProcs.Contains(process.ExePath)
 
 		check := widget.NewCheck("", nil)
 		item.(*fyne.Container).Objects[0] = check
@@ -80,27 +104,52 @@ func (spd *SelectProcessDialog) buildContent() {
 
 		check.OnChanged = func(selected bool) {
 			if selected {
-				spd.selProcs.Add(getProcess(id).ExePath)
+				spd.currentSelProcs.Add(spd.processList[id].ExePath)
 			} else {
-				spd.selProcs.Remove(getProcess(id).ExePath)
+				spd.currentSelProcs.Remove(spd.processList[id].ExePath)
+			}
+
+			if spd.currentSelProcs.IsEmpty() {
+				confirmBtn.Disable()
+			} else {
+				confirmBtn.Enable()
 			}
 			check.FocusLost()
 		}
 	})
-	toolbar := widget.NewToolbar(
-		&MySearchToolbar{widget.NewToolbarAction(theme.SearchIcon(), func() { fmt.Println("search") })},
-	)
-	toolbar.Resize(fyne.NewSize(1800, 30))
-	toolbar.Refresh()
-	spd.body.(*fyne.Container).Add(container.NewBorder(toolbar, nil, nil, nil, spd.list))
+
+	//create toolbar
+	spd.body.(*fyne.Container).Add(
+		container.NewBorder(
+			spd.getToolbar(),
+			nil, nil, nil,
+			spd.list,
+		))
 }
 
-func (spd *SelectProcessDialog) Show(oldSelProcs types.StringSet, callBack func(bool), parent *fyne.Window) {
-	spd.ConfirmDialog = dialog.NewCustomConfirm("Select Process", "Select", "Cancel", spd.body, callBack, *parent)
-	spd.oldSelProcs = oldSelProcs
-	spd.ConfirmDialog.Resize(fyne.NewSize(1800, 600))
-	spd.populateProcessList()
-	spd.ConfirmDialog.Show()
+func (spd *SelectProcessDialog) SetOnClose(callback func(selection types.StringSet, confirmed bool)) {
+	spd.callBack = callback
+}
+
+func (spd *SelectProcessDialog) getToolbar() *fyne.Container {
+
+	spd.searchBar = widgets.NewStringSearchBar(spd.processList, func(proc Process, inputStr string) bool {
+		return strings.Contains(strings.ToLower(proc.ExePath), strings.ToLower(inputStr)) || strings.Contains(strings.ToLower(proc.Name), strings.ToLower(inputStr))
+	}, func(poz int) {
+		spd.list.ScrollTo(poz)
+		spd.list.Select(poz)
+	})
+
+	refreshButton := widget.NewButtonWithIcon(
+		"", resources.ResRefreshPng,
+		func() {
+			spd.populateProcessList()
+			spd.Refresh()
+		},
+	)
+
+	entry, button := spd.searchBar.GetControls()
+	return container.NewBorder(nil, nil, nil, container.NewHBox(button, refreshButton), entry)
 }
 
 func getProcess(id binding.DataItem) *Process {
@@ -117,14 +166,16 @@ func getProcess(id binding.DataItem) *Process {
 }
 
 func (spd *SelectProcessDialog) GetSelection() types.StringSet {
-	return spd.selProcs
+	return spd.currentSelProcs
 }
 
 func (spd *SelectProcessDialog) populateProcessList() {
+	spd.processList = spd.processList[:0]
 	processes, err := process.Processes()
 	if err != nil {
 		log.Fatalf("Error getting processes: %v", err)
 	}
+
 	set := types.NewStringSet()
 
 	// Iterate over the list of processes and print their names
@@ -139,8 +190,10 @@ func (spd *SelectProcessDialog) populateProcessList() {
 			// log.Printf("Error getting process exe: %v", err)
 			continue
 		}
+
 		proc := Process{Name: name, ExePath: exe}
-		spd.processList.Append(proc)
+		spd.processList = append(spd.processList, proc)
 		set.Add(exe)
 	}
+	spd.searchBar.SetSearchList(spd.processList)
 }

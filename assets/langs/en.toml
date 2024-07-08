@@ -12,8 +12,10 @@ navi.scriptTitle = "Scripts"
 navi.mappingTitle = "Mappings"
 navi.managementTitle = "Management"
 
-appS.appFileTab = "App file"
-appS.runningProcessTab = "App running"
+apps.selProcTitle = "Select process"
+btn.generalCancel = "Cancel"
+btn.generalSelect = "Select"
+btn.search = "Search..."
 
 try.conDevices = "Connected devices"
 try.conDevicesTT = "Show connected devices"

@@ -88,10 +88,16 @@ func (as *AppsScreen) addApp(exePath string) {
 }
 
 func (as *AppsScreen) selectProcess() {
-	dia := NewSelectProcessDialog()
-	dia.Show(as.appList, func(selected bool) {
-		as.appList.AddAll(dia.GetSelection().Keys()...)
-	}, as.parentWindow)
+	dia := NewSelectProcessDialog(as.appList, as.parentWindow)
+	dia.SetOnClose(func(selection types.StringSet, confirmed bool) {
+		if confirmed {
+			slog.Debug("Selected processes: ", "list", dia.GetSelection())
+			as.appList.AddAll(dia.GetSelection().Keys()...)
+		} else {
+			slog.Debug("Cancelled")
+		}
+	})
+	dia.Show()
 
 	// listAllRunningProcesses()
 }

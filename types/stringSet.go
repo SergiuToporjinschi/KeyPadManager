@@ -51,3 +51,11 @@ func (s StringSet) Values() []string {
 	}
 	return values
 }
+
+func (s StringSet) Size() int {
+	return len(s)
+}
+
+func (s StringSet) IsEmpty() bool {
+	return len(s) == 0
+}

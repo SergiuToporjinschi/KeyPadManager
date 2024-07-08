@@ -12,8 +12,10 @@ navi.scriptTitle = "Scripturi"
 navi.mappingTitle = "Mappari"
 navi.managementTitle = "Management"
 
-appS.appFileTab = "App file"
-appS.runningProcessTab = "App running"
+apps.selProcTitle = "Selecteaza procese"
+btn.generalCancel = "Renunta"
+btn.generalSelect = "Selecteaza"
+btn.search = "Cauta..."
 
 try.conDevices = "Controllere connectate"
 try.conDevicesTT = "Afiseaza controllerele conectate"
