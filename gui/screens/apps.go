@@ -1,7 +1,6 @@
 package screens
 
 import (
-	"fmt"
 	"log/slog"
 	resources "main/assets"
 	"main/devicelayout"
@@ -15,18 +14,19 @@ import (
 	"fyne.io/fyne/v2/data/binding"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/storage"
-	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 )
 
 type AppsScreen struct {
 	*fyne.Container
-	bndLength    binding.ExternalInt
-	bndData      binding.Bytes
-	stopChan     chan struct{}
-	closeOnce    sync.Once
-	parentWindow *fyne.Window
-	appList      types.StringSet
+	bndLength     binding.ExternalInt
+	bndData       binding.Bytes
+	stopChan      chan struct{}
+	closeOnce     sync.Once
+	parentWindow  *fyne.Window
+	appList       types.UniSlice[string]
+	list          *widget.List
+	selectedIndex *int
 }
 
 func NewAppsScreen(currentDevice *monitor.ConnectedDevice, parentWindow *fyne.Window) NavigationItem {
@@ -36,7 +36,7 @@ func NewAppsScreen(currentDevice *monitor.ConnectedDevice, parentWindow *fyne.Wi
 		bndData:      binding.NewBytes(),
 		Container:    container.NewStack(),
 		parentWindow: parentWindow,
-		appList:      types.NewStringSet(),
+		appList:      types.NewUniSlice[string](),
 	}
 	inst.buildContent(currentDevice.DeviceDescriptor)
 	return inst
@@ -51,24 +51,43 @@ func (as *AppsScreen) buildContent(_ *devicelayout.DeviceDescriptor) {
 	toolbar := widget.NewToolbar(
 		widget.NewToolbarAction(resources.ResWindowsPng, as.selectProcess),
 		widget.NewToolbarAction(resources.ResSearchExePng, as.selectExe),
-		widget.NewToolbarSeparator(),
 		widget.NewToolbarAction(resources.ResTrashBinPng, as.removeApp),
-		widget.NewToolbarAction(theme.FileApplicationIcon(), func() { fmt.Println("New") }),
-		widget.NewToolbarAction(theme.AccountIcon(), func() { fmt.Println("New") }),
 		widget.NewToolbarSpacer(),
 	)
 
-	as.Container.Add(container.NewBorder(toolbar, nil, nil, nil, nil))
+	as.list = widget.NewList(
+		func() int {
+			return as.appList.Size()
+		},
+		func() fyne.CanvasObject { return widget.NewLabel("test") },
+		func(i int, item fyne.CanvasObject) {
+			app := as.appList.Get(i)
+			if app == "" {
+				return
+			}
+			item.(*widget.Label).SetText(app)
+		})
+	as.list.OnSelected = func(i int) {
+		as.selectedIndex = &i
+	}
+	as.list.OnUnselected = func(i int) {
+		as.selectedIndex = nil
+	}
+	as.Container.Add(container.NewBorder(toolbar, nil, nil, nil, container.NewPadded(as.list)))
 }
 
 func (as *AppsScreen) Destroy() {
 	as.closeOnce.Do(func() {
 		close(as.stopChan)
 	})
+
 }
 
 func (as *AppsScreen) removeApp() {
-
+	if as.selectedIndex != nil {
+		as.appList.RemoveByIndex(*as.selectedIndex)
+		as.list.Refresh()
+	}
 }
 
 func (as *AppsScreen) selectExe() {
@@ -88,10 +107,11 @@ func (as *AppsScreen) selectExe() {
 
 func (as *AppsScreen) addApp(exePaths []string) {
 	as.appList.AddAll(exePaths...)
+	as.list.Refresh()
 }
 
 func (as *AppsScreen) selectProcess() {
-	dia := NewSelectProcessDialog(as.appList, as.parentWindow)
+	dia := NewSelectProcessDialog(types.NewStringSetWithValues(as.appList...), as.parentWindow)
 	dia.SetOnClose(func(selection types.StringSet, confirmed bool) {
 		if confirmed {
 			slog.Debug("Selected processes: ", "list", dia.GetSelection())
