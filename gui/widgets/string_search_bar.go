@@ -33,7 +33,7 @@ func NewStringSearchBar[T any](searchList []T, compFunc func(T, string) bool, on
 		resources.ResSearchPng,
 		inst.onBtnPush,
 	)
-
+	entr.OnSubmitted = func(val string) { inst.onBtnPush() }
 	return inst
 }
 
