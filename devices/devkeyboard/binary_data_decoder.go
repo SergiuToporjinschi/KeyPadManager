@@ -5,12 +5,12 @@ import (
 	"main/types"
 )
 
-func DecodeBinaryValue(data []byte, devKeyDescriptor DevKeyboardComponent) (types.IntSet, int, int) {
+func DecodeBinaryValue(data []byte, devKeyDescriptor DevKeyboardComponent) (types.AnySet[int], int, int) {
 	if len(data) == 0 {
 		return nil, 0, 0
 	}
 
-	keyList := types.NewIntSet()
+	keyList := types.NewAnySet[int]()
 	encoderValue := 0
 
 	for _, hrd := range devKeyDescriptor.Keys {

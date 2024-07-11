@@ -150,8 +150,8 @@ func (as *AppsScreen) selectExe() {
 }
 
 func (as *AppsScreen) selectProcess() {
-	dia := NewSelectProcessDialog(types.NewStringSetWithValues(as.appList.Keys()...), as.parentWindow)
-	dia.SetOnClose(func(selection types.StringSet, confirmed bool) {
+	dia := NewSelectProcessDialog(types.NewAnySetWithValues(as.appList.Keys()...), as.parentWindow)
+	dia.SetOnClose(func(selection types.AnySet[string], confirmed bool) {
 		if confirmed {
 			slog.Debug("Selected processes: ", "list", dia.GetSelection())
 			as.addApp(dia.GetSelection().Keys())

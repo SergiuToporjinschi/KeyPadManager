@@ -26,17 +26,17 @@ type SelectProcessDialog struct {
 	list            *widget.List
 	body            fyne.CanvasObject
 	processList     []Process
-	currentSelProcs types.StringSet
-	oldSelProcs     types.StringSet
-	callBack        func(selection types.StringSet, confirmed bool)
+	currentSelProcs types.AnySet[string]
+	oldSelProcs     types.AnySet[string]
+	callBack        func(selection types.AnySet[string], confirmed bool)
 	searchBar       *widgets.StringSearchBar[Process]
 }
 
-func NewSelectProcessDialog(oldSelProcs types.StringSet, parent *fyne.Window) *SelectProcessDialog {
+func NewSelectProcessDialog(oldSelProcs types.AnySet[string], parent *fyne.Window) *SelectProcessDialog {
 	inst := &SelectProcessDialog{
 		body:            container.NewStack(),
 		processList:     []Process{},
-		currentSelProcs: types.NewStringSet(),
+		currentSelProcs: types.NewAnySet[string](),
 		oldSelProcs:     oldSelProcs,
 	}
 	inst.CustomDialog = dialog.NewCustom(txt.GetLabel("apps.selProcTitle"), "", inst.body, *parent)
@@ -127,7 +127,7 @@ func (spd *SelectProcessDialog) buildContent() {
 		))
 }
 
-func (spd *SelectProcessDialog) SetOnClose(callback func(selection types.StringSet, confirmed bool)) {
+func (spd *SelectProcessDialog) SetOnClose(callback func(selection types.AnySet[string], confirmed bool)) {
 	spd.callBack = callback
 }
 
@@ -165,7 +165,7 @@ func getProcess(id binding.DataItem) *Process {
 	return &rezz
 }
 
-func (spd *SelectProcessDialog) GetSelection() types.StringSet {
+func (spd *SelectProcessDialog) GetSelection() types.AnySet[string] {
 	return spd.currentSelProcs
 }
 
@@ -176,7 +176,7 @@ func (spd *SelectProcessDialog) populateProcessList() {
 		log.Fatalf("Error getting processes: %v", err)
 	}
 
-	set := types.NewStringSet()
+	set := types.NewAnySet[string]()
 
 	// Iterate over the list of processes and print their names
 	for _, p := range processes {
