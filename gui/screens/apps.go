@@ -62,6 +62,18 @@ func NewAppsScreen(currentDevice *monitor.ConnectedDevice, parentWindow *fyne.Wi
 func (as *AppsScreen) GetContent() *fyne.Container {
 	return as.Container
 }
+func (c *AppsScreen) Dragged(event *fyne.DragEvent) {
+	// Implement logic during dragging over the container if needed
+}
+
+// DragEnd is called when the drag event ends
+func (c *AppsScreen) DragEnd() {
+	// Implement drop logic here
+	fyne.CurrentApp().SendNotification(&fyne.Notification{
+		Title:   "Drop Event",
+		Content: "Item dropped on custom container",
+	})
+}
 
 func (as *AppsScreen) buildContent(_ *devicelayout.DeviceDescriptor) {
 	toolbar := widget.NewToolbar(
@@ -133,7 +145,7 @@ func (as *AppsScreen) selectExe() {
 		as.addApp([]string{file})
 	}, *as.parentWindow)
 	dia.Resize(fyne.NewSize(800, 600))
-	dia.SetFilter(storage.NewMimeTypeFileFilter([]string{"application/*"}))
+	dia.SetFilter((storage.NewExtensionFileFilter([]string{".exe", ".com"})))
 	dia.Show()
 }
 
