@@ -9,7 +9,7 @@ type AnySet[K StringOrIntFloat] map[K]bool
 // type AnySet[K StringOrIntFloat, V any] map[K]KeyValuePair[K, V]
 
 func NewAnySet[K StringOrIntFloat]() AnySet[K] {
-	return make(map[K]bool)
+	return map[K]bool{}
 }
 
 func NewAnySetWithValues[K StringOrIntFloat](values ...K) AnySet[K] {
@@ -54,7 +54,7 @@ func (s AnySet[K]) Get(element K) bool {
 }
 
 func (s AnySet[K]) Keys() []K {
-	keys := make([]K, len(s))
+	keys := []K{}
 	for item := range s {
 		keys = append(keys, item)
 	}

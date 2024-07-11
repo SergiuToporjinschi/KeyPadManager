@@ -2,6 +2,7 @@ package main
 
 import (
 	"log/slog"
+	"main/datahandlers"
 	"main/devicelayout"
 	"main/gui"
 	"main/logger"
@@ -14,6 +15,8 @@ import (
 func main() {
 	slog.SetDefault(logger.NewSLogger())
 	slog.Info("Starting the application")
+
+	datahandlers.GetInstance().LoadAppList()
 
 	err := devicelayout.GetInstance().LoadConfig()
 	if err != nil {

@@ -62,7 +62,7 @@ func (h *PrettyConsoleHandler) WithGroup(name string) slog.Handler {
 
 func (h *PrettyConsoleHandler) Handle(ctx context.Context, r slog.Record) error {
 	level := ReplaceLevelName(r.Level)
-	buffer := make([]byte, 0, 10)
+	buffer := []byte{}
 	appendToBuffer := func(content string) {
 		buffer = append(buffer, []byte(content)...)
 		buffer = append(buffer, ' ')

@@ -73,7 +73,7 @@ func (s *UniAnySlice[T, V]) Contains(element PairKeyValue[T, V]) bool {
 }
 
 func (s *UniAnySlice[T, V]) Values() []V {
-	values := make([]V, 0, len(*s))
+	values := []V{}
 	for _, value := range *s {
 		values = append(values, value.Value())
 	}
@@ -81,7 +81,7 @@ func (s *UniAnySlice[T, V]) Values() []V {
 }
 
 func (s *UniAnySlice[T, V]) Keys() []T {
-	keys := make([]T, 0, len(*s))
+	keys := []T{}
 	for _, item := range *s {
 		keys = append(keys, item.Key())
 	}
