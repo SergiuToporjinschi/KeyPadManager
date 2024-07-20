@@ -7,9 +7,17 @@ import (
 	"sync"
 )
 
+const (
+	appFileName = "apps.json"
+)
+
 type Application struct {
-	Name    string
-	ExePath string
+	Name    string `json:"name"`
+	ExePath string `json:"exePath" validate:"required"`
+}
+
+func (a Application) GetDisplayText() string {
+	return a.Name
 }
 
 var onceAppHandler sync.Once
@@ -20,7 +28,7 @@ type AppsHandler struct {
 	appList      []Application
 }
 
-func GetInstance() *AppsHandler {
+func GetAppHandlerInstance() *AppsHandler {
 	onceAppHandler.Do(func() {
 		instanceAppHandler = &AppsHandler{}
 	})
@@ -90,9 +98,10 @@ func (ah *AppsHandler) LoadAppList() int {
 	ah.appListMutex.Lock()
 	defer ah.appListMutex.Unlock()
 
-	content, err := os.ReadFile("apps.json")
+	content, err := os.ReadFile(appFileName)
 	if os.IsNotExist(err) {
 		slog.Warn("File not found: ", "error", err)
+		return 0
 	} else if err != nil {
 		slog.Error("Error opening file: ", "error", err)
 	}
@@ -122,7 +131,7 @@ func (ah *AppsHandler) SaveAppList() {
 		return
 	}
 
-	file, err := os.OpenFile("apps.json", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+	file, err := os.OpenFile(appFileName, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
 	if err != nil {
 		slog.Error("Error opening file: ", "error", err)
 		return
@@ -143,6 +152,17 @@ func (ah *AppsHandler) GetAppList() []Application {
 	defer ah.appListMutex.Unlock()
 
 	return ah.appList
+}
+
+func (ah *AppsHandler) GetAppNameList() []string {
+	ah.appListMutex.Lock()
+	defer ah.appListMutex.Unlock()
+
+	appNames := []string{}
+	for _, a := range ah.appList {
+		appNames = append(appNames, a.Name)
+	}
+	return appNames
 }
 
 func (ah *AppsHandler) GetAppByExePath(exePath string) *Application {
@@ -203,6 +223,13 @@ func (ah *AppsHandler) GetExePaths() []string {
 	return exePaths
 }
 
+func (ah *AppsHandler) ContainsExePath(exePath string) bool {
+	ah.appListMutex.Lock()
+	defer ah.appListMutex.Unlock()
+
+	return ah.containsExePath(exePath)
+}
+
 func (ah *AppsHandler) containsExePath(exePath string) bool {
 	for _, a := range ah.appList {
 		if a.ExePath == exePath {
@@ -210,13 +237,6 @@ func (ah *AppsHandler) containsExePath(exePath string) bool {
 		}
 	}
 	return false
-}
-
-func (ah *AppsHandler) ContainsExePath(exePath string) bool {
-	ah.appListMutex.Lock()
-	defer ah.appListMutex.Unlock()
-
-	return ah.containsExePath(exePath)
 }
 
 func (ah *AppsHandler) add(app Application) bool {

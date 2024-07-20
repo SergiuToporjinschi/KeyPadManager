@@ -16,7 +16,10 @@ func main() {
 	slog.SetDefault(logger.NewSLogger())
 	slog.Info("Starting the application")
 
-	datahandlers.GetInstance().LoadAppList()
+	go datahandlers.GetAppHandlerInstance().LoadAppList()
+	go datahandlers.GetMacrosHandlerInstance().LoadMacroList()
+	go datahandlers.GetKeysHandlerInstance().GenerateKeyList()
+	go datahandlers.GetMappingHandlerInstance().LoadMapping()
 
 	err := devicelayout.GetInstance().LoadConfig()
 	if err != nil {

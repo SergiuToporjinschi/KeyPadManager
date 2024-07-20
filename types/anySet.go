@@ -1,9 +1,5 @@
 package types
 
-type StringOrIntFloat interface {
-	~string | ~int | ~int32 | ~int64 | ~int16 | ~int8 | ~uint | ~uint32 | ~uint64 | ~uint16 | ~uint8 | ~float32 | ~float64
-}
-
 type AnySet[K StringOrIntFloat] map[K]bool
 
 // type AnySet[K StringOrIntFloat, V any] map[K]KeyValuePair[K, V]

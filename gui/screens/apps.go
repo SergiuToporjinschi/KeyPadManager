@@ -39,7 +39,7 @@ func NewAppsScreen(currentDevice *monitor.ConnectedDevice, parentWindow *fyne.Wi
 		bndData:      binding.NewBytes(),
 		Container:    container.NewStack(),
 		parentWindow: parentWindow,
-		appList:      *datahandlers.GetInstance(),
+		appList:      *datahandlers.GetAppHandlerInstance(),
 	}
 
 	inst.buildContent(currentDevice.DeviceDescriptor)

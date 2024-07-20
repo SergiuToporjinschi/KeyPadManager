@@ -29,15 +29,17 @@ type DeviceScreen struct {
 	bndDataStr binding.String
 	stopChan   chan struct{}
 	closeOnce  sync.Once
+	parent     *fyne.Window
 }
 
-func NewDeviceScreen(currentDevice *monitor.ConnectedDevice, _ *fyne.Window) NavigationItem {
+func NewDeviceScreen(currentDevice *monitor.ConnectedDevice, parent *fyne.Window) NavigationItem {
 	slog.Debug("Creating NewDeviceScreen")
 	inst := &DeviceScreen{
 		stopChan:   make(chan struct{}),
 		bndData:    binding.NewBytes(),
 		bndDataStr: binding.NewString(),
 		Container:  container.NewStack(),
+		parent:     parent,
 	}
 	//build content
 	inst.buildContent(currentDevice.DeviceDescriptor)
@@ -58,7 +60,11 @@ func (ds *DeviceScreen) buildContent(devDescriptor *devicelayout.DeviceDescripto
 	//draw console
 	console := container.NewGridWrap(fyne.NewSize(400, 90), widget.NewLabelWithData(ds.bndDataStr))
 
-	ds.Container.Add(container.NewVSplit(container.NewCenter(instObject), console))
+	//draw mapping container
+	mappingContainer := NewMappingContainer(ds.parent, devDescriptor).Container //TODO: find a better way to do this
+	// mappingContainer.Refresh()
+
+	ds.Container.Add(container.NewHSplit(container.NewVSplit(container.NewCenter(instObject), console), mappingContainer))
 }
 
 func (ds *DeviceScreen) monitorUSBData(dev *monitor.ConnectedDevice) {

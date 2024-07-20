@@ -25,8 +25,8 @@ type KeySwitchControl struct {
 	knobImageRes    fyne.Resource
 	knobSelImageRes fyne.Resource
 	binderFocused   widgets.Binder
-	keysImages      map[int]*canvas.Image
-	knobImage       *canvas.Image
+	keysImages      map[int]*widgets.TGIcon
+	knobImage       *widgets.TGIcon
 	devDescriptor   *devicelayout.DeviceDescriptor
 }
 
@@ -36,7 +36,7 @@ func New(data binding.Bytes, devDesc *devicelayout.DeviceDescriptor) fyne.Canvas
 		keyImageRes:     resources.ResButtonGrayPng,
 		knobImageRes:    resources.ResKnobGrayPng,
 		knobSelImageRes: resources.ResKnobPng,
-		keysImages:      make(map[int]*canvas.Image),
+		keysImages:      make(map[int]*widgets.TGIcon),
 	}
 	ins.devDescriptor = devkeyboard.ConvertHardwareDescriptor(devDesc)
 	ins.ExtendBaseWidget(ins)
@@ -49,12 +49,10 @@ func (w *KeySwitchControl) createImages() {
 	hrdDesc := w.devDescriptor.HardwareDescriptor.(devkeyboard.DevKeyboardComponent)
 	for _, comp := range hrdDesc.Keys {
 		if comp.Type == "button" {
-			w.keysImages[comp.Value] = canvas.NewImageFromResource(w.keyImageRes)
-			w.keysImages[comp.Value].FillMode = canvas.ImageFillContain
+			w.keysImages[comp.Value] = widgets.NewTGIcon(w.keyImageRes)
 		}
 	}
-	w.knobImage = canvas.NewImageFromResource(w.knobImageRes)
-	w.knobImage.FillMode = canvas.ImageFillContain
+	w.knobImage = widgets.NewTGIcon(w.knobImageRes)
 }
 
 func (w *KeySwitchControl) updateFromData(dataBinding binding.DataItem) {
@@ -130,12 +128,12 @@ type devRanderer struct {
 	hGap       float32
 	vGap       float32
 	iconSize   fyne.Size
-	keysImages map[int]*canvas.Image
-	knobImage  *canvas.Image
+	keysImages map[int]*widgets.TGIcon
+	knobImage  *widgets.TGIcon
 	widget     *KeySwitchControl
 }
 
-func newDevRenderer(keysImages map[int]*canvas.Image, knobImage *canvas.Image, widget *KeySwitchControl) fyne.WidgetRenderer {
+func newDevRenderer(keysImages map[int]*widgets.TGIcon, knobImage *widgets.TGIcon, widget *KeySwitchControl) fyne.WidgetRenderer {
 	inst := &devRanderer{
 		iconSSize:  64,
 		margin:     10,
@@ -148,11 +146,10 @@ func newDevRenderer(keysImages map[int]*canvas.Image, knobImage *canvas.Image, w
 
 	inst.iconSize = fyne.NewSize(inst.iconSSize, inst.iconSSize)
 	for i := range inst.keysImages {
-		inst.keysImages[i].SetMinSize(inst.iconSize)
+		// inst.keysImages[i].SetMinSize(inst.iconSize)
 		inst.keysImages[i].Resize(inst.iconSize)
 	}
 
-	inst.knobImage.SetMinSize(inst.iconSize)
 	inst.knobImage.Resize(inst.iconSize)
 
 	inst.Layout(inst.MinSize())
@@ -166,7 +163,7 @@ func (inst *devRanderer) Layout(_ fyne.Size) {
 	var yPos float32 = inst.vGap + inst.iconSSize
 
 	for i := range inst.keysImages {
-		inst.keysImages[i].SetMinSize(inst.iconSize)
+		// inst.keysImages[i].SetMinSize(inst.iconSize)
 		inst.keysImages[i].Resize(inst.iconSize)
 	}
 
@@ -183,7 +180,6 @@ func (inst *devRanderer) Layout(_ fyne.Size) {
 	inst.keysImages[512].Move(fyne.NewPos(inst.margin+xPos*4, yPos+inst.margin+vShift*2))
 
 	//knob display
-	inst.knobImage.SetMinSize(inst.iconSize)
 	inst.knobImage.Resize(inst.iconSize)
 	inst.knobImage.Move(fyne.NewPos(inst.margin+xPos*4+vShift, yPos+inst.margin+vShift*2+inst.iconSSize+inst.vGap))
 }
